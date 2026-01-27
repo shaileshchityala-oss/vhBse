@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FEServer">
+</Property><Property Name="Solution File" Value="D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\FEServer.sln">
+</Property><Property Name="User Options File" Value="D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\FEServer.suo">
+</Property><Property Name="Date" Value="Monday, November 18, 2013">
+</Property><Property Name="Time" Value="14:32 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FEServer.sln" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer.sln">
+</Event><Event ErrorLevel="0" Project="" Source="FEServer.suo" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer.suo">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\FEServer.vbproj" Description="Project file successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\FEServer.vbproj">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\FEServer.vbproj.user" Description="Project user file successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\FEServer.vbproj.user">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\ApplicationEvents.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\ApplicationEvents.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Lib\DataGridViewAutoFilterColumnHeaderCell.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Lib\DataGridViewAutoFilterColumnHeaderCell.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Lib\DataGridViewAutoFilterTextBoxColumn.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Lib\DataGridViewAutoFilterTextBoxColumn.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\BLL\SqlServerSetting.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\BLL\SqlServerSetting.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\ClsLoginData.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\ClsLoginData.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Lib\CalenderColumn.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Lib\CalenderColumn.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Lib\clsEnDe.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Lib\clsEnDe.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\BLL\clsSetting.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\BLL\clsSetting.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Lib\data_access_sql.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Lib\data_access_sql.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmChangePassword.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmChangePassword.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmChangePassword.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmChangePassword.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmSetting.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmSetting.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmSetting.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmSetting.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmUserMapper.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmUserMapper.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmUserMapper.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmUserMapper.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmUserMaster.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmUserMaster.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmUserMaster.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmUserMaster.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmLogIn.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmLogIn.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmLogIn.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmLogIn.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmSQLServerDBSetting.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmSQLServerDBSetting.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmSQLServerDBSetting.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmSQLServerDBSetting.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\MainModule.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\MainModule.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\MDI.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\MDI.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\MDI.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\MDI.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\My Project\AssemblyInfo.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\My Project\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\My Project\Application.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\My Project\Application.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\My Project\Resources.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\My Project\Resources.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\My Project\Settings.Designer.vb" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\My Project\Settings.Designer.vb">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\My Project\Application.myapp" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\My Project\Application.myapp">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\My Project\DataSources\FrmUserMapper.datasource" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\My Project\DataSources\FrmUserMapper.datasource">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\My Project\Settings.settings" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\My Project\Settings.settings">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\icontexto_user_web20_furl.ico" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\icontexto_user_web20_furl.ico">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\UdpSql.ico" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\UdpSql.ico">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmChangePassword.resx" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmChangePassword.resx">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmSetting.resx" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmSetting.resx">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmUserMapper.resx" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmUserMapper.resx">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmUserMaster.resx" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmUserMaster.resx">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmLogIn.resx" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmLogIn.resx">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\Form\FrmSQLServerDBSetting.resx" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\Form\FrmSQLServerDBSetting.resx">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\MDI.resx" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\MDI.resx">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\My Project\Resources.resx" Description="File successfully backed up as D:\Volhedge\NewVolHedge\VolHedge5002C-I20FTest\Backup1\FEServer\My Project\Resources.resx">
+</Event><Event ErrorLevel="1" Project="FEServer" Source="FEServer\FEServer.vbproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\FEServer.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="FEServer" Source="FEServer\FEServer.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FEServer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FEServer.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FEServer" Source="FEServer\FEServer.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

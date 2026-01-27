@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3FAB130-7E81-42F9-B187-3BB55FC93E7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VolHedge.My.MyApplication</StartupObject>
+    <RootNamespace>VolHedge</RootNamespace>
+    <AssemblyName>VolHedge</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>Full Screen.ico</ApplicationIcon>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VolHedge.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VolHedge.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>VolHedge.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>VolHedge.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>VolHedge.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>VolHedge.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Vol64|AnyCPU'">
+    <OutputPath>bin\Vol64\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Vol64|x64'">
+    <OutputPath>bin\x64\Vol64\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Vol64|x86'">
+    <OutputPath>bin\x86\Vol64\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addprevious_datetrading.Designer.vb">
+      <DependentUpon>addprevious_datetrading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addprevious_datetrading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allDwn\CNseImportBhavCopy.vb" />
+    <Compile Include="allDwn\CNseImportSecurityZip.vb" />
+    <Compile Include="allDwn\CZip.vb" />
+    <Compile Include="AtmvolWatch.Designer.vb">
+      <DependentUpon>AtmvolWatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AtmvolWatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BLL\Cls_AEL.vb" />
+    <Compile Include="BLL\CLS_Check_UDP_Licence.vb" />
+    <Compile Include="BLL\CLS_Encrypt_Data.vb" />
+    <Compile Include="BLL\ColorSchem.vb" />
+    <Compile Include="Bse\CAelExtractor.vb" />
+    <Compile Include="Bse\CBig.vb" />
+    <Compile Include="Bse\CBseBhavCopy.vb" />
+    <Compile Include="Bse\CBseBids.vb" />
+    <Compile Include="Bse\CBseContractEq.vb" />
+    <Compile Include="Bse\CBseContractFo.vb" />
+    <Compile Include="Bse\CBseContracts.vb" />
+    <Compile Include="Bse\CBseExchange.vb" />
+    <Compile Include="Bse\CBseExchangeEqRate.vb" />
+    <Compile Include="Bse\CBseExchangeFoRates.vb" />
+    <Compile Include="Bse\CBseExchangeIndexRates.vb" />
+    <Compile Include="Bse\CBseExpoMarginCalc.vb" />
+    <Compile Include="Bse\CBseIndex.vb" />
+    <Compile Include="Bse\CBseIndexLiveDataTable.vb" />
+    <Compile Include="Bse\CBseIndexRates.vb" />
+    <Compile Include="Bse\CBseInstrument.vb" />
+    <Compile Include="Bse\CBseMp.vb" />
+    <Compile Include="Bse\CBseSpanPos.vb" />
+    <Compile Include="Bse\CBseTest.vb" />
+    <Compile Include="Bse\CBseTrade.vb" />
+    <Compile Include="Bse\CBseUdpBroadCast.vb" />
+    <Compile Include="Bse\CContract.vb" />
+    <Compile Include="Bse\CExpenseCalc.vb" />
+    <Compile Include="Bse\CFinUtils.vb" />
+    <Compile Include="Bse\CGetExpObj.vb" />
+    <Compile Include="Bse\CMarginApply.vb" />
+    <Compile Include="Bse\CMdbConnection.vb" />
+    <Compile Include="Bse\CSpanAelExtractor.vb" />
+    <Compile Include="Bse\CSpanReader.vb" />
+    <Compile Include="Bse\CUdpMultiTester.vb" />
+    <Compile Include="Bse\FrmBseIndexView.Designer.vb" />
+    <Compile Include="Bse\FrmBseIndexView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bse\FrmMarginBse.Designer.vb" />
+    <Compile Include="Bse\FrmMarginBse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CChartData.vb" />
+    <Compile Include="CCheckGapUp.vb" />
+    <Compile Include="CCrypto.vb" />
+    <Compile Include="allDwn\CDownloadMgr.vb" />
+    <Compile Include="allDwn\CFileDownloader.vb" />
+    <Compile Include="CHwPrint.vb" />
+    <Compile Include="allDwn\CNseImportContractZip.vb" />
+    <Compile Include="CNetworkMode.vb" />
+    <Compile Include="CNse728.vb" />
+    <Compile Include="Common.vb" />
+    <Compile Include="CPerfCheck.vb" />
+    <Compile Include="CSetting.vb" />
+    <Compile Include="CSkDataFeed.vb" />
+    <Compile Include="CSocket.vb" />
+    <Compile Include="CSqlConn.vb" />
+    <Compile Include="CUserKey.vb" />
+    <Compile Include="CUtils.vb" />
+    <Compile Include="allDwn\CWebDownloader.vb" />
+    <Compile Include="DownloadRangeCalc.Designer.vb">
+      <DependentUpon>DownloadRangeCalc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadRangeCalc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.vb">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.vb">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDnMgr.Designer.vb">
+      <DependentUpon>FrmDnMgr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDnMgr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdditionalExpo.Designer.vb">
+      <DependentUpon>FormAdditionalExpo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdditionalExpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Issue_Reporting.Designer.vb">
+      <DependentUpon>Form_Issue_Reporting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Issue_Reporting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAboutVolHedge1.Designer.vb">
+      <DependentUpon>FrmAboutVolHedge1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAboutVolHedge1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCFBalance.Designer.vb">
+      <DependentUpon>FrmCFBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCFBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGapUpDown.Designer.vb">
+      <DependentUpon>frmGapUpDown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGapUpDown.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportAllfile.Designer.vb">
+      <DependentUpon>FrmImportAllfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImportAllfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarketwatch.Designer.vb">
+      <DependentUpon>frmMarketwatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarketwatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnlineSupportDownloader.Designer.vb">
+      <DependentUpon>FrmOnlineSupportDownloader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnlineSupportDownloader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTradefilesetting.Designer.vb">
+      <DependentUpon>frmTradefilesetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTradefilesetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP.Designer.vb">
+      <DependentUpon>HELP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HELP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectColumns.Designer.vb">
+      <DependentUpon>frmSelectColumns.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectColumns.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData\FrmMatchContract.Designer.vb">
+      <DependentUpon>FrmMatchContract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportData\FrmMatchContract.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportData.vb" />
+    <Compile Include="Control\ipTextbox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarketWatch.Designer.vb">
+      <DependentUpon>MarketWatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MarketWatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\APIModule.vb" />
+    <Compile Include="Modules\Module1.vb" />
+    <Compile Include="Networking\DownloadInfo.vb" />
+    <Compile Include="Networking\FileDownloadCompletedEventArgs.vb" />
+    <Compile Include="Networking\FileDownloader.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Networking\FileDownloadProgressChangedEventArgs.vb" />
+    <Compile Include="Networking\FileDownloadStatusChangedEventArgs.vb" />
+    <Compile Include="Old Form\OptionG\Greeks.vb" />
+    <Compile Include="optionfrm1.Designer.vb">
+      <DependentUpon>optionfrm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="optionfrm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessRangeCalc.Designer.vb">
+      <DependentUpon>ProcessRangeCalc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessRangeCalc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RangeCalculator.Designer.vb">
+      <DependentUpon>RangeCalculator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RangeCalculator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMarginReport.Designer.vb">
+      <DependentUpon>rptMarginReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptMarginReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScriptMapingFunctionality.Designer.vb">
+      <DependentUpon>ScriptMapingFunctionality.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMapingFunctionality.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortCut.Designer.vb">
+      <DependentUpon>ShortCut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShortCut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupSplash\3key\SplashScreen3IndLic.Designer.vb">
+      <DependentUpon>SplashScreen3IndLic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartupSplash\3key\SplashScreen3IndLic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupSplash\clsEnDe.vb" />
+    <Compile Include="StartupSplash\ClsLoginData.vb" />
+    <Compile Include="StartupSplash\data_access_sql.vb" />
+    <Compile Include="StartupSplash\FrmUserRegister.Designer.vb">
+      <DependentUpon>FrmUserRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartupSplash\FrmUserRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupSplash\SplashScreenMnUsrLic.Designer.vb">
+      <DependentUpon>SplashScreenMnUsrLic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartupSplash\SplashScreenMnUsrLic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupSplash\Frm_UDPSetting.Designer.vb">
+      <DependentUpon>Frm_UDPSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartupSplash\Frm_UDPSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminModule.vb" />
+    <Compile Include="alert.Designer.vb">
+      <DependentUpon>alert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alert_entry.Designer.vb">
+      <DependentUpon>alert_entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alert_entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allcompany.designer.vb">
+      <DependentUpon>allcompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="allcompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="bhavcopy.designer.vb">
+      <DependentUpon>bhavcopy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bhavcopy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bhavcopyprocess.Designer.vb">
+      <DependentUpon>bhavcopyprocess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bhavcopyprocess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BLL\alertentry.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\analysisprocess.vb" />
+    <Compile Include="BLL\bhav_copy.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\clsEnDe.vb" />
+    <Compile Include="BLL\clsOptionPera.vb" />
+    <Compile Include="BLL\deletedata.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\expenses.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\findvolitility.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\HtmlPars.vb" />
+    <Compile Include="ImportData\import_Data.vb" />
+    <Compile Include="BLL\Mastergenrate.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\PLAnaProcess.vb" />
+    <Compile Include="BLL\scenarioDetail.vb" />
+    <Compile Include="BLL\script.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\SqlDbProcess.vb" />
+    <Compile Include="BLL\trading.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\UserDefScenario.vb" />
+    <Compile Include="BLL\UserDefTag.vb" />
+    <Compile Include="BLL\user_master.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\DGVColumnHeader.vb" />
+    <Compile Include="Dal\DA_SQL.vb" />
+    <Compile Include="frmbackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDateSelection.Designer.vb">
+      <DependentUpon>FrmDateSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDateSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMargin.Designer.vb">
+      <DependentUpon>FrmMargin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMargin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOptionChart.Designer.vb">
+      <DependentUpon>FrmOptionChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOptionChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPLanalysis.Designer.vb">
+      <DependentUpon>FrmPLanalysis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPLanalysis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPLDetail.Designer.vb">
+      <DependentUpon>FrmPLDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPLDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReadFile.Designer.vb">
+      <DependentUpon>FrmReadFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReadFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScenarioSetting.Designer.vb">
+      <DependentUpon>FrmScenarioSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScenarioSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectChart.Designer.vb">
+      <DependentUpon>FrmSelectChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserDefScenario.Designer.vb">
+      <DependentUpon>FrmUserDefScenario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserDefScenario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserDefTag.Designer.vb">
+      <DependentUpon>FrmUserDefTag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserDefTag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frnCurrencyExposureMargin.Designer.vb">
+      <DependentUpon>frnCurrencyExposureMargin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frnCurrencyExposureMargin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dal\data_access.vb" />
+    <Compile Include="analysis.Designer.vb">
+      <DependentUpon>analysis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="analysis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dal\data_access_sql.vb" />
+    <Compile Include="delete_data.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displaytrans.designer.vb">
+      <DependentUpon>displaytrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="displaytrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display_master.designer.vb">
+      <DependentUpon>display_master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="display_master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmprofitLossChart.Designer.vb">
+      <DependentUpon>frmprofitLossChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmprofitLossChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_exposure_margin_entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clsGlobal.vb" />
+    <Compile Include="import_master.designer.vb">
+      <DependentUpon>import_master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="import_master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\BCastModule.vb" />
+    <Compile Include="Modules\InternetModule.vb" />
+    <Compile Include="Modules\mainmodule.vb" />
+    <Compile Include="MDI.designer.vb">
+      <DependentUpon>MDI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SqlModule.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OpenPosition.designer.vb">
+      <DependentUpon>OpenPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OpenPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPasssword.Designer.vb">
+      <DependentUpon>ResetPasssword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPasssword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\resultfrm.designer.vb">
+      <DependentUpon>resultfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\resultfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptExpense.Designer.vb">
+      <DependentUpon>rptExpense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptExpense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMaturity.Designer.vb">
+      <DependentUpon>rptMaturity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptMaturity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptposition.Designer.vb">
+      <DependentUpon>rptposition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptposition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptProfitLossDaywise.designer.vb">
+      <DependentUpon>rptProfitLossDaywise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptProfitLossDaywise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptProfitLossScriptwise.designer.vb">
+      <DependentUpon>rptProfitLossScriptwise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptProfitLossScriptwise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptProfitLossSumary.designer.vb">
+      <DependentUpon>rptProfitLossSumary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptProfitLossSumary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scenario1.designer.vb">
+      <DependentUpon>scenario1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="scenario1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettelmentBhav.designer.vb">
+      <DependentUpon>SettelmentBhav.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SettelmentBhav.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempSplesh.Designer.vb">
+      <DependentUpon>TempSplesh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TempSplesh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Version_Notes.Designer.vb">
+      <DependentUpon>Version_Notes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Version_Notes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wss.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="addprevious_datetrading.resx">
+      <DependentUpon>addprevious_datetrading.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alert.resx">
+      <DependentUpon>alert.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alert_entry.resx">
+      <DependentUpon>alert_entry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="allcompany.resx">
+      <DependentUpon>allcompany.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtmvolWatch.resx">
+      <DependentUpon>AtmvolWatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bhavcopy.resx">
+      <DependentUpon>bhavcopy.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bhavcopyprocess.resx">
+      <DependentUpon>bhavcopyprocess.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analysis.resx">
+      <DependentUpon>analysis.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\FrmBseIndexView.resx" />
+    <EmbeddedResource Include="Bse\FrmMarginBse.resx" />
+    <EmbeddedResource Include="Control\ipTextbox.resx">
+      <DependentUpon>ipTextbox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadRangeCalc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DownloadRangeCalc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDnMgr.resx">
+      <DependentUpon>FrmDnMgr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdditionalExpo.resx">
+      <DependentUpon>FormAdditionalExpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Issue_Reporting.resx">
+      <DependentUpon>Form_Issue_Reporting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAboutVolHedge1.resx">
+      <DependentUpon>FrmAboutVolHedge1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmbackup.resx">
+      <DependentUpon>frmbackup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCFBalance.resx">
+      <DependentUpon>FrmCFBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDateSelection.resx">
+      <DependentUpon>FrmDateSelection.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGapUpDown.resx">
+      <DependentUpon>frmGapUpDown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportAllfile.resx">
+      <DependentUpon>FrmImportAllfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMargin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMargin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarketwatch.resx">
+      <DependentUpon>frmMarketwatch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnlineSupportDownloader.resx">
+      <DependentUpon>FrmOnlineSupportDownloader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOptionChart.resx">
+      <DependentUpon>FrmOptionChart.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPLanalysis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPLanalysis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPLDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPLDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReadFile.resx">
+      <DependentUpon>FrmReadFile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScenarioSetting.resx">
+      <DependentUpon>FrmScenarioSetting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectChart.resx">
+      <DependentUpon>FrmSelectChart.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectColumns.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectColumns.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTradefilesetting.resx">
+      <DependentUpon>frmTradefilesetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserDefScenario.resx">
+      <DependentUpon>FrmUserDefScenario.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserDefTag.resx">
+      <DependentUpon>FrmUserDefTag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HELP.resx">
+      <DependentUpon>HELP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportData\FrmMatchContract.resx">
+      <DependentUpon>FrmMatchContract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarketWatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MarketWatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="optionfrm1.resx">
+      <DependentUpon>optionfrm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessRangeCalc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProcessRangeCalc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RangeCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RangeCalculator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMarginReport.resx">
+      <DependentUpon>rptMarginReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScriptMapingFunctionality.resx">
+      <DependentUpon>ScriptMapingFunctionality.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortCut.resx">
+      <DependentUpon>ShortCut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupSplash\3key\SplashScreen3IndLic.resx">
+      <DependentUpon>SplashScreen3IndLic.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupSplash\FrmUserRegister.resx">
+      <DependentUpon>FrmUserRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupSplash\SplashScreenMnUsrLic.resx">
+      <DependentUpon>SplashScreenMnUsrLic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupSplash\Frm_UDPSetting.resx">
+      <DependentUpon>Frm_UDPSetting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frnCurrencyExposureMargin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frnCurrencyExposureMargin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_data.resx">
+      <DependentUpon>delete_data.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displaytrans.resx">
+      <DependentUpon>displaytrans.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display_master.resx">
+      <DependentUpon>display_master.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmprofitLossChart.resx">
+      <DependentUpon>frmprofitLossChart.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_exposure_margin_entry.resx">
+      <DependentUpon>frm_exposure_margin_entry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="import_master.resx">
+      <DependentUpon>import_master.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenPosition.resx">
+      <DependentUpon>OpenPosition.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPasssword.resx">
+      <DependentUpon>ResetPasssword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\resultfrm.resx">
+      <DependentUpon>resultfrm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptExpense.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rptExpense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMaturity.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rptMaturity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptposition.resx">
+      <DependentUpon>rptposition.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptProfitLossDaywise.resx">
+      <DependentUpon>rptProfitLossDaywise.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptProfitLossScriptwise.resx">
+      <DependentUpon>rptProfitLossScriptwise.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptProfitLossSumary.resx">
+      <DependentUpon>rptProfitLossSumary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scenario1.resx">
+      <DependentUpon>scenario1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettelmentBhav.resx">
+      <DependentUpon>SettelmentBhav.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempSplesh.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TempSplesh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Version_Notes.resx">
+      <DependentUpon>Version_Notes.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Full Screen.ico" />
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\VolHedge Logo.jpg" />
+    <None Include="Resources\new.jpg" />
+    <None Include="Resources\new1.jpg" />
+    <None Include="Resources\RectOrangeButton.JPG" />
+    <None Include="Resources\Phone-icon.png" />
+    <Content Include="Resources\volhedge_icon.ico" />
+    <Content Include="Windows Security.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dllCharts\" />
+    <Folder Include="Test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.MSChart20Lib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\AxInterop.MSChart20Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.STOCKCHARTXLib, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\AxInterop.STOCKCHARTXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bridge, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="dao, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Debug\dao.dll</HintPath>
+    </Reference>
+    <Reference Include="decompress, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\decompress.dll</HintPath>
+    </Reference>
+    <Reference Include="DSS, Version=1.0.3966.31878, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\DSS.dll</HintPath>
+    </Reference>
+    <Reference Include="HarfBuzzSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\HarfBuzzSharp.7.3.0.3\lib\net462\HarfBuzzSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Debug\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.JRO, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Debug\Interop.JRO.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <HintPath>bin\x86\Debug\Interop.Microsoft.Office.Core.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Interop.Excel">
+      <HintPath>bin\x86\Debug\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Debug\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Debug\msdatasrc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dllCharts\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.1.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ScottPlot, Version=5.0.55.0, Culture=neutral, PublicKeyToken=86698dc10387c39e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScottPlot.5.0.55\lib\net462\ScottPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="ScottPlot.WinForms, Version=5.0.55.0, Culture=neutral, PublicKeyToken=86698dc10387c39e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScottPlot.WinForms.5.0.55\lib\net462\ScottPlot.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="ScrollablePanel">
+      <HintPath>.\ScrollablePanel.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.2.88.9\lib\net462\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.HarfBuzz, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.HarfBuzz.2.88.9\lib\net462\SkiaSharp.HarfBuzz.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Desktop.Common, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.Views.Desktop.Common.2.88.9\lib\net462\SkiaSharp.Views.Desktop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.WindowsForms, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.Views.WindowsForms.2.88.9\lib\net462\SkiaSharp.Views.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Debug\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.7.3\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="UniqueIDWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NewLicenseSoftwares\Code\VolHedge5003F2L11 I.27I24B\volhedge\bin\x86\Debug\UniqueIDWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp, Version=1.0.1.0, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocketSharp-netstandard.1.0.1\lib\net45\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSChart20Lib">
+      <Guid>{65E121D4-0C60-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSDATASRC1">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole1">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole2">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="STOCKCHARTXLib">
+      <Guid>{6556E667-F828-4D0E-AF3E-C0FC768796CC}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets'))" />
+    <Error Condition="!Exists('..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.9\build\net462\SkiaSharp.NativeAssets.macOS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.macOS.2.88.9\build\net462\SkiaSharp.NativeAssets.macOS.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.Win32.2.88.9\build\net462\SkiaSharp.NativeAssets.Win32.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.Win32.2.88.9\build\net462\SkiaSharp.NativeAssets.Win32.targets'))" />
+    <Error Condition="!Exists('..\packages\HarfBuzzSharp.NativeAssets.Linux.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HarfBuzzSharp.NativeAssets.Linux.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Linux.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.Linux.NoDependencies.2.88.9\build\net462\SkiaSharp.NativeAssets.Linux.NoDependencies.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.Linux.NoDependencies.2.88.9\build\net462\SkiaSharp.NativeAssets.Linux.NoDependencies.targets'))" />
+  </Target>
+  <Import Project="..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.macOS.2.88.9\build\net462\SkiaSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.9\build\net462\SkiaSharp.NativeAssets.macOS.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.Win32.2.88.9\build\net462\SkiaSharp.NativeAssets.Win32.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.Win32.2.88.9\build\net462\SkiaSharp.NativeAssets.Win32.targets')" />
+  <Import Project="..\packages\HarfBuzzSharp.NativeAssets.Linux.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Linux.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.Linux.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.Linux.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.Linux.NoDependencies.2.88.9\build\net462\SkiaSharp.NativeAssets.Linux.NoDependencies.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.Linux.NoDependencies.2.88.9\build\net462\SkiaSharp.NativeAssets.Linux.NoDependencies.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

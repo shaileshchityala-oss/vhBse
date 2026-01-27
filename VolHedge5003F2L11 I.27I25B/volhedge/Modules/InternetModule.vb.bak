@@ -1,0 +1,436 @@
+Imports System.Threading
+Module InternetModule
+
+    Public ObjLoginData As New ClsLoginData
+    Dim ED As New clsEnDe
+
+    Public Timer_Net_Interval As Integer = 30000
+    Public bool_Thr_GetInterNetDat As Boolean
+    Public resetEvents As ManualResetEvent()
+
+
+
+    Public gstr_ProductName As String = "VolHedge"
+    Public RegServerIP As String = "198.64.251.89,1433"
+    'Public RegServerIP As String = "172.16.12.56,1433"
+    Public GVar_LogIn_User As String
+    Public GVarSQLServerConnStr As String
+
+    Dim DtFo As New DataTable
+
+    Public Sub GetInternetData(ByVal strComp As Object)
+        Dim strCompany As String = ""
+        strCompany = CType(strComp, String).Split(",")(1)
+        Dim token_no As Long
+        Dim buy_price As Double
+        Dim sale_price As Double
+        Dim last_trade_price As Double
+
+        Dim eqtoken_no As Long
+        Dim eqbuy_price As Double
+        Dim eqsale_price As Double
+        Dim eqlast_trade_price As Double
+
+        Dim dttime As Date
+        dttime = Now
+        'For Each drow As DataRow In comptable.Select("", "company")
+        DtFo = HtmlPars.GetFoInterNetData(strCompany)
+        
+        For Each row As DataRow In DtFo.Rows
+
+            token_no = row("Token")
+            buy_price = 0
+            sale_price = 0
+            last_trade_price = row("LastPrice")
+
+            eqtoken_no = row("eqToken")
+            eqbuy_price = 0
+            eqsale_price = 0
+            eqlast_trade_price = row("UnderlyingValue")
+
+            If futall.Contains(token_no) Then
+                'Dim fltppr As Double
+                If fltpprice.Contains(token_no) Then
+                    fbuyprice.Item(token_no) = buy_price
+                    fsaleprice.Item(token_no) = sale_price
+                    fltpprice.Item(token_no) = last_trade_price
+                Else
+                    fbuyprice.Add(token_no, buy_price)
+                    fsaleprice.Add(token_no, sale_price)
+                    fltpprice.Add(token_no, last_trade_price)
+                End If
+            Else
+                If ltpprice.Contains(token_no) Then
+                    buyprice.Item(token_no) = buy_price
+                    saleprice.Item(token_no) = sale_price
+                    ltpprice.Item(token_no) = last_trade_price
+                Else
+                    buyprice.Add(token_no, buy_price)
+                    saleprice.Add(token_no, sale_price)
+                    ltpprice.Add(token_no, last_trade_price)
+                End If
+            End If
+
+            REM Equity
+            If eqfutall.Contains(EQtoken_no) Then
+                If eltpprice.Contains(Eqtoken_no) Then
+                    ebuyprice.Item(Eqtoken_no) = Eqbuy_price
+                    esaleprice.Item(eqtoken_no) = eqsale_price
+                    eltpprice.Item(eqtoken_no) = eqlast_trade_price
+                Else
+                    ebuyprice.Add(eqtoken_no, eqbuy_price)
+                    esaleprice.Add(eqtoken_no, eqsale_price)
+                    eltpprice.Add(eqtoken_no, eqlast_trade_price)
+                End If
+                'If eqarray.Contains(token_no) Then
+                '    cal_eq(token_no)
+                'End If
+                'process cm data
+            End If
+        Next
+        'Next
+
+        '  MsgBox("From Date " & dttime.ToString & " To date " & Now.ToString & vbCrLf & DateDiff(DateInterval.Second, dttime, Now))
+        Dim index As Integer = CInt(CType(strComp, String).Split(",")(0))
+        resetEvents(index).[Set]()
+
+
+
+    End Sub
+
+    ''' <summary>
+    ''' process_fo_Net
+    ''' </summary>
+    ''' <remarks>This method call to receiving Data From Internet</remarks>
+    Private Sub process_fo_Net()
+        Dim token_no As Long
+        Dim buy_price As Double
+        Dim sale_price As Double
+        Dim last_trade_price As Double
+
+        If GVarIsNewBhavcopy = True Then
+            GVarIsNewBhavcopy = False
+        End If
+        'ED_fo = New clsEnDe
+        Dim Cmd As SqlClient.SqlCommand
+        Dim Dr As SqlClient.SqlDataReader
+        'Dr = DAL.DA_SQL.FillListFo("dbo.Sp_SelectFo '" & gVarInstanceID & "'") 'Objsql.SelectFoToken()
+
+        If DAL.DA_SQL._conFo.State = ConnectionState.Closed Then DAL.DA_SQL.open_Fo_connection()
+        Cmd = New SqlClient.SqlCommand("dbo.Sp_004 '" & gVarInstanceID & "'", DAL.DA_SQL._conFo)
+        Dr = Cmd.ExecuteReader()
+
+        While Dr.Read()
+            Try
+                'token_no = Val(Dr("token_no") & "")
+                'buy_price = Val(Dr("bprice") & "")
+                'sale_price = Val(Dr("sprice") & "")
+                'last_trade_price = Val(Dr("ltp") & "")
+
+                'If VarBCurrentDate < Val(Dr("cdate") & "") Then
+                '    VarBCurrentDate = Val(Dr("cdate") & "")
+                'End If
+                token_no = Val(Dr("F1") & "")
+                buy_price = ED.DFo(Dr("F2"))
+                sale_price = ED.DFo(Dr("F3"))
+                last_trade_price = ED.DFo(Dr("F4"))
+
+                If VarBCurrentDate < Val(ED.DFo(Dr("F6")) & "") Then
+                    VarBCurrentDate = Val(ED.DFo(Dr("F6")) & "")
+                End If
+
+                If VarBCurrentDate >= G_VarExpiryDate1 Then
+                    'ThreadReceive_cm.Abort()
+                    'ThreadReceive_Currency.Abort()
+                    'MsgBox("Please Contact Vendor, Trial Version Expired.", MsgBoxStyle.Exclamation)
+                    'Call SplashScreen1.Sub_Get_Version_TextFile()
+                    ''Application.Exit()
+                    'End
+                    'Exit Sub
+                    IsVersionExpire = True
+                    'ThreadReceive_fo.Abort()
+                    Application.Exit()
+                End If
+
+                If futall.Contains(token_no) Then
+
+                    'Dim fltppr As Double
+                    If fltpprice.Contains(token_no) Then
+                        fbuyprice.Item(token_no) = buy_price
+                        fsaleprice.Item(token_no) = sale_price
+                        fltpprice.Item(token_no) = last_trade_price
+                    Else
+                        fbuyprice.Add(token_no, buy_price)
+                        fsaleprice.Add(token_no, sale_price)
+                        fltpprice.Add(token_no, last_trade_price)
+                    End If
+
+                Else
+
+                    If ltpprice.Contains(token_no) Then
+                        buyprice.Item(token_no) = buy_price
+                        saleprice.Item(token_no) = sale_price
+                        ltpprice.Item(token_no) = last_trade_price
+                    Else
+                        buyprice.Add(token_no, buy_price)
+                        saleprice.Add(token_no, sale_price)
+                        ltpprice.Add(token_no, last_trade_price)
+                    End If
+
+                End If
+            Catch ex As Threading.ThreadAbortException
+                Threading.Thread.ResetAbort()
+            End Try
+        End While
+        Dr.Close()
+        Dr.Dispose()
+        'End If
+    End Sub
+    ''' <summary>
+    ''' process_cm_Net
+    ''' </summary>
+    ''' <remarks>This method call to receiving Data From SqlDb</remarks>
+    Private Sub process_cm_Net()
+        Dim token_no As Long
+        Dim buy_price As Double
+        Dim sale_price As Double
+        Dim last_trade_price As Double
+
+        'ED_cm = New clsEnDe
+        Dim Cmd As SqlClient.SqlCommand
+        Dim Dr As SqlClient.SqlDataReader
+        'Dr = DAL.DA_SQL.FillListEq("dbo.Sp_005 '" & gVarInstanceID & "'") 'Objsql.SelectEqToken()
+        If DAL.DA_SQL._conEq.State = ConnectionState.Closed Then DAL.DA_SQL.open_Eq_connection()
+        Cmd = New SqlClient.SqlCommand("dbo.Sp_013 '" & gVarInstanceID & "'", DAL.DA_SQL._conEq)
+        Dr = Cmd.ExecuteReader
+
+        While Dr.Read()
+            Try
+                If Dr("Typ") = "EQ" Then
+                    'token_no = Val(Dr("token_no") & "")
+                    'buy_price = Val(Dr("bprice") & "")
+                    'sale_price = Val(Dr("sprice") & "")
+                    'last_trade_price = Val(Dr("ltp") & "")
+                    token_no = Val(Dr("F1") & "")
+                    buy_price = ED.DEq(Dr("F2"))
+                    sale_price = ED.DEq(Dr("F3"))
+                    last_trade_price = ED.DEq(Dr("F4"))
+
+                    If VarBCurrentDate < Val(ED.DCur(Dr("F38")) & "") Then
+                        VarBCurrentDate = Val(ED.DCur(Dr("F38")) & "")
+                    End If
+
+                    If VarBCurrentDate >= G_VarExpiryDate1 Then
+                        'ThreadReceive_fo.Abort()
+                        'ThreadReceive_Currency.Abort()
+                        'MsgBox("Please Contact Vendor, Trial Version Expired.", MsgBoxStyle.Exclamation)
+                        'Call SplashScreen1.Sub_Get_Version_TextFile()
+                        ''Application.Exit()
+                        'End
+                        'Exit Sub
+                        IsVersionExpire = True
+                        Application.Exit()
+                        'ThreadReceive_cm.Abort()
+                    End If
+
+                    If eqfutall.Contains(token_no) Then
+                        If eltpprice.Contains(token_no) Then
+                            ebuyprice.Item(token_no) = buy_price
+                            esaleprice.Item(token_no) = sale_price
+                            eltpprice.Item(token_no) = last_trade_price
+                        Else
+                            ebuyprice.Add(token_no, buy_price)
+                            esaleprice.Add(token_no, sale_price)
+                            eltpprice.Add(token_no, last_trade_price)
+                        End If
+                        'If eqarray.Contains(token_no) Then
+                        '    cal_eq(token_no)
+                        'End If
+                        'process cm data
+                    End If
+                Else
+                    '=======================
+                    'token_no = Val(Dr("token_no") & "")
+                    'buy_price = Val(Dr("bprice") & "")
+                    'sale_price = Val(Dr("sprice") & "")
+                    'last_trade_price = Val(Dr("ltp") & "")
+
+                    token_no = Val(Dr("F1") & "")
+                    buy_price = ED.DCur(Dr("F2"))
+                    sale_price = ED.DCur(Dr("F3"))
+                    last_trade_price = ED.DCur(Dr("F4"))
+
+                    If VarBCurrentDate < Val(ED.DCur(Dr("F38")) & "") Then
+                        VarBCurrentDate = Val(ED.DCur(Dr("F38")) & "")
+                    End If
+
+                    If VarBCurrentDate >= G_VarExpiryDate1 Then
+                        'ThreadReceive_fo.Abort()
+                        'ThreadReceive_cm.Abort()
+                        'MsgBox("Please Contact Vendor, Trial Version Expired.", MsgBoxStyle.Exclamation)
+                        'Call SplashScreen1.Sub_Get_Version_TextFile()
+                        ''Application.Exit()
+                        'End
+                        'Exit Sub
+                        IsVersionExpire = True
+                        'ThreadReceive_Currency.Abort()
+                        Application.Exit()
+                    End If
+
+                    If Currfutall.Contains(token_no) Then
+                        'Dim fltppr As Double
+                        If Currfltpprice.Contains(token_no) Then
+                            Currfbuyprice.Item(token_no) = buy_price
+                            Currfsaleprice.Item(token_no) = sale_price
+                            Currfltpprice.Item(token_no) = last_trade_price
+                        Else
+                            Currfbuyprice.Add(token_no, buy_price)
+                            Currfsaleprice.Add(token_no, sale_price)
+                            Currfltpprice.Add(token_no, last_trade_price)
+                        End If
+                    Else
+                        If Currltpprice.Contains(token_no) Then
+                            Currbuyprice.Item(token_no) = buy_price
+                            Currsaleprice.Item(token_no) = sale_price
+                            Currltpprice.Item(token_no) = last_trade_price
+                        Else
+                            Currbuyprice.Add(token_no, buy_price)
+                            Currsaleprice.Add(token_no, sale_price)
+                            Currltpprice.Add(token_no, last_trade_price)
+                        End If
+                    End If
+                    '=====================
+                End If
+            Catch ex As Threading.ThreadAbortException
+                Threading.Thread.ResetAbort()
+            End Try
+        End While
+        Dr.Close()
+        Dr.Dispose()
+        'Return False
+        'Else
+        'Return False
+        'End If
+    End Sub
+    ''' <summary>
+    ''' process_Currency_Net
+    ''' </summary>
+    ''' <remarks>This method call to receiving SqlDB</remarks>
+    Private Sub process_Currency_Net()
+        Dim token_no As Long
+        Dim buy_price As Double
+        Dim sale_price As Double
+        Dim last_trade_price As Double
+
+        'ED_Currency = New clsEnDe
+        Dim Cmd As SqlClient.SqlCommand
+        Dim Dr As SqlClient.SqlDataReader
+        'Try
+        'Dr = DAL.DA_SQL.FillListCur("dbo.Sp_006 '" & gVarInstanceID & "'") 'Objsql.SelectCurToken()
+        If DAL.DA_SQL._conCur.State = ConnectionState.Closed Then DAL.DA_SQL.open_cur_connection()
+        Cmd = New SqlClient.SqlCommand("dbo.Sp_006 '" & gVarInstanceID & "'", DAL.DA_SQL._conCur)
+        Dr = Cmd.ExecuteReader
+
+        'Catch ex As Exception
+        '    MsgBox("Error")
+        'End Try
+        While Dr.Read()
+            Try
+                'token_no = Val(Dr("token_no") & "")
+                'buy_price = Val(Dr("bprice") & "")
+                'sale_price = Val(Dr("sprice") & "")
+                'last_trade_price = Val(Dr("ltp") & "")
+                token_no = Val(Dr("F1") & "")
+                buy_price = ED.DCur(Dr("F2"))
+                sale_price = ED.DCur(Dr("F3"))
+                last_trade_price = ED.DCur(Dr("F4"))
+
+                If VarBCurrentDate < Val(ED.DCur(Dr("F38")) & "") Then
+                    VarBCurrentDate = Val(ED.DCur(Dr("F38")) & "")
+                End If
+
+
+                If VarBCurrentDate >= G_VarExpiryDate1 Then
+                    'ThreadReceive_fo.Abort()
+                    'ThreadReceive_cm.Abort()
+                    'MsgBox("Please Contact Vendor, Trial Version Expired.", MsgBoxStyle.Exclamation)
+                    'Call SplashScreen1.Sub_Get_Version_TextFile()
+                    ''Application.Exit()
+                    'End
+                    'Exit Sub
+                    IsVersionExpire = True
+                    'ThreadReceive_Currency.Abort()
+                    Application.Exit()
+                End If
+
+                If Currfutall.Contains(token_no) Then
+                    'Dim fltppr As Double
+                    If Currfltpprice.Contains(token_no) Then
+                        Currfbuyprice.Item(token_no) = buy_price
+                        Currfsaleprice.Item(token_no) = sale_price
+                        Currfltpprice.Item(token_no) = last_trade_price
+                    Else
+                        Currfbuyprice.Add(token_no, buy_price)
+                        Currfsaleprice.Add(token_no, sale_price)
+                        Currfltpprice.Add(token_no, last_trade_price)
+                    End If
+                Else
+                    If Currltpprice.Contains(token_no) Then
+                        Currbuyprice.Item(token_no) = buy_price
+                        Currsaleprice.Item(token_no) = sale_price
+                        Currltpprice.Item(token_no) = last_trade_price
+                    Else
+                        Currbuyprice.Add(token_no, buy_price)
+                        Currsaleprice.Add(token_no, sale_price)
+                        Currltpprice.Add(token_no, last_trade_price)
+                    End If
+                End If
+            Catch ex As Threading.ThreadAbortException
+                Threading.Thread.ResetAbort()
+            End Try
+        End While
+        Dr.Close()
+        Dr.Dispose()
+        'End If
+    End Sub
+
+    Public Function decTable(ByVal entable As DataTable) As DataTable
+        Dim dt As New DataTable
+        dt = entable.Clone
+        Dim dr As DataRow
+        For Each edr As DataRow In entable.Rows
+            dr = dt.NewRow
+            For Each edc As DataColumn In entable.Columns
+                'If edc.ColumnName = "Id" Then
+                If edc.ColumnName = "F1" Then
+                    dr(edc.ColumnName) = edr(edc.ColumnName)
+                    'ElseIf edc.ColumnName.ToUpper = "ALLOWED" Or edc.ColumnName.ToUpper = "LIMITED" Then
+                ElseIf edc.ColumnName.ToUpper = "F7" Or edc.ColumnName.ToUpper = "F8" Then
+                    Try
+                        dr(edc.ColumnName) = CBool(clsUEnDe.FDec(edr(edc.ColumnName).ToString))
+                    Catch ex As Exception
+                        dr(edc.ColumnName) = CBool("FALSE")
+                    End Try
+                Else
+                    dr(edc.ColumnName) = clsUEnDe.FDec(edr(edc.ColumnName).ToString)
+                End If
+
+            Next
+            dt.Rows.Add(dr)
+        Next
+        Return dt
+    End Function
+
+    Public Sub WriteLog(ByVal str As String)
+        'Try
+        '    Dim FSPrcTikLogFile As IO.StreamWriter
+        '    FSPrcTikLogFile = New IO.StreamWriter(Application.StartupPath & "\FeserverLog.txt", True)
+        '    FSPrcTikLogFile.WriteLine(Date.Now.ToString & "|" & GVar_LogIn_User & "|" & str)
+        '    FSPrcTikLogFile.WriteLine(Date.Now.ToString & "|" & GVar_LogIn_User & "|" & Strings.StrDup(str.Length, "-"))
+        '    FSPrcTikLogFile.Close()
+        'Catch ex As Exception
+
+        'End Try
+
+    End Sub
+End Module

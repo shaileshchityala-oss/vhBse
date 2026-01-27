@@ -1,0 +1,334 @@
+Imports VolHedge.DAL
+Imports System.Data.SqlClient
+Public Class SqlDbProcess
+
+    'Public Sub AppendFoToken(ByVal token As Long)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@Instance", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    DA_SQL.AddParam("@token_no", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_InsertFoToken "
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+
+    'Public Sub AppendEQToken(ByVal token As Long)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@Instance", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    DA_SQL.AddParam("@token_no", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_InsertEqToken "
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+
+    'Public Sub AppendCurToken(ByVal token As Long)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@Instance", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    DA_SQL.AddParam("@token_no", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_InsertCurToken "
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+
+    'Public Sub DeleteFoToken(Optional ByVal token As Long = 0)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@Instance", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    DA_SQL.AddParam("@token_no", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_DeleteFoToken "
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+    'Public Sub DeleteEqToken(Optional ByVal token As Long = 0)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@Instance", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    DA_SQL.AddParam("@token_no", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_DeleteEqToken "
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+    'Public Sub DeleteCurToken(Optional ByVal token As Long = 0)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@Instance", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    DA_SQL.AddParam("@token_no", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_DeleteCurToken "
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+
+    'Public Sub AppendFoToken(ByVal token As Long)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@F1", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    DA_SQL.AddParam("@FF1", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_007"
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+
+    'Public Sub AppendEQToken(ByVal token As Long)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@F1", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    DA_SQL.AddParam("@F2", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_008"
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+
+    'Public Sub AppendCurToken(ByVal token As Long)
+    '    DA_SQL.ParamClear()
+    '    DA_SQL.AddParam("@F1", SqlDbType.VarChar, 25, gVarInstanceID)
+    '    DA_SQL.AddParam("@F2", SqlDbType.BigInt, 12, token)
+    '    DA_SQL.Cmd_Text = "dbo.Sp_009"
+    '    DA_SQL.ExecuteNonQuery()
+    'End Sub
+
+    Public Sub AppendFoToken(ByVal token As Long)
+        ''Write_Log2("AppendFoToken Process Start..")
+        ' If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+        'bool_SqlSeverExist = IsSqlSeverExist()
+        If bool_IsTelNet = True Then
+            ' If bool_SqlSeverExist = True Then
+            DA_SQL.IsConClose = True
+            DA_SQL.ParamClear()
+            DA_SQL.AddParam("@F1", SqlDbType.VarChar, 17, gVarInstanceID)
+            DA_SQL.AddParam("@FF1", SqlDbType.BigInt, 12, token)
+            DA_SQL.AddParam("@UCode", SqlDbType.NVarChar, 150, gvarInstanceCode)
+            DA_SQL.Cmd_Text = "dbo.Sp_007"
+            DA_SQL.ExecuteNonQuery()
+            DA_SQL.IsConClose = False
+            'End If
+        End If
+        ''Write_Log2("AppendFoToken Process Stop..")
+    End Sub
+    Public Sub AppendEQToken(ByVal token As Long)
+        ''Write_Log2("AppendEQToken Process Start..")
+        'If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+        'bool_SqlSeverExist = IsSqlSeverExist()
+        If bool_IsTelNet = True Then
+            '   If bool_SqlSeverExist = True Then
+            DA_SQL.IsConClose = True
+            DA_SQL.ParamClear()
+            DA_SQL.AddParam("@F1", SqlDbType.VarChar, 17, gVarInstanceID)
+            DA_SQL.AddParam("@F2", SqlDbType.BigInt, 12, token)
+            DA_SQL.AddParam("@UCode", SqlDbType.NVarChar, 150, gvarInstanceCode)
+            DA_SQL.Cmd_Text = "dbo.Sp_008"
+            DA_SQL.ExecuteNonQuery()
+            DA_SQL.IsConClose = False
+            'End If
+        End If
+        ' 'Write_Log2("AppendEQToken Process Stop..")
+    End Sub
+    Public Sub AppendCurToken(ByVal token As Long)
+        '  'Write_Log2("AppendCurToken Process Start..")
+        'If bool_IsTelNet = False Then CheckTelNet()
+
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+
+        '  bool_SqlSeverExist = IsSqlSeverExist()
+        If bool_IsTelNet = True Then
+            '    If bool_SqlSeverExist = True Then
+            DA_SQL.IsConClose = True
+            DA_SQL.ParamClear()
+            DA_SQL.AddParam("@F1", SqlDbType.VarChar, 25, gVarInstanceID)
+            DA_SQL.AddParam("@F2", SqlDbType.BigInt, 12, token)
+            DA_SQL.AddParam("@UCode", SqlDbType.NVarChar, 150, gvarInstanceCode)
+            DA_SQL.Cmd_Text = "dbo.Sp_009"
+            DA_SQL.ExecuteNonQuery()
+            DA_SQL.IsConClose = False
+        End If
+        'End If
+        ''Write_Log2("AppendCurToken Process Stop..")
+    End Sub
+
+    Public Sub DeleteFoTokens(Optional ByVal tokens As String = "")
+        ' 'Write_Log2("DeleteFoTokens Process Start..")
+        'If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+        '   bool_SqlSeverExist = IsSqlSeverExist()
+        If bool_IsTelNet = True Then
+            '    If bool_SqlSeverExist = True Then
+            DA_SQL.IsConClose = True
+            DA_SQL.ParamClear()
+            DA_SQL.AddParam("@F1", SqlDbType.VarChar, 25, gVarInstanceID)
+            DA_SQL.AddParam("@FF1", SqlDbType.VarChar, 1000, tokens)
+            DA_SQL.Cmd_Text = "dbo.Sp_032"
+            DA_SQL.ExecuteNonQuery()
+            DA_SQL.IsConClose = False
+        End If
+        'End If
+        ' 'Write_Log2("DeleteFoTokens Process Stop..")
+    End Sub
+    Public Sub DeleteFoToken(Optional ByVal token As Long = 0)
+        '  'Write_Log2("DeleteFoToken Process Start..")
+        'If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+        ' bool_SqlSeverExist = IsSqlSeverExist()
+        If bool_IsTelNet = True Then
+            '    If bool_SqlSeverExist = True Then
+            DA_SQL.IsConClose = True
+            DA_SQL.ParamClear()
+            DA_SQL.AddParam("@F1", SqlDbType.VarChar, 25, gVarInstanceID)
+            DA_SQL.AddParam("@FF1", SqlDbType.BigInt, 12, token)
+            DA_SQL.Cmd_Text = "dbo.Sp_010"
+            DA_SQL.ExecuteNonQuery()
+            DA_SQL.IsConClose = False
+        End If
+        'End If
+        ''Write_Log2("DeleteFoToken Process Stop..")
+    End Sub
+    Public Sub DeleteEqToken(Optional ByVal token As Long = 0)
+        '  'Write_Log2("DeleteEqToken Process Start..")
+        'If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+        '  bool_SqlSeverExist = IsSqlSeverExist()
+        If bool_IsTelNet = True Then
+            '  If bool_SqlSeverExist = True Then
+            DA_SQL.IsConClose = True
+            DA_SQL.ParamClear()
+            DA_SQL.AddParam("@F1", SqlDbType.VarChar, 25, gVarInstanceID)
+            DA_SQL.AddParam("@F2", SqlDbType.BigInt, 12, token)
+            DA_SQL.Cmd_Text = "dbo.Sp_011"
+            DA_SQL.ExecuteNonQuery()
+            DA_SQL.IsConClose = False
+            'End If
+        End If
+        ' 'Write_Log2("DeleteEqToken Process Stop..")
+    End Sub
+    Public Sub DeleteCurToken(Optional ByVal token As Long = 0)
+        '   'Write_Log2("DeleteCurToken Process Start..")
+        'If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+        '   bool_SqlSeverExist = IsSqlSeverExist()
+        If bool_IsTelNet = True Then
+            '  If bool_SqlSeverExist = True Then
+            DA_SQL.IsConClose = True
+            DA_SQL.ParamClear()
+            DA_SQL.AddParam("@F1", SqlDbType.VarChar, 25, gVarInstanceID)
+            DA_SQL.AddParam("@F2", SqlDbType.BigInt, 12, token)
+            DA_SQL.Cmd_Text = "dbo.Sp_012"
+            DA_SQL.ExecuteNonQuery()
+            DA_SQL.IsConClose = False
+            'End If
+        End If
+        '  'Write_Log2("DeleteCurToken Process Stop..")
+    End Sub
+
+    'Public Sub AppendFoTokens(ByRef tokens As String)
+    '    'DA_SQL.ParamClear()
+    '    'DA_SQL.AddParam("@F1", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    'DA_SQL.AddParam("@FF1", SqlDbType.VarChar, 0, tokens)
+    '    'DA_SQL.Cmd_Text = "dbo.Sp_028"
+    '    'DA_SQL.ExecuteNonQuery()
+    '    DA_SQL.Execute("dbo.Sp_028 '" & gVarInstanceID & "','" & tokens & "'")
+    'End Sub
+
+    'Public Sub AppendEQTokens(ByRef tokens As String)
+    '    'DA_SQL.ParamClear()
+    '    'DA_SQL.AddParam("@F1", SqlDbType.VarChar, 17, gVarInstanceID)
+    '    'DA_SQL.AddParam("@FF1", SqlDbType.VarChar, 0, tokens)
+    '    'DA_SQL.Cmd_Text = "dbo.Sp_029"
+    '    'DA_SQL.ExecuteNonQuery()
+    '    DA_SQL.Execute("dbo.Sp_029 '" & gVarInstanceID & "','" & tokens & "'")
+    'End Sub
+
+    'Public Sub AppendCurTokens(ByRef tokens As String)
+    '    'DA_SQL.ParamClear()
+    '    'DA_SQL.AddParam("@F1", SqlDbType.VarChar, 25, gVarInstanceID)
+    '    'DA_SQL.AddParam("@FF1", SqlDbType.VarChar, 0, tokens)
+    '    'DA_SQL.Cmd_Text = "dbo.Sp_030"
+    '    DA_SQL.Execute("dbo.Sp_030 '" & gVarInstanceID & "','" & tokens & "'")
+    '    'DA_SQL.ExecuteNonQuery()
+    'End Sub
+
+    Public Sub AppendFoTokens(ByRef tokens As String)
+        ''Write_Log2("AppendFoTokens Process Start..")
+        'DA_SQL.ParamClear()
+        'DA_SQL.AddParam("@F1", SqlDbType.VarChar, 17, gVarInstanceID)
+        'DA_SQL.AddParam("@FF1", SqlDbType.VarChar, 0, tokens)
+        'DA_SQL.Cmd_Text = "dbo.Sp_028"
+        'DA_SQL.ExecuteNonQuery()
+        'DA_SQL.AddParam("@UCode", SqlDbType.NVarChar, 150, gvarInstanceCode)
+        'If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+
+        If bool_IsTelNet = True Then
+
+            DA_SQL.IsConClose = True
+            DA_SQL.Execute("dbo.Sp_028 '" & gVarInstanceID & "','" & tokens & "','" & gvarInstanceCode & "'")
+            DA_SQL.IsConClose = False
+
+        End If
+        'DA_SQL.Execute("dbo.Sp_028 '" & gVarInstanceID & "','" & tokens & "'")
+        ''Write_Log2("AppendFoTokens Process Stop..")
+    End Sub
+
+    Public Sub AppendEQTokens(ByRef tokens As String)
+        'DA_SQL.ParamClear()
+        'DA_SQL.AddParam("@F1", SqlDbType.VarChar, 17, gVarInstanceID)
+        'DA_SQL.AddParam("@FF1", SqlDbType.VarChar, 0, tokens)
+        'DA_SQL.Cmd_Text = "dbo.Sp_029"
+        'DA_SQL.ExecuteNonQuery()
+        ' 'Write_Log2("AppendEQTokens Process Start..")
+        'If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+
+        If bool_IsTelNet = True Then
+
+            DA_SQL.IsConClose = True
+            DA_SQL.Execute("dbo.Sp_029 '" & gVarInstanceID & "','" & tokens & "','" & gvarInstanceCode & "'")
+            DA_SQL.IsConClose = False
+
+        End If
+        'DA_SQL.Execute("dbo.Sp_029 '" & gVarInstanceID & "','" & tokens & "'")
+        ' 'Write_Log2("AppendEQTokens Process Stop..")
+    End Sub
+
+    Public Sub AppendCurTokens(ByRef tokens As String)
+        ' 'Write_Log2("AppendCurTokens Process Start..")
+        'DA_SQL.ParamClear()
+        'DA_SQL.AddParam("@F1", SqlDbType.VarChar, 25, gVarInstanceID)
+        'DA_SQL.AddParam("@FF1", SqlDbType.VarChar, 0, tokens)
+        'DA_SQL.Cmd_Text = "dbo.Sp_030"
+        ' If bool_IsTelNet = False Then CheckTelNet()
+        If bool_IsTelNet = False Then
+            bool_IsTelNet = CheckTelNet()
+        End If
+        If bool_IsTelNet = True Then
+
+            DA_SQL.IsConClose = True
+            DA_SQL.Execute("dbo.Sp_030 '" & gVarInstanceID & "','" & tokens & "','" & gvarInstanceCode & "'")
+            DA_SQL.IsConClose = False
+
+        End If
+        'DA_SQL.Execute("dbo.Sp_030 '" & gVarInstanceID & "','" & tokens & "'")
+        'DA_SQL.ExecuteNonQuery()
+        ' 'Write_Log2("AppendCurTokens Process Stop..")
+    End Sub
+
+    'Public Function SelectFoToken() As SqlDataReader
+    '    Return DA_SQL.FillListFo("dbo.Sp_SelectFo '" & gVarInstanceID & "'")
+    'End Function
+
+    ' Public Function SelectEqToken() As SqlDataReader
+    '     Return DA_SQL.FillListEq("dbo.Sp_SelectEq '" & gVarInstanceID & "'")
+    'End Function
+
+    'Public Function SelectCurToken() As SqlDataReader
+    '    Return DA_SQL.FillListCur("dbo.Sp_SelectCur '" & gVarInstanceID & "'")
+    'End Function
+
+    Public Sub New()
+        'IsValidConnection = DA_SQL.IsValidConnection()
+    End Sub
+
+End Class

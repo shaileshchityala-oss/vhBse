@@ -1,0 +1,1780 @@
+Imports VolHedge.OptionG
+Public Class allcompany
+    Public temptable As New DataTable
+    Public totmtm As Double
+    Public allcompanyflag As Boolean = False
+    Dim flgEnter As Boolean = False
+    Dim rowNo As Integer
+    Dim trd As New trading
+    Dim Mrateofinterast As Double = 0
+
+    Private Sub Save_Size_location()
+        Dim separators As String() = {"_"}
+        Dim grpExpiryDateX As Integer, grpExpiryDateY As Integer
+        Dim Height As Integer, Width As Integer
+        grpExpiryDateX = Me.Location.X
+        grpExpiryDateY = Me.Location.Y
+        Height = Me.Height
+        Width = Me.Width
+        ALLCOMPANYLOCATION = grpExpiryDateX.ToString() + "_" + grpExpiryDateY.ToString()
+        trd.Update_setting(ALLCOMPANYLOCATION.Trim(), "ALLCOMPANYLOCATION")
+
+
+        ALLCOMPANYSIZE = Height.ToString() + "_" + Width.ToString()
+        Me.Size = New System.Drawing.Point(Height, Width)
+
+        trd.Update_setting(ALLCOMPANYSIZE.Trim(), "ALLCOMPANYSIZE")
+    End Sub
+    Private Sub Load_Size_location()
+        If ALLCOMPANYLOCATION = "" Then
+        Else
+            Dim separators As String() = {"_"}
+            Dim grpExpiryDateX As Integer, grpExpiryDateY As Integer
+
+            Dim value As String = ALLCOMPANYLOCATION
+            Dim words As String() = value.Split(separators, StringSplitOptions.RemoveEmptyEntries)
+            Dim x As Integer, y As Integer
+            x = Integer.Parse(words(0))
+            y = Integer.Parse(words(1))
+
+            Me.Location = New Point(x, y)
+
+        End If
+        If ALLCOMPANYSIZE = "" Then
+        Else
+            Dim separators As String() = {"_"}
+
+            Dim value As String = ALLCOMPANYSIZE
+            Dim words As String() = value.Split(separators, StringSplitOptions.RemoveEmptyEntries)
+
+            Height = Double.Parse(words(0))
+            Width = Double.Parse(words(1))
+            '  Me.Size = New System.Drawing.Point(Height, Width)
+        End If
+    End Sub
+    Private Sub allcompany_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+        '  flgEnter = True
+        'Me.InvokePaintBackground (Nothing, Nothing)
+        '      SetFormating()
+        
+        If ALLCOMPANYLOCATION = "" Then
+        Else
+            Dim separators As String() = {"_"}
+            Dim grpExpiryDateX As Integer, grpExpiryDateY As Integer
+            'grpExpiryDateX = Me.Location.X
+            'grpExpiryDateY = Me.Location.Y
+            'ALLCOMPANYLOCATION = grpExpiryDateX.ToString() + "_" + grpExpiryDateY.ToString()
+            Dim value As String = ALLCOMPANYLOCATION
+            Dim words As String() = value.Split(separators, StringSplitOptions.RemoveEmptyEntries)
+            Dim x As Integer, y As Integer
+            x = Integer.Parse(words(0))
+            y = Integer.Parse(words(1))
+            Me.Location = New Point(x, y)
+            'Height = Double.Parse(words(2))
+            'Width = Double.Parse(words(3))
+            'Me.Size = New System.Drawing.Point(Height, Width)
+        End If
+
+        If ALLCOMPANYSIZE = "" Then
+        Else
+            Dim separators As String() = {"_"}
+
+            Dim value As String = ALLCOMPANYSIZE
+            Dim words As String() = value.Split(separators, StringSplitOptions.RemoveEmptyEntries)
+
+            Height = Double.Parse(words(0))
+            Width = Double.Parse(words(1))
+            ' Me.Size = New System.Drawing.Point(Height, Width)
+        End If
+    End Sub
+    Private Function SetFormating()
+        'Try
+
+
+        'For Each item As DataGridViewRow In grdtrad.Rows
+        '    If RefreshsummaryExpirywise = True Then
+        '        If item.Cells("Expiry").Value = "ALL" Or item.Cells("Expiry").Value.ToString.ToUpper() = "Total".ToUpper() Then
+        '            item.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 8, FontStyle.Bold, GraphicsUnit.Point)
+        '        Else
+        '            item.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 8, FontStyle.Regular, GraphicsUnit.Point)
+        '        End If
+        '        '    item.DefaultCellStyle.BackColor = Color.Khaki
+        '        '    item.DefaultCellStyle.ForeColor = Color.Black
+        '        'Else
+        '        '    If item.Cells("cp").Value = "E" Then
+        '        '        item.DefaultCellStyle.BackColor = Color.LightSalmon
+        '        '        item.DefaultCellStyle.ForeColor = Color.Black
+
+        '        '    Else
+        '        '        item.DefaultCellStyle.BackColor = Color.LightSteelBlue
+        '        '        item.DefaultCellStyle.ForeColor = Color.Black
+        '        '    End If
+        '        'End If
+        '        'If item.Cells("Expiry").Value = "Total" Then
+        '        '    item.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 8, FontStyle.Bold, GraphicsUnit.Point)
+        '        'Else
+        '        '    item.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 8, FontStyle.Regular, GraphicsUnit.Point)
+        '        'End If
+        '    Else
+
+        '        'If item.Cells("Expiry").Value = "ALL" Then
+        '        '    item.DefaultCellStyle.BackColor = Color.Khaki
+        '        '    item.DefaultCellStyle.ForeColor = Color.Black
+
+        '        'Else
+        '        '    item.DefaultCellStyle.BackColor = Color.LightSteelBlue
+        '        '    item.DefaultCellStyle.ForeColor = Color.Black
+        '        'End If
+
+        '        If item.Cells("Expiry").Value = "Total" Then
+        '            item.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 8, FontStyle.Bold, GraphicsUnit.Point)
+        '        Else
+        '            item.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 8, FontStyle.Regular, GraphicsUnit.Point)
+        '        End If
+        '    End If
+        '    Next
+        'Catch ex As Exception
+
+        'End Try
+    End Function
+    Private Sub allcompany_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        alertmsg = False
+        analysis.flgSummary = False
+    End Sub
+
+    Private Sub allcompany_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        Try
+
+        
+        alertmsg = False
+        analysis.flgSummary = False
+        VarFrmIsLoad = False
+        If ChkExpiryWise.Checked = True Then
+            trd.Update_setting("True", "RefreshsummaryExpirywise")
+        Else
+            trd.Update_setting("False", "RefreshsummaryExpirywise")
+            End If
+
+            If RbFixvol.Checked = True Then
+                trd.Update_setting("True", "RefreshsummaryFixVol ")
+                RefreshsummaryFixVol = True
+            Else
+                trd.Update_setting("False", "RefreshsummaryFixVol ")
+                RefreshsummaryFixVol = False
+            End If
+        'Delete_DataGrid_SummaryColumn_Setting()
+        '===== REM Change BY Payal Patel For Save Grid index to database==========
+            'Gsub_summaryGridColProfileSave()
+            '===== REM:End==========
+            '  Save_Size_location()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    
+    Private Sub Gsub_summaryGridColProfileSave()
+        Dim Dt As New DataTable
+        'Dim I As Integer
+        'Dim Str As String
+        Dt.Columns.Add("FormName")
+        Dt.Columns.Add("ColumnName")
+        Dt.Columns.Add("DisplayIndex")
+        Dt.Columns.Add("DisplayText")
+        Dt.Columns.Add("Width")
+        Dt.Columns.Add("IsVisible")
+        For cnt As Integer = 0 To grdtrad.ColumnCount - 1
+            'If
+            '.Columns(cnt).Visible = True Then
+            'Str = "Insert Into DataGrid_Column_Setting Values('Analysis','" & DGTrading.Columns(cnt).DataPropertyName & " '," & cnt & ", '" & DGTrading.Columns(cnt).HeaderText & " ', " & DGTrading.Columns(cnt).Width & ",1)"
+            Dt.Rows.Add("allcompany", grdtrad.Columns(cnt).Name, grdtrad.Columns(cnt).DisplayIndex, grdtrad.Columns(cnt).HeaderText, grdtrad.Columns(cnt).Width, grdtrad.Columns(cnt).Visible)
+            'End If
+        Next
+        Dt.AcceptChanges()
+        trd.Update_DataGrid_summaryColumn_Setting_OnWidthIndex(Dt)
+        Dt.Dispose()
+    End Sub
+
+    Public Sub showhidemenu()
+        
+        If grdtrad.Columns("Delta").Visible = True Then
+            DeltaToolStripMenuItem.ForeColor = Color.Blue
+            DeltaToolStripMenuItem.Checked = True
+        Else
+            DeltaToolStripMenuItem.ForeColor = Color.Black
+            DeltaToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("gamma").Visible = True Then
+
+            GammaToolStripMenuItem.ForeColor = Color.Blue
+            GammaToolStripMenuItem.Checked = True
+        Else
+
+            GammaToolStripMenuItem.ForeColor = Color.Black
+            GammaToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("vega").Visible = True Then
+
+            VegaToolStripMenuItem.ForeColor = Color.Blue
+            VegaToolStripMenuItem.Checked = True
+        Else
+
+            VegaToolStripMenuItem.ForeColor = Color.Black
+            VegaToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("theta").Visible = True Then
+
+            ThetaToolStripMenuItem.ForeColor = Color.Blue
+            ThetaToolStripMenuItem.Checked = True
+        Else
+
+            ThetaToolStripMenuItem.ForeColor = Color.Black
+            ThetaToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("deltaRs").Visible = True Then
+
+            DeltaRSToolStripMenuItem1.ForeColor = Color.Blue
+            DeltaRSToolStripMenuItem1.Checked = True
+        Else
+
+            DeltaRSToolStripMenuItem1.ForeColor = Color.Black
+            DeltaRSToolStripMenuItem1.Checked = False
+        End If
+        If grdtrad.Columns("grossmtm").Visible = True Then
+
+            GrossProfitToolStripMenuItem.ForeColor = Color.Blue
+            GrossProfitToolStripMenuItem.Checked = True
+        Else
+
+            GrossProfitToolStripMenuItem.ForeColor = Color.Black
+            GrossProfitToolStripMenuItem.Checked = False 
+        End If
+        If grdtrad.Columns("initMargin").Visible = True Then
+
+            ExToolStripMenuItem.ForeColor = Color.Blue
+            ExToolStripMenuItem.Checked = True
+        Else
+
+            ExToolStripMenuItem.ForeColor = Color.Black
+            ExToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("ExpoMargin").Visible = True Then
+
+            NetProfitToolStripMenuItem.ForeColor = Color.Blue
+            NetProfitToolStripMenuItem.Checked = True
+        Else
+
+            NetProfitToolStripMenuItem.ForeColor = Color.Black
+            NetProfitToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("TotalMargin").Visible = True Then
+
+            ProjMTMToolStripMenuItem1.ForeColor = Color.Blue
+            ProjMTMToolStripMenuItem1.Checked = True
+        Else
+
+            ProjMTMToolStripMenuItem1.ForeColor = Color.Black
+            ProjMTMToolStripMenuItem1.Checked = False
+        End If
+        If grdtrad.Columns("NetMTM").Visible = True Then
+
+            NetMTMToolStripMenuItem.ForeColor = Color.Blue
+            NetMTMToolStripMenuItem.Checked = True
+        Else
+
+            NetMTMToolStripMenuItem.ForeColor = Color.Black
+            NetMTMToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("Expense").Visible = True Then
+
+            ExpenseToolStripMenuItem.ForeColor = Color.Blue
+            ExpenseToolStripMenuItem.Checked = True
+        Else
+            ExpenseToolStripMenuItem.ForeColor = Color.Black
+            ExpenseToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("Scenario1").Visible = True Then
+
+            Scenario1ToolStripMenuItem.ForeColor = Color.Blue
+            Scenario1ToolStripMenuItem.Checked = True
+        Else
+
+            Scenario1ToolStripMenuItem.ForeColor = Color.Black
+            Scenario1ToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("LTP").Visible = True Then
+
+            LTPToolStripMenuItem.ForeColor = Color.Blue
+            LTPToolStripMenuItem.Checked = True
+        Else
+
+            LTPToolStripMenuItem.ForeColor = Color.Black
+            LTPToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("Scenario2").Visible = True Then
+
+            Scenario2ToolStripMenuItem.ForeColor = Color.Blue
+            Scenario2ToolStripMenuItem.Checked = True
+        Else
+
+            Scenario2ToolStripMenuItem.ForeColor = Color.Black
+            Scenario2ToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("Scenario2").Visible = True Then
+
+            Scenario2ToolStripMenuItem.ForeColor = Color.Blue
+            Scenario2ToolStripMenuItem.Checked = True
+        Else
+
+            Scenario2ToolStripMenuItem.ForeColor = Color.Black
+            Scenario2ToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("Volga").Visible = True Then
+
+            VolgaToolStripMenuItem.ForeColor = Color.Blue
+            VolgaToolStripMenuItem.Checked = True
+        Else
+
+            VolgaToolStripMenuItem.ForeColor = Color.Black
+            VolgaToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("Vanna").Visible = True Then
+
+            VannaToolStripMenuItem.ForeColor = Color.Blue
+            VannaToolStripMenuItem.Checked = True
+        Else
+
+            VannaToolStripMenuItem.ForeColor = Color.Black
+            VannaToolStripMenuItem.Checked = False
+        End If
+        If grdtrad.Columns("Qty").Visible = True Then
+
+            QtyToolStripMenuItem.ForeColor = Color.Blue
+            QtyToolStripMenuItem.Checked = True
+        Else
+
+            QtyToolStripMenuItem.ForeColor = Color.Black
+            QtyToolStripMenuItem.Checked = False
+        End If
+    End Sub
+
+    Private Sub savegridformatting()
+        Try
+
+            Dim DtGrid As New DataTable
+            grdtrad.Rows(0).DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 8, FontStyle.Bold, GraphicsUnit.Point)
+            grdtrad.Rows(0).Frozen = True
+            VarFrmIsLoad = True
+
+            Dim MyColor As System.Drawing.Color
+
+
+
+
+
+
+
+            'If GRID_FONTSTYLE = "" And GRID_FONTSIZE = 0 Then
+            'Else
+            '    grdtrad.DefaultCellStyle.Font = New Font(GRID_FONTTYPE, GRID_FONTSIZE, FontStyle.Regular, GraphicsUnit.Point)
+
+            '    btnfont.Font = New Font(GRID_FONTTYPE, GRID_FONTSIZE, FontStyle.Bold, GraphicsUnit.Point)
+            'End If
+            ''If GRID_FONTSIZE = "" Then
+            ''Else
+
+            ''End If
+            If GRID_FONTSTYLE = "" Then
+            Else
+                Dim f As FontStyle
+
+                f = DirectCast([Enum].Parse(GetType(FontStyle), GRID_FONTSTYLE, True), FontStyle)
+                grdtrad.DefaultCellStyle.Font = New Font(GRID_FONTTYPE, GRID_FONTSIZE, f, GraphicsUnit.Point)
+                btnfont.Font = New Font(GRID_FONTTYPE, GRID_FONTSIZE, f, GraphicsUnit.Point)
+            End If
+
+            If GRID_BACKCOLOR = "" Then
+
+                grdtrad.DefaultCellStyle.BackColor = Color.Black
+                grdtrad.RowsDefaultCellStyle.BackColor = Color.Black
+                'grdtrad.ColumnHeadersDefaultCellStyle.BackColor = MyColor
+                grdtrad.RowsDefaultCellStyle.BackColor = Color.Black
+                grdtrad.BackgroundColor = Color.Black
+
+                btnbackcolor.BackColor = Color.Black
+            Else
+                Dim VarColorCode As String() = GRID_BACKCOLOR.Split(","c)
+
+                MyColor = Color.FromArgb(Int16.Parse(VarColorCode(0)), Int16.Parse(VarColorCode(1)), Int16.Parse(VarColorCode(2)), Int16.Parse(VarColorCode(3)))
+
+                grdtrad.DefaultCellStyle.BackColor = MyColor
+                grdtrad.RowsDefaultCellStyle.BackColor = MyColor
+                'grdtrad.ColumnHeadersDefaultCellStyle.BackColor = MyColor
+                grdtrad.RowsDefaultCellStyle.BackColor = MyColor
+                grdtrad.BackgroundColor = MyColor
+                btnbackcolor.BackColor = MyColor
+            End If
+            If FONT_COLOR = "" Then
+
+
+                grdtrad.DefaultCellStyle.ForeColor = Color.White
+                btnforecolor.ForeColor = Color.White
+            Else
+                Dim VarColorCode As String() = FONT_COLOR.Split(","c)
+
+                MyColor = Color.FromArgb(Int16.Parse(VarColorCode(0)), Int16.Parse(VarColorCode(1)), Int16.Parse(VarColorCode(2)), Int16.Parse(VarColorCode(3)))
+
+                grdtrad.DefaultCellStyle.ForeColor = MyColor
+                btnforecolor.ForeColor = MyColor
+
+                Dim VarColorCode11 As String() = GRID_BACKCOLOR.Split(","c)
+
+                MyColor = Color.FromArgb(Int16.Parse(VarColorCode11(0)), Int16.Parse(VarColorCode11(1)), Int16.Parse(VarColorCode11(2)), Int16.Parse(VarColorCode11(3)))
+                For i As Integer = 0 To Me.grdtrad.Rows.Count - 1
+                    If Me.grdtrad.Rows(i).Cells("CP").Value = "E" And Me.grdtrad.Rows(i).Cells("EXPIRY").Value <> "ALL" Then
+                        Me.grdtrad.Rows(i).Cells("EXPIRY").Style.ForeColor = MyColor 'Color.Red
+                    End If
+                Next
+            End If
+
+            DtGrid = trd.GFun_SetGridSummaryColumnSetting(grdtrad)
+            If DtGrid.Rows.Count > 0 Then
+                Dim DvGrid As New DataView
+                DvGrid = DtGrid.DefaultView
+                DvGrid.RowFilter = "FormName='allcompany'"
+                DvGrid.Sort = "DisplayIndex"
+                Dim ColList() As String = {"ColumnName", "DisplayIndex", "Width", "IsVisible"}
+                For Each Dr As DataRow In DvGrid.ToTable(True, ColList).Rows
+                    'If Dr("ColumnName").ToString = "deltaval" Then MsgBox("A")
+
+                    If Dr("DisplayIndex") >= grdtrad.Columns.Count Then
+                        grdtrad.Columns(Dr("ColumnName").ToString).DisplayIndex = grdtrad.Columns.Count - 1
+                    Else
+                        grdtrad.Columns(Dr("ColumnName").ToString).DisplayIndex = Dr("DisplayIndex")
+                    End If
+                    grdtrad.Columns(Dr("ColumnName").ToString).Width = Dr("width")
+                    'MsgBox(Dr("ColumnName").ToString & "-" & Dr("DisplayIndex"))
+                    grdtrad.Columns(Dr("ColumnName").ToString).Visible = CBool(Dr("IsVisible"))
+
+                    Dim f As FontStyle
+
+                    f = DirectCast([Enum].Parse(GetType(FontStyle), GRID_FONTSTYLE, True), FontStyle)
+                    'grdtrad.Font =Font.f
+                    grdtrad.DefaultCellStyle.Font = New Font(GRID_FONTTYPE, GRID_FONTSIZE, f, GraphicsUnit.Point)
+                    '  f = DirectCast([Enum].Parse(GetType(FontStyle), GRID_FONTSTYLE, True), FontStyle)
+
+                    grdtrad.Columns(Dr("ColumnName").ToString).DefaultCellStyle.Font = New Font(GRID_FONTTYPE, GRID_FONTSIZE, f, GraphicsUnit.Point)
+                    'grdtrad.Columns(Dr("ColumnName").ToString).Visible = CBool(Dr("IsVisible"))
+                    'grdtrad.Columns(Dr("ColumnName").ToString).Visible = CBool(Dr("IsVisible"))
+
+                Next
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Public Shared VarFrmIsLoad As Boolean = False
+    Private Sub allcompany_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        If RefreshsummaryExpirywise = True Then
+            ChkExpiryWise.Checked = True
+        Else
+            ChkExpiryWise.Checked = False
+        End If
+
+        If RefreshsummaryFixVol = True Then
+            RbFixvol.Checked = True
+            RBmarketVol.Checked = False
+        Else
+            RbFixvol.Checked = False
+            RBmarketVol.Checked = True
+        End If
+        RefreshsummaryScenario = True
+        Mrateofinterast = Val(GdtSettings.Compute("max(SettingKey)", "SettingName='Rateofinterest'").ToString)
+        Dim DtGrid As New DataTable
+
+        'Dim dataView As New DataView(Gtbl_Summary_Analysis)
+        'dataView.Sort = " Company DESC"
+        'Gtbl_Summary_Analysis = dataView.ToTable()
+
+        If Gtbl_Summary_Analysis.Rows.Count = 0 Then Exit Sub
+
+
+        grdtrad.DataSource = Gtbl_Summary_Analysis
+
+
+
+        'grdtrad.Rows(0).DefaultCellStyle.BackColor = Color.LightSkyBlue
+
+        '===== REM Change BY Payal Patel For Save Grid index to database==========
+        savegridformatting()
+        grdtrad.Columns("Scenario1").Visible = False
+        grdtrad.Columns("Scenario2").Visible = False
+        grdtrad.Columns("MDate").Visible = False
+        showhidemenu()
+        Load_Size_location()
+        'Dim sortedindex As Integer = GetColName("Security", grdtrad)
+
+        'grdtrad.Sort(grdtrad.Columns(sortedindex), System.ComponentModel.ListSortDirection.Descending)
+
+        'grdtrad.Sort(grdtrad.Columns(sortedindex), System.ComponentModel.ListSortDirection.Ascending)
+
+        '   ===================REM:end==============================================
+        'Label2.Text = totmtm
+        'Label2.Refresh()
+    End Sub
+    Private Function GetColName(ByVal name As String, ByRef dgv As DataGridView) As Integer
+        Dim retVal As Integer
+
+        For Each col As DataGridViewColumn In dgv.Columns
+            If col.Name = name Then
+                retVal = col.Index
+                Exit For
+            End If
+        Next
+
+        Return retVal
+
+    End Function
+
+
+
+    Private Sub grdtrad_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles grdtrad.CellDoubleClick
+        Try
+            If grdtrad.Rows(e.RowIndex).Cells("company").Value.ToUpper() = "TOTAL" Then
+                Return
+            End If
+            ' Dim str As String = grdtrad.SelectedRows(e.RowIndex).Cells("Security").Value
+
+            If e.RowIndex = 0 Then Exit Sub
+            If analysis.compname = "Total" Then Exit Sub
+            analysis.compname = grdtrad.Rows(e.RowIndex).Cells("company").Value
+            analysis.TempChangeTAB()
+            Me.Close()
+        Catch ex As Exception
+
+        End Try
+        'If e.RowIndex = 0 Then Exit Sub
+        'analysis.compname = grdtrad.Rows(e.RowIndex - 1).Cells(0).Value
+        'analysis.TempChangeTAB()
+        'Me.Close()
+    End Sub
+
+    'Private Sub grdtrad_CellFormatting(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles grdtrad.CellFormatting
+
+    '    'If e.ColumnIndex > 0 Then
+    '    '    If grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Value < 0 Then
+    '    '        grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Red
+    '    '    ElseIf grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Value > 0 Then
+    '    '        grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Blue
+    '    '    Else
+    '    '        grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Black
+
+    '    '    End If
+    '    '    Label2.Text = val(IIf(IsDBNull(temptable.Compute("sum(grossmtm)", "")), 0, temptable.Compute("sum(grossmtm)", "")))
+    '    'End If
+    'End Sub
+
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        EXPORT_IMPORT_POSITION = Val(GdtSettings.Compute("max(SettingKey)", "SettingName='EXPORT_IMPORT_POSITION'").ToString)
+
+        If (EXPORT_IMPORT_POSITION = 2) Then
+            If grdtrad.Rows.Count > 0 Then
+
+                Dim savedi As New SaveFileDialog
+                savedi.Filter = "Files(*.XLS)|*.XLS"
+                If savedi.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    Dim grd(0) As DataGridView
+                    grd(0) = grdtrad
+                    Dim sname(0) As String
+                    sname(0) = "Summary"
+
+                    exporttoexcel(grd, savedi.FileName, sname, "other")
+                    MsgBox("Export Successfully")
+                    OPEN_Export_File(savedi.FileName)
+                End If
+            End If
+        ElseIf (EXPORT_IMPORT_POSITION = 1) Then
+
+            Dim savedi As New SaveFileDialog
+            savedi.Filter = "File(*.csv)|*.Csv"
+            If savedi.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Dim dt As DataTable
+                dt = CType(grdtrad.DataSource, DataTable)
+                Dim dtgrd As DataTable
+                Dim name(dt.Columns.Count) As String
+
+
+                Dim dr As DataRow
+                dtgrd = New DataTable
+                With dtgrd.Columns
+
+                    .Add("Security")
+                    .Add("Delta", GetType(Integer))
+                    .Add("Gamma", GetType(Double))
+                    .Add("Vega", GetType(Double))
+                    .Add("Theta", GetType(Integer))
+                    .Add("Volga", GetType(Double))
+                    .Add("Vanna", GetType(Double))
+                    .Add("Gross MTM", GetType(Double))
+                    .Add("Delta (Rs)", GetType(Double))
+                    .Add("Scenario1", GetType(Double))
+                    .Add("Scenario2", GetType(Double))
+                    .Add("initMargin", GetType(Double))
+                    .Add("ExpoMargin", GetType(Double))
+                    .Add("TotalMargin", GetType(Double))
+                End With
+
+                Dim cal As DataRow
+                dr = dtgrd.NewRow()
+                For Each dr5 As DataRow In dt.Rows
+                    cal = dtgrd.NewRow()
+
+                    cal("Security") = dr5("Company")
+                    cal("Delta") = dr5("Delta")
+                    cal("Gamma") = dr5("Gamma")
+                    cal("Vega") = dr5("Vega")
+                    cal("Theta") = dr5("Theta")
+                    cal("Volga") = dr5("Volga")
+                    cal("Vanna") = dr5("Vanna")
+                    cal("Gross MTM") = dr5("GrossMTM")
+                    cal("Delta (Rs)") = dr5("DeltaRs")
+                    cal("Scenario1") = dr5("Scenario1")
+                    cal("Scenario2") = dr5("Scenario2")
+                    cal("initMargin") = dr5("initMargin")
+                    cal("ExpoMargin") = dr5("ExpoMargin")
+                    cal("TotalMargin") = dr5("TotalMargin")
+
+                    dtgrd.Rows.Add(cal)
+
+                    dtgrd.AcceptChanges()
+
+                Next
+                exporttocsv(dtgrd, savedi.FileName, "other")
+                MsgBox("Export Successfully")
+                OPEN_Export_File(savedi.FileName)
+            End If
+        End If
+    End Sub
+
+    Private Sub allcompany_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+        Try
+
+
+            If e.KeyCode = Keys.Escape Then
+                'Me.Dispose()
+
+                Me.Close()
+            End If
+            If e.KeyCode = Keys.F11 Then
+                If grdtrad.Rows.Count > 0 Then
+                    Dim savedi As New SaveFileDialog
+                    savedi.Filter = "Files(*.XLS)|*.XLS"
+                    If savedi.ShowDialog = Windows.Forms.DialogResult.OK Then
+                        Dim grd(0) As DataGridView
+                        grd(0) = grdtrad
+                        Dim sname(0) As String
+                        sname(0) = "Summary"
+                        exporttoexcel(grd, savedi.FileName, sname, "other")
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+
+    Private Sub DeltaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeltaToolStripMenuItem.Click
+        If grdtrad.Columns("Delta").Visible = True Then
+            grdtrad.Columns("Delta").Visible = False
+
+            DeltaToolStripMenuItem.ForeColor = Color.Black
+            DeltaToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("Delta").Visible = True
+            DeltaToolStripMenuItem.ForeColor = Color.Blue
+            DeltaToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub GammaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GammaToolStripMenuItem.Click
+        If grdtrad.Columns("gamma").Visible = True Then
+            grdtrad.Columns("gamma").Visible = False
+            GammaToolStripMenuItem.ForeColor = Color.Black
+            GammaToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("gamma").Visible = True
+            GammaToolStripMenuItem.ForeColor = Color.Blue
+
+            GammaToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub VegaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VegaToolStripMenuItem.Click
+        If grdtrad.Columns("vega").Visible = True Then
+            grdtrad.Columns("vega").Visible = False
+            VegaToolStripMenuItem.ForeColor = Color.Black
+            VegaToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("vega").Visible = True
+            VegaToolStripMenuItem.ForeColor = Color.Blue
+
+            VegaToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub ThetaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ThetaToolStripMenuItem.Click
+        If grdtrad.Columns("theta").Visible = True Then
+            grdtrad.Columns("theta").Visible = False
+            ThetaToolStripMenuItem.ForeColor = Color.Black
+            ThetaToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("theta").Visible = True
+            ThetaToolStripMenuItem.ForeColor = Color.Blue
+
+            ThetaToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub GrossProfitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GrossProfitToolStripMenuItem.Click
+        If grdtrad.Columns("grossmtm").Visible = True Then
+            grdtrad.Columns("grossmtm").Visible = False
+            GrossProfitToolStripMenuItem.ForeColor = Color.Black
+            GrossProfitToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("grossmtm").Visible = True
+
+            GrossProfitToolStripMenuItem.ForeColor = Color.Blue
+            GrossProfitToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub ExToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExToolStripMenuItem.Click
+        If grdtrad.Columns("initMargin").Visible = True Then
+            grdtrad.Columns("initMargin").Visible = False
+            ExToolStripMenuItem.ForeColor = Color.Black
+            ExToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("initMargin").Visible = True
+
+            ExToolStripMenuItem.ForeColor = Color.Blue
+            ExToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+
+    Private Sub NetProfitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NetProfitToolStripMenuItem.Click
+        If grdtrad.Columns("ExpoMargin").Visible = True Then
+            grdtrad.Columns("ExpoMargin").Visible = False
+            NetProfitToolStripMenuItem.ForeColor = Color.Black
+            NetProfitToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("ExpoMargin").Visible = True
+            NetProfitToolStripMenuItem.ForeColor = Color.Blue
+
+            NetProfitToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub ProjMTMToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProjMTMToolStripMenuItem1.Click
+        If grdtrad.Columns("TotalMargin").Visible = True Then
+            grdtrad.Columns("TotalMargin").Visible = False
+            ProjMTMToolStripMenuItem1.ForeColor = Color.Black
+            ProjMTMToolStripMenuItem1.Checked = False
+        Else
+            grdtrad.Columns("TotalMargin").Visible = True
+            ProjMTMToolStripMenuItem1.ForeColor = Color.Blue
+            ProjMTMToolStripMenuItem1.Checked = True
+        End If
+    End Sub
+
+    Private Sub DeltaRSToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeltaRSToolStripMenuItem1.Click
+        If grdtrad.Columns("deltaRs").Visible = True Then
+            grdtrad.Columns("deltaRs").Visible = False
+            DeltaRSToolStripMenuItem1.ForeColor = Color.Black
+            DeltaRSToolStripMenuItem1.Checked = False
+        Else
+            grdtrad.Columns("deltaRs").Visible = True
+            DeltaRSToolStripMenuItem1.ForeColor = Color.Blue
+            DeltaRSToolStripMenuItem1.Checked = True
+        End If
+    End Sub
+
+
+    Private Sub grdtrad_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles grdtrad.KeyDown
+        Try
+
+
+            If e.KeyCode = Keys.Enter Then
+                'If rowNo = 0 Then Exit Sub
+                If grdtrad.Rows(rowNo).Cells(1).Value.ToUpper() = "TOTAL" Then
+                    Return
+                End If
+                analysis.compname = grdtrad.Rows(rowNo).Cells(0).Value
+                analysis.TempChangeTAB()
+                Me.Close()
+
+            Else
+                'Dim key As String = Asc(e.KeyCode)
+                'For Each row As DataGridViewRow In grdtrad.Rows
+                '    If row.Cells("company").ToString.Substring(1, 1) = key Then
+                '        ' grdtrad.
+
+                '    End If
+                'Next
+
+                'grdtrad.Rows(0).Item("compnay")
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Private Sub grdtrad_RowEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles grdtrad.RowEnter
+        'Try
+
+        '    rowNo = Convert.ToInt16(e.RowIndex)
+        'Catch ex As Exception
+        '    rowNo = 0
+        'End Try
+    End Sub
+
+    'Private Sub grdtrad_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles grdtrad.Scroll
+    '    If e.ScrollOrientation = ScrollOrientation.HorizontalScroll Then
+    '        grdtrad.HorizontalScrollingOffset = e.NewValue
+    '    End If
+    'End Sub
+
+    'Private Sub DGDealerwise_Scroll(ByVal sender As Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles DGDealerwise.Scroll
+    '    If e.ScrollOrientation = ScrollOrientation.HorizontalScroll Then
+    '        DGTotal.HorizontalScrollingOffset = e.NewValue
+    '    End If
+    'End Sub
+    'Private Sub DGTotal_Scroll(ByVal sender As Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles DGTotal.Scroll
+    '    If e.ScrollOrientation = ScrollOrientation.HorizontalScroll Then
+    '        DGDealerwise.HorizontalScrollingOffset = e.NewValue
+    '    End If
+    'End Sub
+
+    Private Sub grdtrad_DataError(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewDataErrorEventArgs) Handles grdtrad.DataError
+        'Return
+        '  On Error Resume Next
+    End Sub
+
+    Private Sub FunScenario()
+        allcompanyflag = True
+        sceallcompanyflag = True
+        save_applyMt()
+        Dim isGrossMTM As Boolean = False
+        If MsgBox("Want to transfer Gross MTM to scenario?", MsgBoxStyle.YesNo + MsgBoxStyle.Question) = MsgBoxResult.Yes Then
+            isGrossMTM = True
+        Else
+            isGrossMTM = False
+        End If
+        Dim scenario As New scenario1
+        REM: if no position of FO then give message and exit
+        If maintable.Rows.Count <= 0 Then
+            MsgBox("No Call, Put or Fut. data in selected tab!!", MsgBoxStyle.Exclamation)
+
+            If scenario.chkscenario = False Then 'if scenario's any instance is not opened
+                scenario.MdiParent = VolHedge.MDI 'Me.MdiParent
+                scenario.ShowForm(True)
+                'Call searchcompany()
+            Else
+                MDI.ToolStripMenuSearchComp.Visible = True
+                MDI.ToolStripcompanyCombo.Visible = True
+                scenario.Dispose()
+            End If
+            Exit Sub
+        End If
+        REM :initialize scenario table
+        'init_scenario()
+
+        Dim drow As DataRow
+        Dim i As Integer
+        i = 1
+        REM: add FO position to scenario table whose quantity<>0
+        Dim scename As String = ""
+
+        For Each dr As DataRow In comptable.Select()
+            Try
+                Dim ObjSceDetail As New scenarioDetail
+                ObjSceDetail.select_scenario_Name(dr("company").ToString())
+                ObjSceDetail.ScenarioName = dr("company").ToString()
+                scename = dr("company").ToString()
+                ObjSceDetail.Delete_scenario()
+                'ObjSceDetail.CMP = maintable.Compute("Max(flast)", "company='" & dr("company") & "' And mdate='" & CDate(maintable.Compute("min(mdate)", "company='" & dr("company") & "'")) & "'") 'Val(txtmkt.Text)
+
+
+                Dim eq As String = "E"
+                If maintable.Select("CP <>'" & eq & "' and company='" & dr("company") & "'").Length > 0 Then
+                    ObjSceDetail.CMP = maintable.Compute("Max(flast)", "company='" & dr("company") & "' And mdate='" & CDate(maintable.Compute("min(mdate)", "company='" & dr("company") & "'")) & "'") 'Val(txtmkt.Text)
+                    ObjSceDetail.EndDate = CDate(maintable.Compute("Max(mdate)", "company='" & dr("company") & "'") & "")
+                Else
+                    If IsDBNull(maintable.Compute("Max(last)", "company='" & dr("company") & "' ")) = True Then
+                        ObjSceDetail.CMP = 0
+                    Else
+                        ObjSceDetail.CMP = Convert.ToDouble(maintable.Compute("Max(last)", "company='" & dr("company") & "' "))
+                    End If
+
+                    ObjSceDetail.EndDate = Date.Now
+                End If
+
+                ObjSceDetail.CVol = 0 'Val(txtcvol.Text)
+                ObjSceDetail.PVol = 0 'Val(txtpvol.Text)
+                ObjSceDetail.StartDate = DateTime.Today() 'dttoday.Value.Date
+                'ObjSceDetail.EndDate = CDate(maintable.Compute("Max(mdate)", "company='" & dr("company") & "'") & "")
+
+                'If chkint.Checked = True Then
+                'ObjSceDetail.interval_type = "PER"
+                'Else
+                ObjSceDetail.interval_type = "VALUE"
+                'End If
+
+                'ObjSceDetail.interval = Val(txtinterval.Text)
+                ObjSceDetail.strike = 10 'Val(txtllimit.Text)
+                ObjSceDetail.MStrike = ObjSceDetail.CMP 'Val(TxtMStrike.Text)
+                ObjSceDetail.SelectedDate = ObjSceDetail.StartDate.ToString("MM/dd/yyyy") & ",Expiry " & ObjSceDetail.EndDate.ToString("MM/dd/yyyy") '08/28/2013,Expiry 09/26/2013 GetSelectedDate()
+                If isGrossMTM = True Then
+                    ObjSceDetail.PNL = Val(Format(IIf(IsDBNull(maintable.Compute("sum(grossmtm)", "company='" & dr("company") & "'")) = True, 0, maintable.Compute("sum(grossmtm)", "company='" & dr("company") & "'")), GrossMTMstr))
+                Else
+                    ObjSceDetail.PNL = 0
+                End If
+
+                ObjSceDetail.Insert_scenario()
+
+                ObjSceDetail.Delete_scenario_Detail()
+                Dim dtDetail As New DataTable
+                dtDetail = ObjSceDetail.dtScenarioDetail.Clone
+
+
+                For Each grow As DataRow In maintable.Select("company='" & dr("company").ToString() & "'")
+
+                    drow = dtDetail.NewRow()
+                    drow("ScenarioName") = dr("company").ToString()
+
+                    drow("Flag") = True 'CBool(grow.Cells("Active").Value)
+                    drow("StartDate") = DateTime.Today() 'CDate(grow.Cells("TimeI").Value)
+                    drow("Expiry") = CDate(grow("mdate")) 'CDate(grow.Cells("TimeII").Value)
+                    drow("CPF") = grow("cp") 'CStr(grow.Cells("CPF").Value)
+                    drow("Underlying") = Val(grow("flast") & "")
+                    drow("Strike") = Val(grow("strikes") & "")
+                    drow("Qty") = Val(grow("units") & "")
+                    drow("ltp") = Val(grow("last") & "")
+                    drow("Rate") = Val(grow("last") & "") 'Val(grow("traded") & "")
+                    drow("Vol") = Val(grow("lv") & "")
+                    drow("Delta") = Val(grow("delta") & "")
+                    drow("DelVal") = Val(grow("deltaval") & "")
+                    drow("Theta") = Val(grow("theta") & "")
+                    drow("Thval") = Val(grow("thetaval") & "")
+                    drow("Vega") = Val(grow("vega") & "")
+                    drow("Vgval") = Val(grow("vgval") & "")
+                    drow("Gamma") = Val(grow("gamma") & "")
+                    drow("Gamval") = Val(grow("gmval") & "")
+
+                    drow("Volga") = Val(grow("volga") & "")
+                    drow("Voval") = Val(grow("volgaval") & "")
+                    drow("Vanna") = Val(grow("vanna") & "")
+                    drow("Vaval") = Val(grow("vannaval") & "")
+
+                    drow("DifFactor") = 0 'Val(grow.Cells("DifFactor").Value)
+                    dtDetail.Rows.Add(drow)
+                    dtDetail.AcceptChanges()
+                Next
+                dtDetail.AcceptChanges()
+                ObjSceDetail.Insert_scenario_Detail(dtDetail)
+            Catch ex As Exception
+                MsgBox(" Error in Save Tab" & vbCrLf & ex.ToString)
+            End Try
+        Next
+
+        scenario.MdiParent = MDI
+        scenario.ShowForm(False, "")
+
+
+    End Sub
+    Private Sub save_applyMt()
+        REM Add Volga,Vanna in Alert Screen for give alert for volga ,vanna changes for given criteria
+        Dim ltppr As Double = 0
+        Dim ltppr1 As Double = 0
+        Dim fltppr As Double = 0
+        Dim mt As Double = 0
+        Dim iscall As Boolean = False
+        Dim alltp As Double = 0
+        Dim token As Long
+        Dim token1 As Long
+        Dim togrossmtm As Double = 0
+        Dim prgrossmtm As Double = 0
+        Dim prExp As Double = 0
+        Dim toExp As Double = 0
+        Dim texp As Double = 0
+        Dim isfut As Boolean = False
+
+
+        For Each mrow As DataRow In comptable.Select()
+            Dim DTTmp As DataTable = New DataView(maintable, "company='" & mrow("company") & "' AND mdate Is Not Null", "mdate", DataViewRowState.CurrentRows).ToTable(True, "ftoken")
+            Dim VarCompFToken As Long
+            If DTTmp.Rows.Count > 0 Then
+                VarCompFToken = DTTmp.Rows(0)("ftoken")
+            End If
+            For Each drow As DataRow In maintable.Select("company='" & mrow("company") & "'")
+                If CBool(drow("isliq")) = True Then
+                    token = CLng(drow("tokanno"))
+                    token1 = CLng(drow("token1"))
+                Else
+                    token = CLng(drow("tokanno"))
+                    token1 = 0
+                End If
+                If drow("iscurrency") = False Then
+                    fltppr = Val(fltpprice(CLng(drow("ftoken"))))
+                Else
+                    fltppr = Val(Currfltpprice(CLng(drow("ftoken"))))
+                End If
+
+                If ltpprice.Contains(token) Then
+                    If token1 > 0 Then
+                        ltppr = Val(ltpprice(token))
+                        ltppr1 = Val(ltpprice(token1))
+                    Else
+                        ltppr = Val(ltpprice(token))
+                        ltppr1 = 0
+                    End If
+                    mt = DateDiff(DateInterval.Day, Now.Date, CDate(drow("mdate")).Date)
+                    If Now.Date = CDate(drow("mdate")).Date Then
+                        mt = 0.5
+                    End If
+                    If drow("cp") = "C" Then
+                        iscall = True
+                    Else
+                        iscall = False
+                    End If
+                    If Val(drow("units")) <> 0 And (drow("cp") = "C" Or drow("cp") = "P") Then
+                        CalDataalert1(fltppr, Val(drow("strikes").ToString), ltppr, ltppr1, mt, iscall, isfut, drow, Val(drow("units").ToString))
+                    End If
+                End If
+
+                REM Change BY Alpesh For Currency
+                If Currltpprice.Contains(token) Then
+                    'If token = 1026 Then
+                    '    MsgBox("A")
+                    'End If
+                    If token1 > 0 Then
+                        ltppr = Val(Currltpprice(token))
+                        ltppr1 = Val(Currltpprice(token1))
+                    Else
+                        ltppr = Val(Currltpprice(token))
+                        ltppr1 = 0
+                    End If
+                    mt = DateDiff(DateInterval.Day, Now.Date, CDate(drow("mdate")).Date)
+                    If Now.Date = CDate(drow("mdate")).Date Then
+                        mt = 0.5
+                    End If
+                    If drow("cp") = "C" Then
+                        iscall = True
+                    Else
+                        iscall = False
+                    End If
+                    If Val(drow("units")) <> 0 And (drow("cp") = "C" Or drow("cp") = "P") Then
+                        If fltppr > 0 Then
+                            'If drow("Script").ToString.Contains("Eurinr") = True Then MsgBox("a")
+                            'Debug.Print(drow("Script"))
+                            CalDataalert1(fltppr, Val(drow("strikes").ToString), ltppr, ltppr1, mt, iscall, isfut, drow, Val(drow("units").ToString))
+
+                        End If
+                    End If
+                End If
+
+                Dim VarCompFLTP As Double = 0
+                If drow("iscurrency") = False Then
+                    VarCompFLTP = Val(fltpprice(VarCompFToken))
+                    drow("flast") = Val(fltpprice(CLng(drow("ftoken"))))
+
+                Else
+                    VarCompFLTP = Val(Currfltpprice(VarCompFToken))
+                    drow("flast") = Val(Currfltpprice(CLng(drow("ftoken"))))
+                End If
+
+                If IsDBNull(drow("deltaval")) Then
+                    drow("deltaval") = 0
+                End If
+
+                'drow("deltaRS") = Val(drow("deltaval") * VarCompFLTP)
+                'drow("deltaRS") = Val(IIf(IsDBNull(drow("deltaval")) = True, 0, drow("deltaval")) * VarCompFLTP)
+                'fltppr = Val(Ght_fltpprice(CInt(DRowScript("ftokan"))))
+                'If DRowScript("fltp") <> fltppr Then
+                '    DRowScript("fltp") = fltppr
+                '    VarFLTPChange = True
+                'Else
+                '    VarFLTPChange = False
+                'End If
+                '  drow("deltaRS") = Val(drow("units")) * Val(drow("traded"))
+                If drow("cp") = "F" Then
+                    isfut = True
+                    If drow("iscurrency") = False Then
+                        alltp = Val(fltpprice(CLng(drow("tokanno"))))
+
+                    Else
+                        alltp = Val(Currfltpprice(CLng(drow("tokanno"))))
+
+                    End If
+                    drow("last") = alltp
+
+                    If Val(drow("units")) = 0 Then
+                        drow("grossmtm") = -Val(drow("traded"))
+                    Else
+                        drow("grossmtm") = (Val(drow("units")) * (Val(alltp) - Val(drow("traded"))))
+                    End If
+                ElseIf drow("cp") = "E" Then
+                    isfut = False
+                    alltp = Val(eltpprice(CLng(drow("tokanno"))))
+                    drow("last") = alltp
+                    drow("flast") = 0
+                    If Val(drow("units")) = 0 Then
+                        drow("grossmtm") = -Val(drow("traded"))
+                    Else
+                        drow("grossmtm") = (Val(drow("units")) * (Val(alltp) - Val(drow("traded"))))
+                    End If
+                Else
+                    isfut = False
+                    If Val(drow("units")) = 0 Then
+                        drow("grossmtm") = -Val(drow("traded"))
+                    Else
+                        drow("grossmtm") = (Val(drow("units")) * (Val(drow("last")) - Val(drow("traded"))))
+                    End If
+                End If
+                maintable.AcceptChanges()
+            Next
+        Next
+
+    End Sub
+    Private Sub CalDataalert1(ByVal futval As Double, ByVal stkprice As Double, ByVal cpprice As Double, ByVal cpprice1 As Double, ByVal mT As Integer, ByVal mIsCall As Boolean, ByVal mIsFut As Boolean, ByVal drow As DataRow, ByVal qty As Double)
+        Try
+            Dim mDelta As Double
+            Dim mGama As Double
+            Dim mVega As Double
+            Dim mThita As Double
+            Dim mVolga As Double
+            Dim mVanna As Double
+            Dim mRah As Double
+
+
+            Dim mVolatility As Double
+            Dim tmpcpprice As Double = 0
+            Dim tmpcpprice1 As Double = 0
+            Dim mD1 As Double
+            Dim mD2 As Double
+
+            tmpcpprice = cpprice
+            tmpcpprice1 = cpprice1
+
+            mDelta = 0
+            mGama = 0
+            mVega = 0
+            mThita = 0
+            mVolga = 0
+            mVanna = 0
+            mRah = 0
+            mVolga = 0
+            mVanna = 0
+            mD1 = 0
+            mD2 = 0
+            Dim _mt As Double
+
+          
+              If DAYTIME_VOLANDGREEK_CAL = 1 Then
+                Dim _mmt As Double '// Not using this Veriable
+                _mt = Get_DayTime_mt(CDate(drow("mdate")).Date, _mmt)
+
+            Else
+
+                If mT = 0 Then
+                    _mt = 0.00001
+                Else
+                    _mt = (mT) / 365
+                End If
+            End If
+            If stkprice = 0 Then  'future volatility =0
+                mVolatility = 0
+            ElseIf tmpcpprice1 = 0 Then
+                mVolatility = Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, tmpcpprice, _mt, mIsCall, mIsFut, 0, 6)
+            Else
+                If mIsCall = True Then
+                    mVolatility = Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, tmpcpprice1, _mt, False, mIsFut, 0, 6)
+                Else
+                    mVolatility = Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, tmpcpprice1, _mt, True, mIsFut, 0, 6)
+                End If
+            End If
+
+            ' Try
+            If mVolatility = 0 Then
+                mVolatility = 0.1
+                mDelta = 1
+            Else
+                'mDelta = mDelta + (Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, mVolatility, _mt, mIsCall, mIsFut, 0, 1))
+                mDelta = mDelta + (Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, mVolatility, _mt, mIsCall, mIsFut, 0, 1))
+            End If
+
+
+
+            mGama = mGama + (Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, mVolatility, _mt, mIsCall, mIsFut, 0, 2))
+
+            mVega = mVega + (Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, mVolatility, _mt, mIsCall, mIsFut, 0, 3))
+
+            mThita = mThita + (Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, mVolatility, _mt, mIsCall, mIsFut, 0, 4))
+
+            mRah = mRah + (Greeks.Black_Scholes(futval, stkprice, Mrateofinterast, 0, mVolatility, _mt, mIsCall, mIsFut, 0, 5))
+
+            'Using Function 
+            mD1 = mD1 + CalD1(futval, stkprice, Mrateofinterast, mVolatility, _mt)
+            mD2 = mD2 + CalD2(futval, stkprice, Mrateofinterast, mVolatility, _mt)
+
+            mVolga = mVolga + CalVolga(mVega, mD1, mD2, mVolatility)
+            mVanna = mVanna + CalVanna(futval, mVega, mD1, mD2, mVolatility, _mt)
+
+
+            'drow("delta") = Math.Round(val(drow("delta")) + (val(Math.Round(mDelta, roundDelta)) * qty), roundDelta)
+            'drow("theta") = Math.Round(val(drow("theta")) + (val(Math.Round(mThita, roundTheta)) * qty), roundTheta)
+            'drow("vega") = Math.Round(val(drow("vega")) + (val(Math.Round(mVega, roundVega)) * qty), roundVega)
+            'drow("gamma") = Math.Round(val(drow("gamma")) + (val(Math.Round(mGama, roundGamma)) * qty), roundGamma)
+            drow("last") = cpprice
+            drow("lv") = mVolatility * 100
+            drow("deltaval") = Val(Math.Round(mDelta * qty, roundDelta_Val))
+            drow("vgval") = Val(Math.Round(mVega * qty, roundVega_Val))
+            drow("gmval") = Val(Math.Round(mGama * qty, roundGamma_Val))
+
+            drow("volgaval") = Val(Math.Round(mVolga * qty, roundVolga_Val))
+            drow("vannaval") = Val(Math.Round(mVanna * qty, roundVanna_Val))
+
+            If mThita < 0 Then
+                If Math.Abs(mThita) > cpprice Then
+                    mThita = -Math.Round(cpprice, roundTheta)
+                    'drow("thetaval") = Math.Round(mThita* qty, roundTheta_Val)
+                End If
+            Else
+                If Math.Abs(mThita) > cpprice Then
+                    mThita = Math.Round(cpprice, roundTheta)
+                    'drow("thetaval") = Math.Round(mThita * qty, roundTheta_Val)
+                End If
+            End If
+            drow("thetaval") = Val(Math.Round(mThita * qty, roundTheta_Val))
+
+
+            'Catch ex As Exception
+            '    MsgBox(ex.ToString)
+            ' End Try
+
+        Catch ex As Exception
+            MsgBox("futval = " & futval & vbCrLf _
+             & "stkprice = " & stkprice & vbCrLf _
+             & "ltppr = " & cpprice & vbCrLf _
+             & "ltppr1 = " & cpprice1 & vbCrLf _
+             & "qty = " & qty & vbCrLf _
+             & "script = " & drow("script") & vbCrLf & ex.ToString)
+        End Try
+
+
+    End Sub
+
+    Private Sub btnScenario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnScenario.Click
+        Call FunScenario()
+        sceallcompanyflag = False
+    End Sub
+
+    Private Sub NetMTMToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NetMTMToolStripMenuItem.Click
+        If grdtrad.Columns("NetMTM").Visible = True Then
+            grdtrad.Columns("NetMTM").Visible = False
+            NetMTMToolStripMenuItem.ForeColor = Color.Black
+            NetMTMToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("NetMTM").Visible = True
+            NetMTMToolStripMenuItem.ForeColor = Color.Blue
+            NetMTMToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub ExpenseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExpenseToolStripMenuItem.Click
+        If grdtrad.Columns("Expense").Visible = True Then
+            grdtrad.Columns("Expense").Visible = False
+            ExpenseToolStripMenuItem.ForeColor = Color.Black
+            ExpenseToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("Expense").Visible = True
+            ExpenseToolStripMenuItem.ForeColor = Color.Blue
+            ExpenseToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub Scenario1ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Scenario1ToolStripMenuItem.Click
+        If grdtrad.Columns("Scenario1").Visible = True Then
+            grdtrad.Columns("Scenario1").Visible = False
+            Scenario1ToolStripMenuItem.ForeColor = Color.Black
+            Scenario1ToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("Scenario1").Visible = True
+            Scenario1ToolStripMenuItem.ForeColor = Color.Blue
+            Scenario1ToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub Scenario2ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Scenario2ToolStripMenuItem.Click
+        If grdtrad.Columns("Scenario2").Visible = True Then
+            grdtrad.Columns("Scenario2").Visible = False
+            Scenario2ToolStripMenuItem.ForeColor = Color.Black
+            Scenario2ToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("Scenario2").Visible = True
+            Scenario2ToolStripMenuItem.ForeColor = Color.Blue
+            Scenario2ToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub BtnrefreshScenario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnrefreshScenario.Click
+        RefreshsummaryScenario = True
+    End Sub
+
+    Private Sub ContextMenuStrip1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub ContextMenuStrip1_Opening(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs)
+
+    End Sub
+
+    Private Sub VolgaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VolgaToolStripMenuItem.Click
+        If grdtrad.Columns("Volga").Visible = True Then
+            grdtrad.Columns("Volga").Visible = False
+            VolgaToolStripMenuItem.ForeColor = Color.Black
+            VolgaToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("Volga").Visible = True
+            VolgaToolStripMenuItem.ForeColor = Color.Blue
+            VolgaToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub VannaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VannaToolStripMenuItem.Click
+        If grdtrad.Columns("Vanna").Visible = True Then
+            grdtrad.Columns("Vanna").Visible = False
+            VannaToolStripMenuItem.ForeColor = Color.Black
+            VannaToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("Vanna").Visible = True
+            VannaToolStripMenuItem.ForeColor = Color.Blue
+            VannaToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    Private Sub ContextMenuStrip1_Opening_1(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
+
+    End Sub
+
+    Private Sub ChkExpiryWise_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChkExpiryWise.CheckedChanged
+        If ChkExpiryWise.Checked Then
+            RefreshsummaryExpirywise = True
+
+            'objanalysis.summary()
+            'If flgprocesssummary = False Then
+            allcompany1()
+            '  grdtrad.DataSource = Nothing
+            ' grdtrad.DataSource = Gtbl_Summary_Analysis_ExpiryWise
+            Try
+
+                grdtrad.Columns("Scenario1").Visible = False
+                grdtrad.Columns("Scenario2").Visible = False
+                grdtrad.Columns("MDate").Visible = False
+                grdtrad.Columns("Month").Visible = False
+            Catch ex As Exception
+
+            End Try
+            'End If
+        Else
+
+
+            RefreshsummaryExpirywise = False
+            allcompany1()
+            ' grdtrad.DataSource = Nothing
+            ' grdtrad.DataSource = Gtbl_Summary_Analysis
+            grdtrad.Columns("Scenario1").Visible = False
+            grdtrad.Columns("Scenario2").Visible = False
+            grdtrad.Columns("MDate").Visible = False
+            grdtrad.Columns("Month").Visible = False
+        End If
+        'If flgprocesssummary = False Then
+        ' objanalysis.allcompany()
+        ' End If
+
+
+
+
+
+        savegridformatting()
+
+
+    End Sub
+
+    'Private Sub grdtrad_CellFormatting(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles grdtrad.CellFormatting
+    '    'Try
+
+    '    '    If RefreshsummaryExpirywise = True Then
+    '    '        If grdtrad.Rows(e.RowIndex).Cells("Expiry").Value = "ALL" Then
+    '    '            grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.BackColor = Color.Khaki
+    '    '            grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Black
+    '    '        Else
+    '    '            If grdtrad.Rows(e.RowIndex).Cells("cp").Value = "E" Then
+    '    '                grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.BackColor = Color.LightSalmon
+    '    '                grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Black
+
+    '    '            Else
+    '    '                grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.BackColor = Color.LightSteelBlue
+    '    '                grdtrad.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.ForeColor = Color.Black
+    '    '            End If
+    '    '        End If
+    '    '    End If
+    '    'Catch ex As Exception
+
+    '    'End Try
+    'End Sub
+
+
+
+    Private Sub grdtrad_RowsAdded(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewRowsAddedEventArgs) Handles grdtrad.RowsAdded
+        'Try
+
+        '    SetFormating()
+        'Catch ex As Exception
+
+        'End Try
+    End Sub
+
+    Private Sub ChkcalFixvol_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub RBmarketVol_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBmarketVol.CheckedChanged
+        If RBmarketVol.Checked = True Then
+            RefreshsummaryFixVol = False
+        Else
+            RefreshsummaryFixVol = True
+        End If
+    End Sub
+
+    Private Sub RbFixvol_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RbFixvol.CheckedChanged
+        If RbFixvol.Checked = True Then
+            RefreshsummaryFixVol = True
+        Else
+            RefreshsummaryFixVol = False
+        End If
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub grdtrad_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles grdtrad.CellContentClick
+        If e.RowIndex < 0 Then
+            Return
+        End If
+        'Dim colidx As Integer = grdtrad.CurrentCell.ColumnIndex
+        'Dim colnm As String = grdtrad.Columns(colidx).Name
+        If grdtrad.CurrentCell.OwningColumn.Name = "IsSelected" Then
+
+
+            If grdtrad.Rows(e.RowIndex).Cells("IsSelected").Value.ToString().ToUpper() = "TRUE" Then
+                If grdtrad.Rows(e.RowIndex).Cells("expiry").Value.ToString().ToUpper() = "ALL" Then
+
+
+                    For Each drow As DataRow In Gtbl_Summary_Analysis.Select(" company='" & grdtrad.Rows(e.RowIndex).Cells("Company").Value.ToString().ToUpper() & "' and expiry='ALL'")
+                        drow("IsSelected") = False
+                    Next
+                End If
+            ElseIf grdtrad.Rows(e.RowIndex).Cells("IsSelected").Value.ToString().ToUpper() = "FALSE" Then
+                If grdtrad.Rows(e.RowIndex).Cells("expiry").Value.ToString().ToUpper() = "ALL" Then
+
+
+                    For Each drow As DataRow In Gtbl_Summary_Analysis.Select(" company='" & grdtrad.Rows(e.RowIndex).Cells("Company").Value.ToString().ToUpper() & "' and expiry='ALL'")
+                        drow("IsSelected") = True
+                    Next
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub btnrefreshsummary_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnrefreshsummary.Click
+        Refreshsummary = True
+        If ChkExpiryWise.Checked Then
+            RefreshsummaryExpirywise = True
+
+            'objanalysis.summary()
+            'If flgprocesssummary = False Then
+            allcompany1()
+            '  grdtrad.DataSource = Nothing
+            ' grdtrad.DataSource = Gtbl_Summary_Analysis_ExpiryWise
+            Try
+
+                grdtrad.Columns("Scenario1").Visible = False
+                grdtrad.Columns("Scenario2").Visible = False
+                grdtrad.Columns("MDate").Visible = False
+                grdtrad.Columns("Month").Visible = False
+            Catch ex As Exception
+
+            End Try
+            'End If
+        Else
+
+
+            RefreshsummaryExpirywise = False
+            allcompany1()
+            ' grdtrad.DataSource = Nothing
+            ' grdtrad.DataSource = Gtbl_Summary_Analysis
+            grdtrad.Columns("Scenario1").Visible = False
+            grdtrad.Columns("Scenario2").Visible = False
+            grdtrad.Columns("MDate").Visible = False
+            grdtrad.Columns("Month").Visible = False
+        End If
+        'If flgprocesssummary = False Then
+        ' objanalysis.allcompany()
+        ' End If
+
+        SetFormating()
+    End Sub
+
+    Private Sub SplitContainer1_SplitterMoved(ByVal sender As System.Object, ByVal e As System.Windows.Forms.SplitterEventArgs) Handles SplitContainer1.SplitterMoved
+
+    End Sub
+
+    Private Sub SetFormattingToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SetFormattingToolStripMenuItem.Click
+        pnlcolor.Visible = True
+    End Sub
+
+    Private Sub btnapply_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnapply.Click
+        Try
+
+
+            GRID_BACKCOLOR = btnbackcolor.BackColor.A.ToString() + "," + btnbackcolor.BackColor.R.ToString() + "," + btnbackcolor.BackColor.G.ToString() + "," + btnbackcolor.BackColor.B.ToString()
+            FONT_COLOR = btnforecolor.ForeColor.A.ToString() + "," + btnforecolor.ForeColor.R.ToString() + "," + btnforecolor.ForeColor.G.ToString() + "," + btnforecolor.ForeColor.B.ToString()
+            Dim MyColor As System.Drawing.Color
+            If GRID_BACKCOLOR = "" Then
+
+                '  grdtrad.Columns("grossmtm").DefaultCellStyle.BackColor = Color.Indigo
+                grdtrad.DefaultCellStyle.BackColor = Color.Black
+                btnbackcolor.BackColor = Color.Black
+            Else
+                Dim VarColorCode As String() = GRID_BACKCOLOR.Split(","c)
+
+                MyColor = Color.FromArgb(Int16.Parse(VarColorCode(0)), Int16.Parse(VarColorCode(1)), Int16.Parse(VarColorCode(2)), Int16.Parse(VarColorCode(3)))
+
+                grdtrad.DefaultCellStyle.BackColor = MyColor
+                grdtrad.RowsDefaultCellStyle.BackColor = MyColor
+                'grdtrad.ColumnHeadersDefaultCellStyle.BackColor = MyColor
+                grdtrad.RowsDefaultCellStyle.BackColor = MyColor
+                grdtrad.BackgroundColor = MyColor
+                btnbackcolor.BackColor = MyColor
+                'For i As Integer = 0 To grdtrad.Columns.Count - 1
+                '    grdtrad.Columns(i).DefaultCellStyle.BackColor = MyColor
+                'Next
+            End If
+            
+            If FONT_COLOR = "" Then
+
+                grdtrad.DefaultCellStyle.ForeColor = Color.Black
+                btnforecolor.ForeColor = Color.Black
+            Else
+                Dim VarColorCode As String() = FONT_COLOR.Split(","c)
+
+                MyColor = Color.FromArgb(Int16.Parse(VarColorCode(0)), Int16.Parse(VarColorCode(1)), Int16.Parse(VarColorCode(2)), Int16.Parse(VarColorCode(3)))
+
+                grdtrad.DefaultCellStyle.ForeColor = MyColor
+                btnforecolor.ForeColor = MyColor
+
+            End If
+
+           
+
+
+            ' grdtrad.Font = FontDialog1.Font
+            trd.Uid = GdtSettings.Select("SettingName='GRID_BACKCOLOR'")(0).Item("Uid")
+            trd.SettingName = "GRID_BACKCOLOR"
+            trd.SettingKey = GRID_BACKCOLOR
+            trd.Update_setting()
+
+            trd.Uid = GdtSettings.Select("SettingName='FONT_COLOR'")(0).Item("Uid")
+            trd.SettingName = "FONT_COLOR"
+            trd.SettingKey = FONT_COLOR
+            trd.Update_setting()
+
+
+            GRID_FONTSIZE = btnfont.Font.Size
+            GRID_FONTSTYLE = btnfont.Font.Style.ToString()
+            GRID_FONTTYPE = btnfont.Font.Name.ToString()
+
+            trd.Uid = GdtSettings.Select("SettingName='GRID_FONTSIZE'")(0).Item("Uid")
+            trd.SettingName = "GRID_FONTSIZE"
+            trd.SettingKey = GRID_FONTSIZE
+            trd.Update_setting()
+
+
+            trd.Uid = GdtSettings.Select("SettingName='GRID_FONTSTYLE'")(0).Item("Uid")
+            trd.SettingName = "GRID_FONTSTYLE"
+            trd.SettingKey = GRID_FONTSTYLE
+            trd.Update_setting()
+
+
+            trd.Uid = GdtSettings.Select("SettingName='GRID_FONTTYPE'")(0).Item("Uid")
+            trd.SettingName = "GRID_FONTTYPE"
+            trd.SettingKey = GRID_FONTTYPE
+            trd.Update_setting()
+            savegridformatting()
+            pnlcolor.Visible = False
+        Catch ex As Exception
+
+        End Try
+        pnlcolor.Visible = False
+    End Sub
+
+    Private Sub btngmtm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbackcolor.Click
+        'If ColorDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+        '    btngmtm.BackColor = ColorDialog1.Color
+        'End If
+    End Sub
+
+    Private Sub btnnetmtm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnforecolor.Click, btnfont.Click
+        'If ColorDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+        '    btnnetmtm.ForeColor = ColorDialog1.Color
+        'End If
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        pnlcolor.Visible = False
+    End Sub
+
+    Private Sub LTPToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LTPToolStripMenuItem.Click
+        If grdtrad.Columns("LTP").Visible = True Then
+            grdtrad.Columns("LTP").Visible = False
+            LTPToolStripMenuItem.ForeColor = Color.Black
+            LTPToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("LTP").Visible = True
+            LTPToolStripMenuItem.ForeColor = Color.Blue
+            LTPToolStripMenuItem.Checked = True
+        End If
+    End Sub
+
+    
+
+   
+
+    Private Sub SaveProfileToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveProfileToolStripMenuItem.Click
+        Dim dtgrid As New DataTable
+        trd.Exec_Qry("Delete From DataGrid_SummaryColumn_Setting")
+        Try
+
+
+            DtGrid = trd.GFun_SetGridSummaryColumnSetting(grdtrad)
+            If DtGrid.Rows.Count > 0 Then
+                Dim DvGrid As New DataView
+                DvGrid = DtGrid.DefaultView
+                DvGrid.RowFilter = "FormName='allcompany'"
+                DvGrid.Sort = "DisplayIndex"
+                Dim ColList() As String = {"ColumnName", "DisplayIndex", "Width", "IsVisible"}
+                For Each Dr As DataRow In DvGrid.ToTable(True, ColList).Rows
+                    'If Dr("ColumnName").ToString = "deltaval" Then MsgBox("A")
+
+                    If Dr("DisplayIndex") >= grdtrad.Columns.Count Then
+                        grdtrad.Columns(Dr("ColumnName").ToString).DisplayIndex = grdtrad.Columns.Count - 1
+                    Else
+                        grdtrad.Columns(Dr("ColumnName").ToString).DisplayIndex = Dr("DisplayIndex")
+                    End If
+                    grdtrad.Columns(Dr("ColumnName").ToString).Width = Dr("width")
+                    'MsgBox(Dr("ColumnName").ToString & "-" & Dr("DisplayIndex"))
+                    grdtrad.Columns(Dr("ColumnName").ToString).Visible = CBool(Dr("IsVisible"))
+
+
+                Next
+            End If
+            Gsub_summaryGridColProfileSave()
+            MessageBox.Show("Save Successfully...")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub allcompany_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseClick
+
+    End Sub
+
+    Private Sub allcompany_Move(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Move
+
+    End Sub
+
+    Private Sub allcompany_LocationChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.LocationChanged
+      
+    End Sub
+
+    Private Sub allcompany_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseDown
+      
+    End Sub
+
+    Private Sub allcompany_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseMove
+        'Dim separators As String() = {"_"}
+        'Dim grpExpiryDateX As Integer, grpExpiryDateY As Integer
+        'grpExpiryDateX = Me.Location.X
+        'grpExpiryDateY = Me.Location.Y
+        'ALLCOMPANYLOCATION = grpExpiryDateX + "_" + grpExpiryDateY
+        'Dim value As String = ALLCOMPANYLOCATION
+        'Dim words As String() = value.Split(separators, StringSplitOptions.RemoveEmptyEntries)
+        'Dim x As Integer, y As Integer
+        'x = Integer.Parse(words(0))
+        'y = Integer.Parse(words(1))
+        'Me.Location = New Point(x, y)
+    End Sub
+
+    Private Sub allcompany_BackgroundImageChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.BackgroundImageChanged
+
+    End Sub
+
+    Private Sub browsebackcolor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles browsebackcolor.Click
+        If ColorDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            btnbackcolor.BackColor = ColorDialog1.Color
+        End If
+    End Sub
+
+    Private Sub browseforecolor_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles browseforecolor.Click
+        If ColorDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            btnforecolor.ForeColor = ColorDialog1.Color
+        End If
+    End Sub
+
+    Private Sub btnfontformatting_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfontformatting.Click
+        Dim fontDialog1 As New FontDialog()
+
+        'fontDialog1.ShowColor = True
+        fontDialog1.ShowEffects = False
+        fontDialog1.ScriptsOnly = False
+        '   fontDialog1.ShowDialog = False
+        'fontDialog1.ShowColor = True
+
+        If fontDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            btnfont.Font = fontDialog1.Font
+        End If
+    End Sub
+
+    Private Sub SaveLocationToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveLocationToolStripMenuItem.Click
+        Save_Size_location()
+        Load_Size_location()
+    End Sub
+
+    Private Sub QtyToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QtyToolStripMenuItem.Click
+
+        If grdtrad.Columns("Qty").Visible = True Then
+            grdtrad.Columns("Qty").Visible = False
+
+            QtyToolStripMenuItem.ForeColor = Color.Black
+            QtyToolStripMenuItem.Checked = False
+        Else
+            grdtrad.Columns("Qty").Visible = True
+            QtyToolStripMenuItem.ForeColor = Color.Blue
+            QtyToolStripMenuItem.Checked = True
+        End If
+    End Sub
+End Class

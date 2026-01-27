@@ -1,0 +1,651 @@
+Imports Microsoft.Win32
+Imports System.Management
+
+Imports System.Runtime.InteropServices
+Imports System.Net
+Imports System.Net.Sockets
+Imports System.Text
+Imports system.Threading
+Imports VolHedge.DAL
+Imports System.Data
+
+
+Public NotInheritable Class SplashScreenUsrLic
+    'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
+    '  of the Project Designer ("Properties" under the "Project" menu).
+
+    Dim VarIsAMC As Boolean = False
+    Dim VarAppVersion As String = ""
+
+
+    Dim MothrBoardSrNo As String = ""
+    Dim HDDSrNoStr As String = ""
+    Dim ProcessorSrNoStr As String = ""
+
+
+    Dim DTUserMasterde As New DataTable
+
+    <DllImport("UniqueID.dll", CallingConvention:=CallingConvention.Cdecl)> _
+   Private Shared Function GetProcessorSeialNumber(ByVal str As Boolean) As String
+    End Function
+    <DllImport("UniqueID.dll", CallingConvention:=CallingConvention.Cdecl)> _
+    Private Shared Function LoadDiskInfo() As String
+    End Function
+
+    <DllImport("Code.dll", CallingConvention:=CallingConvention.Cdecl)> _
+   Private Shared Function GenerateKey(ByVal strKey1 As String, ByVal strKey2 As String) As String
+    End Function
+    <DllImport("Code.dll", CallingConvention:=CallingConvention.Cdecl)> _
+   Private Shared Function GenerateActKey(ByVal str As String) As String
+    End Function
+    <DllImport("ReadLicence.dll", CallingConvention:=CallingConvention.Cdecl)> _
+    Private Shared Sub ReadServiceFile()
+    End Sub
+    <DllImport("ReadLicence.dll", CallingConvention:=CallingConvention.Cdecl)> _
+    Private Shared Function GetActkey(ByVal StrUserCode As String) As String
+    End Function
+    <DllImport("ReadLicence.dll", CallingConvention:=CallingConvention.Cdecl)> _
+        Private Shared Function GetExpiryDate(ByVal StrUserCode As String) As String
+    End Function
+    <DllImport("ReadLicence.dll", CallingConvention:=CallingConvention.Cdecl)> _
+    Private Shared Function GetAMCCheck(ByVal StrUserCode As String) As String
+    End Function
+    <DllImport("ReadLicence.dll", CallingConvention:=CallingConvention.Cdecl)> _
+    Private Shared Function GetLicenceVersion(ByVal StrUserCode As String) As String
+    End Function
+    <DllImport("ReadLicence.dll", CallingConvention:=CallingConvention.Cdecl)> _
+     Private Shared Function IsFound(ByVal StrUserCode As String) As Boolean
+    End Function
+    <DllImport("ReadLicence.dll", CallingConvention:=CallingConvention.Cdecl)> _
+     Private Shared Function GetNoOfDealer(ByVal StrUserCode As String) As String
+    End Function
+
+    'Private Sub wait(ByVal interval As Integer)
+    '    Dim sw As New Stopwatch
+    '    sw.Start()
+    '    Do While sw.ElapsedMilliseconds < interval
+    '        ' Allows UI to remain responsive
+    '        ' Application.DoEvents()
+    '        SendKeys.Flush()
+    '    Loop
+    '    sw.Stop()
+    'End Sub
+
+
+    ''' <summary>
+    '''  getmbserial
+    ''' </summary>
+    ''' <returns>Return Motherboard Serial No.</returns>
+    ''' <remarks>Get Serial Number of Mother Board </remarks>
+    Private Function getmbserial() As String
+        REM Read Serial No. From Mother-Board
+        Dim searcher As New ManagementObjectSearcher("SELECT  SerialNumber FROM Win32_BaseBoard")
+        Dim information As ManagementObjectCollection = searcher.[Get]()
+        For Each obj As ManagementObject In information
+            For Each data As PropertyData In obj.Properties
+                'Console.WriteLine("{0} = {1}", data.Name, data.Value)
+                'Return data.Value
+                Return data.Value
+            Next
+        Next
+        REM End
+        searcher.Dispose()
+    End Function
+
+    Private Sub SplashScreenUsrLic_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+
+    End Sub
+
+    Private Sub SplashScreenUsrLic_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            'If GBoxUserMaster.Visible Then
+            SendKeys.Send("{Tab}")
+            'Else
+            '    Call btnLogIn_Click(btnLogIn, New EventArgs)
+            'End If
+
+        ElseIf e.KeyCode = Keys.Escape Then
+            'If GBoxUserMaster.Visible Then
+            Call btnCancel_Click(btnCancel, New EventArgs)
+            'Else
+
+            'End If
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' SplashScreen1_Load
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks>WHen this method call to Timer Enable</remarks>
+    Private Sub SplashScreen1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'wait(1000)
+lbl:
+        Try
+            Dim client As New Net.Sockets.TcpClient(RegServerIP.Split(",")(0), RegServerIP.Split(",")(1))
+        Catch ex As Exception
+            If MsgBox("Internet is Down.       " & vbCrLf & "Do you want to retry?", MsgBoxStyle.RetryCancel) = MsgBoxResult.Retry Then
+                GoTo lbl
+            Else
+                Application.Exit()
+                End
+            End If
+        End Try
+
+        If Not ChkSQLConn() Then
+            MsgBox("Internet is Down.")
+            End
+        End If
+
+        DTUserMasterde = ObjLoginData.Select_User_Master(False)
+        Timer1.Enabled = True
+        lblAMCText.Text = ""
+        lblAMCText.Refresh()
+    End Sub
+
+    Public Shared StartUpExpire_Date As Date = clsGlobal.SetExpDate(DateSerial(2016, 12, 31)) ' CDate("2012-12-31") 'CDate("2011-04-30")
+
+    ''' <summary>
+    ''' PictureBox3_Click
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks>Set the Version Type and Expiry date
+    ''' Generate User Code using Motherboard Serial Number,Processort Serial Number and Hard Disk Number and checking that user code in Licence file of client version
+    ''' Fill Global datatable from database
+    ''' All Settings which is already applied after check Version type and expiry date checking
+    ''' </remarks>
+    Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
+        AppLicMode = "NETLIC"
+        Timer1.Enabled = False
+        '        gVarInstanceID = "V-" & FunG_GetMACAddress()
+        gVarInstanceID = "B-" & FunG_GetMACAddress() 'change by payal patel
+
+        'obj = Microsoft.Win32.Registry.GetValue("HKEY_CURRENT_USER\Control Panel\International", "sShortDate", "MMM/dd/yyyy")
+        'Registry.SetValue("HKEY_CURRENT_USER\Control Panel\International", "sShortDate", "MM/dd/yyyy")
+        '==========================================keval chakalasiya(15-2-2010)
+
+        REM This block Set Master Expiry and Version title to global variable 
+        GVar_Master_Expiry = clsGlobal.Expire_Date
+        GVar_Version_Title = MDI.Text.Trim
+        REM End
+
+        Try
+            REM Check Expiry date againest System date
+            If Today >= CDate(clsGlobal.Expire_Date) Then
+                MsgBox("Please Contact Vendor, Version Expired.", MsgBoxStyle.Exclamation)
+                Call clsGlobal.Sub_Get_Version_TextFile()
+                Application.Exit()
+                End
+                Exit Sub
+            End If
+            REM End
+
+            MothrBoardSrNo = Microsoft.VisualBasic.Left(Trim(getmbserial()), 20)
+            HDDSrNoStr = LoadDiskInfo()
+            ProcessorSrNoStr = GetProcessorSeialNumber(False)
+
+            If (MothrBoardSrNo.Trim = "" Or UCase(MothrBoardSrNo.Trim) = UCase("BASE BOARD SERIAL NUMBER")) And HDDSrNoStr.Trim = "" Then
+                MsgBox("Code cannot be generated.", MsgBoxStyle.Critical)
+                End
+            End If
+            If (MothrBoardSrNo.Trim = "" Or UCase(MothrBoardSrNo.Trim) = UCase("BASE BOARD SERIAL NUMBER")) And ProcessorSrNoStr.Trim = "" Then
+                MsgBox("Code cannot be generated.", MsgBoxStyle.Critical)
+                End
+            End If
+            If HDDSrNoStr.Trim = "" And ProcessorSrNoStr.Trim = "" Then
+                MsgBox("Code cannot be generated.", MsgBoxStyle.Critical)
+                End
+            End If
+
+            REM Generate User code using DSS.dll
+            'VarUserCode = Client_encry.Client_encry.get_client_key(HDDSrNoStr, MothrBoardSrNo, ProcessorSrNoStr, "S10XQ6BJ4G8S26JSN")
+            REM End
+
+            gvarInstanceCode = gVarInstanceID & "|" & My.Computer.Name & "|" & My.User.Name
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Application.Exit()
+        End Try
+        
+        Me.Cursor = Cursors.WaitCursor
+
+        Call clsGlobal.LoadInitializeData()
+
+        Me.Cursor = Cursors.Default
+
+    End Sub
+
+
+
+    ''' <summary>
+    '''  Varify_Act_Key
+    ''' </summary>
+    ''' <param name="VarUserCode">To Pass generated user code generated by DSS dll</param>
+    ''' <returns></returns>
+    ''' <remarks>Find Activation Key Liecnce genrate according to passing User Code. This function read Expiry Date, Version name and AMC flag from Licence file</remarks>
+    Private Function Varify_Act_Key(ByVal VarUserCode As String) As Boolean
+        REM to skip Rendom char generat
+        Dim ArrSkipChar As New ArrayList
+        ArrSkipChar.Add(2)
+        ArrSkipChar.Add(4)
+        ArrSkipChar.Add(6)
+        ArrSkipChar.Add(8)
+        Dim VarActualCode As String = ""
+        For i As Integer = 0 To VarUserCode.Length - 1
+            If ArrSkipChar.Contains(i + 1) = False Then
+                VarActualCode &= VarUserCode.Chars(i)
+            End If
+        Next
+        REM END
+
+        Call ReadServiceFile()
+        Dim VarActKey = GenerateActKey(VarUserCode).Substring(0, VarUserCode.Length)
+        Dim VarTempActkey As String = ""
+        For i As Integer = 0 To VarActKey.Length - 5
+            If ArrSkipChar.Contains(i + 1) = False Then
+                VarTempActkey &= VarActKey.Chars(i)
+            End If
+        Next
+        If IsFound(VarActualCode) = False Then
+            Return False
+        Else
+            Dim VarStrActKey As String = GetActkey(VarActualCode).Substring(0, VarActualCode.Length)
+            Dim VarLicActkey As String = ""
+            For i As Integer = 0 To VarStrActKey.Length - 1
+                If ArrSkipChar.Contains(i + 1) = False Then
+                    VarLicActkey &= VarStrActKey.Chars(i)
+                End If
+            Next
+            If VarTempActkey <> VarLicActkey Then
+                Return False
+            Else
+                Dim sExpire_Date = GetExpiryDate(VarActualCode)
+                Dim sdate() As String
+                sdate = sExpire_Date.ToString.Split("/")
+                clsGlobal.Expire_Date = DateSerial(sdate(2), sdate(0), sdate(1))
+                G_VarExpiryDate = IIf(clsGlobal.Expire_Date > G_VarExpiryDate, G_VarExpiryDate, clsGlobal.Expire_Date)
+                G_VarExpiryDate1 = DateDiff(DateInterval.Second, CDate("1-1-1980"), G_VarExpiryDate)
+                VarIsAMC = CBool(GetAMCCheck(VarActualCode).Substring(0, 1))
+                VarAppVersion = GetLicenceVersion(VarActualCode)
+                G_VarNoOfDealer = GetNoOfDealer(VarActualCode)
+            End If
+        End If
+        Return True
+    End Function
+
+    Private Function Varify_User() As Boolean
+        Dim sExpire_Date As String
+        Dim isAllowed As String = "False"
+        If Not DTUserMasterde.Select("F21='" & MothrBoardSrNo & "' And F22='" & HDDSrNoStr & "' And F23='" & ProcessorSrNoStr & "' And F2='" & txtUserName.Text & "' And F3='" & txtPassword.Text & "' And F6='" & gstr_ProductName & "'").Length > 0 Then
+            MsgBox("Invalid User!!!" & vbCrLf & "Contact Your Vendor.")
+            WriteLog("Update Existing User='" & txtUserId.Text & "' information by " & GVar_LogIn_User & "")
+            txtUserName.Focus()
+            Return False
+            Exit Function
+        End If
+
+        For Each drow As DataRow In DTUserMasterde.Select("F21='" & MothrBoardSrNo & "' And F22='" & HDDSrNoStr & "' And F23='" & ProcessorSrNoStr & "' And F2='" & txtUserName.Text & "' And F3='" & txtPassword.Text & "' And F6 = '" & gstr_ProductName & "'")
+            sExpire_Date = drow("F9")
+            isAllowed = drow("F7")
+
+
+
+            ObjLoginData.Userid = drow("F2")
+            ObjLoginData.pwd = drow("F3")
+
+            ObjLoginData.Username = drow("F4")
+            ObjLoginData.Address = drow("F13")
+            ObjLoginData.Mobile = drow("F14")
+            ObjLoginData.Email = drow("F15")
+            ObjLoginData.DOB = drow("F16")
+
+            ObjLoginData.Firm = drow("F5")
+            ObjLoginData.FirmAddress = drow("F18")
+            ObjLoginData.FirmContactNo = drow("F19")
+            ObjLoginData.Reference = drow("F20")
+
+            ObjLoginData.Product = drow("F6")
+            ObjLoginData.Allowed = drow("F7")
+            ObjLoginData.Limited = drow("F8")
+            ObjLoginData.ExDate = drow("F9")
+            ObjLoginData.Status = drow("F10")
+
+            ObjLoginData.M = drow("F21")
+            ObjLoginData.H = drow("F22")
+            ObjLoginData.P = drow("F23")
+
+            ObjLoginData.City = drow("F24")
+
+
+
+            Dim sdate() As String
+            sdate = sExpire_Date.ToString.Split("/")
+            clsGlobal.Expire_Date = DateSerial(sdate(2), sdate(1), sdate(0))
+            G_VarExpiryDate = IIf(clsGlobal.Expire_Date > G_VarExpiryDate, G_VarExpiryDate, clsGlobal.Expire_Date)
+            G_VarExpiryDate1 = DateDiff(DateInterval.Second, CDate("1-1-1980"), G_VarExpiryDate)
+            'VarIsAMC = CBool(GetAMCCheck(VarActualCode).Substring(0, 1))
+            'VarAppVersion = GetLicenceVersion(VarActualCode)
+            'G_VarNoOfDealer = GetNoOfDealer(VarActualCode)
+        Next
+
+        If Convert.ToBoolean(isAllowed) = False Then
+            MsgBox("User Blocked!!!" & vbCrLf & "Contact Your Vendor.")
+            Return False
+            Exit Function
+        End If
+
+
+        REM Check Expiry date againest Tradedate
+        If Today >= CDate(G_VarExpiryDate) Then
+            MsgBox("Please Contact Vendor, Version Expired.", MsgBoxStyle.Exclamation)
+            Call clsGlobal.Sub_Get_Version_TextFile()
+            'Application.Exit()
+            Return False
+            Exit Function
+        End If
+
+
+        Return True
+    End Function
+
+    ''' <summary>
+    '''  Timer1_Tick
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks>call picture box click event and Timer Stop </remarks>
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        'Dim Tik As Long = System.Environment.TickCount
+        'FSPrcTikLogFile.WriteLine("Change Tab: " & (Math.Floor(System.Environment.TickCount - lngTik) / 1000))
+        'lngTik = System.Environment.TickCount
+
+        'Dim Dt As Date = Now
+        Call PictureBox3_Click(sender, e)
+        Timer1.Enabled = False
+        'MsgBox(DateDiff(DateInterval.Second, Dt, Now))
+    End Sub
+
+    Public Sub New()
+
+        ' This call is required by the Windows Form Designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Private Sub lblAMCText_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblAMCText.Click
+
+    End Sub
+
+    Private Sub btnLogIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogIn.Click
+
+lbl:
+        Try
+            Dim client As New Net.Sockets.TcpClient(RegServerIP.Split(",")(0), RegServerIP.Split(",")(1))
+        Catch ex As Exception
+            If MsgBox("Internet is Down.       " & vbCrLf & "Do you want to retry?", MsgBoxStyle.RetryCancel) = MsgBoxResult.Retry Then
+                GoTo lbl
+            Else
+                Application.Exit()
+                End
+            End If
+        End Try
+
+
+        If ObjLoginData.GetTodayDate().date <> Today.Date Then
+            MsgBox("Please Set Your System Date.", MsgBoxStyle.OkOnly, "VolHedge")
+            'Application.Exit()
+            'End
+            Exit Sub
+        End If
+
+
+        REM Check Expiry date Check with System data
+        If Today >= CDate(clsGlobal.Expire_Date) Then
+            MsgBox("Please Contact Vendor, Version Expired.", MsgBoxStyle.Exclamation)
+            Call clsGlobal.Sub_Get_Version_TextFile()
+            Application.Exit()
+            End
+            Exit Sub
+        End If
+        REM End
+
+        
+
+
+        REM This block check generated user code exist in Licence file. If exist then continue otherwise display Key.txt file
+        If Varify_User() = False Then
+            'Application.Exit()
+            Exit Sub
+        End If
+        REM End
+
+
+
+        'REM This block check whether version is AMC then display AMC version Text
+        'If VarIsAMC = True Then
+        '    lblAMCText.Text = "AMC Active"
+        'Else
+        '    lblAMCText.Text = "AMC Not Active"
+        'End If
+        'lblAMCText.Refresh()
+        'REM End
+
+        
+        ObjLoginData.SetLoginState()
+        MDI.Show()
+
+        Dim obj_DelSetDisableMenubar As New GDelegate_MdiStatus(AddressOf MDI.Sub_Disable_Manu_n_Tool_bar)
+        obj_DelSetDisableMenubar.Invoke(Boolean.TrueString, "Connected..")
+
+        CheckTelNet_Connection()
+
+        If NetMode = "NET" Then
+            MDI.Timer_Net.Interval = Timer_Net_Interval
+            MDI.Timer_Net.Enabled = True
+            MDI.Timer_Net.Start()
+            Call MDI.Timer_Net_Tick(MDI.Timer_Net, New EventArgs)
+        ElseIf NetMode = "TCP" Then
+            MDI.Timer_Sql.Interval = Timer_Sql_Interval
+            MDI.Timer_Sql.Enabled = True
+            MDI.Timer_Sql.Start()
+        End If
+
+
+        Me.Hide()
+    End Sub
+
+    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GBoxUserMaster.Enter
+
+    End Sub
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+
+        If txtUserId.Text.Trim.Length <= 0 Then
+            MsgBox("Invalid UserId!")
+            txtUserId.Focus()
+            Exit Sub
+        End If
+
+        If TxtPwd.Text.Trim.Length <= 0 Then
+            MsgBox("Invalid Passwod!")
+            TxtPwd.Focus()
+            Exit Sub
+        End If
+
+        If TxtPwd.Text <> TxtPwdConfirm.Text Then
+            MsgBox("Password Not Match With Confirm Password!")
+            Exit Sub
+        End If
+
+        If TxtName.Text.Trim.Length <= 0 Then
+            MsgBox("Invalid User Name!")
+            TxtName.Focus()
+            Exit Sub
+        End If
+
+        If TxtAddress.Text.Trim.Length <= 0 Then
+            MsgBox("Invalid User Address!")
+            TxtAddress.Focus()
+            Exit Sub
+        End If
+
+        If TxtCity.Text.Trim.Length <= 0 Then
+            MsgBox("Invalid User City!")
+            TxtCity.Focus()
+            Exit Sub
+        End If
+
+        If TxtMobNo.Text.Trim.Length <= 0 Then
+            MsgBox("Invalid User Mobile No.!")
+            TxtMobNo.Focus()
+            Exit Sub
+        End If
+
+        If TxtFirm.Text.Trim.Length <= 0 Then
+            MsgBox("Invalid Organisation!")
+            TxtFirm.Focus()
+            Exit Sub
+        End If
+
+        SetData()
+
+        If CheckValidation() = False Then
+            Exit Sub
+        End If
+
+        ObjLoginData.Insert_User_Master()
+        MsgBox("Registered Successfully ", MsgBoxStyle.Information)
+        WriteLog("Save/Edit User='" & txtUserId.Text & "' information by " & GVar_LogIn_User & "")
+
+        Application.Restart()
+
+    End Sub
+
+    Private Sub SetData()
+        REM Data transfer to data class
+        ObjLoginData.Userid = txtUserId.Text
+        ObjLoginData.pwd = TxtPwd.Text
+
+        ObjLoginData.Username = TxtName.Text
+        ObjLoginData.Address = TxtAddress.Text
+        ObjLoginData.Mobile = TxtMobNo.Text
+        ObjLoginData.Email = txtEmail.Text
+        ObjLoginData.DOB = dtpDOBDate.Text
+
+        ObjLoginData.Firm = TxtFirm.Text
+        ObjLoginData.FirmAddress = TxtFirmAddress.Text
+        ObjLoginData.FirmContactNo = TxtFirmContactNo.Text
+        ObjLoginData.Reference = TxtReference.Text
+
+        ObjLoginData.Product = gstr_ProductName
+        ObjLoginData.Allowed = Boolean.TrueString.ToString
+        ObjLoginData.Limited = Boolean.TrueString.ToString
+        ObjLoginData.ExDate = DateAdd(DateInterval.Day, 15, Now.Date).ToString("dd/MM/yyyy")
+        ObjLoginData.Status = "out"
+
+        ObjLoginData.M = MothrBoardSrNo
+        ObjLoginData.H = HDDSrNoStr
+        ObjLoginData.P = ProcessorSrNoStr
+
+        ObjLoginData.city = TxtCity.Text
+
+    End Sub
+
+    ''' <summary>
+    ''' CheckValidation
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks>This function use to check validation</remarks>
+    Private Function CheckValidation() As Boolean
+
+        REM This block use to Check Same Dealer Name Already Exist or not
+        If DTUserMasterde.Select("F21='" & MothrBoardSrNo & "' And F22='" & HDDSrNoStr & "' And F23='" & ProcessorSrNoStr & "' And F6 ='" & gstr_ProductName & "'").Length > 0 Then
+            MsgBox("Already Exist !!!" & vbCrLf & "Contact Your Vendor.")
+            WriteLog("Update Existing User='" & txtUserId.Text & "' information by " & GVar_LogIn_User & "")
+            txtUserName.Focus()
+            Return False
+            Exit Function
+        End If
+        REM End
+
+
+        'REM Check Allowed User 
+        'If ChkUserAllowed.Checked Then
+        '    Dim AllowCnt As Integer
+        '    AllowCnt = DTUserMasterde.Compute("count(F7)", "F7=true")
+        '    If GFun_CheckLicUserCount(AllowCnt) = False Then
+        '        Return False
+        '        Exit Function
+        '    End If
+        'End If
+        'REM End
+
+        Return True
+    End Function
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        GBoxUserMaster.Visible = True
+        GBoxUserMaster.Top = 5
+        GBoxUserMaster.Left = 13
+
+        txtUserId.Focus()
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        End
+    End Sub
+
+    Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
+        End
+    End Sub
+
+    Private Sub txtPassword_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtPassword.TextChanged
+
+    End Sub
+
+    Private Function ChkSQLConn() As Boolean
+
+
+        Try
+            Dim telnetServerIp As String = ""
+            Dim telnetPort As Integer = 23
+
+            telnetServerIp = RegServerIP.Split(",")(0)
+            If RegServerIP.Split(",").Length <= 1 Then
+                telnetPort = 1433
+            Else
+                telnetPort = RegServerIP.Split(",")(1)
+            End If
+
+            
+
+            Dim client As New TcpClient(telnetServerIp, telnetPort)
+            'MessageBox.Show("Server is reachable")
+            'Return True
+        Catch ex As Exception
+            Return False
+
+        End Try
+
+
+        Dim StrConn As String = ""
+        StrConn = " Data Source=" & RegServerIP & ";Initial Catalog=" & "finideas" & ";User ID=" & "finideas" & ";Password=" & "finideas#123"
+
+        Dim ConTest As New System.Data.SqlClient.SqlConnection(StrConn)
+        Try
+            ConTest.Open()
+            ConTest.Close()
+            ConTest.Dispose()
+            Return True
+        Catch ex As Exception
+            ConTest.Dispose()
+            Return False
+        End Try
+    End Function
+
+End Class

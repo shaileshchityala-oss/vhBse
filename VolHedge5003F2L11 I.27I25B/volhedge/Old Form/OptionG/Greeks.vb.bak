@@ -1,0 +1,802 @@
+
+'using System;
+'using System.Collections.Generic;
+'using System.Text;
+'Imports Microsoft.SqlServer.Server
+
+
+
+Namespace OptionG
+    ''' <summary>
+    ''' Calculation of Greeks 
+    ''' </summary>
+    Public Class Greeks
+        'static Microsoft.Office.Interop.Excel.Application xApp = new Microsoft.Office.Interop.Excel.Application();
+
+        '[Microsoft.SqlServer.Server.SqlFunction()]
+        'public static bool RegExMatch(string Input, string Pattern)
+        '{
+        '    //System.Text.RegularExpressions.
+        '    //Regex RegexInstance = new Regex(Pattern);
+        '    //return RegexInstance.IsMatch(Input);
+
+        '}
+
+        ''<Microsoft.SqlServer.Server.SqlFunction()> _
+        Public Shared Function Black_Scholes(ByVal a As Double, ByVal b As Double, ByVal c As Double, ByVal d As Double, ByVal e As Double, ByVal f As Double, _
+        ByVal g As Boolean, ByVal h As Boolean, ByVal i As Integer, ByVal j As Integer) As Double
+            'public static double Black_Scholes( double spot,  double Strike,  double rateInterest,  double aa,  double vol,  double time,  bool isCall,  bool IsFut,  int Divs,  int Result)
+            ', ByVal mt As Integer
+            Try
+                Dim spot As Double = a
+                Dim Strike As Double = b
+                Dim rateInterest As Double = c
+                Dim aa As Double = d
+                Dim vol As Double = e
+                Dim time As Double = f
+                Dim isCall As Boolean = g
+                Dim IsFut As Boolean = h
+                Dim Divs As Integer = i
+                Dim Result As Integer = j
+
+                Dim ans As Double
+                ans = 0
+                Select Case Result
+                    Case 0
+                        'Return price
+                        'if (IsFut == true)
+                        '{
+                        '    ans = spot;
+                        '}
+                        'else
+                        '{
+                        ans = Premium(spot, Strike, rateInterest, vol, time, isCall)
+                        '}
+
+                        Exit Select
+                    Case 1
+                        'If IsFut = True Then
+                        'Return 1
+                        'Else
+                        ans = delta(spot, Strike, rateInterest, vol, time, isCall)
+                        'End If
+                        Exit Select
+                    Case 2
+                        'If IsFut = True Then
+                        'Return 0
+                        'Else
+                        ans = Gamma(spot, Strike, rateInterest, vol, time)
+                        'End If
+                        Exit Select
+                    Case 3
+                        'If IsFut = True Then
+                        'Return 0
+                        'Else
+                        ans = Vega(spot, Strike, rateInterest, vol, time)
+                        'End If
+                        Exit Select
+                    Case 4
+                        'If IsFut = True Then
+                        'Return 0
+                        'Else
+                        ans = Theta(spot, Strike, rateInterest, vol, time, isCall)
+                        Dim priceltp As Double
+                        priceltp = Premium(spot, Strike, rateInterest, vol, time, isCall)
+                        'because of  price not drow down  more theta value  so theta value  will not more than price
+                        If Math.Abs(ans) > priceltp Then
+                            If isCall = True Then
+                                ans = Math.Max(Math.Min(priceltp - Math.Max(spot - Strike, 0), Math.Abs(ans)), 0) * -1
+                            Else
+                                ans = Math.Max(Math.Min(priceltp - Math.Max(Strike - spot, 0), Math.Abs(ans)), 0) * -1
+                            End If
+                        End If
+                        'End If
+                        Exit Select
+                    Case 5
+                        'If IsFut = True Then
+                        'Return 0
+                        'Else
+                        ans = Roh(spot, Strike, rateInterest, vol, time, isCall)
+                        'End If
+                        Exit Select
+                    Case 6
+                        'If IsFut = True Then
+                        'Return 0
+                        'Else
+                        ans = volatility(spot, Strike, rateInterest, vol, time, isCall)
+                        'ans = CVolFunctions(spot, Strike, rateInterest, vol, time, isCall);
+
+                        'End If
+                        Exit Select
+                    Case 7
+                        'If IsFut = True Then
+                        'Return 0
+                        'Else
+                        ans = Vanna(spot, Strike, rateInterest, vol, time)
+                        'End If
+                        Exit Select
+                    Case 8
+                        'If IsFut = True Then
+                        'Return 0
+                        'Else
+                        ans = Volga(spot, Strike, rateInterest, vol, time)
+                        'End If
+                        Exit Select
+                    Case 12
+                        ans = CVolFunctions(spot, Strike, rateInterest, vol, time, isCall)
+                        Exit Select
+                End Select
+
+                Return IIf(IsDBNull(ans), 0, Val(ans & ""))
+
+            Catch generatedExceptionName As Exception
+                'throw;
+                Return 0
+            End Try
+        End Function
+
+
+        ''' <summary>
+        ''' Calculate Premiun as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <param name="isCall"></param>
+        ''' <returns></returns>
+        Private Shared Function Premium(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double, ByVal isCall As Boolean) As Double
+            'if (isCall)
+            '{
+            '    return Call_Premium(spot, Strike, rateInterest, vol, time);
+            '}
+            'else
+            '{
+            '    return Put_Premium(spot, Strike, rateInterest, vol, time);
+            '}
+
+            Dim d_D1 As Double = DOne(spot, Strike, rateInterest, vol, time)
+            Dim d_D2 As Double = DTwo(spot, Strike, rateInterest, vol, time)
+            Return CallPut(spot, d_D1, d_D2, Strike, rateInterest, time, _
+             isCall)
+
+
+        End Function
+
+        ''' <summary>
+        ''' Calculate Call Premiun as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Call_Premium(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(spot*NORMSDIST(((LN( C4/C5))+((C7+(C6*C6)/2)*(C10)))/(C6*SQRT(C10))))-(C5*EXP(C10*C7*-1)*(NORMSDIST(((LN(C4/C5))+((C7-(C6*C6)/2)*(C10)))/(C6*SQRT(C10)))))
+            Dim result As Double = 0
+            result = (spot * NORMSDIST(((LN(spot / Strike)) + ((rateInterest + (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time)))) - (Strike * Math.Exp(time * rateInterest * -1) * (NORMSDIST(((LN(spot / Strike)) + ((rateInterest - (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time)))))
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Put Premiun as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Put_Premium(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            Dim result As Double = 0
+            '=(C5*EXP(C10*C7*-1)*(NORMSDIST(-((LN(C4/C5))+((C7-(C6*C6)/2)*(C10)))/(C6*SQRT(C10)))))-(C4*NORMSDIST(-((LN(C4/C5))+((C7+(C6*C6)/2)*(C10)))/(C6*SQRT(C10))))
+
+            result = (Strike * Math.Exp(time * rateInterest * -1) * (NORMSDIST(-((LN(spot / Strike)) + ((rateInterest - (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time))))) - (spot * NORMSDIST(-((LN(spot / Strike)) + ((rateInterest + (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time))))
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Delta as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <param name="isCall"></param>
+        ''' <returns></returns>
+        Private Shared Function delta(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double, ByVal isCall As Boolean) As Double
+            If isCall Then
+                Return Call_delta(spot, Strike, rateInterest, vol, time)
+            Else
+                Return Put_delta(spot, Strike, rateInterest, vol, time)
+            End If
+        End Function
+
+        ''' <summary>
+        ''' Calculate Call Delta as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Call_delta(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=NORMSDIST(((LN(C4/C5))+((C7+(C6*C6)/2)*(C10)))/(C6*SQRT(C10)))
+            Dim result As Double = 0
+            result = NORMSDIST(((LN(spot / Strike)) + ((rateInterest + (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time)))
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Put Delta as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Put_delta(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=C14-1
+            Dim delta As Double = Call_delta(spot, Strike, rateInterest, vol, time)
+            Dim result As Double = 0
+            result = delta - 1
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Theeta as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <param name="isCall"></param>
+        ''' <returns></returns>
+        Private Shared Function Theta(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double, ByVal isCall As Boolean) As Double
+            If isCall Then
+                Return Call_Theta(spot, Strike, rateInterest, vol, time)
+            Else
+                Return Put_Theta(spot, Strike, rateInterest, vol, time)
+            End If
+        End Function
+
+
+        ''' <summary>
+        ''' Calculate Call Theeta as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Call_Theta(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(-((C4*C24*C6)/(2*SQRT(C10)))-((C7*C5*EXP(-C7*C10)*NORMSDIST(C23))))/365
+            Dim result As Double = 0
+            Dim nd1 As Double = NdOne(spot, Strike, rateInterest, vol, time)
+            Dim d2 As Double = DTwo(spot, Strike, rateInterest, vol, time)
+            result = (-((spot * nd1 * vol) / (2 * Math.Sqrt(time))) - ((rateInterest * Strike * Math.Exp(-rateInterest * time) * NORMSDIST(d2)))) / 365
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Put Theeta as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Put_Theta(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(-((C4*C24*C6)/(2*SQRT(C10)))+((C7*C5*EXP(-C7*C10)*(1-NORMSDIST(C23)))))/365
+            Dim result As Double = 0
+            Dim nd1 As Double = NdOne(spot, Strike, rateInterest, vol, time)
+            Dim d2 As Double = DTwo(spot, Strike, rateInterest, vol, time)
+            result = (-((spot * nd1 * vol) / (2 * Math.Sqrt(time))) + ((rateInterest * Strike * Math.Exp(-rateInterest * time) * (1 - NORMSDIST(d2))))) / 365
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Gamma as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Gamma(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=C24/(C4*C6*SQRT(C10))
+            Dim result As Double = 0
+            Dim nd1 As Double = NdOne(spot, Strike, rateInterest, vol, time)
+            result = nd1 / (spot * vol * Math.Sqrt(time))
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Vega as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Vega(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=C4*SQRT(C10)*(EXP(-((((LN(C4/C5))+((C7+(C6*C6)/2)*(C10)))/(C6*SQRT(C10)))^2)/2)/(SQRT(2*PI())))/100
+            Dim result As Double = 0
+            result = spot * Math.Sqrt(time) * (Math.Exp(-(Math.Pow((((LN(spot / Strike)) + ((rateInterest + (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time))), 2)) / 2) / (Math.Sqrt(2 * Math.PI))) / 100
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Roh as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <param name="isCall"></param>
+        ''' <returns></returns>
+        Private Shared Function Roh(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double, ByVal isCall As Boolean) As Double
+            If isCall Then
+                Return Call_Roh(spot, Strike, rateInterest, vol, time)
+            Else
+                Return Put_Roh(spot, Strike, rateInterest, vol, time)
+            End If
+        End Function
+
+        ''' <summary>
+        ''' Calculate Call_Roh as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Call_Roh(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(C5*C10*EXP(-C7*C10)*NORMSDIST(C23))/100
+            Dim result As Double = 0
+            Dim d2 As Double = DTwo(spot, Strike, rateInterest, vol, time)
+            result = (Strike * time * Math.Exp(-rateInterest * time) * NORMSDIST(d2)) / 100
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Put_Roh as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Put_Roh(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(-C5*C10*EXP(-C7*C10)*(1-NORMSDIST(C23)))/100
+            Dim result As Double = 0
+            Dim d2 As Double = DTwo(spot, Strike, rateInterest, vol, time)
+            result = (-Strike * time * Math.Exp(-rateInterest * time) * (1 - NORMSDIST(d2))) / 100
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Vanna as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Vanna(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(C19/C4)*(1-(C22/(C6*SQRT(C10))))
+            Dim result As Double = 0
+            Dim Ve As Double = Vega(spot, Strike, rateInterest, vol, time)
+            Dim D1 As Double = DOne(spot, Strike, rateInterest, vol, time)
+            result = (Ve / spot) * (1 - (D1 / (vol * Math.Sqrt(time))))
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Volga as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function Volga(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(C19*(C22*C23)/C6)/100
+            Dim result As Double = 0
+            Dim d2 As Double = DTwo(spot, Strike, rateInterest, vol, time)
+            Dim d1 As Double = DOne(spot, Strike, rateInterest, vol, time)
+            Dim Ve As Double = Vega(spot, Strike, rateInterest, vol, time)
+            result = (Ve * (d1 * d2) / vol) / 100
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate ND2 as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function NdOne(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(EXP(-((((LN(C4/C5))+((C7+(C6*C6)/2)*(C10)))/(C6*SQRT(C10)))^2)/2)/(SQRT(2*PI())))
+            Dim result As Double = 0
+            result = (Math.Exp(-(Math.Pow((((LN(spot / Strike)) + ((rateInterest + (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time))), 2)) / 2) / (Math.Sqrt(2 * Math.PI)))
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate D2 as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function DTwo(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=((LN(C4/C5))+((C7-(C6*C6)/2)*(C10)))/(C6*SQRT(C10))
+            Dim result As Double = 0
+            result = ((LN(spot / Strike)) + ((rateInterest - (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time))
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate D1 as Describe in Option Excel Sheet
+        ''' </summary>
+        ''' <param name="spot"></param>
+        ''' <param name="Strike"></param>
+        ''' <param name="rateInterest"></param>
+        ''' <param name="vol"></param>
+        ''' <param name="time"></param>
+        ''' <returns></returns>
+        Private Shared Function DOne(ByVal spot As Double, ByVal Strike As Double, ByVal rateInterest As Double, ByVal vol As Double, ByVal time As Double) As Double
+            '=(((LN(C4/C5))+((C7+(C6*C6)/2)*(C10)))/(C6*SQRT(C10)))
+            Dim result As Double = 0
+            result = (((LN(spot / Strike)) + ((rateInterest + (vol * vol) / 2) * (time))) / (vol * Math.Sqrt(time)))
+            Return result
+        End Function
+
+        ''' <summary>
+        ''' Calculate Normal Distribution -- Adopt Function From MS-Excel 
+        ''' </summary>
+        ''' <param name="x"></param>
+        ''' <returns></returns>
+        Private Shared Function NORMSDIST(ByVal x As Double) As Double
+            'Microsoft.Office.Interop.Excel._Application appx = new Microsoft.Office.Interop.Excel._Application();
+            'return xApp.WorksheetFunction.NormSDist(x);
+            'If isExcel = True Then
+            'return Microsoft.Win32. eNormDist(x);
+            'Else
+            Return cNormSDist(x)
+            'End If
+        End Function
+
+        ''' <summary>
+        ''' Calculate Normal distribution ---- Adopt From C++ MFC (CTCL)
+        ''' </summary>
+        ''' <param name="x"></param>
+        ''' <returns></returns>
+        Private Shared Function cNormSDist(ByVal x As Double) As Double
+            Const b1 As Double = 0.31938153
+            Const b2 As Double = -0.356563782
+            Const b3 As Double = 1.781477937
+            Const b4 As Double = -1.821255978
+            Const b5 As Double = 1.330274429
+            Const p As Double = 0.2316419
+            Const c As Double = 0.39894228
+
+            If (x >= 0.0) Then
+                Dim t As Double = 1.0 / (1.0 + p * x)
+
+                Return (1.0 - c * Math.Exp(-x * x / 2.0) * t * (t * (t * (t * (t * b5 + b4) + b3) + b2) + b1))
+            Else
+                Dim t As Double = 1.0 / (1.0 - p * x)
+                Return (c * Math.Exp(-x * x / 2.0) * t * (t * (t * (t * (t * b5 + b4) + b3) + b2) + b1))
+            End If
+        End Function
+
+        ''' <summary>
+        ''' Calculate Log 
+        ''' </summary>
+        ''' <param name="x"></param>
+        ''' <returns></returns>
+        Private Shared Function LN(ByVal x As Double) As Double
+            'If isExcel = True Then
+            '    Return ExFunc.eLN(x)
+            'Else
+            Return Math.Log(x)
+            'End If
+        End Function
+
+        ''' <summary>
+        ''' Calculation of Volatility as Given Option Excel Sheet
+        ''' </summary>
+        ''' <param name="s"></param>
+        ''' <param name="k"></param>
+        ''' <param name="r"></param>
+        ''' <param name="price"></param>
+        ''' <param name="t"></param>
+        ''' <param name="IsCall"></param>
+        ''' <returns></returns>
+        Private Shared Function volatility(ByVal s As Double, ByVal k As Double, ByVal r As Double, ByVal price As Double, ByVal t As Double, ByVal IsCall As Boolean) As Double
+            Dim _d_Vol As Double = 0.1
+            Dim MinVol As Double = 0
+            Dim MaxVol As Double = _d_Vol
+            Dim prevCall As Double = 0
+            Dim prevVol As Double = 0
+            Dim d_D1 As Double, d_D2 As Double, d_Call As Double
+            Dim Iteration As Integer = 0
+            While True
+                'd_D1=DOne(s,k,r,_d_Vol,t);
+                'd_D2=DTwo(s,k,r,_d_Vol,t);
+
+                'd_Call=CallPut(s,d_D1,d_D2,k,r,t,IsCall);
+                d_Call = Premium(s, k, r, _d_Vol, t, IsCall)
+                If _d_Vol > 3 Then
+                    Return 2.6
+                End If
+
+                If d_Call > price Then
+                    MinVol = _d_Vol - 0.1
+                    MaxVol = _d_Vol
+                    Do
+                        If Iteration > 25 Then
+                            Exit Do
+                        End If
+                        prevCall = d_Call
+                        prevVol = _d_Vol
+                        _d_Vol = (MinVol + MaxVol) / 2
+
+                        'd_D1=DOne(s,k,r,_d_Vol,t);
+                        'd_D2=DTwo(s,k,r,_d_Vol,t);
+                        'd_Call=CallPut(s,d_D1,d_D2,k,r,t,IsCall);
+
+                        d_Call = Premium(s, k, r, _d_Vol, t, IsCall)
+
+                        If d_Call > price Then
+                            MaxVol = _d_Vol - 0.00000000000001
+                        ElseIf d_Call < price Then
+                            MinVol = _d_Vol + 0.00000000000001
+                        End If
+                        If d_Call = price Then
+                            Exit Do
+                        End If
+                        If prevVol = _d_Vol AndAlso d_Call <> price Then
+                            Iteration += 1
+
+                        End If
+                    Loop While MinVol <= MaxVol
+                    If prevVol > 2.6 Then
+                        Return 2.6
+                    ElseIf d_Call = price Then
+                        Return _d_Vol
+                    ElseIf prevCall < price Then
+                        Return prevVol
+                    Else
+                        Return _d_Vol
+                    End If
+                End If
+                _d_Vol += 0.1
+            End While
+        End Function
+
+        ''' <summary>
+        ''' Calculation of volatility --- This Function adopt From C++ MFC (FinExcel)
+        ''' </summary>
+        ''' <param name="s"></param>
+        ''' <param name="k"></param>
+        ''' <param name="r"></param>
+        ''' <param name="price"></param>
+        ''' <param name="t"></param>
+        ''' <param name="IsCall"></param>
+        ''' <returns></returns>
+        Private Shared Function CVolFunctions(ByVal s As Double, ByVal k As Double, ByVal r As Double, ByVal price As Double, ByVal t As Double, ByVal IsCall As [Boolean]) As Double
+            'Calculates the Vol
+            Dim m_b_Vol As Boolean
+            m_b_Vol = False
+            Dim m_d_Vol As Double
+            m_d_Vol = 1.0
+            Dim _d_Vol As Double = m_d_Vol
+            Dim d_D1 As Double, d_D2 As Double, d_Call As Double, d_Vega As Double
+            Dim Iteration As Integer = 0
+            Dim d_sigma As Double = 0
+            k = Math.Abs(k)
+            Dim str As [String]
+            'str.Format("%.02f",t);
+            't=atof(str);
+            Do
+                d_D1 = DOne(s, k, r, _d_Vol, t)
+                'str.Format("%.04f",d_D1);
+                'd_D1=atof(str);
+                d_D2 = DTwo(s, k, r, _d_Vol, t)
+                'str.Format("%.04f",d_D2);
+                'd_D2=atof(str);
+
+
+                d_Call = CallPut(s, d_D1, d_D2, k, r, t, _
+                 IsCall)
+                'str.Format("%.04f",d_Call);
+                'd_Call=atof(str);
+
+                d_Vega = Vega(s, t, d_D1)
+                'str.Format("%.04f",d_Vega);
+                'd_Vega=atof(str);
+
+                'if(d_Vega==0)
+                '{
+                '	_d_Vol=_d_Vol+((double)10/100);
+                '	//str.Format("%.04f",_d_Vol);
+                '	//_d_Vol=atof(str);
+                '	Iteration++;
+                '	if(Iteration==26)
+                '	{
+                '		break;
+                '	}
+                '}
+                'else
+                '{
+                'str.Format("%.06f",d_Call);
+                str = Convert.ToString(Math.Round(d_Call, 6))
+                If (price - Convert.ToDouble(str)) <> 0 Then
+                    d_sigma = (price - d_Call) / (d_Vega * 100 + 0.0001)
+                    If d_sigma > 0.1 Then
+                        d_sigma = 0.1
+                    ElseIf d_sigma < -0.1 Then
+                        d_sigma = -0.1
+                    End If
+                    _d_Vol = _d_Vol + d_sigma
+                    If _d_Vol < 0.00001 Then
+                        _d_Vol = 0.00001
+                    End If
+                Else
+                    Exit Do
+                End If
+                Iteration += 1
+                If Iteration = 26 Then
+                    Exit Do
+                    '}
+                End If
+            Loop While True
+
+            If m_b_Vol = False Then
+                m_d_Vol = _d_Vol
+                m_b_Vol = True
+            End If
+
+            Return (_d_Vol)
+        End Function
+
+        ''' <summary>
+        ''' Calculate Vega -- This calculation Adopt From C++ MFC (FinExcel)
+        ''' </summary>
+        ''' <param name="s"></param>
+        ''' <param name="t"></param>
+        ''' <param name="_d1"></param>
+        ''' <returns></returns>
+        Private Shared Function Vega(ByVal s As Double, ByVal t As Double, ByVal _d1 As Double) As Double
+            'Calculates the Vega
+            Return (s * Math.Sqrt(t) * NORMSDIST(_d1)) / 100
+        End Function
+
+        ''' <summary>
+        ''' Calculate Premium Of Call Or Put This calculation adopt From C++ MFC (CTCL)
+        ''' </summary>
+        ''' <param name="s"></param>
+        ''' <param name="pD1"></param>
+        ''' <param name="pD2"></param>
+        ''' <param name="k"></param>
+        ''' <param name="r"></param>
+        ''' <param name="t"></param>
+        ''' <param name="IsCall"></param>
+        ''' <returns></returns>
+        Private Shared Function CallPut(ByVal s As Double, ByVal pD1 As Double, ByVal pD2 As Double, ByVal k As Double, ByVal r As Double, ByVal t As Double, _
+        ByVal IsCall As Boolean) As Double
+            'return Premium(s, k, r, 0, t, IsCall);
+            If IsCall Then
+                Dim nd1 As Double = NORMSDIST(pD1)
+                Dim nd2 As Double = NORMSDIST(pD2)
+                Dim c1 As Double = s * nd1
+                Dim c2 As Double = k * Math.Exp(r * t * (-1)) * nd2
+                'Calculates Call
+                Return c1 - c2
+            Else
+                Dim nd1 As Double = NORMSDIST(-pD1)
+                Dim nd2 As Double = NORMSDIST(-pD2)
+                Dim c1 As Double = s * nd1
+                Dim c2 As Double = k * Math.Exp(r * t * (-1)) * nd2
+                'Calculates Put
+                Return c2 - c1
+            End If
+        End Function
+
+        ''' <summary>
+        ''' Calculate Profit And loss as on Expiry Date
+        ''' </summary>
+        ''' <param name="Spot"></param>
+        ''' <param name="strike"></param>
+        ''' <param name="rate"></param>
+        ''' <param name="Qty"></param>
+        ''' <param name="CPF"></param>
+        ''' <returns></returns>
+        Public Shared Function PNL(ByVal Spot As Double, ByVal strike As Double, ByVal rate As Double, ByVal Qty As Double, ByVal CPF As String) As Double
+            Dim result As Double
+            Dim price As Double
+            Dim sCPF As String
+            sCPF = CPF.ToUpper()
+            Select Case sCPF
+                Case "C"
+                    If (Spot - strike) > 0 Then
+                        price = (Spot - strike)
+                    Else
+                        price = 0
+                    End If
+                    result = (price - rate) * Qty
+
+                    Exit Select
+                Case "P"
+                    If (strike - Spot) > 0 Then
+                        price = (strike - Spot)
+                    Else
+                        price = 0
+                    End If
+                    result = (price - rate) * Qty
+                    Exit Select
+                Case "F"
+                    price = Spot
+                    result = (price - rate) * Qty
+                    Exit Select
+                Case Else
+                    price = Spot
+                    result = (price - rate) * Qty
+                    Exit Select
+            End Select
+            Return result
+        End Function
+
+    End Class
+
+    'using Microsoft.VisualBasic;
+    'using System;
+    'using System.Collections;
+    'using System.Collections.Generic;
+    'using System.Data;
+    'using System.Diagnostics;
+    'using Microsoft.Office.Interop;
+    'using Microsoft.Office.Interop.Excel;
+    'public class ExFunc
+    '{
+
+    '    static Excel.Application xApp = new Excel.Application();
+    '    public static double eNormDist(ref double x)
+    '    {
+    '        return xApp.WorksheetFunction.NormSDist(x);
+    '    }
+
+    '    public static double eLN(ref double x)
+    '    {
+    '        return xApp.Ln(x);
+    '    }
+
+    '    public static double ePI()
+    '    {
+    '        return xApp.Pi;
+    '    }
+    '}
+End Namespace
