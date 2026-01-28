@@ -5798,7 +5798,7 @@ lblAppCrash:
 
                 i = i + 1
                 str = drow("Symbol")
-                End If
+            End If
 
         Next
 

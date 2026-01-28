@@ -162,10 +162,20 @@ Module BCastModule
 
 
 
+            'multicastListener_cm = New Socket(System.Net.Sockets.AddressFamily.InterNetwork, System.Net.Sockets.SocketType.Dgram, System.Net.Sockets.ProtocolType.Udp)
+            'multicastListener_cm.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, 1)
+            'multicastListener_cm.Bind(New IPEndPoint(IPAddress.Any, GdtSettings.Compute("max(SettingKey)", "SettingName='CM_UDP_Port'").ToString))
+            'multicastListener_cm.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AddMembership, New MulticastOption(IPAddress.Parse(GdtSettings.Compute("max(SettingKey)", "SettingName='CM_UDP_IP'").ToString), IPAddress.Any))
+
+
+
+            Dim port As Integer = CUtils.StringToInt(GdtSettings.Compute("max(SettingKey)", "SettingName='CM_UDP_Port'").ToString())
+            Dim ip As IPAddress = IPAddress.Parse(GdtSettings.Compute("max(SettingKey)", "SettingName='CM_UDP_IP'").ToString())
             multicastListener_cm = New Socket(System.Net.Sockets.AddressFamily.InterNetwork, System.Net.Sockets.SocketType.Dgram, System.Net.Sockets.ProtocolType.Udp)
             multicastListener_cm.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, 1)
-            multicastListener_cm.Bind(New IPEndPoint(IPAddress.Any, GdtSettings.Compute("max(SettingKey)", "SettingName='CM_UDP_Port'").ToString))
-            multicastListener_cm.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AddMembership, New MulticastOption(IPAddress.Parse(GdtSettings.Compute("max(SettingKey)", "SettingName='CM_UDP_IP'").ToString), IPAddress.Any))
+            multicastListener_cm.Bind(New IPEndPoint(IPAddress.Any, port))
+            multicastListener_cm.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AddMembership, New MulticastOption(ip, IPAddress.Any))
+
 
             ThreadReceive_cm = New System.Threading.Thread(AddressOf ReceiveMessages_cm)
             ThreadReceive_cm.Name = "thr_Rec_CM"
@@ -373,21 +383,6 @@ Module BCastModule
     ''' <remarks>This method call to Receive CM broadcast and store LTP price into hashtable</remarks>
     Public Sub ReceiveMessages_cm()
         Try
-
-            'Dim port1 As Integer = GdtSettings.Compute("max(SettingKey)", "SettingName='CM_UDP_Port'").ToString
-            'Dim multicastAddress1 As IPAddress = IPAddress.Parse(GdtSettings.Compute("max(SettingKey)", "SettingName='CM_UDP_IP'").ToString)
-            '' multicastListener_fo = New UdpClient(New IPEndPoint(IPAddress.Any, port))
-
-            ''Dim client = New UdpClient(New IPEndPoint(IPAddress.Any, port))
-            'While True
-            '    Dim bteReceiveData_cm(511) As Byte
-            '    bteReceiveData_cm = multicastListener_cm.Receive(New IPEndPoint(multicastAddress1, port1))
-            '    Call process_cm_data(bteReceiveData_cm)
-            '    'Threading.Thread.Sleep(2000)
-            '    NewInitialize_cm()
-            'End While
-
-
             While True
 
                 Dim bteReceiveData_cm(511) As Byte

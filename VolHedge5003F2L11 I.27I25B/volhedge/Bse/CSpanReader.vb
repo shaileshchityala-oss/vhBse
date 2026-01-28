@@ -2589,9 +2589,9 @@ a2:
             'End If
 
             DeleteExistingFiles()
-            CreateSpan()
+            CreateBseSpan()
             '    CreateCurSpan()
-            CreateBatchFiles()
+            CreateBseBatchFiles()
 
             'Dim client_code As String = Nothing
             'Dim temp_comp_name As String = Nothing
@@ -3365,11 +3365,11 @@ a2:
         End If
     End Function
 
-    Private Sub CreateBatchFiles()
+    Private Sub CreateBseBatchFiles()
         ' ==== generate.bat ====
         Dim batchPath As String = System.IO.Path.Combine(mSPAN_path, "generate.bat")
         Dim spanCmd As String = """" & System.IO.Path.Combine(mSPAN_path, "spanit") & """ """ &
-                    System.IO.Path.Combine(mSPAN_path, "span.spn") & """"
+                    System.IO.Path.Combine(mSPAN_path, "BseSpan.spn") & """"
 
         Using fs_batchfile As New FileStream(batchPath, FileMode.Create, FileAccess.Write, FileShare.None)
             Using sw As New StreamWriter(fs_batchfile)
@@ -3409,14 +3409,14 @@ a2:
         End Using
     End Sub
 
-    Private Sub CreateSpan()
+    Private Sub CreateBseSpan()
         If mExchaneSpanFilePath.Length > 0 Then
             If (File.Exists(mSPAN_path & "\" & mExchaneSpanFilePath)) Then
                 mCurrent_SPAN_file = mExchaneSpanFilePath
             End If
         End If
 
-        Dim fullSpnPath As String = System.IO.Path.Combine(mSPAN_path, "span.spn")
+        Dim fullSpnPath As String = System.IO.Path.Combine(mSPAN_path, "BseSpan.spn")
         Dim inputFile As String = System.IO.Path.Combine(mSPAN_path, "input.txt")
         Dim outputFile As String = System.IO.Path.Combine(mSPAN_path, mExchange + "output.xml")
 
@@ -3452,7 +3452,7 @@ a2:
 
             CUtils.DeleteWithTimeout(mSPAN_path & "\curoutput.xml")
             CUtils.DeleteWithTimeout(mSPAN_path & "\" & mExchange & "output.xml")
-            CUtils.DeleteWithTimeout(mSPAN_path & "\span.spn")
+            CUtils.DeleteWithTimeout(mSPAN_path & "\" & mExchange & "Span.spn")
             CUtils.DeleteWithTimeout(mSPAN_path & "\curspan.spn")
             CUtils.DeleteWithTimeout(mSPAN_path & "\input.txt")
             CUtils.DeleteWithTimeout(mSPAN_path & "\curinput.txt")
@@ -3462,7 +3462,7 @@ a2:
 
 
         Catch ex As Exception
-            MsgBox("Error in generate_Span_data Method..")
+            MsgBox("Error In generate_Span_data Method..")
             mFlgThr_Span = False
         End Try
     End Sub
@@ -3550,7 +3550,7 @@ a2:
             '    System.IO.File.Delete(mSPAN_path & "\generate.bat")
             '    System.IO.File.Delete(mSPAN_path & "\curgenerate.bat")
             'Catch ex As Exception
-            '    MsgBox("Error in generate_Span_data Method..")
+            '    MsgBox("Error In generate_Span_data Method..")
             '    mFlgThr_Span = False
             'End Try
 
@@ -3562,7 +3562,7 @@ a2:
             mSPAN_path = SPAN_PATH
             'CType(Me.MdiParent, mdiMain).StatusBar1.Panels(2).Text = ""
             If Not Directory.Exists(mSPAN_path) Then 'if not correct span software path
-                MsgBox("Enter Correct Path for span in setting.")
+                MsgBox("Enter Correct Path For span In setting.")
                 Exit Sub
             End If
             'get latest span file
@@ -3586,7 +3586,7 @@ a2:
 
             'Dim sw As StreamWriter
             'sw = New StreamWriter(fs_spn)
-            'sw.WriteLine("Load " & mSPAN_path & "\input.txt" & ",USEXTLAYOUT")
+            'sw.WriteLine("Load " & mSPAN_path & "\input.txt" & ", USEXTLAYOUT")
             'sw.WriteLine("Calc")
             'sw.WriteLine("Save " & mSPAN_path & "\output.xml")
             'sw.Close()
@@ -3602,7 +3602,7 @@ a2:
 
                     ' Quote file paths in case of spaces
                     swSpn.WriteLine("LOAD " & mSPAN_path & "\" & mCurrent_SPAN_file)
-                    swSpn.WriteLine("Load " & inputFile & ",USEXTLAYOUT")
+                    swSpn.WriteLine("Load " & inputFile & ", USEXTLAYOUT")
                     swSpn.WriteLine("Calc")
                     swSpn.WriteLine("Save " & outputFile)
                 End Using ' StreamWriter auto closes and flushes
@@ -3613,7 +3613,7 @@ a2:
             'Dim cursw As StreamWriter
             'cursw = New StreamWriter(fs_Curspn)
             'cursw.WriteLine("LOAD " & mSPAN_path & "\" & mCurrent_CurSPAN_file)
-            'cursw.WriteLine("Load " & mSPAN_path & "\curinput.txt" & ",USEXTLAYOUT")
+            'cursw.WriteLine("Load " & mSPAN_path & "\curinput.txt" & ", USEXTLAYOUT")
             'cursw.WriteLine("Calc")
             'cursw.WriteLine("Save " & mSPAN_path & "\curoutput.xml")
             'cursw.Close()
@@ -3630,7 +3630,7 @@ a2:
 
                     ' Quote all paths for safety
                     cursw.WriteLine("LOAD " & curSPANFile)
-                    cursw.WriteLine("LOAD " & curInput & ",USEXTLAYOUT")
+                    cursw.WriteLine("LOAD " & curInput & ", USEXTLAYOUT")
                     cursw.WriteLine("CALC")
                     cursw.WriteLine("SAVE " & curOutput)
                 End Using
@@ -3688,7 +3688,7 @@ a2:
                     swInput.WriteLine("<pointInTime>")
                     swInput.WriteLine("<date></date>")
                     swInput.WriteLine("<isSetl>0</isSetl>")
-                    swInput.WriteLine("<time>:::::</time>")
+                    swInput.WriteLine("<time>:: </time>")
                     swInput.WriteLine("<run>0</run>")
                     swInput.WriteLine("<pointInTime>")
                     swInput.WriteLine("<date></date>")
@@ -4061,9 +4061,9 @@ a2:
                 'mPerf.WriteLogStr("Old Code")
                 'mPerf.WriteLogStr("Table:mTblSpanOutput")
 
-                mPerf.PrintDataTable(mTblSpanOutput)
-                mPerf.PrintDataTable(mTbl_exposure_comp)
-                mPerf.PrintDataTable(mTbl_span_calc)
+                '   mPerf.PrintDataTable(mTblSpanOutput)
+                '   mPerf.PrintDataTable(mTbl_exposure_comp)
+                '   mPerf.PrintDataTable(mTbl_span_calc)
 
 
                 mPerf.PrintTopRecords(mTblSpanOutput, 10)
@@ -4252,7 +4252,8 @@ a2:
             'DataGridView2.DataSource = mTbl_SPAN_output
             'Return True
         Catch ex As Exception
-            MsgBox(ex.ToString)
+            'MsgBox(ex.ToString)
+            MsgBox("Wait for sum Time")
             'Return False
             mFlgThr_Span = False
         End Try
