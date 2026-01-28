@@ -2025,7 +2025,7 @@ Module BCastModule
             Dim packet_counter As Int16 = 0
             If temp_data(0) = 2 Then
                 While packet_counter < IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(temp_data, 2))
-                    Debug.WriteLine(IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(temp_data, 2)))
+                    'Debug.WriteLine(IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(temp_data, 2)))
                     compressed_length = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(temp_data, 4 + compressed_length_old + (packet_counter * 2)))
                     If compressed_length > 0 And compressed_length <= 512 Then
                         Dim compressed_data(compressed_length - 1) As Byte
@@ -2171,7 +2171,7 @@ Module BCastModule
         Dim packet_counter As Int16 = 0
         If temp_data(0) = 6 Then
             While packet_counter < IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(temp_data, 2))
-                Debug.WriteLine(IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(temp_data, 2)))
+                'Debug.WriteLine(IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(temp_data, 2)))
                 compressed_length = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(temp_data, 4 + compressed_length_old + (packet_counter * 2)))
                 If compressed_length > 0 And compressed_length <= 512 Then
                     Dim compressed_data(compressed_length - 1) As Byte

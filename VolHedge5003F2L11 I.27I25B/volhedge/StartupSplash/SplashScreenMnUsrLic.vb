@@ -14,7 +14,7 @@ Imports System.Security.Cryptography
 Imports System.IO
 Imports System.Globalization
 Imports System.Net.NetworkInformation
-
+Imports System.Security.Permissions
 Imports Bridge
 
 Public NotInheritable Class SplashScreenMnUsrLic
@@ -1311,6 +1311,8 @@ lbl:
 
     '    End Sub
 
+
+    <SecurityPermission(SecurityAction.Demand, UnmanagedCode:=True)>
     Private Sub StartInd(ByVal is3key As Boolean)
 
         'Dim Thr_Filltoken As New Thread(AddressOf fill_token)
@@ -1427,6 +1429,8 @@ lbl:
             End If
             'Dim HDDSrNo As String = Getprint1()
             Dim HDDSrNoStrOld As String = newdll.GetDiskId() & ""
+            ' Dim HDDSrNoStrOld As String = CleanString(LoadDiskInfo())
+            'todo
             If HDDSrNoStrOld.Length <= 3 Then
                 HDDSrNoStrOld = CleanString(LoadDiskInfo())
             End If '//LoadDiskInfo()
@@ -1667,7 +1671,6 @@ lblKeyFile:
                 Exit Sub
             End If
             REM End
-
         Catch ex As Exception
             MsgBox(ex.ToString)
             Application.Exit()

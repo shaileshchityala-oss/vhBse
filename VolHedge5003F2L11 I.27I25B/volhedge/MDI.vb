@@ -882,28 +882,33 @@ back2:
             StrContracttxt = Application.StartupPath & "\Contract\contract.txt"
         End If
 
-        Dim info2 As New FileInfo(StrContracttxt)
-        Dim length2 As Long = info2.Length
-        Dim lineCnt As Integer = CUtils.GetCsvRowCount(StrContracttxt)
+        Dim lineCnt As Integer
+        Dim length2 As Long
+        If File.Exists(StrContracttxt) Then
+            Dim info2 As New FileInfo(StrContracttxt)
+            length2 = info2.Length
+            lineCnt = CUtils.GetCsvRowCount(StrContracttxt)
+            If length2 > 0 And lineCnt > 2 Then
+                'txtpath.Text = StrContracttxt
+                Dim bolfocon As Boolean
+                flgimportContract = True
+                bolfocon = import_Data.ContractImport(StrContracttxt, ObjIO, True)
+                flgimportContract = False
+                If bolfocon = True Then
+                    AutoFilemsg = AutoFilemsg + "Fo Contract Process Successfully"
+                Else
+                    AutoFilemsg = AutoFilemsg + "Fo Contract Process Error"
+                End If
+                ' objimpmaster.fo(StrContracttxt)
 
-        If File.Exists(StrContracttxt) And length2 > 0 And lineCnt > 2 Then
-            'txtpath.Text = StrContracttxt
-            Dim bolfocon As Boolean
-            flgimportContract = True
-            bolfocon = import_Data.ContractImport(StrContracttxt, ObjIO, True)
-            flgimportContract = False
-            If bolfocon = True Then
-                AutoFilemsg = AutoFilemsg + "Fo Contract Process Successfully"
+            ElseIf length2 = 0 Or lineCnt < 3 Then
+                MsgBox("Contract not process. ")
+                GoTo EQ
             Else
-                AutoFilemsg = AutoFilemsg + "Fo Contract Process Error"
+                GoTo back2
             End If
-            ' objimpmaster.fo(StrContracttxt)
-
-        ElseIf length2 = 0 Or lineCnt < 3 Then
-            MsgBox("Contract not process. ")
-            GoTo EQ
         Else
-            GoTo back2
+            MsgBox("Contract not process. ")
         End If
 EQ:
         '-----Download file Eq---
@@ -1000,8 +1005,15 @@ CURR:
         End Try
         'Dim FileNameToDownload1 As String = "csv_Data_Put_" + Fromdate1 + ".rar"
 
-        Dim info1 As New FileInfo(StrContracttxt)
-        Dim length1 As Long = info1.Length
+        Dim info1 As FileInfo
+        Dim length1 As Long
+        If Not File.Exists(StrContracttxt) Then
+            MsgBox(" curr Contract not process. ")
+            Exit Function
+        End If
+
+        info1 = New FileInfo(StrContracttxt)
+        length1 = info1.Length
         lineCnt = CUtils.GetCsvRowCount(StrContracttxt)
         If File.Exists(StrContracttxt) And length1 > 2 And lineCnt > 2 Then
             Dim bolcurrcon As Boolean
@@ -1234,7 +1246,7 @@ CURR:
 
     End Sub
 
- Dim mBseExchange As CBseExchange
+    Dim mBseExchange As CBseExchange
     Private Sub BseExchangeInit()
         clsGlobal.CreateBseExchange()
         mBseExchange = clsGlobal.mBseExchange

@@ -11,7 +11,8 @@
     <RootNamespace>VolHedge</RootNamespace>
     <AssemblyName>VolHedge</AssemblyName>
     <MyType>WindowsForms</MyType>
-    <ApplicationIcon>Full Screen.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <SccProjectName>
     </SccProjectName>
     <SccLocalPath>
@@ -28,6 +29,8 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -42,8 +45,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -129,6 +130,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Vol64|x86'">
     <OutputPath>bin\x86\Vol64\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -189,11 +193,15 @@
     <Compile Include="Bse\CSpanAelExtractor.vb" />
     <Compile Include="Bse\CSpanReader.vb" />
     <Compile Include="Bse\CUdpMultiTester.vb" />
-    <Compile Include="Bse\FrmBseIndexView.Designer.vb" />
+    <Compile Include="Bse\FrmBseIndexView.designer.vb">
+      <DependentUpon>FrmBseIndexView.vb</DependentUpon>
+    </Compile>
     <Compile Include="Bse\FrmBseIndexView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bse\FrmMarginBse.Designer.vb" />
+    <Compile Include="Bse\FrmMarginBse.designer.vb">
+      <DependentUpon>FrmMarginBse.vb</DependentUpon>
+    </Compile>
     <Compile Include="Bse\FrmMarginBse.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -723,8 +731,12 @@
       <DependentUpon>analysis.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bse\FrmBseIndexView.resx" />
-    <EmbeddedResource Include="Bse\FrmMarginBse.resx" />
+    <EmbeddedResource Include="Bse\FrmBseIndexView.resx">
+      <DependentUpon>FrmBseIndexView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bse\FrmMarginBse.resx">
+      <DependentUpon>FrmMarginBse.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\ipTextbox.resx">
       <DependentUpon>ipTextbox.vb</DependentUpon>
       <SubType>Designer</SubType>

@@ -214,6 +214,7 @@ Public Class frmSettings
     End Sub
     Private Sub frmSettings_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ''  port = txtFOudpport.Text
+        AddBseColumns()
         If verVersion = "MI" Then
             grpInstance.Enabled = True
         Else

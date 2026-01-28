@@ -20,113 +20,113 @@ Partial Class analysis
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle107 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle151 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle152 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle153 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle108 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle109 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle110 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle111 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle112 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle113 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle114 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle115 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle116 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle117 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle118 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle119 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle120 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle121 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle122 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle123 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle124 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle125 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle126 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle127 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle128 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle129 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle130 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle131 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle132 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle133 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle134 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle135 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle136 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle137 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle138 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle139 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle140 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle141 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle142 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle143 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle144 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle145 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle146 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle147 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle148 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle149 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle150 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(analysis))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(analysis))
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle61 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle62 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle63 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle64 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle65 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle66 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle67 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle68 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle69 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle70 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle71 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle72 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle73 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle74 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle75 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle76 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle77 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle78 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle79 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle80 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle81 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle82 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle83 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle84 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle85 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle86 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle87 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle88 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle89 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle90 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle91 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle92 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle93 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle94 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle95 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle96 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle97 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle98 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle99 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle100 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle106 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle154 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle155 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle156 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle157 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle158 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle159 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle160 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle161 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle162 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle163 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle164 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle165 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle166 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle167 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle168 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle169 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle170 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle171 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle172 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle173 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle174 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle175 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle176 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle177 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle178 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle179 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle180 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle181 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle182 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle183 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle184 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle185 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle186 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle187 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle188 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle189 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle190 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle191 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle192 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle193 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle194 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle195 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle196 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle197 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle198 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle199 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle200 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle201 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle202 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle203 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle204 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle205 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle206 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle207 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle208 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Alert = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.deltaAlert = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer_Calculation = New System.Windows.Forms.Timer(Me.components)
@@ -842,13 +842,13 @@ Partial Class analysis
         Me.Alert.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.Alert.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.deltaAlert})
         Me.Alert.Name = "ContextMenuStrip1"
-        Me.Alert.Size = New System.Drawing.Size(119, 26)
+        Me.Alert.Size = New System.Drawing.Size(152, 36)
         Me.Alert.Text = "Alert"
         '
         'deltaAlert
         '
         Me.deltaAlert.Name = "deltaAlert"
-        Me.deltaAlert.Size = New System.Drawing.Size(118, 22)
+        Me.deltaAlert.Size = New System.Drawing.Size(151, 32)
         Me.deltaAlert.Text = "Set Alert"
         '
         'Timer_Calculation
@@ -875,21 +875,23 @@ Partial Class analysis
         Me.TabControl1.Controls.Add(Me.OptionGreeks)
         Me.TabControl1.Controls.Add(Me.GreeksComparison)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(3, 301)
+        Me.TabControl1.Location = New System.Drawing.Point(4, 463)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.ShowToolTips = True
-        Me.TabControl1.Size = New System.Drawing.Size(1022, 272)
+        Me.TabControl1.Size = New System.Drawing.Size(1534, 418)
         Me.TabControl1.TabIndex = 17
         '
         'Total
         '
         Me.Total.BackColor = System.Drawing.Color.Transparent
         Me.Total.Controls.Add(Me.TableLayoutPanel3)
-        Me.Total.Location = New System.Drawing.Point(4, 22)
+        Me.Total.Location = New System.Drawing.Point(4, 29)
+        Me.Total.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Total.Name = "Total"
-        Me.Total.Padding = New System.Windows.Forms.Padding(3)
-        Me.Total.Size = New System.Drawing.Size(1014, 246)
+        Me.Total.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Total.Size = New System.Drawing.Size(1526, 385)
         Me.Total.TabIndex = 0
         Me.Total.Text = "Total"
         Me.Total.UseVisualStyleBackColor = True
@@ -905,12 +907,13 @@ Partial Class analysis
         Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel14, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.lblBep, 0, 1)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(4, 5)
+        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1008, 240)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1518, 375)
         Me.TableLayoutPanel3.TabIndex = 17
         '
         'TableLayoutPanel13
@@ -920,21 +923,21 @@ Partial Class analysis
         Me.TableLayoutPanel13.Controls.Add(Me.TableLayoutPanelDay, 0, 0)
         Me.TableLayoutPanel13.Controls.Add(Me.TabControl2, 0, 1)
         Me.TableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel13.Location = New System.Drawing.Point(734, 0)
+        Me.TableLayoutPanel13.Location = New System.Drawing.Point(1105, 0)
         Me.TableLayoutPanel13.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel13.Name = "TableLayoutPanel13"
         Me.TableLayoutPanel13.RowCount = 2
         Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.59184!))
         Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.40816!))
-        Me.TableLayoutPanel13.Size = New System.Drawing.Size(274, 227)
+        Me.TableLayoutPanel13.Size = New System.Drawing.Size(413, 355)
         Me.TableLayoutPanel13.TabIndex = 18
         '
         'TableLayoutPanelDay
         '
         Me.TableLayoutPanelDay.BackColor = System.Drawing.Color.Black
         Me.TableLayoutPanelDay.ColumnCount = 4
-        Me.TableLayoutPanelDay.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
-        Me.TableLayoutPanelDay.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
+        Me.TableLayoutPanelDay.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51.0!))
+        Me.TableLayoutPanelDay.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82.0!))
         Me.TableLayoutPanelDay.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
         Me.TableLayoutPanelDay.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.0!))
         Me.TableLayoutPanelDay.Controls.Add(Me.Label3, 0, 0)
@@ -952,7 +955,7 @@ Partial Class analysis
         Me.TableLayoutPanelDay.RowCount = 2
         Me.TableLayoutPanelDay.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.72414!))
         Me.TableLayoutPanelDay.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586!))
-        Me.TableLayoutPanelDay.Size = New System.Drawing.Size(274, 67)
+        Me.TableLayoutPanelDay.Size = New System.Drawing.Size(413, 105)
         Me.TableLayoutPanelDay.TabIndex = 43
         '
         'Label3
@@ -962,11 +965,11 @@ Partial Class analysis
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label3.Location = New System.Drawing.Point(1, 1)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label3.Location = New System.Drawing.Point(2, 2)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label3.Name = "Label3"
         Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label3.Size = New System.Drawing.Size(32, 32)
+        Me.Label3.Size = New System.Drawing.Size(47, 50)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "No of Day"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -980,10 +983,10 @@ Partial Class analysis
         Me.cmdrefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
         Me.cmdrefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmdrefresh.ForeColor = System.Drawing.SystemColors.Window
-        Me.cmdrefresh.Location = New System.Drawing.Point(172, 34)
+        Me.cmdrefresh.Location = New System.Drawing.Point(259, 54)
         Me.cmdrefresh.Margin = New System.Windows.Forms.Padding(0)
         Me.cmdrefresh.Name = "cmdrefresh"
-        Me.cmdrefresh.Size = New System.Drawing.Size(102, 33)
+        Me.cmdrefresh.Size = New System.Drawing.Size(154, 51)
         Me.cmdrefresh.TabIndex = 40
         Me.cmdrefresh.Text = "Refresh(F5)"
         Me.ToolTip1.SetToolTip(Me.cmdrefresh, "F5")
@@ -995,10 +998,11 @@ Partial Class analysis
         Me.txtlot.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtlot.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtlot.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtlot.Location = New System.Drawing.Point(37, 37)
+        Me.txtlot.Location = New System.Drawing.Point(55, 59)
+        Me.txtlot.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtlot.Name = "txtlot"
         Me.txtlot.ReadOnly = True
-        Me.txtlot.Size = New System.Drawing.Size(49, 26)
+        Me.txtlot.Size = New System.Drawing.Size(74, 35)
         Me.txtlot.TabIndex = 14
         Me.txtlot.TabStop = False
         Me.txtlot.Text = "0"
@@ -1011,11 +1015,11 @@ Partial Class analysis
         Me.label7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label7.ForeColor = System.Drawing.Color.LightCoral
-        Me.label7.Location = New System.Drawing.Point(1, 35)
-        Me.label7.Margin = New System.Windows.Forms.Padding(1)
+        Me.label7.Location = New System.Drawing.Point(2, 56)
+        Me.label7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.label7.Name = "label7"
         Me.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.label7.Size = New System.Drawing.Size(32, 31)
+        Me.label7.Size = New System.Drawing.Size(47, 47)
         Me.label7.TabIndex = 12
         Me.label7.Text = "Lot Size"
         Me.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1029,10 +1033,10 @@ Partial Class analysis
         Me.cmdsum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
         Me.cmdsum.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmdsum.ForeColor = System.Drawing.SystemColors.Window
-        Me.cmdsum.Location = New System.Drawing.Point(89, 34)
+        Me.cmdsum.Location = New System.Drawing.Point(133, 54)
         Me.cmdsum.Margin = New System.Windows.Forms.Padding(0)
         Me.cmdsum.Name = "cmdsum"
-        Me.cmdsum.Size = New System.Drawing.Size(83, 33)
+        Me.cmdsum.Size = New System.Drawing.Size(126, 51)
         Me.cmdsum.TabIndex = 42
         Me.cmdsum.Text = "Summary(F9)"
         Me.ToolTip1.SetToolTip(Me.cmdsum, "F9")
@@ -1047,10 +1051,10 @@ Partial Class analysis
         Me.CmdScenario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
         Me.CmdScenario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CmdScenario.ForeColor = System.Drawing.SystemColors.Window
-        Me.CmdScenario.Location = New System.Drawing.Point(89, 0)
+        Me.CmdScenario.Location = New System.Drawing.Point(133, 0)
         Me.CmdScenario.Margin = New System.Windows.Forms.Padding(0)
         Me.CmdScenario.Name = "CmdScenario"
-        Me.CmdScenario.Size = New System.Drawing.Size(83, 34)
+        Me.CmdScenario.Size = New System.Drawing.Size(126, 54)
         Me.CmdScenario.TabIndex = 39
         Me.CmdScenario.Text = "Scenario(F3)"
         Me.ToolTip1.SetToolTip(Me.CmdScenario, "Scenario")
@@ -1062,9 +1066,10 @@ Partial Class analysis
         Me.txtnoofday.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtnoofday.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtnoofday.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtnoofday.Location = New System.Drawing.Point(37, 3)
+        Me.txtnoofday.Location = New System.Drawing.Point(55, 5)
+        Me.txtnoofday.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtnoofday.Name = "txtnoofday"
-        Me.txtnoofday.Size = New System.Drawing.Size(49, 26)
+        Me.txtnoofday.Size = New System.Drawing.Size(74, 35)
         Me.txtnoofday.TabIndex = 13
         Me.txtnoofday.Text = "0"
         Me.txtnoofday.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1078,10 +1083,10 @@ Partial Class analysis
         Me.cmdalert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
         Me.cmdalert.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmdalert.ForeColor = System.Drawing.SystemColors.Window
-        Me.cmdalert.Location = New System.Drawing.Point(172, 0)
+        Me.cmdalert.Location = New System.Drawing.Point(259, 0)
         Me.cmdalert.Margin = New System.Windows.Forms.Padding(0)
         Me.cmdalert.Name = "cmdalert"
-        Me.cmdalert.Size = New System.Drawing.Size(102, 34)
+        Me.cmdalert.Size = New System.Drawing.Size(154, 54)
         Me.cmdalert.TabIndex = 36
         Me.cmdalert.Text = "Open Position(F8)"
         Me.ToolTip1.SetToolTip(Me.cmdalert, "F8")
@@ -1093,23 +1098,23 @@ Partial Class analysis
         Me.TabControl2.Controls.Add(Me.TabPage2)
         Me.TabControl2.Controls.Add(Me.TabPage1)
         Me.TabControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl2.Location = New System.Drawing.Point(0, 67)
+        Me.TabControl2.Location = New System.Drawing.Point(0, 105)
         Me.TabControl2.Margin = New System.Windows.Forms.Padding(0)
         Me.TabControl2.Multiline = True
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.Padding = New System.Drawing.Point(1, 1)
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(274, 160)
+        Me.TabControl2.Size = New System.Drawing.Size(413, 250)
         Me.TabControl2.TabIndex = 17
         '
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.Gray
         Me.TabPage2.Controls.Add(Me.TblLytAtm)
-        Me.TabPage2.Location = New System.Drawing.Point(21, 4)
+        Me.TabPage2.Location = New System.Drawing.Point(26, 4)
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(249, 152)
+        Me.TabPage2.Size = New System.Drawing.Size(383, 242)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Up Down"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1127,7 +1132,7 @@ Partial Class analysis
         Me.TblLytAtm.RowCount = 2
         Me.TblLytAtm.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.49398!))
         Me.TblLytAtm.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.50603!))
-        Me.TblLytAtm.Size = New System.Drawing.Size(249, 152)
+        Me.TblLytAtm.Size = New System.Drawing.Size(383, 242)
         Me.TblLytAtm.TabIndex = 0
         '
         'TblLytAtm1
@@ -1164,8 +1169,8 @@ Partial Class analysis
         Me.TblLytAtm1.Controls.Add(Me.lblOTM, 0, 3)
         Me.TblLytAtm1.Controls.Add(Me.lblITM, 0, 1)
         Me.TblLytAtm1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TblLytAtm1.Location = New System.Drawing.Point(0, 36)
-        Me.TblLytAtm1.Margin = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.TblLytAtm1.Location = New System.Drawing.Point(0, 58)
+        Me.TblLytAtm1.Margin = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.TblLytAtm1.Name = "TblLytAtm1"
         Me.TblLytAtm1.RowCount = 5
         Me.TblLytAtm1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.75!))
@@ -1173,7 +1178,7 @@ Partial Class analysis
         Me.TblLytAtm1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.3125!))
         Me.TblLytAtm1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.09375!))
         Me.TblLytAtm1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.875!))
-        Me.TblLytAtm1.Size = New System.Drawing.Size(249, 116)
+        Me.TblLytAtm1.Size = New System.Drawing.Size(383, 184)
         Me.TblLytAtm1.TabIndex = 21
         '
         'lblATMTotal
@@ -1183,10 +1188,10 @@ Partial Class analysis
         Me.lblATMTotal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblATMTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblATMTotal.ForeColor = System.Drawing.Color.HotPink
-        Me.lblATMTotal.Location = New System.Drawing.Point(1, 89)
-        Me.lblATMTotal.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblATMTotal.Location = New System.Drawing.Point(2, 144)
+        Me.lblATMTotal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblATMTotal.Name = "lblATMTotal"
-        Me.lblATMTotal.Size = New System.Drawing.Size(36, 26)
+        Me.lblATMTotal.Size = New System.Drawing.Size(51, 38)
         Me.lblATMTotal.TabIndex = 10
         Me.lblATMTotal.Text = "Total"
         Me.lblATMTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1198,10 +1203,10 @@ Partial Class analysis
         Me.lblATM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblATM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblATM.ForeColor = System.Drawing.Color.HotPink
-        Me.lblATM.Location = New System.Drawing.Point(1, 42)
-        Me.lblATM.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblATM.Location = New System.Drawing.Point(2, 69)
+        Me.lblATM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblATM.Name = "lblATM"
-        Me.lblATM.Size = New System.Drawing.Size(36, 21)
+        Me.lblATM.Size = New System.Drawing.Size(51, 33)
         Me.lblATM.TabIndex = 10
         Me.lblATM.Text = "ATM"
         Me.lblATM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1214,10 +1219,10 @@ Partial Class analysis
         Me.txtDeITM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDeITM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDeITM.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtDeITM.Location = New System.Drawing.Point(39, 22)
-        Me.txtDeITM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtDeITM.Location = New System.Drawing.Point(57, 36)
+        Me.txtDeITM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDeITM.Name = "txtDeITM"
-        Me.txtDeITM.Size = New System.Drawing.Size(50, 18)
+        Me.txtDeITM.Size = New System.Drawing.Size(78, 29)
         Me.txtDeITM.TabIndex = 108
         Me.txtDeITM.Text = "0"
         Me.txtDeITM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1230,10 +1235,10 @@ Partial Class analysis
         Me.txtDeATM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDeATM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDeATM.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtDeATM.Location = New System.Drawing.Point(39, 42)
-        Me.txtDeATM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtDeATM.Location = New System.Drawing.Point(57, 69)
+        Me.txtDeATM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDeATM.Name = "txtDeATM"
-        Me.txtDeATM.Size = New System.Drawing.Size(50, 21)
+        Me.txtDeATM.Size = New System.Drawing.Size(78, 33)
         Me.txtDeATM.TabIndex = 104
         Me.txtDeATM.Text = "0"
         Me.txtDeATM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1245,10 +1250,10 @@ Partial Class analysis
         Me.lblDelta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblDelta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDelta.ForeColor = System.Drawing.Color.LightCoral
-        Me.lblDelta.Location = New System.Drawing.Point(39, 1)
-        Me.lblDelta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblDelta.Location = New System.Drawing.Point(57, 2)
+        Me.lblDelta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblDelta.Name = "lblDelta"
-        Me.lblDelta.Size = New System.Drawing.Size(50, 19)
+        Me.lblDelta.Size = New System.Drawing.Size(78, 30)
         Me.lblDelta.TabIndex = 10
         Me.lblDelta.Text = "Delta"
         Me.lblDelta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1261,10 +1266,10 @@ Partial Class analysis
         Me.txtGmATM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtGmATM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtGmATM.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtGmATM.Location = New System.Drawing.Point(91, 42)
-        Me.txtGmATM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtGmATM.Location = New System.Drawing.Point(139, 69)
+        Me.txtGmATM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtGmATM.Name = "txtGmATM"
-        Me.txtGmATM.Size = New System.Drawing.Size(50, 21)
+        Me.txtGmATM.Size = New System.Drawing.Size(78, 33)
         Me.txtGmATM.TabIndex = 105
         Me.txtGmATM.Text = "0"
         Me.txtGmATM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1277,10 +1282,10 @@ Partial Class analysis
         Me.txtGmITM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtGmITM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtGmITM.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtGmITM.Location = New System.Drawing.Point(91, 22)
-        Me.txtGmITM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtGmITM.Location = New System.Drawing.Point(139, 36)
+        Me.txtGmITM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtGmITM.Name = "txtGmITM"
-        Me.txtGmITM.Size = New System.Drawing.Size(50, 18)
+        Me.txtGmITM.Size = New System.Drawing.Size(78, 29)
         Me.txtGmITM.TabIndex = 109
         Me.txtGmITM.Text = "0"
         Me.txtGmITM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1292,10 +1297,10 @@ Partial Class analysis
         Me.lblGamma.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblGamma.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGamma.ForeColor = System.Drawing.Color.LightCoral
-        Me.lblGamma.Location = New System.Drawing.Point(91, 1)
-        Me.lblGamma.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblGamma.Location = New System.Drawing.Point(139, 2)
+        Me.lblGamma.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblGamma.Name = "lblGamma"
-        Me.lblGamma.Size = New System.Drawing.Size(50, 19)
+        Me.lblGamma.Size = New System.Drawing.Size(78, 30)
         Me.lblGamma.TabIndex = 13
         Me.lblGamma.Text = "Gamma"
         Me.lblGamma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1308,10 +1313,10 @@ Partial Class analysis
         Me.txtVeATM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtVeATM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtVeATM.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtVeATM.Location = New System.Drawing.Point(143, 42)
-        Me.txtVeATM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtVeATM.Location = New System.Drawing.Point(221, 69)
+        Me.txtVeATM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtVeATM.Name = "txtVeATM"
-        Me.txtVeATM.Size = New System.Drawing.Size(50, 21)
+        Me.txtVeATM.Size = New System.Drawing.Size(78, 33)
         Me.txtVeATM.TabIndex = 106
         Me.txtVeATM.Text = "0"
         Me.txtVeATM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1324,10 +1329,10 @@ Partial Class analysis
         Me.txtVeITM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtVeITM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtVeITM.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtVeITM.Location = New System.Drawing.Point(143, 22)
-        Me.txtVeITM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtVeITM.Location = New System.Drawing.Point(221, 36)
+        Me.txtVeITM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtVeITM.Name = "txtVeITM"
-        Me.txtVeITM.Size = New System.Drawing.Size(50, 18)
+        Me.txtVeITM.Size = New System.Drawing.Size(78, 29)
         Me.txtVeITM.TabIndex = 110
         Me.txtVeITM.Text = "0"
         Me.txtVeITM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1339,10 +1344,10 @@ Partial Class analysis
         Me.lblVega.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblVega.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVega.ForeColor = System.Drawing.Color.LightCoral
-        Me.lblVega.Location = New System.Drawing.Point(143, 1)
-        Me.lblVega.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblVega.Location = New System.Drawing.Point(221, 2)
+        Me.lblVega.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblVega.Name = "lblVega"
-        Me.lblVega.Size = New System.Drawing.Size(50, 19)
+        Me.lblVega.Size = New System.Drawing.Size(78, 30)
         Me.lblVega.TabIndex = 12
         Me.lblVega.Text = "Vega"
         Me.lblVega.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1355,10 +1360,10 @@ Partial Class analysis
         Me.txtThATM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtThATM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtThATM.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtThATM.Location = New System.Drawing.Point(195, 42)
-        Me.txtThATM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtThATM.Location = New System.Drawing.Point(303, 69)
+        Me.txtThATM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtThATM.Name = "txtThATM"
-        Me.txtThATM.Size = New System.Drawing.Size(53, 21)
+        Me.txtThATM.Size = New System.Drawing.Size(78, 33)
         Me.txtThATM.TabIndex = 107
         Me.txtThATM.Text = "0"
         Me.txtThATM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1371,10 +1376,10 @@ Partial Class analysis
         Me.txtThITM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtThITM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtThITM.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtThITM.Location = New System.Drawing.Point(195, 22)
-        Me.txtThITM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtThITM.Location = New System.Drawing.Point(303, 36)
+        Me.txtThITM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtThITM.Name = "txtThITM"
-        Me.txtThITM.Size = New System.Drawing.Size(53, 18)
+        Me.txtThITM.Size = New System.Drawing.Size(78, 29)
         Me.txtThITM.TabIndex = 111
         Me.txtThITM.Text = "0"
         Me.txtThITM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1386,10 +1391,10 @@ Partial Class analysis
         Me.lblTheta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblTheta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTheta.ForeColor = System.Drawing.Color.LightCoral
-        Me.lblTheta.Location = New System.Drawing.Point(195, 1)
-        Me.lblTheta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblTheta.Location = New System.Drawing.Point(303, 2)
+        Me.lblTheta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblTheta.Name = "lblTheta"
-        Me.lblTheta.Size = New System.Drawing.Size(53, 19)
+        Me.lblTheta.Size = New System.Drawing.Size(78, 30)
         Me.lblTheta.TabIndex = 11
         Me.lblTheta.Text = "Theta"
         Me.lblTheta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1402,10 +1407,10 @@ Partial Class analysis
         Me.txtDeOTM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDeOTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDeOTM.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtDeOTM.Location = New System.Drawing.Point(39, 65)
-        Me.txtDeOTM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtDeOTM.Location = New System.Drawing.Point(57, 106)
+        Me.txtDeOTM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDeOTM.Name = "txtDeOTM"
-        Me.txtDeOTM.Size = New System.Drawing.Size(50, 22)
+        Me.txtDeOTM.Size = New System.Drawing.Size(78, 34)
         Me.txtDeOTM.TabIndex = 108
         Me.txtDeOTM.Text = "0"
         Me.txtDeOTM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1418,10 +1423,10 @@ Partial Class analysis
         Me.txtDeTot.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDeTot.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDeTot.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtDeTot.Location = New System.Drawing.Point(39, 89)
-        Me.txtDeTot.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtDeTot.Location = New System.Drawing.Point(57, 144)
+        Me.txtDeTot.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDeTot.Name = "txtDeTot"
-        Me.txtDeTot.Size = New System.Drawing.Size(50, 26)
+        Me.txtDeTot.Size = New System.Drawing.Size(78, 38)
         Me.txtDeTot.TabIndex = 104
         Me.txtDeTot.Text = "0"
         Me.txtDeTot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1434,10 +1439,10 @@ Partial Class analysis
         Me.txtGmTot.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtGmTot.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtGmTot.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtGmTot.Location = New System.Drawing.Point(91, 89)
-        Me.txtGmTot.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtGmTot.Location = New System.Drawing.Point(139, 144)
+        Me.txtGmTot.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtGmTot.Name = "txtGmTot"
-        Me.txtGmTot.Size = New System.Drawing.Size(50, 26)
+        Me.txtGmTot.Size = New System.Drawing.Size(78, 38)
         Me.txtGmTot.TabIndex = 105
         Me.txtGmTot.Text = "0"
         Me.txtGmTot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1450,10 +1455,10 @@ Partial Class analysis
         Me.txtVeTot.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtVeTot.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtVeTot.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtVeTot.Location = New System.Drawing.Point(143, 89)
-        Me.txtVeTot.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtVeTot.Location = New System.Drawing.Point(221, 144)
+        Me.txtVeTot.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtVeTot.Name = "txtVeTot"
-        Me.txtVeTot.Size = New System.Drawing.Size(50, 26)
+        Me.txtVeTot.Size = New System.Drawing.Size(78, 38)
         Me.txtVeTot.TabIndex = 106
         Me.txtVeTot.Text = "0"
         Me.txtVeTot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1466,10 +1471,10 @@ Partial Class analysis
         Me.txtThTot.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtThTot.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtThTot.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtThTot.Location = New System.Drawing.Point(195, 89)
-        Me.txtThTot.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtThTot.Location = New System.Drawing.Point(303, 144)
+        Me.txtThTot.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtThTot.Name = "txtThTot"
-        Me.txtThTot.Size = New System.Drawing.Size(53, 26)
+        Me.txtThTot.Size = New System.Drawing.Size(78, 38)
         Me.txtThTot.TabIndex = 107
         Me.txtThTot.Text = "0"
         Me.txtThTot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1482,10 +1487,10 @@ Partial Class analysis
         Me.txtThOTM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtThOTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtThOTM.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtThOTM.Location = New System.Drawing.Point(195, 65)
-        Me.txtThOTM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtThOTM.Location = New System.Drawing.Point(303, 106)
+        Me.txtThOTM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtThOTM.Name = "txtThOTM"
-        Me.txtThOTM.Size = New System.Drawing.Size(53, 22)
+        Me.txtThOTM.Size = New System.Drawing.Size(78, 34)
         Me.txtThOTM.TabIndex = 111
         Me.txtThOTM.Text = "0"
         Me.txtThOTM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1498,10 +1503,10 @@ Partial Class analysis
         Me.txtVeOTM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtVeOTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtVeOTM.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtVeOTM.Location = New System.Drawing.Point(143, 65)
-        Me.txtVeOTM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtVeOTM.Location = New System.Drawing.Point(221, 106)
+        Me.txtVeOTM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtVeOTM.Name = "txtVeOTM"
-        Me.txtVeOTM.Size = New System.Drawing.Size(50, 22)
+        Me.txtVeOTM.Size = New System.Drawing.Size(78, 34)
         Me.txtVeOTM.TabIndex = 110
         Me.txtVeOTM.Text = "0"
         Me.txtVeOTM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1514,10 +1519,10 @@ Partial Class analysis
         Me.txtGmOTM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtGmOTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtGmOTM.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtGmOTM.Location = New System.Drawing.Point(91, 65)
-        Me.txtGmOTM.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtGmOTM.Location = New System.Drawing.Point(139, 106)
+        Me.txtGmOTM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtGmOTM.Name = "txtGmOTM"
-        Me.txtGmOTM.Size = New System.Drawing.Size(50, 22)
+        Me.txtGmOTM.Size = New System.Drawing.Size(78, 34)
         Me.txtGmOTM.TabIndex = 109
         Me.txtGmOTM.Text = "0"
         Me.txtGmOTM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1529,10 +1534,10 @@ Partial Class analysis
         Me.lblOTM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblOTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOTM.ForeColor = System.Drawing.Color.HotPink
-        Me.lblOTM.Location = New System.Drawing.Point(1, 65)
-        Me.lblOTM.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblOTM.Location = New System.Drawing.Point(2, 106)
+        Me.lblOTM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblOTM.Name = "lblOTM"
-        Me.lblOTM.Size = New System.Drawing.Size(36, 22)
+        Me.lblOTM.Size = New System.Drawing.Size(51, 34)
         Me.lblOTM.TabIndex = 10
         Me.lblOTM.Text = "OTM"
         Me.lblOTM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1544,10 +1549,10 @@ Partial Class analysis
         Me.lblITM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblITM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblITM.ForeColor = System.Drawing.Color.HotPink
-        Me.lblITM.Location = New System.Drawing.Point(1, 22)
-        Me.lblITM.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblITM.Location = New System.Drawing.Point(2, 36)
+        Me.lblITM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblITM.Name = "lblITM"
-        Me.lblITM.Size = New System.Drawing.Size(36, 18)
+        Me.lblITM.Size = New System.Drawing.Size(51, 29)
         Me.lblITM.TabIndex = 10
         Me.lblITM.Text = "ITM"
         Me.lblITM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1556,10 +1561,10 @@ Partial Class analysis
         '
         Me.Panel8.Controls.Add(Me.GroupBox1)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel8.Location = New System.Drawing.Point(1, 1)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(1)
+        Me.Panel8.Location = New System.Drawing.Point(2, 2)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(247, 33)
+        Me.Panel8.Size = New System.Drawing.Size(379, 52)
         Me.Panel8.TabIndex = 22
         '
         'GroupBox1
@@ -1574,7 +1579,7 @@ Partial Class analysis
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(0)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(0)
-        Me.GroupBox1.Size = New System.Drawing.Size(247, 33)
+        Me.GroupBox1.Size = New System.Drawing.Size(379, 52)
         Me.GroupBox1.TabIndex = 129
         Me.GroupBox1.TabStop = False
         '
@@ -1582,9 +1587,10 @@ Partial Class analysis
         '
         Me.btnrefresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.btnrefresh.ForeColor = System.Drawing.Color.Black
-        Me.btnrefresh.Location = New System.Drawing.Point(137, 8)
+        Me.btnrefresh.Location = New System.Drawing.Point(206, 12)
+        Me.btnrefresh.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnrefresh.Name = "btnrefresh"
-        Me.btnrefresh.Size = New System.Drawing.Size(77, 20)
+        Me.btnrefresh.Size = New System.Drawing.Size(116, 31)
         Me.btnrefresh.TabIndex = 128
         Me.btnrefresh.Text = "Refresh"
         Me.btnrefresh.UseVisualStyleBackColor = True
@@ -1596,10 +1602,10 @@ Partial Class analysis
         Me.OptAll.Checked = True
         Me.OptAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OptAll.ForeColor = System.Drawing.Color.Black
-        Me.OptAll.Location = New System.Drawing.Point(94, 9)
-        Me.OptAll.Margin = New System.Windows.Forms.Padding(1)
+        Me.OptAll.Location = New System.Drawing.Point(141, 14)
+        Me.OptAll.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.OptAll.Name = "OptAll"
-        Me.OptAll.Size = New System.Drawing.Size(39, 17)
+        Me.OptAll.Size = New System.Drawing.Size(56, 24)
         Me.OptAll.TabIndex = 127
         Me.OptAll.TabStop = True
         Me.OptAll.Text = "All"
@@ -1611,10 +1617,10 @@ Partial Class analysis
         Me.OptPut.BackColor = System.Drawing.Color.Transparent
         Me.OptPut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OptPut.ForeColor = System.Drawing.Color.Black
-        Me.OptPut.Location = New System.Drawing.Point(48, 9)
-        Me.OptPut.Margin = New System.Windows.Forms.Padding(1)
+        Me.OptPut.Location = New System.Drawing.Point(72, 14)
+        Me.OptPut.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.OptPut.Name = "OptPut"
-        Me.OptPut.Size = New System.Drawing.Size(44, 17)
+        Me.OptPut.Size = New System.Drawing.Size(62, 24)
         Me.OptPut.TabIndex = 126
         Me.OptPut.Text = "Put"
         Me.OptPut.UseVisualStyleBackColor = False
@@ -1625,10 +1631,10 @@ Partial Class analysis
         Me.OptCall.BackColor = System.Drawing.Color.Transparent
         Me.OptCall.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OptCall.ForeColor = System.Drawing.Color.Black
-        Me.OptCall.Location = New System.Drawing.Point(3, 9)
-        Me.OptCall.Margin = New System.Windows.Forms.Padding(1)
+        Me.OptCall.Location = New System.Drawing.Point(4, 14)
+        Me.OptCall.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.OptCall.Name = "OptCall"
-        Me.OptCall.Size = New System.Drawing.Size(46, 17)
+        Me.OptCall.Size = New System.Drawing.Size(67, 24)
         Me.OptCall.TabIndex = 125
         Me.OptCall.Text = "Call"
         Me.OptCall.UseVisualStyleBackColor = False
@@ -1637,10 +1643,10 @@ Partial Class analysis
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Gray
         Me.TabPage1.Controls.Add(Me.TableLayoutPanel4)
-        Me.TabPage1.Location = New System.Drawing.Point(21, 4)
+        Me.TabPage1.Location = New System.Drawing.Point(26, 4)
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(249, 152)
+        Me.TabPage1.Size = New System.Drawing.Size(381, 238)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gap"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -1657,20 +1663,20 @@ Partial Class analysis
         Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 3
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 129.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.66234!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.33766!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(306, 161)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(459, 248)
         Me.TableLayoutPanel4.TabIndex = 12
         '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.BackColor = System.Drawing.Color.Black
         Me.TableLayoutPanel2.ColumnCount = 5
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.lblnVal, 4, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label48, 3, 2)
@@ -1689,10 +1695,10 @@ Partial Class analysis
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(306, 84)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(459, 129)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'lblnVal
@@ -1703,10 +1709,11 @@ Partial Class analysis
         Me.lblnVal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblnVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblnVal.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lblnVal.Location = New System.Drawing.Point(190, 59)
+        Me.lblnVal.Location = New System.Drawing.Point(284, 90)
+        Me.lblnVal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblnVal.Name = "lblnVal"
-        Me.lblnVal.Padding = New System.Windows.Forms.Padding(3, 1, 0, 2)
-        Me.lblnVal.Size = New System.Drawing.Size(113, 25)
+        Me.lblnVal.Padding = New System.Windows.Forms.Padding(4, 2, 0, 3)
+        Me.lblnVal.Size = New System.Drawing.Size(171, 39)
         Me.lblnVal.TabIndex = 17
         Me.lblnVal.Text = "0"
         Me.lblnVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1717,10 +1724,10 @@ Partial Class analysis
         Me.Label48.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label48.Location = New System.Drawing.Point(176, 59)
+        Me.Label48.Location = New System.Drawing.Point(264, 90)
         Me.Label48.Margin = New System.Windows.Forms.Padding(0)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(11, 25)
+        Me.Label48.Size = New System.Drawing.Size(16, 39)
         Me.Label48.TabIndex = 19
         Me.Label48.Text = "-"
         Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1731,10 +1738,10 @@ Partial Class analysis
         Me.Label33.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label33.Location = New System.Drawing.Point(176, 34)
+        Me.Label33.Location = New System.Drawing.Point(264, 52)
         Me.Label33.Margin = New System.Windows.Forms.Padding(0)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(11, 25)
+        Me.Label33.Size = New System.Drawing.Size(16, 38)
         Me.Label33.TabIndex = 18
         Me.Label33.Text = "+"
         Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1747,10 +1754,11 @@ Partial Class analysis
         Me.lblpVal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblpVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblpVal.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lblpVal.Location = New System.Drawing.Point(190, 34)
+        Me.lblpVal.Location = New System.Drawing.Point(284, 52)
+        Me.lblpVal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblpVal.Name = "lblpVal"
-        Me.lblpVal.Padding = New System.Windows.Forms.Padding(3, 1, 0, 2)
-        Me.lblpVal.Size = New System.Drawing.Size(113, 25)
+        Me.lblpVal.Padding = New System.Windows.Forms.Padding(4, 2, 0, 3)
+        Me.lblpVal.Size = New System.Drawing.Size(171, 38)
         Me.lblpVal.TabIndex = 16
         Me.lblpVal.Text = "0"
         Me.lblpVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1761,9 +1769,10 @@ Partial Class analysis
         Me.txtLtpVal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtLtpVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.txtLtpVal.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txtLtpVal.Location = New System.Drawing.Point(79, 37)
+        Me.txtLtpVal.Location = New System.Drawing.Point(118, 57)
+        Me.txtLtpVal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLtpVal.Name = "txtLtpVal"
-        Me.txtLtpVal.Size = New System.Drawing.Size(44, 22)
+        Me.txtLtpVal.Size = New System.Drawing.Size(67, 30)
         Me.txtLtpVal.TabIndex = 14
         Me.txtLtpVal.Text = "10"
         Me.txtLtpVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1774,9 +1783,10 @@ Partial Class analysis
         Me.chkLtp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chkLtp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.chkLtp.ForeColor = System.Drawing.Color.LightCoral
-        Me.chkLtp.Location = New System.Drawing.Point(79, 3)
+        Me.chkLtp.Location = New System.Drawing.Point(118, 5)
+        Me.chkLtp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.chkLtp.Name = "chkLtp"
-        Me.chkLtp.Size = New System.Drawing.Size(44, 28)
+        Me.chkLtp.Size = New System.Drawing.Size(67, 42)
         Me.chkLtp.TabIndex = 12
         Me.chkLtp.Text = "Ltp"
         Me.chkLtp.UseVisualStyleBackColor = True
@@ -1787,9 +1797,10 @@ Partial Class analysis
         Me.chkVol.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chkVol.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.chkVol.ForeColor = System.Drawing.Color.LightCoral
-        Me.chkVol.Location = New System.Drawing.Point(129, 3)
+        Me.chkVol.Location = New System.Drawing.Point(193, 5)
+        Me.chkVol.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.chkVol.Name = "chkVol"
-        Me.chkVol.Size = New System.Drawing.Size(44, 28)
+        Me.chkVol.Size = New System.Drawing.Size(67, 42)
         Me.chkVol.TabIndex = 13
         Me.chkVol.Text = "Vol"
         Me.chkVol.UseVisualStyleBackColor = True
@@ -1800,9 +1811,10 @@ Partial Class analysis
         Me.Label50.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label50.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label50.Location = New System.Drawing.Point(3, 59)
+        Me.Label50.Location = New System.Drawing.Point(4, 90)
+        Me.Label50.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(70, 25)
+        Me.Label50.Size = New System.Drawing.Size(106, 39)
         Me.Label50.TabIndex = 23
         Me.Label50.Text = "Scenario-2"
         Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1813,9 +1825,10 @@ Partial Class analysis
         Me.Label49.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label49.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label49.Location = New System.Drawing.Point(3, 34)
+        Me.Label49.Location = New System.Drawing.Point(4, 52)
+        Me.Label49.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(70, 25)
+        Me.Label49.Size = New System.Drawing.Size(106, 38)
         Me.Label49.TabIndex = 22
         Me.Label49.Text = "Scenario-1"
         Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1826,9 +1839,10 @@ Partial Class analysis
         Me.txtLtpVal1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtLtpVal1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.txtLtpVal1.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txtLtpVal1.Location = New System.Drawing.Point(79, 62)
+        Me.txtLtpVal1.Location = New System.Drawing.Point(118, 95)
+        Me.txtLtpVal1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLtpVal1.Name = "txtLtpVal1"
-        Me.txtLtpVal1.Size = New System.Drawing.Size(44, 22)
+        Me.txtLtpVal1.Size = New System.Drawing.Size(67, 30)
         Me.txtLtpVal1.TabIndex = 15
         Me.txtLtpVal1.Text = "-10"
         Me.txtLtpVal1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1839,9 +1853,10 @@ Partial Class analysis
         Me.txtVolVal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtVolVal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.txtVolVal.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txtVolVal.Location = New System.Drawing.Point(129, 37)
+        Me.txtVolVal.Location = New System.Drawing.Point(193, 57)
+        Me.txtVolVal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtVolVal.Name = "txtVolVal"
-        Me.txtVolVal.Size = New System.Drawing.Size(44, 22)
+        Me.txtVolVal.Size = New System.Drawing.Size(67, 30)
         Me.txtVolVal.TabIndex = 16
         Me.txtVolVal.Text = "-5"
         Me.txtVolVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1852,9 +1867,10 @@ Partial Class analysis
         Me.txtVolVal1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtVolVal1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.txtVolVal1.ForeColor = System.Drawing.SystemColors.Menu
-        Me.txtVolVal1.Location = New System.Drawing.Point(129, 62)
+        Me.txtVolVal1.Location = New System.Drawing.Point(193, 95)
+        Me.txtVolVal1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtVolVal1.Name = "txtVolVal1"
-        Me.txtVolVal1.Size = New System.Drawing.Size(44, 22)
+        Me.txtVolVal1.Size = New System.Drawing.Size(67, 30)
         Me.txtVolVal1.TabIndex = 17
         Me.txtVolVal1.Text = "5"
         Me.txtVolVal1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -1868,10 +1884,10 @@ Partial Class analysis
         Me.BtnCalc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
         Me.BtnCalc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCalc.ForeColor = System.Drawing.SystemColors.Window
-        Me.BtnCalc.Location = New System.Drawing.Point(0, 84)
+        Me.BtnCalc.Location = New System.Drawing.Point(0, 129)
         Me.BtnCalc.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnCalc.Name = "BtnCalc"
-        Me.BtnCalc.Size = New System.Drawing.Size(306, 29)
+        Me.BtnCalc.Size = New System.Drawing.Size(459, 44)
         Me.BtnCalc.TabIndex = 41
         Me.BtnCalc.Text = "Calculate(Alt+C)"
         Me.ToolTip1.SetToolTip(Me.BtnCalc, "Calculate(Alt+C)")
@@ -1880,18 +1896,19 @@ Partial Class analysis
         'TableLayoutPanel28
         '
         Me.TableLayoutPanel28.ColumnCount = 2
-        Me.TableLayoutPanel28.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113.0!))
-        Me.TableLayoutPanel28.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191.0!))
+        Me.TableLayoutPanel28.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170.0!))
+        Me.TableLayoutPanel28.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 286.0!))
         Me.TableLayoutPanel28.Controls.Add(Me.chksynfut, 1, 0)
         Me.TableLayoutPanel28.Controls.Add(Me.chkCalVol, 0, 0)
         Me.TableLayoutPanel28.Controls.Add(Me.chksynfutexp, 1, 1)
         Me.TableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel28.Location = New System.Drawing.Point(3, 116)
+        Me.TableLayoutPanel28.Location = New System.Drawing.Point(4, 178)
+        Me.TableLayoutPanel28.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel28.Name = "TableLayoutPanel28"
         Me.TableLayoutPanel28.RowCount = 2
         Me.TableLayoutPanel28.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel28.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
-        Me.TableLayoutPanel28.Size = New System.Drawing.Size(300, 42)
+        Me.TableLayoutPanel28.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
+        Me.TableLayoutPanel28.Size = New System.Drawing.Size(451, 65)
         Me.TableLayoutPanel28.TabIndex = 42
         '
         'chksynfut
@@ -1900,11 +1917,11 @@ Partial Class analysis
         Me.chksynfut.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chksynfut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.chksynfut.ForeColor = System.Drawing.Color.LightCoral
-        Me.chksynfut.Location = New System.Drawing.Point(113, 0)
+        Me.chksynfut.Location = New System.Drawing.Point(170, 0)
         Me.chksynfut.Margin = New System.Windows.Forms.Padding(0)
         Me.chksynfut.Name = "chksynfut"
-        Me.chksynfut.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
-        Me.chksynfut.Size = New System.Drawing.Size(191, 17)
+        Me.chksynfut.Padding = New System.Windows.Forms.Padding(6, 0, 0, 0)
+        Me.chksynfut.Size = New System.Drawing.Size(286, 27)
         Me.chksynfut.TabIndex = 43
         Me.chksynfut.Text = "Cal  Vol Using syn future"
         Me.chksynfut.UseVisualStyleBackColor = False
@@ -1917,8 +1934,8 @@ Partial Class analysis
         Me.chkCalVol.Location = New System.Drawing.Point(0, 0)
         Me.chkCalVol.Margin = New System.Windows.Forms.Padding(0)
         Me.chkCalVol.Name = "chkCalVol"
-        Me.chkCalVol.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
-        Me.chkCalVol.Size = New System.Drawing.Size(113, 17)
+        Me.chkCalVol.Padding = New System.Windows.Forms.Padding(6, 0, 0, 0)
+        Me.chkCalVol.Size = New System.Drawing.Size(170, 26)
         Me.chkCalVol.TabIndex = 33
         Me.chkCalVol.Text = "Cal Vol Using EQ"
         Me.chkCalVol.UseVisualStyleBackColor = False
@@ -1929,11 +1946,11 @@ Partial Class analysis
         Me.chksynfutexp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chksynfutexp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.chksynfutexp.ForeColor = System.Drawing.Color.LightCoral
-        Me.chksynfutexp.Location = New System.Drawing.Point(113, 17)
+        Me.chksynfutexp.Location = New System.Drawing.Point(170, 27)
         Me.chksynfutexp.Margin = New System.Windows.Forms.Padding(0)
         Me.chksynfutexp.Name = "chksynfutexp"
-        Me.chksynfutexp.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
-        Me.chksynfutexp.Size = New System.Drawing.Size(191, 25)
+        Me.chksynfutexp.Padding = New System.Windows.Forms.Padding(6, 0, 0, 0)
+        Me.chksynfutexp.Size = New System.Drawing.Size(286, 38)
         Me.chksynfutexp.TabIndex = 46
         Me.chksynfutexp.Text = "Cal  Vol Using EQ on expiry"
         Me.chksynfutexp.UseVisualStyleBackColor = False
@@ -1952,19 +1969,19 @@ Partial Class analysis
         Me.TableLayoutPanel14.RowCount = 2
         Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.28205!))
         Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.71795!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel14.Size = New System.Drawing.Size(729, 227)
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel14.Size = New System.Drawing.Size(1098, 355)
         Me.TableLayoutPanel14.TabIndex = 19
         '
         'TableLayoutPanel15
@@ -1977,7 +1994,7 @@ Partial Class analysis
         Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66722!))
         Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66389!))
         Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66722!))
-        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311.0!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 468.0!))
         Me.TableLayoutPanel15.Controls.Add(Me.label14, 2, 0)
         Me.TableLayoutPanel15.Controls.Add(Me.label11, 1, 0)
         Me.TableLayoutPanel15.Controls.Add(Me.label12, 4, 0)
@@ -2003,13 +2020,13 @@ Partial Class analysis
         Me.TableLayoutPanel15.Controls.Add(Me.TableLayoutPanel29, 7, 2)
         Me.TableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel15.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel15.Margin = New System.Windows.Forms.Padding(0, 0, 0, 1)
+        Me.TableLayoutPanel15.Margin = New System.Windows.Forms.Padding(0, 0, 0, 2)
         Me.TableLayoutPanel15.Name = "TableLayoutPanel15"
         Me.TableLayoutPanel15.RowCount = 3
         Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.0!))
         Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.0!))
-        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23.0!))
-        Me.TableLayoutPanel15.Size = New System.Drawing.Size(729, 70)
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel15.Size = New System.Drawing.Size(1098, 109)
         Me.TableLayoutPanel15.TabIndex = 0
         '
         'label14
@@ -2019,10 +2036,10 @@ Partial Class analysis
         Me.label14.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label14.ForeColor = System.Drawing.Color.LightCoral
-        Me.label14.Location = New System.Drawing.Point(84, 1)
-        Me.label14.Margin = New System.Windows.Forms.Padding(1)
+        Me.label14.Location = New System.Drawing.Point(125, 2)
+        Me.label14.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.label14.Name = "label14"
-        Me.label14.Size = New System.Drawing.Size(65, 18)
+        Me.label14.Size = New System.Drawing.Size(97, 28)
         Me.label14.TabIndex = 13
         Me.label14.Text = "Gamma"
         Me.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2034,10 +2051,10 @@ Partial Class analysis
         Me.label11.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label11.ForeColor = System.Drawing.Color.LightCoral
-        Me.label11.Location = New System.Drawing.Point(17, 1)
-        Me.label11.Margin = New System.Windows.Forms.Padding(1)
+        Me.label11.Location = New System.Drawing.Point(24, 2)
+        Me.label11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.label11.Name = "label11"
-        Me.label11.Size = New System.Drawing.Size(65, 18)
+        Me.label11.Size = New System.Drawing.Size(97, 28)
         Me.label11.TabIndex = 10
         Me.label11.Text = "Delta"
         Me.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2049,10 +2066,10 @@ Partial Class analysis
         Me.label12.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label12.ForeColor = System.Drawing.Color.LightCoral
-        Me.label12.Location = New System.Drawing.Point(218, 1)
-        Me.label12.Margin = New System.Windows.Forms.Padding(1)
+        Me.label12.Location = New System.Drawing.Point(327, 2)
+        Me.label12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.label12.Name = "label12"
-        Me.label12.Size = New System.Drawing.Size(65, 18)
+        Me.label12.Size = New System.Drawing.Size(97, 28)
         Me.label12.TabIndex = 11
         Me.label12.Text = "Theta"
         Me.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2066,10 +2083,10 @@ Partial Class analysis
         Me.txttdelval.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelval.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelval.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttdelval.Location = New System.Drawing.Point(17, 21)
-        Me.txttdelval.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelval.Location = New System.Drawing.Point(24, 34)
+        Me.txttdelval.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelval.Name = "txttdelval"
-        Me.txttdelval.Size = New System.Drawing.Size(65, 24)
+        Me.txttdelval.Size = New System.Drawing.Size(97, 37)
         Me.txttdelval.TabIndex = 108
         Me.txttdelval.Text = "0"
         Me.txttdelval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2081,10 +2098,10 @@ Partial Class analysis
         Me.label13.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label13.ForeColor = System.Drawing.Color.LightCoral
-        Me.label13.Location = New System.Drawing.Point(151, 1)
-        Me.label13.Margin = New System.Windows.Forms.Padding(1)
+        Me.label13.Location = New System.Drawing.Point(226, 2)
+        Me.label13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.label13.Name = "label13"
-        Me.label13.Size = New System.Drawing.Size(65, 18)
+        Me.label13.Size = New System.Drawing.Size(97, 28)
         Me.label13.TabIndex = 12
         Me.label13.Text = "Vega"
         Me.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2096,10 +2113,10 @@ Partial Class analysis
         Me.Label56.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label56.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label56.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label56.Location = New System.Drawing.Point(351, 1)
-        Me.Label56.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label56.Location = New System.Drawing.Point(529, 2)
+        Me.Label56.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(65, 18)
+        Me.Label56.Size = New System.Drawing.Size(97, 28)
         Me.Label56.TabIndex = 122
         Me.Label56.Text = "Vanna"
         Me.Label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2112,10 +2129,10 @@ Partial Class analysis
         Me.txtttheta1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtttheta1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtttheta1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtttheta1.Location = New System.Drawing.Point(218, 47)
-        Me.txtttheta1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtttheta1.Location = New System.Drawing.Point(327, 75)
+        Me.txtttheta1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtttheta1.Name = "txtttheta1"
-        Me.txtttheta1.Size = New System.Drawing.Size(65, 22)
+        Me.txtttheta1.Size = New System.Drawing.Size(97, 32)
         Me.txtttheta1.TabIndex = 107
         Me.txtttheta1.Text = "0"
         Me.txtttheta1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2128,10 +2145,10 @@ Partial Class analysis
         Me.txttdelta1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelta1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelta1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttdelta1.Location = New System.Drawing.Point(17, 47)
-        Me.txttdelta1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelta1.Location = New System.Drawing.Point(24, 75)
+        Me.txttdelta1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelta1.Name = "txttdelta1"
-        Me.txttdelta1.Size = New System.Drawing.Size(65, 22)
+        Me.txttdelta1.Size = New System.Drawing.Size(97, 32)
         Me.txttdelta1.TabIndex = 104
         Me.txttdelta1.Text = "0"
         Me.txttdelta1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2145,10 +2162,10 @@ Partial Class analysis
         Me.txttthval.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttthval.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttthval.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttthval.Location = New System.Drawing.Point(218, 21)
-        Me.txttthval.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttthval.Location = New System.Drawing.Point(327, 34)
+        Me.txttthval.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttthval.Name = "txttthval"
-        Me.txttthval.Size = New System.Drawing.Size(65, 24)
+        Me.txttthval.Size = New System.Drawing.Size(97, 37)
         Me.txttthval.TabIndex = 111
         Me.txttthval.Text = "0"
         Me.txttthval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2160,10 +2177,10 @@ Partial Class analysis
         Me.label10.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label10.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.label10.Location = New System.Drawing.Point(0, 20)
+        Me.label10.Location = New System.Drawing.Point(0, 32)
         Me.label10.Margin = New System.Windows.Forms.Padding(0)
         Me.label10.Name = "label10"
-        Me.label10.Size = New System.Drawing.Size(16, 26)
+        Me.label10.Size = New System.Drawing.Size(22, 41)
         Me.label10.TabIndex = 5
         Me.label10.Text = "T"
         Me.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2176,10 +2193,10 @@ Partial Class analysis
         Me.txttvega1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvega1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvega1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvega1.Location = New System.Drawing.Point(151, 47)
-        Me.txttvega1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvega1.Location = New System.Drawing.Point(226, 75)
+        Me.txttvega1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvega1.Name = "txttvega1"
-        Me.txttvega1.Size = New System.Drawing.Size(65, 22)
+        Me.txttvega1.Size = New System.Drawing.Size(97, 32)
         Me.txttvega1.TabIndex = 106
         Me.txttvega1.Text = "0"
         Me.txttvega1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2193,10 +2210,10 @@ Partial Class analysis
         Me.txttvanna1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvanna1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvanna1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvanna1.Location = New System.Drawing.Point(351, 47)
-        Me.txttvanna1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvanna1.Location = New System.Drawing.Point(529, 75)
+        Me.txttvanna1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvanna1.Name = "txttvanna1"
-        Me.txttvanna1.Size = New System.Drawing.Size(65, 22)
+        Me.txttvanna1.Size = New System.Drawing.Size(97, 32)
         Me.txttvanna1.TabIndex = 119
         Me.txttvanna1.Text = "0"
         Me.txttvanna1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2210,10 +2227,10 @@ Partial Class analysis
         Me.txttvannaval.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvannaval.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvannaval.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvannaval.Location = New System.Drawing.Point(351, 21)
-        Me.txttvannaval.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvannaval.Location = New System.Drawing.Point(529, 34)
+        Me.txttvannaval.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvannaval.Name = "txttvannaval"
-        Me.txttvannaval.Size = New System.Drawing.Size(65, 24)
+        Me.txttvannaval.Size = New System.Drawing.Size(97, 37)
         Me.txttvannaval.TabIndex = 117
         Me.txttvannaval.Text = "0"
         Me.txttvannaval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2225,10 +2242,10 @@ Partial Class analysis
         Me.lblt1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblt1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblt1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.lblt1.Location = New System.Drawing.Point(0, 46)
+        Me.lblt1.Location = New System.Drawing.Point(0, 73)
         Me.lblt1.Margin = New System.Windows.Forms.Padding(0)
         Me.lblt1.Name = "lblt1"
-        Me.lblt1.Size = New System.Drawing.Size(16, 24)
+        Me.lblt1.Size = New System.Drawing.Size(22, 36)
         Me.lblt1.TabIndex = 26
         Me.lblt1.Text = "N"
         Me.lblt1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2242,10 +2259,10 @@ Partial Class analysis
         Me.txttgmval.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgmval.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgmval.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttgmval.Location = New System.Drawing.Point(84, 21)
-        Me.txttgmval.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgmval.Location = New System.Drawing.Point(125, 34)
+        Me.txttgmval.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgmval.Name = "txttgmval"
-        Me.txttgmval.Size = New System.Drawing.Size(65, 24)
+        Me.txttgmval.Size = New System.Drawing.Size(97, 37)
         Me.txttgmval.TabIndex = 109
         Me.txttgmval.Text = "0"
         Me.txttgmval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2259,10 +2276,10 @@ Partial Class analysis
         Me.txttvolgaval.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolgaval.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolgaval.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvolgaval.Location = New System.Drawing.Point(285, 21)
-        Me.txttvolgaval.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolgaval.Location = New System.Drawing.Point(428, 34)
+        Me.txttvolgaval.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolgaval.Name = "txttvolgaval"
-        Me.txttvolgaval.Size = New System.Drawing.Size(64, 24)
+        Me.txttvolgaval.Size = New System.Drawing.Size(97, 37)
         Me.txttvolgaval.TabIndex = 116
         Me.txttvolgaval.Text = "0"
         Me.txttvolgaval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2276,10 +2293,10 @@ Partial Class analysis
         Me.txttvolga1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolga1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolga1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvolga1.Location = New System.Drawing.Point(285, 47)
-        Me.txttvolga1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolga1.Location = New System.Drawing.Point(428, 75)
+        Me.txttvolga1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolga1.Name = "txttvolga1"
-        Me.txttvolga1.Size = New System.Drawing.Size(64, 22)
+        Me.txttvolga1.Size = New System.Drawing.Size(97, 32)
         Me.txttvolga1.TabIndex = 118
         Me.txttvolga1.Text = "0"
         Me.txttvolga1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2293,10 +2310,10 @@ Partial Class analysis
         Me.txttvgval.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvgval.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvgval.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvgval.Location = New System.Drawing.Point(151, 21)
-        Me.txttvgval.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvgval.Location = New System.Drawing.Point(226, 34)
+        Me.txttvgval.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvgval.Name = "txttvgval"
-        Me.txttvgval.Size = New System.Drawing.Size(65, 24)
+        Me.txttvgval.Size = New System.Drawing.Size(97, 37)
         Me.txttvgval.TabIndex = 110
         Me.txttvgval.Text = "0"
         Me.txttvgval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2309,10 +2326,10 @@ Partial Class analysis
         Me.txttgamma1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgamma1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgamma1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttgamma1.Location = New System.Drawing.Point(84, 47)
-        Me.txttgamma1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgamma1.Location = New System.Drawing.Point(125, 75)
+        Me.txttgamma1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgamma1.Name = "txttgamma1"
-        Me.txttgamma1.Size = New System.Drawing.Size(65, 22)
+        Me.txttgamma1.Size = New System.Drawing.Size(97, 32)
         Me.txttgamma1.TabIndex = 105
         Me.txttgamma1.Text = "0"
         Me.txttgamma1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2324,10 +2341,10 @@ Partial Class analysis
         Me.Label32.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label32.Location = New System.Drawing.Point(285, 1)
-        Me.Label32.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label32.Location = New System.Drawing.Point(428, 2)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(64, 18)
+        Me.Label32.Size = New System.Drawing.Size(97, 28)
         Me.Label32.TabIndex = 121
         Me.Label32.Text = "Volga"
         Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2339,10 +2356,10 @@ Partial Class analysis
         Me.Label97.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label97.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label97.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label97.Location = New System.Drawing.Point(418, 1)
-        Me.Label97.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label97.Location = New System.Drawing.Point(630, 2)
+        Me.Label97.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label97.Name = "Label97"
-        Me.Label97.Size = New System.Drawing.Size(310, 18)
+        Me.Label97.Size = New System.Drawing.Size(466, 28)
         Me.Label97.TabIndex = 125
         Me.Label97.Text = "Pay In Out"
         Me.Label97.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2353,10 +2370,10 @@ Partial Class analysis
         Me.lblpayin.BackColor = System.Drawing.SystemColors.WindowText
         Me.lblpayin.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblpayin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblpayin.Location = New System.Drawing.Point(418, 21)
-        Me.lblpayin.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblpayin.Location = New System.Drawing.Point(630, 34)
+        Me.lblpayin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblpayin.Name = "lblpayin"
-        Me.lblpayin.Size = New System.Drawing.Size(310, 24)
+        Me.lblpayin.Size = New System.Drawing.Size(466, 37)
         Me.lblpayin.TabIndex = 123
         Me.lblpayin.Text = "0"
         Me.lblpayin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2371,11 +2388,12 @@ Partial Class analysis
         Me.TableLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.TableLayoutPanel29.ForeColor = System.Drawing.Color.LightCoral
-        Me.TableLayoutPanel29.Location = New System.Drawing.Point(420, 49)
+        Me.TableLayoutPanel29.Location = New System.Drawing.Point(632, 78)
+        Me.TableLayoutPanel29.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel29.Name = "TableLayoutPanel29"
         Me.TableLayoutPanel29.RowCount = 1
         Me.TableLayoutPanel29.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel29.Size = New System.Drawing.Size(306, 18)
+        Me.TableLayoutPanel29.Size = New System.Drawing.Size(462, 26)
         Me.TableLayoutPanel29.TabIndex = 132
         '
         'Label99
@@ -2383,9 +2401,10 @@ Partial Class analysis
         Me.Label99.AutoSize = True
         Me.Label99.BackColor = System.Drawing.SystemColors.WindowText
         Me.Label99.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label99.Location = New System.Drawing.Point(3, 0)
+        Me.Label99.Location = New System.Drawing.Point(4, 0)
+        Me.Label99.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label99.Name = "Label99"
-        Me.Label99.Size = New System.Drawing.Size(112, 18)
+        Me.Label99.Size = New System.Drawing.Size(170, 26)
         Me.Label99.TabIndex = 0
         Me.Label99.Text = "wavv"
         '
@@ -2396,9 +2415,10 @@ Partial Class analysis
         Me.lblwavv.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblwavv.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.lblwavv.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lblwavv.Location = New System.Drawing.Point(121, 0)
+        Me.lblwavv.Location = New System.Drawing.Point(182, 0)
+        Me.lblwavv.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblwavv.Name = "lblwavv"
-        Me.lblwavv.Size = New System.Drawing.Size(182, 18)
+        Me.lblwavv.Size = New System.Drawing.Size(276, 26)
         Me.lblwavv.TabIndex = 1
         Me.lblwavv.Text = "0"
         '
@@ -2412,19 +2432,19 @@ Partial Class analysis
         Me.TableLayoutPanel16.Controls.Add(Me.TblPnlExpense, 2, 0)
         Me.TableLayoutPanel16.Controls.Add(Me.TableLayoutPanel5, 1, 0)
         Me.TableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel16.Location = New System.Drawing.Point(0, 71)
+        Me.TableLayoutPanel16.Location = New System.Drawing.Point(0, 111)
         Me.TableLayoutPanel16.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel16.Name = "TableLayoutPanel16"
         Me.TableLayoutPanel16.RowCount = 1
         Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel16.Size = New System.Drawing.Size(729, 156)
+        Me.TableLayoutPanel16.Size = New System.Drawing.Size(1098, 244)
         Me.TableLayoutPanel16.TabIndex = 1
         '
         'TableLayoutPanel18
         '
         Me.TableLayoutPanel18.ColumnCount = 2
-        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153.0!))
-        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
+        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230.0!))
+        Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel18.Controls.Add(Me.lblPreBalance, 0, 5)
         Me.TableLayoutPanel18.Controls.Add(Me.txtprsqexp, 1, 1)
         Me.TableLayoutPanel18.Controls.Add(Me.txttosqexp, 1, 4)
@@ -2440,8 +2460,8 @@ Partial Class analysis
         Me.TableLayoutPanel18.Controls.Add(Me.Label93, 0, 7)
         Me.TableLayoutPanel18.Controls.Add(Me.txttimevalue, 0, 8)
         Me.TableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel18.Location = New System.Drawing.Point(1, 1)
-        Me.TableLayoutPanel18.Margin = New System.Windows.Forms.Padding(1)
+        Me.TableLayoutPanel18.Location = New System.Drawing.Point(2, 2)
+        Me.TableLayoutPanel18.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel18.Name = "TableLayoutPanel18"
         Me.TableLayoutPanel18.RowCount = 9
         Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.358!))
@@ -2451,9 +2471,9 @@ Partial Class analysis
         Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.88889!))
         Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.59259!))
         Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 0!))
-        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19.0!))
-        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15.0!))
-        Me.TableLayoutPanel18.Size = New System.Drawing.Size(137, 154)
+        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
+        Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23.0!))
+        Me.TableLayoutPanel18.Size = New System.Drawing.Size(205, 240)
         Me.TableLayoutPanel18.TabIndex = 1
         '
         'lblPreBalance
@@ -2463,9 +2483,10 @@ Partial Class analysis
         Me.lblPreBalance.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblPreBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblPreBalance.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPreBalance.Location = New System.Drawing.Point(156, 95)
+        Me.lblPreBalance.Location = New System.Drawing.Point(234, 153)
+        Me.lblPreBalance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPreBalance.Name = "lblPreBalance"
-        Me.lblPreBalance.Size = New System.Drawing.Size(21, 21)
+        Me.lblPreBalance.Size = New System.Drawing.Size(32, 33)
         Me.lblPreBalance.TabIndex = 115
         Me.lblPreBalance.Text = "Prev. Balance"
         Me.lblPreBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2478,10 +2499,10 @@ Partial Class analysis
         Me.txtprsqexp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprsqexp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprsqexp.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtprsqexp.Location = New System.Drawing.Point(154, 21)
-        Me.txtprsqexp.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprsqexp.Location = New System.Drawing.Point(232, 34)
+        Me.txtprsqexp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprsqexp.Name = "txtprsqexp"
-        Me.txtprsqexp.Size = New System.Drawing.Size(25, 17)
+        Me.txtprsqexp.Size = New System.Drawing.Size(36, 27)
         Me.txtprsqexp.TabIndex = 92
         Me.txtprsqexp.Text = "0"
         Me.txtprsqexp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2495,10 +2516,10 @@ Partial Class analysis
         Me.txttosqexp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttosqexp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttosqexp.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txttosqexp.Location = New System.Drawing.Point(154, 80)
-        Me.txttosqexp.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttosqexp.Location = New System.Drawing.Point(232, 129)
+        Me.txttosqexp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttosqexp.Name = "txttosqexp"
-        Me.txttosqexp.Size = New System.Drawing.Size(25, 14)
+        Me.txttosqexp.Size = New System.Drawing.Size(36, 22)
         Me.txttosqexp.TabIndex = 93
         Me.txttosqexp.Text = "0"
         Me.txttosqexp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2511,10 +2532,10 @@ Partial Class analysis
         Me.lblcount.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblcount.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblcount.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblcount.Location = New System.Drawing.Point(1, 117)
-        Me.lblcount.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblcount.Location = New System.Drawing.Point(2, 188)
+        Me.lblcount.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblcount.Name = "lblcount"
-        Me.lblcount.Size = New System.Drawing.Size(151, 1)
+        Me.lblcount.Size = New System.Drawing.Size(226, 1)
         Me.lblcount.TabIndex = 112
         Me.lblcount.Text = "0"
         Me.lblcount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2528,10 +2549,10 @@ Partial Class analysis
         Me.txttosqmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttosqmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttosqmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttosqmtm.Location = New System.Drawing.Point(154, 58)
-        Me.txttosqmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttosqmtm.Location = New System.Drawing.Point(232, 94)
+        Me.txttosqmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttosqmtm.Name = "txttosqmtm"
-        Me.txttosqmtm.Size = New System.Drawing.Size(25, 20)
+        Me.txttosqmtm.Size = New System.Drawing.Size(36, 31)
         Me.txttosqmtm.TabIndex = 90
         Me.txttosqmtm.Text = "0"
         Me.txttosqmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2544,10 +2565,10 @@ Partial Class analysis
         Me.lblmcount.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblmcount.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblmcount.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblmcount.Location = New System.Drawing.Point(1, 96)
-        Me.lblmcount.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblmcount.Location = New System.Drawing.Point(2, 155)
+        Me.lblmcount.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblmcount.Name = "lblmcount"
-        Me.lblmcount.Size = New System.Drawing.Size(151, 19)
+        Me.lblmcount.Size = New System.Drawing.Size(226, 29)
         Me.lblmcount.TabIndex = 113
         Me.lblmcount.Text = "0"
         Me.lblmcount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2559,9 +2580,10 @@ Partial Class analysis
         Me.lblStatus.BackColor = System.Drawing.Color.Green
         Me.lblStatus.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblStatus.Font = New System.Drawing.Font("Arial", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(3, 39)
+        Me.lblStatus.Location = New System.Drawing.Point(4, 63)
+        Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(147, 18)
+        Me.lblStatus.Size = New System.Drawing.Size(222, 29)
         Me.lblStatus.TabIndex = 18
         Me.lblStatus.Text = "Online Update"
         '
@@ -2572,10 +2594,10 @@ Partial Class analysis
         Me.label8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label8.ForeColor = System.Drawing.Color.LightCoral
-        Me.label8.Location = New System.Drawing.Point(1, 1)
-        Me.label8.Margin = New System.Windows.Forms.Padding(1)
+        Me.label8.Location = New System.Drawing.Point(2, 2)
+        Me.label8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.label8.Name = "label8"
-        Me.label8.Size = New System.Drawing.Size(151, 18)
+        Me.label8.Size = New System.Drawing.Size(226, 28)
         Me.label8.TabIndex = 1
         Me.label8.Text = "To Neutralize"
         Me.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2588,10 +2610,10 @@ Partial Class analysis
         Me.txtprsqmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprsqmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprsqmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprsqmtm.Location = New System.Drawing.Point(154, 40)
-        Me.txtprsqmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprsqmtm.Location = New System.Drawing.Point(232, 65)
+        Me.txtprsqmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprsqmtm.Name = "txtprsqmtm"
-        Me.txtprsqmtm.Size = New System.Drawing.Size(25, 16)
+        Me.txtprsqmtm.Size = New System.Drawing.Size(36, 25)
         Me.txtprsqmtm.TabIndex = 89
         Me.txtprsqmtm.Text = "0"
         Me.txtprsqmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2604,11 +2626,11 @@ Partial Class analysis
         Me.txtshare.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtshare.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtshare.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtshare.Location = New System.Drawing.Point(1, 21)
-        Me.txtshare.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtshare.Location = New System.Drawing.Point(2, 34)
+        Me.txtshare.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtshare.Name = "txtshare"
         Me.txtshare.ReadOnly = True
-        Me.txtshare.Size = New System.Drawing.Size(151, 22)
+        Me.txtshare.Size = New System.Drawing.Size(226, 30)
         Me.txtshare.TabIndex = 3
         Me.txtshare.TabStop = False
         Me.txtshare.Text = "0"
@@ -2620,9 +2642,10 @@ Partial Class analysis
         Me.lblCalCellVal.BackColor = System.Drawing.Color.SteelBlue
         Me.lblCalCellVal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblCalCellVal.Font = New System.Drawing.Font("Arial", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCalCellVal.Location = New System.Drawing.Point(3, 57)
+        Me.lblCalCellVal.Location = New System.Drawing.Point(4, 92)
+        Me.lblCalCellVal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCalCellVal.Name = "lblCalCellVal"
-        Me.lblCalCellVal.Size = New System.Drawing.Size(147, 22)
+        Me.lblCalCellVal.Size = New System.Drawing.Size(222, 35)
         Me.lblCalCellVal.TabIndex = 114
         Me.lblCalCellVal.Text = "Calculate"
         Me.lblCalCellVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2633,9 +2656,10 @@ Partial Class analysis
         Me.Label90.BackColor = System.Drawing.Color.DarkSlateBlue
         Me.Label90.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label90.Font = New System.Drawing.Font("Arial", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label90.Location = New System.Drawing.Point(3, 79)
+        Me.Label90.Location = New System.Drawing.Point(4, 127)
+        Me.Label90.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label90.Name = "Label90"
-        Me.Label90.Size = New System.Drawing.Size(147, 16)
+        Me.Label90.Size = New System.Drawing.Size(222, 26)
         Me.Label90.TabIndex = 116
         Me.Label90.Text = "CF Balance"
         Me.Label90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2647,10 +2671,10 @@ Partial Class analysis
         Me.Label93.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label93.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label93.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label93.Location = New System.Drawing.Point(1, 117)
-        Me.Label93.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label93.Location = New System.Drawing.Point(2, 188)
+        Me.Label93.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label93.Name = "Label93"
-        Me.Label93.Size = New System.Drawing.Size(151, 17)
+        Me.Label93.Size = New System.Drawing.Size(226, 25)
         Me.Label93.TabIndex = 117
         Me.Label93.Text = "TimeValue"
         Me.Label93.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2662,11 +2686,11 @@ Partial Class analysis
         Me.txttimevalue.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttimevalue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttimevalue.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttimevalue.Location = New System.Drawing.Point(1, 136)
-        Me.txttimevalue.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttimevalue.Location = New System.Drawing.Point(2, 217)
+        Me.txttimevalue.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttimevalue.Name = "txttimevalue"
         Me.txttimevalue.ReadOnly = True
-        Me.txttimevalue.Size = New System.Drawing.Size(151, 20)
+        Me.txttimevalue.Size = New System.Drawing.Size(226, 26)
         Me.txttimevalue.TabIndex = 118
         Me.txttimevalue.TabStop = False
         Me.txttimevalue.Text = "0"
@@ -2700,8 +2724,8 @@ Partial Class analysis
         Me.TblPnlExpense.Controls.Add(Me.txttotsqexp, 1, 4)
         Me.TblPnlExpense.Controls.Add(Me.txtprexp, 1, 2)
         Me.TblPnlExpense.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TblPnlExpense.Location = New System.Drawing.Point(283, 1)
-        Me.TblPnlExpense.Margin = New System.Windows.Forms.Padding(1)
+        Me.TblPnlExpense.Location = New System.Drawing.Point(427, 2)
+        Me.TblPnlExpense.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TblPnlExpense.Name = "TblPnlExpense"
         Me.TblPnlExpense.RowCount = 5
         Me.TblPnlExpense.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
@@ -2709,7 +2733,7 @@ Partial Class analysis
         Me.TblPnlExpense.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TblPnlExpense.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TblPnlExpense.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TblPnlExpense.Size = New System.Drawing.Size(445, 154)
+        Me.TblPnlExpense.Size = New System.Drawing.Size(669, 240)
         Me.TblPnlExpense.TabIndex = 0
         '
         'txttotsqmtm
@@ -2720,10 +2744,10 @@ Partial Class analysis
         Me.txttotsqmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotsqmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotsqmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotsqmtm.Location = New System.Drawing.Point(325, 121)
-        Me.txttotsqmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotsqmtm.Location = New System.Drawing.Point(489, 194)
+        Me.txttotsqmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotsqmtm.Name = "txttotsqmtm"
-        Me.txttotsqmtm.Size = New System.Drawing.Size(119, 32)
+        Me.txttotsqmtm.Size = New System.Drawing.Size(178, 44)
         Me.txttotsqmtm.TabIndex = 91
         Me.txttotsqmtm.Text = "0"
         Me.txttotsqmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2736,10 +2760,10 @@ Partial Class analysis
         Me.txttotnetmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotnetmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotnetmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotnetmtm.Location = New System.Drawing.Point(325, 91)
-        Me.txttotnetmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotnetmtm.Location = New System.Drawing.Point(489, 146)
+        Me.txttotnetmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotnetmtm.Name = "txttotnetmtm"
-        Me.txttotnetmtm.Size = New System.Drawing.Size(119, 28)
+        Me.txttotnetmtm.Size = New System.Drawing.Size(178, 44)
         Me.txttotnetmtm.TabIndex = 97
         Me.txttotnetmtm.Text = "0"
         Me.txttotnetmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2752,10 +2776,10 @@ Partial Class analysis
         Me.txttotexp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotexp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotexp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttotexp.Location = New System.Drawing.Point(325, 61)
-        Me.txttotexp.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotexp.Location = New System.Drawing.Point(489, 98)
+        Me.txttotexp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotexp.Name = "txttotexp"
-        Me.txttotexp.Size = New System.Drawing.Size(119, 28)
+        Me.txttotexp.Size = New System.Drawing.Size(178, 44)
         Me.txttotexp.TabIndex = 100
         Me.txttotexp.Text = "0"
         Me.txttotexp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2769,10 +2793,10 @@ Partial Class analysis
         Me.txttotGmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotGmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotGmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotGmtm.Location = New System.Drawing.Point(325, 31)
-        Me.txttotGmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotGmtm.Location = New System.Drawing.Point(489, 50)
+        Me.txttotGmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotGmtm.Name = "txttotGmtm"
-        Me.txttotGmtm.Size = New System.Drawing.Size(119, 28)
+        Me.txttotGmtm.Size = New System.Drawing.Size(178, 44)
         Me.txttotGmtm.TabIndex = 103
         Me.txttotGmtm.Text = "0"
         Me.txttotGmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2785,10 +2809,10 @@ Partial Class analysis
         Me.label36.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label36.ForeColor = System.Drawing.Color.LightCoral
-        Me.label36.Location = New System.Drawing.Point(325, 1)
-        Me.label36.Margin = New System.Windows.Forms.Padding(1)
+        Me.label36.Location = New System.Drawing.Point(489, 2)
+        Me.label36.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.label36.Name = "label36"
-        Me.label36.Size = New System.Drawing.Size(119, 28)
+        Me.label36.Size = New System.Drawing.Size(178, 44)
         Me.label36.TabIndex = 15
         Me.label36.Text = "Total"
         Me.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2801,10 +2825,10 @@ Partial Class analysis
         Me.label37.Dock = System.Windows.Forms.DockStyle.Fill
         Me.label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label37.ForeColor = System.Drawing.Color.LightCoral
-        Me.label37.Location = New System.Drawing.Point(205, 1)
-        Me.label37.Margin = New System.Windows.Forms.Padding(1)
+        Me.label37.Location = New System.Drawing.Point(308, 2)
+        Me.label37.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.label37.Name = "label37"
-        Me.label37.Size = New System.Drawing.Size(118, 28)
+        Me.label37.Size = New System.Drawing.Size(177, 44)
         Me.label37.TabIndex = 13
         Me.label37.Text = "Today"
         Me.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2817,10 +2841,10 @@ Partial Class analysis
         Me.txttGmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttGmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttGmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttGmtm.Location = New System.Drawing.Point(205, 31)
-        Me.txttGmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttGmtm.Location = New System.Drawing.Point(308, 50)
+        Me.txttGmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttGmtm.Name = "txttGmtm"
-        Me.txttGmtm.Size = New System.Drawing.Size(118, 28)
+        Me.txttGmtm.Size = New System.Drawing.Size(177, 44)
         Me.txttGmtm.TabIndex = 102
         Me.txttGmtm.Text = "0"
         Me.txttGmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2833,10 +2857,10 @@ Partial Class analysis
         Me.txttexp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttexp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttexp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttexp.Location = New System.Drawing.Point(205, 61)
-        Me.txttexp.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttexp.Location = New System.Drawing.Point(308, 98)
+        Me.txttexp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttexp.Name = "txttexp"
-        Me.txttexp.Size = New System.Drawing.Size(118, 28)
+        Me.txttexp.Size = New System.Drawing.Size(177, 44)
         Me.txttexp.TabIndex = 99
         Me.txttexp.Text = "0"
         Me.txttexp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2849,10 +2873,10 @@ Partial Class analysis
         Me.txttnetmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttnetmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttnetmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttnetmtm.Location = New System.Drawing.Point(205, 91)
-        Me.txttnetmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttnetmtm.Location = New System.Drawing.Point(308, 146)
+        Me.txttnetmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttnetmtm.Name = "txttnetmtm"
-        Me.txttnetmtm.Size = New System.Drawing.Size(118, 28)
+        Me.txttnetmtm.Size = New System.Drawing.Size(177, 44)
         Me.txttnetmtm.TabIndex = 96
         Me.txttnetmtm.Text = "0"
         Me.txttnetmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2865,10 +2889,10 @@ Partial Class analysis
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label2.Location = New System.Drawing.Point(205, 121)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label2.Location = New System.Drawing.Point(308, 194)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(118, 32)
+        Me.Label2.Size = New System.Drawing.Size(177, 44)
         Me.Label2.TabIndex = 79
         Me.Label2.Text = "Proj. MTM"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2881,10 +2905,10 @@ Partial Class analysis
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label1.Location = New System.Drawing.Point(1, 31)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label1.Location = New System.Drawing.Point(2, 50)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 28)
+        Me.Label1.Size = New System.Drawing.Size(121, 44)
         Me.Label1.TabIndex = 105
         Me.Label1.Text = "Gross MTM"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2897,10 +2921,10 @@ Partial Class analysis
         Me.Label57.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label57.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label57.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label57.Location = New System.Drawing.Point(1, 1)
-        Me.Label57.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label57.Location = New System.Drawing.Point(2, 2)
+        Me.Label57.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(82, 28)
+        Me.Label57.Size = New System.Drawing.Size(121, 44)
         Me.Label57.TabIndex = 109
         Me.Label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -2912,10 +2936,10 @@ Partial Class analysis
         Me.txtprGmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprGmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprGmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprGmtm.Location = New System.Drawing.Point(85, 31)
-        Me.txtprGmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprGmtm.Location = New System.Drawing.Point(127, 50)
+        Me.txtprGmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprGmtm.Name = "txtprGmtm"
-        Me.txtprGmtm.Size = New System.Drawing.Size(118, 28)
+        Me.txtprGmtm.Size = New System.Drawing.Size(177, 44)
         Me.txtprGmtm.TabIndex = 101
         Me.txtprGmtm.Text = "0"
         Me.txtprGmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2928,10 +2952,10 @@ Partial Class analysis
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label5.Location = New System.Drawing.Point(1, 61)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label5.Location = New System.Drawing.Point(2, 98)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 28)
+        Me.Label5.Size = New System.Drawing.Size(121, 44)
         Me.Label5.TabIndex = 106
         Me.Label5.Text = "Expense"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2944,10 +2968,10 @@ Partial Class analysis
         Me.Label19.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label19.Location = New System.Drawing.Point(1, 91)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label19.Location = New System.Drawing.Point(2, 146)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(82, 28)
+        Me.Label19.Size = New System.Drawing.Size(121, 44)
         Me.Label19.TabIndex = 107
         Me.Label19.Text = "Current MTM"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2960,10 +2984,10 @@ Partial Class analysis
         Me.Label21.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label21.Location = New System.Drawing.Point(1, 121)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label21.Location = New System.Drawing.Point(2, 194)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(82, 32)
+        Me.Label21.Size = New System.Drawing.Size(121, 44)
         Me.Label21.TabIndex = 108
         Me.Label21.Text = "Sq. off Exp."
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2976,10 +3000,10 @@ Partial Class analysis
         Me.txtprnetmtm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprnetmtm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprnetmtm.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprnetmtm.Location = New System.Drawing.Point(85, 91)
-        Me.txtprnetmtm.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprnetmtm.Location = New System.Drawing.Point(127, 146)
+        Me.txtprnetmtm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprnetmtm.Name = "txtprnetmtm"
-        Me.txtprnetmtm.Size = New System.Drawing.Size(118, 28)
+        Me.txtprnetmtm.Size = New System.Drawing.Size(177, 44)
         Me.txtprnetmtm.TabIndex = 95
         Me.txtprnetmtm.Text = "0"
         Me.txtprnetmtm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2992,10 +3016,10 @@ Partial Class analysis
         Me.Label71.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label71.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label71.Location = New System.Drawing.Point(85, 1)
-        Me.Label71.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label71.Location = New System.Drawing.Point(127, 2)
+        Me.Label71.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(118, 28)
+        Me.Label71.Size = New System.Drawing.Size(177, 44)
         Me.Label71.TabIndex = 65
         Me.Label71.Text = "Previous"
         Me.Label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3008,10 +3032,10 @@ Partial Class analysis
         Me.txttotsqexp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotsqexp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotsqexp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttotsqexp.Location = New System.Drawing.Point(85, 121)
-        Me.txttotsqexp.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotsqexp.Location = New System.Drawing.Point(127, 194)
+        Me.txttotsqexp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotsqexp.Name = "txttotsqexp"
-        Me.txttotsqexp.Size = New System.Drawing.Size(118, 32)
+        Me.txttotsqexp.Size = New System.Drawing.Size(177, 44)
         Me.txttotsqexp.TabIndex = 94
         Me.txttotsqexp.Text = "0"
         Me.txttotsqexp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -3024,10 +3048,10 @@ Partial Class analysis
         Me.txtprexp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprexp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprexp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtprexp.Location = New System.Drawing.Point(85, 61)
-        Me.txtprexp.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprexp.Location = New System.Drawing.Point(127, 98)
+        Me.txtprexp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprexp.Name = "txtprexp"
-        Me.txtprexp.Size = New System.Drawing.Size(118, 28)
+        Me.txtprexp.Size = New System.Drawing.Size(177, 44)
         Me.txtprexp.TabIndex = 98
         Me.txtprexp.Text = "0"
         Me.txtprexp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -3040,20 +3064,20 @@ Partial Class analysis
         Me.TableLayoutPanel5.Controls.Add(Me.txttotmarg, 0, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.Label24, 0, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(139, 0)
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(209, 0)
         Me.TableLayoutPanel5.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 3
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.43836!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.91781!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.9589!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(143, 156)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(216, 244)
         Me.TableLayoutPanel5.TabIndex = 2
         '
         'TableLayoutPanel11
         '
         Me.TableLayoutPanel11.ColumnCount = 2
-        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
         Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel11.Controls.Add(Me.Label95, 0, 3)
         Me.TableLayoutPanel11.Controls.Add(Me.txtEquity, 1, 2)
@@ -3064,15 +3088,15 @@ Partial Class analysis
         Me.TableLayoutPanel11.Controls.Add(Me.Label43, 0, 2)
         Me.TableLayoutPanel11.Controls.Add(Me.lblpicmargin, 1, 3)
         Me.TableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel11.Location = New System.Drawing.Point(1, 60)
-        Me.TableLayoutPanel11.Margin = New System.Windows.Forms.Padding(1)
+        Me.TableLayoutPanel11.Location = New System.Drawing.Point(2, 95)
+        Me.TableLayoutPanel11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
         Me.TableLayoutPanel11.RowCount = 4
         Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.95454!))
         Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.09091!))
         Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.09091!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel11.Size = New System.Drawing.Size(141, 95)
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel11.Size = New System.Drawing.Size(212, 147)
         Me.TableLayoutPanel11.TabIndex = 0
         '
         'Label95
@@ -3082,10 +3106,10 @@ Partial Class analysis
         Me.Label95.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label95.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label95.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label95.Location = New System.Drawing.Point(1, 75)
-        Me.Label95.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label95.Location = New System.Drawing.Point(2, 117)
+        Me.Label95.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label95.Name = "Label95"
-        Me.Label95.Size = New System.Drawing.Size(29, 19)
+        Me.Label95.Size = New System.Drawing.Size(42, 28)
         Me.Label95.TabIndex = 29
         Me.Label95.Text = "PM."
         Me.Label95.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3097,12 +3121,12 @@ Partial Class analysis
         Me.txtEquity.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtEquity.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEquity.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtEquity.Location = New System.Drawing.Point(32, 50)
-        Me.txtEquity.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtEquity.Location = New System.Drawing.Point(48, 78)
+        Me.txtEquity.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtEquity.Multiline = True
         Me.txtEquity.Name = "txtEquity"
         Me.txtEquity.ReadOnly = True
-        Me.txtEquity.Size = New System.Drawing.Size(108, 23)
+        Me.txtEquity.Size = New System.Drawing.Size(162, 35)
         Me.txtEquity.TabIndex = 28
         Me.txtEquity.TabStop = False
         Me.txtEquity.Text = "0"
@@ -3115,10 +3139,10 @@ Partial Class analysis
         Me.Label41.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label41.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label41.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label41.Location = New System.Drawing.Point(1, 1)
-        Me.Label41.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label41.Location = New System.Drawing.Point(2, 2)
+        Me.Label41.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(29, 22)
+        Me.Label41.Size = New System.Drawing.Size(42, 33)
         Me.Label41.TabIndex = 22
         Me.Label41.Text = "Init."
         Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3130,12 +3154,12 @@ Partial Class analysis
         Me.txtexpmrg.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtexpmrg.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtexpmrg.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtexpmrg.Location = New System.Drawing.Point(32, 25)
-        Me.txtexpmrg.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtexpmrg.Location = New System.Drawing.Point(48, 39)
+        Me.txtexpmrg.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtexpmrg.Multiline = True
         Me.txtexpmrg.Name = "txtexpmrg"
         Me.txtexpmrg.ReadOnly = True
-        Me.txtexpmrg.Size = New System.Drawing.Size(108, 23)
+        Me.txtexpmrg.Size = New System.Drawing.Size(162, 35)
         Me.txtexpmrg.TabIndex = 27
         Me.txtexpmrg.TabStop = False
         Me.txtexpmrg.Text = "0"
@@ -3148,10 +3172,10 @@ Partial Class analysis
         Me.Label42.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label42.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label42.Location = New System.Drawing.Point(1, 25)
-        Me.Label42.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label42.Location = New System.Drawing.Point(2, 39)
+        Me.Label42.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(29, 23)
+        Me.Label42.Size = New System.Drawing.Size(42, 35)
         Me.Label42.TabIndex = 22
         Me.Label42.Text = "Exp. Margin "
         Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3163,12 +3187,12 @@ Partial Class analysis
         Me.txtintmrg.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtintmrg.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtintmrg.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtintmrg.Location = New System.Drawing.Point(32, 1)
-        Me.txtintmrg.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtintmrg.Location = New System.Drawing.Point(48, 2)
+        Me.txtintmrg.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtintmrg.Multiline = True
         Me.txtintmrg.Name = "txtintmrg"
         Me.txtintmrg.ReadOnly = True
-        Me.txtintmrg.Size = New System.Drawing.Size(108, 22)
+        Me.txtintmrg.Size = New System.Drawing.Size(162, 33)
         Me.txtintmrg.TabIndex = 26
         Me.txtintmrg.TabStop = False
         Me.txtintmrg.Text = "0"
@@ -3181,10 +3205,10 @@ Partial Class analysis
         Me.Label43.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label43.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label43.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label43.Location = New System.Drawing.Point(1, 50)
-        Me.Label43.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label43.Location = New System.Drawing.Point(2, 78)
+        Me.Label43.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(29, 23)
+        Me.Label43.Size = New System.Drawing.Size(42, 35)
         Me.Label43.TabIndex = 24
         Me.Label43.Text = "EQ."
         Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3195,9 +3219,10 @@ Partial Class analysis
         Me.lblpicmargin.BackColor = System.Drawing.SystemColors.WindowText
         Me.lblpicmargin.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblpicmargin.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.lblpicmargin.Location = New System.Drawing.Point(34, 74)
+        Me.lblpicmargin.Location = New System.Drawing.Point(50, 115)
+        Me.lblpicmargin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblpicmargin.Name = "lblpicmargin"
-        Me.lblpicmargin.Size = New System.Drawing.Size(104, 21)
+        Me.lblpicmargin.Size = New System.Drawing.Size(158, 32)
         Me.lblpicmargin.TabIndex = 30
         Me.lblpicmargin.Text = "0"
         Me.lblpicmargin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -3209,11 +3234,11 @@ Partial Class analysis
         Me.txttotmarg.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotmarg.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotmarg.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txttotmarg.Location = New System.Drawing.Point(1, 26)
-        Me.txttotmarg.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotmarg.Location = New System.Drawing.Point(2, 42)
+        Me.txttotmarg.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotmarg.Name = "txttotmarg"
         Me.txttotmarg.ReadOnly = True
-        Me.txttotmarg.Size = New System.Drawing.Size(141, 31)
+        Me.txttotmarg.Size = New System.Drawing.Size(212, 43)
         Me.txttotmarg.TabIndex = 85
         Me.txttotmarg.TabStop = False
         Me.txttotmarg.Text = "0"
@@ -3227,10 +3252,10 @@ Partial Class analysis
         Me.Label24.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label24.Location = New System.Drawing.Point(1, 1)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label24.Location = New System.Drawing.Point(2, 2)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(141, 23)
+        Me.Label24.Size = New System.Drawing.Size(212, 36)
         Me.Label24.TabIndex = 84
         Me.Label24.Text = "Tot. Marg.(In Lacs)"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -3242,9 +3267,10 @@ Partial Class analysis
         Me.lblBep.BackColor = System.Drawing.Color.Black
         Me.lblBep.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblBep.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBep.Location = New System.Drawing.Point(3, 227)
+        Me.lblBep.Location = New System.Drawing.Point(4, 355)
+        Me.lblBep.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBep.Name = "lblBep"
-        Me.lblBep.Size = New System.Drawing.Size(723, 13)
+        Me.lblBep.Size = New System.Drawing.Size(1090, 20)
         Me.lblBep.TabIndex = 20
         Me.lblBep.Text = "Break Even point"
         '
@@ -3253,10 +3279,11 @@ Partial Class analysis
         Me.MonthWise.BackColor = System.Drawing.Color.Transparent
         Me.MonthWise.Controls.Add(Me.TableLayoutPanel6)
         Me.MonthWise.Controls.Add(Me.Panel6)
-        Me.MonthWise.Location = New System.Drawing.Point(4, 22)
+        Me.MonthWise.Location = New System.Drawing.Point(4, 29)
+        Me.MonthWise.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MonthWise.Name = "MonthWise"
-        Me.MonthWise.Padding = New System.Windows.Forms.Padding(3)
-        Me.MonthWise.Size = New System.Drawing.Size(1014, 246)
+        Me.MonthWise.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MonthWise.Size = New System.Drawing.Size(1525, 385)
         Me.MonthWise.TabIndex = 1
         Me.MonthWise.Text = "Month Wise"
         Me.MonthWise.UseVisualStyleBackColor = True
@@ -3347,7 +3374,7 @@ Partial Class analysis
         Me.TableLayoutPanel6.Controls.Add(Me.txtvannaval_4, 8, 7)
         Me.TableLayoutPanel6.Controls.Add(Me.txttvannaval_4, 8, 8)
         Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel6.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(4, 5)
         Me.TableLayoutPanel6.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
         Me.TableLayoutPanel6.RowCount = 9
@@ -3360,7 +3387,7 @@ Partial Class analysis
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(1008, 240)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(1517, 375)
         Me.TableLayoutPanel6.TabIndex = 0
         '
         'txtshare2
@@ -3370,12 +3397,12 @@ Partial Class analysis
         Me.txtshare2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtshare2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtshare2.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtshare2.Location = New System.Drawing.Point(106, 79)
-        Me.txtshare2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtshare2.Location = New System.Drawing.Point(161, 125)
+        Me.txtshare2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtshare2.Name = "txtshare2"
         Me.txtshare2.ReadOnly = True
         Me.TableLayoutPanel6.SetRowSpan(Me.txtshare2, 2)
-        Me.txtshare2.Size = New System.Drawing.Size(134, 35)
+        Me.txtshare2.Size = New System.Drawing.Size(201, 48)
         Me.txtshare2.TabIndex = 142
         Me.txtshare2.TabStop = False
         Me.txtshare2.Text = "0"
@@ -3388,10 +3415,10 @@ Partial Class analysis
         Me.Label15.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label15.Location = New System.Drawing.Point(106, 1)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label15.Location = New System.Drawing.Point(161, 2)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(134, 24)
+        Me.Label15.Size = New System.Drawing.Size(201, 37)
         Me.Label15.TabIndex = 2
         Me.Label15.Text = "To Neutralize"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3402,10 +3429,10 @@ Partial Class analysis
         Me.Label20.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label20.Location = New System.Drawing.Point(241, 26)
+        Me.Label20.Location = New System.Drawing.Point(364, 41)
         Me.Label20.Margin = New System.Windows.Forms.Padding(0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(82, 26)
+        Me.Label20.Size = New System.Drawing.Size(124, 41)
         Me.Label20.TabIndex = 16
         Me.Label20.Text = "Today"
         Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -3417,10 +3444,10 @@ Partial Class analysis
         Me.Label18.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label18.Location = New System.Drawing.Point(324, 1)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label18.Location = New System.Drawing.Point(490, 2)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(96, 24)
+        Me.Label18.Size = New System.Drawing.Size(144, 37)
         Me.Label18.TabIndex = 14
         Me.Label18.Text = "Delta"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3432,10 +3459,10 @@ Partial Class analysis
         Me.Label22.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label22.Location = New System.Drawing.Point(422, 1)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label22.Location = New System.Drawing.Point(638, 2)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(96, 24)
+        Me.Label22.Size = New System.Drawing.Size(144, 37)
         Me.Label22.TabIndex = 17
         Me.Label22.Text = "Gamma"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3447,10 +3474,10 @@ Partial Class analysis
         Me.Label25.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label25.Location = New System.Drawing.Point(520, 1)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label25.Location = New System.Drawing.Point(786, 2)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(96, 24)
+        Me.Label25.Size = New System.Drawing.Size(144, 37)
         Me.Label25.TabIndex = 18
         Me.Label25.Text = "Vega"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3462,10 +3489,10 @@ Partial Class analysis
         Me.Label27.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label27.Location = New System.Drawing.Point(241, 52)
+        Me.Label27.Location = New System.Drawing.Point(364, 82)
         Me.Label27.Margin = New System.Windows.Forms.Padding(0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(82, 26)
+        Me.Label27.Size = New System.Drawing.Size(124, 41)
         Me.Label27.TabIndex = 27
         Me.Label27.Text = "Next Day"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -3479,10 +3506,10 @@ Partial Class analysis
         Me.txtdelval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtdelval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdelval_1.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtdelval_1.Location = New System.Drawing.Point(324, 27)
-        Me.txtdelval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtdelval_1.Location = New System.Drawing.Point(490, 43)
+        Me.txtdelval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtdelval_1.Name = "txtdelval_1"
-        Me.txtdelval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txtdelval_1.Size = New System.Drawing.Size(144, 37)
         Me.txtdelval_1.TabIndex = 109
         Me.txtdelval_1.Text = "0"
         Me.txtdelval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3496,10 +3523,10 @@ Partial Class analysis
         Me.txtwegaval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtwegaval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtwegaval_1.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtwegaval_1.Location = New System.Drawing.Point(520, 27)
-        Me.txtwegaval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtwegaval_1.Location = New System.Drawing.Point(786, 43)
+        Me.txtwegaval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtwegaval_1.Name = "txtwegaval_1"
-        Me.txtwegaval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txtwegaval_1.Size = New System.Drawing.Size(144, 37)
         Me.txtwegaval_1.TabIndex = 111
         Me.txtwegaval_1.Text = "0"
         Me.txtwegaval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3513,10 +3540,10 @@ Partial Class analysis
         Me.txtthetaval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtthetaval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtthetaval_1.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtthetaval_1.Location = New System.Drawing.Point(618, 27)
-        Me.txtthetaval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtthetaval_1.Location = New System.Drawing.Point(934, 43)
+        Me.txtthetaval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtthetaval_1.Name = "txtthetaval_1"
-        Me.txtthetaval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txtthetaval_1.Size = New System.Drawing.Size(144, 37)
         Me.txtthetaval_1.TabIndex = 112
         Me.txtthetaval_1.Text = "0"
         Me.txtthetaval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3529,10 +3556,10 @@ Partial Class analysis
         Me.txttdelval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelval_1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttdelval_1.Location = New System.Drawing.Point(324, 53)
-        Me.txttdelval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelval_1.Location = New System.Drawing.Point(490, 84)
+        Me.txttdelval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelval_1.Name = "txttdelval_1"
-        Me.txttdelval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txttdelval_1.Size = New System.Drawing.Size(144, 37)
         Me.txttdelval_1.TabIndex = 113
         Me.txttdelval_1.Text = "0"
         Me.txttdelval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3546,10 +3573,10 @@ Partial Class analysis
         Me.txtgmval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtgmval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtgmval_1.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtgmval_1.Location = New System.Drawing.Point(422, 27)
-        Me.txtgmval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtgmval_1.Location = New System.Drawing.Point(638, 43)
+        Me.txtgmval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtgmval_1.Name = "txtgmval_1"
-        Me.txtgmval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txtgmval_1.Size = New System.Drawing.Size(144, 37)
         Me.txtgmval_1.TabIndex = 110
         Me.txtgmval_1.Text = "0"
         Me.txtgmval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3562,10 +3589,10 @@ Partial Class analysis
         Me.txttgmval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgmval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgmval_1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttgmval_1.Location = New System.Drawing.Point(422, 53)
-        Me.txttgmval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgmval_1.Location = New System.Drawing.Point(638, 84)
+        Me.txttgmval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgmval_1.Name = "txttgmval_1"
-        Me.txttgmval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txttgmval_1.Size = New System.Drawing.Size(144, 37)
         Me.txttgmval_1.TabIndex = 114
         Me.txttgmval_1.Text = "0"
         Me.txttgmval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3578,10 +3605,10 @@ Partial Class analysis
         Me.txttwegaval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttwegaval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttwegaval_1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttwegaval_1.Location = New System.Drawing.Point(520, 53)
-        Me.txttwegaval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttwegaval_1.Location = New System.Drawing.Point(786, 84)
+        Me.txttwegaval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttwegaval_1.Name = "txttwegaval_1"
-        Me.txttwegaval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txttwegaval_1.Size = New System.Drawing.Size(144, 37)
         Me.txttwegaval_1.TabIndex = 115
         Me.txttwegaval_1.Text = "0"
         Me.txttwegaval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3594,10 +3621,10 @@ Partial Class analysis
         Me.txttthetaval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttthetaval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttthetaval_1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttthetaval_1.Location = New System.Drawing.Point(618, 53)
-        Me.txttthetaval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttthetaval_1.Location = New System.Drawing.Point(934, 84)
+        Me.txttthetaval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttthetaval_1.Name = "txttthetaval_1"
-        Me.txttthetaval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txttthetaval_1.Size = New System.Drawing.Size(144, 37)
         Me.txttthetaval_1.TabIndex = 116
         Me.txttthetaval_1.Text = "0"
         Me.txttthetaval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3610,10 +3637,10 @@ Partial Class analysis
         Me.txtdelval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtdelval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdelval_2.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtdelval_2.Location = New System.Drawing.Point(324, 79)
-        Me.txtdelval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtdelval_2.Location = New System.Drawing.Point(490, 125)
+        Me.txtdelval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtdelval_2.Name = "txtdelval_2"
-        Me.txtdelval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txtdelval_2.Size = New System.Drawing.Size(144, 37)
         Me.txtdelval_2.TabIndex = 109
         Me.txtdelval_2.Text = "0"
         Me.txtdelval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3626,10 +3653,10 @@ Partial Class analysis
         Me.txtdelval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtdelval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdelval_3.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtdelval_3.Location = New System.Drawing.Point(324, 131)
-        Me.txtdelval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtdelval_3.Location = New System.Drawing.Point(490, 207)
+        Me.txtdelval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtdelval_3.Name = "txtdelval_3"
-        Me.txtdelval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txtdelval_3.Size = New System.Drawing.Size(144, 37)
         Me.txtdelval_3.TabIndex = 109
         Me.txtdelval_3.Text = "0"
         Me.txtdelval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3642,10 +3669,10 @@ Partial Class analysis
         Me.txtdelval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtdelval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdelval_4.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtdelval_4.Location = New System.Drawing.Point(324, 183)
-        Me.txtdelval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtdelval_4.Location = New System.Drawing.Point(490, 289)
+        Me.txtdelval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtdelval_4.Name = "txtdelval_4"
-        Me.txtdelval_4.Size = New System.Drawing.Size(96, 24)
+        Me.txtdelval_4.Size = New System.Drawing.Size(144, 37)
         Me.txtdelval_4.TabIndex = 109
         Me.txtdelval_4.Text = "0"
         Me.txtdelval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3658,10 +3685,10 @@ Partial Class analysis
         Me.txttdelval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelval_2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttdelval_2.Location = New System.Drawing.Point(324, 105)
-        Me.txttdelval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelval_2.Location = New System.Drawing.Point(490, 166)
+        Me.txttdelval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelval_2.Name = "txttdelval_2"
-        Me.txttdelval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txttdelval_2.Size = New System.Drawing.Size(144, 37)
         Me.txttdelval_2.TabIndex = 113
         Me.txttdelval_2.Text = "0"
         Me.txttdelval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3674,10 +3701,10 @@ Partial Class analysis
         Me.txttdelval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelval_3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttdelval_3.Location = New System.Drawing.Point(324, 157)
-        Me.txttdelval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelval_3.Location = New System.Drawing.Point(490, 248)
+        Me.txttdelval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelval_3.Name = "txttdelval_3"
-        Me.txttdelval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txttdelval_3.Size = New System.Drawing.Size(144, 37)
         Me.txttdelval_3.TabIndex = 113
         Me.txttdelval_3.Text = "0"
         Me.txttdelval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3690,10 +3717,10 @@ Partial Class analysis
         Me.txttdelval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelval_4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttdelval_4.Location = New System.Drawing.Point(324, 209)
-        Me.txttdelval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelval_4.Location = New System.Drawing.Point(490, 330)
+        Me.txttdelval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelval_4.Name = "txttdelval_4"
-        Me.txttdelval_4.Size = New System.Drawing.Size(96, 30)
+        Me.txttdelval_4.Size = New System.Drawing.Size(144, 43)
         Me.txttdelval_4.TabIndex = 113
         Me.txttdelval_4.Text = "0"
         Me.txttdelval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3706,10 +3733,10 @@ Partial Class analysis
         Me.txtgmval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtgmval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtgmval_2.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtgmval_2.Location = New System.Drawing.Point(422, 79)
-        Me.txtgmval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtgmval_2.Location = New System.Drawing.Point(638, 125)
+        Me.txtgmval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtgmval_2.Name = "txtgmval_2"
-        Me.txtgmval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txtgmval_2.Size = New System.Drawing.Size(144, 37)
         Me.txtgmval_2.TabIndex = 110
         Me.txtgmval_2.Text = "0"
         Me.txtgmval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3722,10 +3749,10 @@ Partial Class analysis
         Me.txtgmval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtgmval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtgmval_3.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtgmval_3.Location = New System.Drawing.Point(422, 131)
-        Me.txtgmval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtgmval_3.Location = New System.Drawing.Point(638, 207)
+        Me.txtgmval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtgmval_3.Name = "txtgmval_3"
-        Me.txtgmval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txtgmval_3.Size = New System.Drawing.Size(144, 37)
         Me.txtgmval_3.TabIndex = 110
         Me.txtgmval_3.Text = "0"
         Me.txtgmval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3738,10 +3765,10 @@ Partial Class analysis
         Me.txtgmval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtgmval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtgmval_4.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtgmval_4.Location = New System.Drawing.Point(422, 183)
-        Me.txtgmval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtgmval_4.Location = New System.Drawing.Point(638, 289)
+        Me.txtgmval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtgmval_4.Name = "txtgmval_4"
-        Me.txtgmval_4.Size = New System.Drawing.Size(96, 24)
+        Me.txtgmval_4.Size = New System.Drawing.Size(144, 37)
         Me.txtgmval_4.TabIndex = 110
         Me.txtgmval_4.Text = "0"
         Me.txtgmval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3754,10 +3781,10 @@ Partial Class analysis
         Me.txtwegaval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtwegaval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtwegaval_2.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtwegaval_2.Location = New System.Drawing.Point(520, 79)
-        Me.txtwegaval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtwegaval_2.Location = New System.Drawing.Point(786, 125)
+        Me.txtwegaval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtwegaval_2.Name = "txtwegaval_2"
-        Me.txtwegaval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txtwegaval_2.Size = New System.Drawing.Size(144, 37)
         Me.txtwegaval_2.TabIndex = 117
         Me.txtwegaval_2.Text = "0"
         Me.txtwegaval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3770,10 +3797,10 @@ Partial Class analysis
         Me.txttwegaval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttwegaval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttwegaval_2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttwegaval_2.Location = New System.Drawing.Point(520, 105)
-        Me.txttwegaval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttwegaval_2.Location = New System.Drawing.Point(786, 166)
+        Me.txttwegaval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttwegaval_2.Name = "txttwegaval_2"
-        Me.txttwegaval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txttwegaval_2.Size = New System.Drawing.Size(144, 37)
         Me.txttwegaval_2.TabIndex = 118
         Me.txttwegaval_2.Text = "0"
         Me.txttwegaval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3786,10 +3813,10 @@ Partial Class analysis
         Me.txtthetaval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtthetaval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtthetaval_2.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtthetaval_2.Location = New System.Drawing.Point(618, 79)
-        Me.txtthetaval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtthetaval_2.Location = New System.Drawing.Point(934, 125)
+        Me.txtthetaval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtthetaval_2.Name = "txtthetaval_2"
-        Me.txtthetaval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txtthetaval_2.Size = New System.Drawing.Size(144, 37)
         Me.txtthetaval_2.TabIndex = 119
         Me.txtthetaval_2.Text = "0"
         Me.txtthetaval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3802,10 +3829,10 @@ Partial Class analysis
         Me.txttgmval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgmval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgmval_3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttgmval_3.Location = New System.Drawing.Point(422, 157)
-        Me.txttgmval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgmval_3.Location = New System.Drawing.Point(638, 248)
+        Me.txttgmval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgmval_3.Name = "txttgmval_3"
-        Me.txttgmval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txttgmval_3.Size = New System.Drawing.Size(144, 37)
         Me.txttgmval_3.TabIndex = 120
         Me.txttgmval_3.Text = "0"
         Me.txttgmval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3818,10 +3845,10 @@ Partial Class analysis
         Me.txtwegaval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtwegaval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtwegaval_3.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtwegaval_3.Location = New System.Drawing.Point(520, 131)
-        Me.txtwegaval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtwegaval_3.Location = New System.Drawing.Point(786, 207)
+        Me.txtwegaval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtwegaval_3.Name = "txtwegaval_3"
-        Me.txtwegaval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txtwegaval_3.Size = New System.Drawing.Size(144, 37)
         Me.txtwegaval_3.TabIndex = 125
         Me.txtwegaval_3.Text = "0"
         Me.txtwegaval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3834,10 +3861,10 @@ Partial Class analysis
         Me.txtthetaval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtthetaval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtthetaval_3.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtthetaval_3.Location = New System.Drawing.Point(618, 131)
-        Me.txtthetaval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtthetaval_3.Location = New System.Drawing.Point(934, 207)
+        Me.txtthetaval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtthetaval_3.Name = "txtthetaval_3"
-        Me.txtthetaval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txtthetaval_3.Size = New System.Drawing.Size(144, 37)
         Me.txtthetaval_3.TabIndex = 127
         Me.txtthetaval_3.Text = "0"
         Me.txtthetaval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3850,10 +3877,10 @@ Partial Class analysis
         Me.txtwegaval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtwegaval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtwegaval_4.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtwegaval_4.Location = New System.Drawing.Point(520, 183)
-        Me.txtwegaval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtwegaval_4.Location = New System.Drawing.Point(786, 289)
+        Me.txtwegaval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtwegaval_4.Name = "txtwegaval_4"
-        Me.txtwegaval_4.Size = New System.Drawing.Size(96, 24)
+        Me.txtwegaval_4.Size = New System.Drawing.Size(144, 37)
         Me.txtwegaval_4.TabIndex = 124
         Me.txtwegaval_4.Text = "0"
         Me.txtwegaval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3866,10 +3893,10 @@ Partial Class analysis
         Me.txtthetaval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtthetaval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtthetaval_4.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtthetaval_4.Location = New System.Drawing.Point(618, 183)
-        Me.txtthetaval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtthetaval_4.Location = New System.Drawing.Point(934, 289)
+        Me.txtthetaval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtthetaval_4.Name = "txtthetaval_4"
-        Me.txtthetaval_4.Size = New System.Drawing.Size(96, 24)
+        Me.txtthetaval_4.Size = New System.Drawing.Size(144, 37)
         Me.txtthetaval_4.TabIndex = 122
         Me.txtthetaval_4.Text = "0"
         Me.txtthetaval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3882,10 +3909,10 @@ Partial Class analysis
         Me.txttgmval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgmval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgmval_2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttgmval_2.Location = New System.Drawing.Point(422, 105)
-        Me.txttgmval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgmval_2.Location = New System.Drawing.Point(638, 166)
+        Me.txttgmval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgmval_2.Name = "txttgmval_2"
-        Me.txttgmval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txttgmval_2.Size = New System.Drawing.Size(144, 37)
         Me.txttgmval_2.TabIndex = 132
         Me.txttgmval_2.Text = "0"
         Me.txttgmval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3898,10 +3925,10 @@ Partial Class analysis
         Me.txttthetaval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttthetaval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttthetaval_2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttthetaval_2.Location = New System.Drawing.Point(618, 105)
-        Me.txttthetaval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttthetaval_2.Location = New System.Drawing.Point(934, 166)
+        Me.txttthetaval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttthetaval_2.Name = "txttthetaval_2"
-        Me.txttthetaval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txttthetaval_2.Size = New System.Drawing.Size(144, 37)
         Me.txttthetaval_2.TabIndex = 129
         Me.txttthetaval_2.Text = "0"
         Me.txttthetaval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3914,10 +3941,10 @@ Partial Class analysis
         Me.txttwegaval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttwegaval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttwegaval_3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttwegaval_3.Location = New System.Drawing.Point(520, 157)
-        Me.txttwegaval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttwegaval_3.Location = New System.Drawing.Point(786, 248)
+        Me.txttwegaval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttwegaval_3.Name = "txttwegaval_3"
-        Me.txttwegaval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txttwegaval_3.Size = New System.Drawing.Size(144, 37)
         Me.txttwegaval_3.TabIndex = 133
         Me.txttwegaval_3.Text = "0"
         Me.txttwegaval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3930,10 +3957,10 @@ Partial Class analysis
         Me.txttthetaval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttthetaval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttthetaval_3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttthetaval_3.Location = New System.Drawing.Point(618, 157)
-        Me.txttthetaval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttthetaval_3.Location = New System.Drawing.Point(934, 248)
+        Me.txttthetaval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttthetaval_3.Name = "txttthetaval_3"
-        Me.txttthetaval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txttthetaval_3.Size = New System.Drawing.Size(144, 37)
         Me.txttthetaval_3.TabIndex = 130
         Me.txttthetaval_3.Text = "0"
         Me.txttthetaval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3946,10 +3973,10 @@ Partial Class analysis
         Me.txttgmval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgmval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgmval_4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttgmval_4.Location = New System.Drawing.Point(422, 209)
-        Me.txttgmval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgmval_4.Location = New System.Drawing.Point(638, 330)
+        Me.txttgmval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgmval_4.Name = "txttgmval_4"
-        Me.txttgmval_4.Size = New System.Drawing.Size(96, 30)
+        Me.txttgmval_4.Size = New System.Drawing.Size(144, 43)
         Me.txttgmval_4.TabIndex = 128
         Me.txttgmval_4.Text = "0"
         Me.txttgmval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3962,10 +3989,10 @@ Partial Class analysis
         Me.txttwegaval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttwegaval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttwegaval_4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttwegaval_4.Location = New System.Drawing.Point(520, 209)
-        Me.txttwegaval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttwegaval_4.Location = New System.Drawing.Point(786, 330)
+        Me.txttwegaval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttwegaval_4.Name = "txttwegaval_4"
-        Me.txttwegaval_4.Size = New System.Drawing.Size(96, 30)
+        Me.txttwegaval_4.Size = New System.Drawing.Size(144, 43)
         Me.txttwegaval_4.TabIndex = 131
         Me.txttwegaval_4.Text = "0"
         Me.txttwegaval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3978,10 +4005,10 @@ Partial Class analysis
         Me.txttthetaval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttthetaval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttthetaval_4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttthetaval_4.Location = New System.Drawing.Point(618, 209)
-        Me.txttthetaval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttthetaval_4.Location = New System.Drawing.Point(934, 330)
+        Me.txttthetaval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttthetaval_4.Name = "txttthetaval_4"
-        Me.txttthetaval_4.Size = New System.Drawing.Size(96, 30)
+        Me.txttthetaval_4.Size = New System.Drawing.Size(144, 43)
         Me.txttthetaval_4.TabIndex = 134
         Me.txttthetaval_4.Text = "0"
         Me.txttthetaval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -3992,10 +4019,10 @@ Partial Class analysis
         Me.Label72.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label72.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label72.Location = New System.Drawing.Point(241, 78)
+        Me.Label72.Location = New System.Drawing.Point(364, 123)
         Me.Label72.Margin = New System.Windows.Forms.Padding(0)
         Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(82, 26)
+        Me.Label72.Size = New System.Drawing.Size(124, 41)
         Me.Label72.TabIndex = 136
         Me.Label72.Text = "Today"
         Me.Label72.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4006,10 +4033,10 @@ Partial Class analysis
         Me.Label70.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label70.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label70.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label70.Location = New System.Drawing.Point(241, 130)
+        Me.Label70.Location = New System.Drawing.Point(364, 205)
         Me.Label70.Margin = New System.Windows.Forms.Padding(0)
         Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(82, 26)
+        Me.Label70.Size = New System.Drawing.Size(124, 41)
         Me.Label70.TabIndex = 135
         Me.Label70.Text = "Today"
         Me.Label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4020,10 +4047,10 @@ Partial Class analysis
         Me.Label73.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label73.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label73.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label73.Location = New System.Drawing.Point(241, 182)
+        Me.Label73.Location = New System.Drawing.Point(364, 287)
         Me.Label73.Margin = New System.Windows.Forms.Padding(0)
         Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(82, 26)
+        Me.Label73.Size = New System.Drawing.Size(124, 41)
         Me.Label73.TabIndex = 137
         Me.Label73.Text = "Today"
         Me.Label73.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4035,10 +4062,10 @@ Partial Class analysis
         Me.Label76.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label76.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label76.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label76.Location = New System.Drawing.Point(241, 104)
+        Me.Label76.Location = New System.Drawing.Point(364, 164)
         Me.Label76.Margin = New System.Windows.Forms.Padding(0)
         Me.Label76.Name = "Label76"
-        Me.Label76.Size = New System.Drawing.Size(82, 26)
+        Me.Label76.Size = New System.Drawing.Size(124, 41)
         Me.Label76.TabIndex = 140
         Me.Label76.Text = "Next Day"
         Me.Label76.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4050,10 +4077,10 @@ Partial Class analysis
         Me.Label75.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label75.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label75.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label75.Location = New System.Drawing.Point(241, 156)
+        Me.Label75.Location = New System.Drawing.Point(364, 246)
         Me.Label75.Margin = New System.Windows.Forms.Padding(0)
         Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(82, 26)
+        Me.Label75.Size = New System.Drawing.Size(124, 41)
         Me.Label75.TabIndex = 139
         Me.Label75.Text = "Next Day"
         Me.Label75.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4065,10 +4092,10 @@ Partial Class analysis
         Me.Label74.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label74.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label74.Location = New System.Drawing.Point(241, 208)
+        Me.Label74.Location = New System.Drawing.Point(364, 328)
         Me.Label74.Margin = New System.Windows.Forms.Padding(0)
         Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(82, 32)
+        Me.Label74.Size = New System.Drawing.Size(124, 47)
         Me.Label74.TabIndex = 138
         Me.Label74.Text = "Next Day"
         Me.Label74.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4080,12 +4107,12 @@ Partial Class analysis
         Me.txtshare1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtshare1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtshare1.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtshare1.Location = New System.Drawing.Point(106, 27)
-        Me.txtshare1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtshare1.Location = New System.Drawing.Point(161, 43)
+        Me.txtshare1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtshare1.Name = "txtshare1"
         Me.txtshare1.ReadOnly = True
         Me.TableLayoutPanel6.SetRowSpan(Me.txtshare1, 2)
-        Me.txtshare1.Size = New System.Drawing.Size(134, 35)
+        Me.txtshare1.Size = New System.Drawing.Size(201, 48)
         Me.txtshare1.TabIndex = 141
         Me.txtshare1.TabStop = False
         Me.txtshare1.Text = "0"
@@ -4098,12 +4125,12 @@ Partial Class analysis
         Me.txtshare3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtshare3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtshare3.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtshare3.Location = New System.Drawing.Point(106, 131)
-        Me.txtshare3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtshare3.Location = New System.Drawing.Point(161, 207)
+        Me.txtshare3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtshare3.Name = "txtshare3"
         Me.txtshare3.ReadOnly = True
         Me.TableLayoutPanel6.SetRowSpan(Me.txtshare3, 2)
-        Me.txtshare3.Size = New System.Drawing.Size(134, 35)
+        Me.txtshare3.Size = New System.Drawing.Size(201, 48)
         Me.txtshare3.TabIndex = 143
         Me.txtshare3.TabStop = False
         Me.txtshare3.Text = "0"
@@ -4116,11 +4143,11 @@ Partial Class analysis
         Me.txtshare4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtshare4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtshare4.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtshare4.Location = New System.Drawing.Point(106, 183)
-        Me.txtshare4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtshare4.Location = New System.Drawing.Point(161, 289)
+        Me.txtshare4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtshare4.Name = "txtshare4"
         Me.txtshare4.ReadOnly = True
-        Me.txtshare4.Size = New System.Drawing.Size(134, 35)
+        Me.txtshare4.Size = New System.Drawing.Size(201, 48)
         Me.txtshare4.TabIndex = 144
         Me.txtshare4.TabStop = False
         Me.txtshare4.Text = "0"
@@ -4132,10 +4159,10 @@ Partial Class analysis
         Me.Label45.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label45.Location = New System.Drawing.Point(0, 78)
+        Me.Label45.Location = New System.Drawing.Point(0, 123)
         Me.Label45.Margin = New System.Windows.Forms.Padding(0)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(105, 26)
+        Me.Label45.Size = New System.Drawing.Size(159, 41)
         Me.Label45.TabIndex = 145
         Me.Label45.Text = "Current + 1"
         Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4146,10 +4173,10 @@ Partial Class analysis
         Me.Label46.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label46.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label46.Location = New System.Drawing.Point(0, 130)
+        Me.Label46.Location = New System.Drawing.Point(0, 205)
         Me.Label46.Margin = New System.Windows.Forms.Padding(0)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(105, 26)
+        Me.Label46.Size = New System.Drawing.Size(159, 41)
         Me.Label46.TabIndex = 145
         Me.Label46.Text = "Current + 2"
         Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4160,10 +4187,10 @@ Partial Class analysis
         Me.Label47.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label47.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label47.Location = New System.Drawing.Point(0, 182)
+        Me.Label47.Location = New System.Drawing.Point(0, 287)
         Me.Label47.Margin = New System.Windows.Forms.Padding(0)
         Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(105, 26)
+        Me.Label47.Size = New System.Drawing.Size(159, 41)
         Me.Label47.TabIndex = 145
         Me.Label47.Text = "Far Month"
         Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4174,10 +4201,10 @@ Partial Class analysis
         Me.Label44.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label44.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label44.Location = New System.Drawing.Point(0, 26)
+        Me.Label44.Location = New System.Drawing.Point(0, 41)
         Me.Label44.Margin = New System.Windows.Forms.Padding(0)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(105, 26)
+        Me.Label44.Size = New System.Drawing.Size(159, 41)
         Me.Label44.TabIndex = 145
         Me.Label44.Text = "Current"
         Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4189,10 +4216,10 @@ Partial Class analysis
         Me.Label58.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label58.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label58.Location = New System.Drawing.Point(618, 1)
-        Me.Label58.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label58.Location = New System.Drawing.Point(934, 2)
+        Me.Label58.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(96, 24)
+        Me.Label58.Size = New System.Drawing.Size(144, 37)
         Me.Label58.TabIndex = 146
         Me.Label58.Text = "Theta"
         Me.Label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4204,10 +4231,10 @@ Partial Class analysis
         Me.Label26.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label26.Location = New System.Drawing.Point(716, 1)
-        Me.Label26.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label26.Location = New System.Drawing.Point(1082, 2)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(96, 24)
+        Me.Label26.Size = New System.Drawing.Size(144, 37)
         Me.Label26.TabIndex = 19
         Me.Label26.Text = "Volga"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4221,10 +4248,10 @@ Partial Class analysis
         Me.txtvolgaval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtvolgaval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtvolgaval_1.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtvolgaval_1.Location = New System.Drawing.Point(716, 27)
-        Me.txtvolgaval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtvolgaval_1.Location = New System.Drawing.Point(1082, 43)
+        Me.txtvolgaval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtvolgaval_1.Name = "txtvolgaval_1"
-        Me.txtvolgaval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txtvolgaval_1.Size = New System.Drawing.Size(144, 37)
         Me.txtvolgaval_1.TabIndex = 147
         Me.txtvolgaval_1.Text = "0"
         Me.txtvolgaval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4238,10 +4265,10 @@ Partial Class analysis
         Me.txttvolgaval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolgaval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolgaval_1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvolgaval_1.Location = New System.Drawing.Point(716, 53)
-        Me.txttvolgaval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolgaval_1.Location = New System.Drawing.Point(1082, 84)
+        Me.txttvolgaval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolgaval_1.Name = "txttvolgaval_1"
-        Me.txttvolgaval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txttvolgaval_1.Size = New System.Drawing.Size(144, 37)
         Me.txttvolgaval_1.TabIndex = 149
         Me.txttvolgaval_1.Text = "0"
         Me.txttvolgaval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4255,10 +4282,10 @@ Partial Class analysis
         Me.txtvolgaval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtvolgaval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtvolgaval_2.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtvolgaval_2.Location = New System.Drawing.Point(716, 79)
-        Me.txtvolgaval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtvolgaval_2.Location = New System.Drawing.Point(1082, 125)
+        Me.txtvolgaval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtvolgaval_2.Name = "txtvolgaval_2"
-        Me.txtvolgaval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txtvolgaval_2.Size = New System.Drawing.Size(144, 37)
         Me.txtvolgaval_2.TabIndex = 148
         Me.txtvolgaval_2.Text = "0"
         Me.txtvolgaval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4272,10 +4299,10 @@ Partial Class analysis
         Me.txttvolgaval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolgaval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolgaval_2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvolgaval_2.Location = New System.Drawing.Point(716, 105)
-        Me.txttvolgaval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolgaval_2.Location = New System.Drawing.Point(1082, 166)
+        Me.txttvolgaval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolgaval_2.Name = "txttvolgaval_2"
-        Me.txttvolgaval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txttvolgaval_2.Size = New System.Drawing.Size(144, 37)
         Me.txttvolgaval_2.TabIndex = 151
         Me.txttvolgaval_2.Text = "0"
         Me.txttvolgaval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4289,10 +4316,10 @@ Partial Class analysis
         Me.txtvolgaval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtvolgaval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtvolgaval_3.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtvolgaval_3.Location = New System.Drawing.Point(716, 131)
-        Me.txtvolgaval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtvolgaval_3.Location = New System.Drawing.Point(1082, 207)
+        Me.txtvolgaval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtvolgaval_3.Name = "txtvolgaval_3"
-        Me.txtvolgaval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txtvolgaval_3.Size = New System.Drawing.Size(144, 37)
         Me.txtvolgaval_3.TabIndex = 150
         Me.txtvolgaval_3.Text = "0"
         Me.txtvolgaval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4306,10 +4333,10 @@ Partial Class analysis
         Me.txttvolgaval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolgaval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolgaval_3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvolgaval_3.Location = New System.Drawing.Point(716, 157)
-        Me.txttvolgaval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolgaval_3.Location = New System.Drawing.Point(1082, 248)
+        Me.txttvolgaval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolgaval_3.Name = "txttvolgaval_3"
-        Me.txttvolgaval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txttvolgaval_3.Size = New System.Drawing.Size(144, 37)
         Me.txttvolgaval_3.TabIndex = 153
         Me.txttvolgaval_3.Text = "0"
         Me.txttvolgaval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4323,10 +4350,10 @@ Partial Class analysis
         Me.txtvolgaval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtvolgaval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtvolgaval_4.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtvolgaval_4.Location = New System.Drawing.Point(716, 183)
-        Me.txtvolgaval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtvolgaval_4.Location = New System.Drawing.Point(1082, 289)
+        Me.txtvolgaval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtvolgaval_4.Name = "txtvolgaval_4"
-        Me.txtvolgaval_4.Size = New System.Drawing.Size(96, 24)
+        Me.txtvolgaval_4.Size = New System.Drawing.Size(144, 37)
         Me.txtvolgaval_4.TabIndex = 152
         Me.txtvolgaval_4.Text = "0"
         Me.txtvolgaval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4338,10 +4365,10 @@ Partial Class analysis
         Me.Label78.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label78.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label78.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label78.Location = New System.Drawing.Point(814, 1)
-        Me.Label78.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label78.Location = New System.Drawing.Point(1230, 2)
+        Me.Label78.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label78.Name = "Label78"
-        Me.Label78.Size = New System.Drawing.Size(96, 24)
+        Me.Label78.Size = New System.Drawing.Size(144, 37)
         Me.Label78.TabIndex = 155
         Me.Label78.Text = "Vanna"
         Me.Label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4355,10 +4382,10 @@ Partial Class analysis
         Me.txttvolgaval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolgaval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolgaval_4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvolgaval_4.Location = New System.Drawing.Point(716, 209)
-        Me.txttvolgaval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolgaval_4.Location = New System.Drawing.Point(1082, 330)
+        Me.txttvolgaval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolgaval_4.Name = "txttvolgaval_4"
-        Me.txttvolgaval_4.Size = New System.Drawing.Size(96, 30)
+        Me.txttvolgaval_4.Size = New System.Drawing.Size(144, 43)
         Me.txttvolgaval_4.TabIndex = 154
         Me.txttvolgaval_4.Text = "0"
         Me.txttvolgaval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4372,10 +4399,10 @@ Partial Class analysis
         Me.txtvannaval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtvannaval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtvannaval_1.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtvannaval_1.Location = New System.Drawing.Point(814, 27)
-        Me.txtvannaval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtvannaval_1.Location = New System.Drawing.Point(1230, 43)
+        Me.txtvannaval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtvannaval_1.Name = "txtvannaval_1"
-        Me.txtvannaval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txtvannaval_1.Size = New System.Drawing.Size(144, 37)
         Me.txtvannaval_1.TabIndex = 156
         Me.txtvannaval_1.Text = "0"
         Me.txtvannaval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4389,10 +4416,10 @@ Partial Class analysis
         Me.txttvannaval_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvannaval_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvannaval_1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvannaval_1.Location = New System.Drawing.Point(814, 53)
-        Me.txttvannaval_1.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvannaval_1.Location = New System.Drawing.Point(1230, 84)
+        Me.txttvannaval_1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvannaval_1.Name = "txttvannaval_1"
-        Me.txttvannaval_1.Size = New System.Drawing.Size(96, 24)
+        Me.txttvannaval_1.Size = New System.Drawing.Size(144, 37)
         Me.txttvannaval_1.TabIndex = 157
         Me.txttvannaval_1.Text = "0"
         Me.txttvannaval_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4406,10 +4433,10 @@ Partial Class analysis
         Me.txtvannaval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtvannaval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtvannaval_2.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtvannaval_2.Location = New System.Drawing.Point(814, 79)
-        Me.txtvannaval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtvannaval_2.Location = New System.Drawing.Point(1230, 125)
+        Me.txtvannaval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtvannaval_2.Name = "txtvannaval_2"
-        Me.txtvannaval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txtvannaval_2.Size = New System.Drawing.Size(144, 37)
         Me.txtvannaval_2.TabIndex = 158
         Me.txtvannaval_2.Text = "0"
         Me.txtvannaval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4423,10 +4450,10 @@ Partial Class analysis
         Me.txttvannaval_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvannaval_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvannaval_2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvannaval_2.Location = New System.Drawing.Point(814, 105)
-        Me.txttvannaval_2.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvannaval_2.Location = New System.Drawing.Point(1230, 166)
+        Me.txttvannaval_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvannaval_2.Name = "txttvannaval_2"
-        Me.txttvannaval_2.Size = New System.Drawing.Size(96, 24)
+        Me.txttvannaval_2.Size = New System.Drawing.Size(144, 37)
         Me.txttvannaval_2.TabIndex = 159
         Me.txttvannaval_2.Text = "0"
         Me.txttvannaval_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4440,10 +4467,10 @@ Partial Class analysis
         Me.txtvannaval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtvannaval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtvannaval_3.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtvannaval_3.Location = New System.Drawing.Point(814, 131)
-        Me.txtvannaval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtvannaval_3.Location = New System.Drawing.Point(1230, 207)
+        Me.txtvannaval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtvannaval_3.Name = "txtvannaval_3"
-        Me.txtvannaval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txtvannaval_3.Size = New System.Drawing.Size(144, 37)
         Me.txtvannaval_3.TabIndex = 161
         Me.txtvannaval_3.Text = "0"
         Me.txtvannaval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4457,10 +4484,10 @@ Partial Class analysis
         Me.txttvannaval_3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvannaval_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvannaval_3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvannaval_3.Location = New System.Drawing.Point(814, 157)
-        Me.txttvannaval_3.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvannaval_3.Location = New System.Drawing.Point(1230, 248)
+        Me.txttvannaval_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvannaval_3.Name = "txttvannaval_3"
-        Me.txttvannaval_3.Size = New System.Drawing.Size(96, 24)
+        Me.txttvannaval_3.Size = New System.Drawing.Size(144, 37)
         Me.txttvannaval_3.TabIndex = 160
         Me.txttvannaval_3.Text = "0"
         Me.txttvannaval_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4474,10 +4501,10 @@ Partial Class analysis
         Me.txtvannaval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtvannaval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtvannaval_4.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtvannaval_4.Location = New System.Drawing.Point(814, 183)
-        Me.txtvannaval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtvannaval_4.Location = New System.Drawing.Point(1230, 289)
+        Me.txtvannaval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtvannaval_4.Name = "txtvannaval_4"
-        Me.txtvannaval_4.Size = New System.Drawing.Size(96, 24)
+        Me.txtvannaval_4.Size = New System.Drawing.Size(144, 37)
         Me.txtvannaval_4.TabIndex = 163
         Me.txtvannaval_4.Text = "0"
         Me.txtvannaval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4491,10 +4518,10 @@ Partial Class analysis
         Me.txttvannaval_4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvannaval_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvannaval_4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvannaval_4.Location = New System.Drawing.Point(814, 209)
-        Me.txttvannaval_4.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvannaval_4.Location = New System.Drawing.Point(1230, 330)
+        Me.txttvannaval_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvannaval_4.Name = "txttvannaval_4"
-        Me.txttvannaval_4.Size = New System.Drawing.Size(96, 30)
+        Me.txttvannaval_4.Size = New System.Drawing.Size(144, 43)
         Me.txttvannaval_4.TabIndex = 162
         Me.txttvannaval_4.Text = "0"
         Me.txttvannaval_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4502,9 +4529,10 @@ Partial Class analysis
         'Panel6
         '
         Me.Panel6.Controls.Add(Me.Label66)
-        Me.Panel6.Location = New System.Drawing.Point(-4, 0)
+        Me.Panel6.Location = New System.Drawing.Point(-6, 0)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1022, 206)
+        Me.Panel6.Size = New System.Drawing.Size(1533, 317)
         Me.Panel6.TabIndex = 1
         Me.Panel6.Visible = False
         '
@@ -4513,19 +4541,21 @@ Partial Class analysis
         Me.Label66.AutoSize = True
         Me.Label66.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label66.ForeColor = System.Drawing.Color.Red
-        Me.Label66.Location = New System.Drawing.Point(269, 87)
+        Me.Label66.Location = New System.Drawing.Point(404, 134)
+        Me.Label66.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(404, 25)
+        Me.Label66.Size = New System.Drawing.Size(601, 37)
         Me.Label66.TabIndex = 0
         Me.Label66.Text = "View Not  Available For Individual Month "
         '
         'OptionGreeks
         '
         Me.OptionGreeks.Controls.Add(Me.TableLayoutPanel12)
-        Me.OptionGreeks.Location = New System.Drawing.Point(4, 22)
+        Me.OptionGreeks.Location = New System.Drawing.Point(4, 29)
+        Me.OptionGreeks.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.OptionGreeks.Name = "OptionGreeks"
-        Me.OptionGreeks.Padding = New System.Windows.Forms.Padding(3)
-        Me.OptionGreeks.Size = New System.Drawing.Size(1014, 246)
+        Me.OptionGreeks.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.OptionGreeks.Size = New System.Drawing.Size(1525, 385)
         Me.OptionGreeks.TabIndex = 2
         Me.OptionGreeks.Text = "Option Greeks"
         Me.OptionGreeks.UseVisualStyleBackColor = True
@@ -4534,7 +4564,7 @@ Partial Class analysis
         '
         Me.TableLayoutPanel12.BackColor = System.Drawing.Color.Gray
         Me.TableLayoutPanel12.ColumnCount = 8
-        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92.0!))
+        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138.0!))
         Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
         Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
         Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
@@ -4542,7 +4572,7 @@ Partial Class analysis
         Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
         Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
         Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TableLayoutPanel12.Controls.Add(Me.lblTotDelta, 2, 5)
         Me.TableLayoutPanel12.Controls.Add(Me.Label55, 0, 1)
         Me.TableLayoutPanel12.Controls.Add(Me.Label60, 0, 2)
@@ -4581,17 +4611,18 @@ Partial Class analysis
         Me.TableLayoutPanel12.Controls.Add(Me.lblEqUnits, 1, 4)
         Me.TableLayoutPanel12.Controls.Add(Me.lblTotUnits, 1, 5)
         Me.TableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel12.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel12.Location = New System.Drawing.Point(4, 5)
+        Me.TableLayoutPanel12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
         Me.TableLayoutPanel12.RowCount = 7
-        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.51798!))
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.51798!))
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.51798!))
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.51798!))
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.51357!))
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.41452!))
-        Me.TableLayoutPanel12.Size = New System.Drawing.Size(1008, 240)
+        Me.TableLayoutPanel12.Size = New System.Drawing.Size(1517, 375)
         Me.TableLayoutPanel12.TabIndex = 1
         '
         'lblTotDelta
@@ -4601,10 +4632,10 @@ Partial Class analysis
         Me.lblTotDelta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblTotDelta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotDelta.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTotDelta.Location = New System.Drawing.Point(223, 151)
-        Me.lblTotDelta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblTotDelta.Location = New System.Drawing.Point(336, 236)
+        Me.lblTotDelta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblTotDelta.Name = "lblTotDelta"
-        Me.lblTotDelta.Size = New System.Drawing.Size(128, 28)
+        Me.lblTotDelta.Size = New System.Drawing.Size(192, 43)
         Me.lblTotDelta.TabIndex = 133
         Me.lblTotDelta.Text = "0"
         Me.lblTotDelta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4614,9 +4645,10 @@ Partial Class analysis
         Me.Label55.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label55.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label55.ForeColor = System.Drawing.Color.Black
-        Me.Label55.Location = New System.Drawing.Point(3, 30)
+        Me.Label55.Location = New System.Drawing.Point(4, 46)
+        Me.Label55.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(86, 30)
+        Me.Label55.Size = New System.Drawing.Size(130, 47)
         Me.Label55.TabIndex = 0
         Me.Label55.Text = "Call"
         Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4626,9 +4658,10 @@ Partial Class analysis
         Me.Label60.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label60.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label60.ForeColor = System.Drawing.Color.Black
-        Me.Label60.Location = New System.Drawing.Point(3, 60)
+        Me.Label60.Location = New System.Drawing.Point(4, 93)
+        Me.Label60.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(86, 30)
+        Me.Label60.Size = New System.Drawing.Size(130, 47)
         Me.Label60.TabIndex = 1
         Me.Label60.Text = "Put"
         Me.Label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4640,10 +4673,10 @@ Partial Class analysis
         Me.lblPutTheta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblPutTheta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPutTheta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblPutTheta.Location = New System.Drawing.Point(613, 61)
-        Me.lblPutTheta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblPutTheta.Location = New System.Drawing.Point(924, 95)
+        Me.lblPutTheta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblPutTheta.Name = "lblPutTheta"
-        Me.lblPutTheta.Size = New System.Drawing.Size(128, 28)
+        Me.lblPutTheta.Size = New System.Drawing.Size(192, 43)
         Me.lblPutTheta.TabIndex = 122
         Me.lblPutTheta.Text = "0"
         Me.lblPutTheta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4655,10 +4688,10 @@ Partial Class analysis
         Me.lblTotTheta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblTotTheta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotTheta.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTotTheta.Location = New System.Drawing.Point(613, 151)
-        Me.lblTotTheta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblTotTheta.Location = New System.Drawing.Point(924, 236)
+        Me.lblTotTheta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblTotTheta.Name = "lblTotTheta"
-        Me.lblTotTheta.Size = New System.Drawing.Size(128, 28)
+        Me.lblTotTheta.Size = New System.Drawing.Size(192, 43)
         Me.lblTotTheta.TabIndex = 131
         Me.lblTotTheta.Text = "0"
         Me.lblTotTheta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4670,10 +4703,10 @@ Partial Class analysis
         Me.lblTotGamma.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblTotGamma.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotGamma.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTotGamma.Location = New System.Drawing.Point(353, 151)
-        Me.lblTotGamma.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblTotGamma.Location = New System.Drawing.Point(532, 236)
+        Me.lblTotGamma.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblTotGamma.Name = "lblTotGamma"
-        Me.lblTotGamma.Size = New System.Drawing.Size(128, 28)
+        Me.lblTotGamma.Size = New System.Drawing.Size(192, 43)
         Me.lblTotGamma.TabIndex = 130
         Me.lblTotGamma.Text = "0"
         Me.lblTotGamma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4685,10 +4718,10 @@ Partial Class analysis
         Me.lblTotVega.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblTotVega.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotVega.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTotVega.Location = New System.Drawing.Point(483, 151)
-        Me.lblTotVega.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblTotVega.Location = New System.Drawing.Point(728, 236)
+        Me.lblTotVega.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblTotVega.Name = "lblTotVega"
-        Me.lblTotVega.Size = New System.Drawing.Size(128, 28)
+        Me.lblTotVega.Size = New System.Drawing.Size(192, 43)
         Me.lblTotVega.TabIndex = 132
         Me.lblTotVega.Text = "0"
         Me.lblTotVega.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4700,10 +4733,10 @@ Partial Class analysis
         Me.lblPutvega.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblPutvega.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPutvega.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblPutvega.Location = New System.Drawing.Point(483, 61)
-        Me.lblPutvega.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblPutvega.Location = New System.Drawing.Point(728, 95)
+        Me.lblPutvega.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblPutvega.Name = "lblPutvega"
-        Me.lblPutvega.Size = New System.Drawing.Size(128, 28)
+        Me.lblPutvega.Size = New System.Drawing.Size(192, 43)
         Me.lblPutvega.TabIndex = 121
         Me.lblPutvega.Text = "0"
         Me.lblPutvega.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4715,10 +4748,10 @@ Partial Class analysis
         Me.lblPutGamma.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblPutGamma.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPutGamma.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblPutGamma.Location = New System.Drawing.Point(353, 61)
-        Me.lblPutGamma.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblPutGamma.Location = New System.Drawing.Point(532, 95)
+        Me.lblPutGamma.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblPutGamma.Name = "lblPutGamma"
-        Me.lblPutGamma.Size = New System.Drawing.Size(128, 28)
+        Me.lblPutGamma.Size = New System.Drawing.Size(192, 43)
         Me.lblPutGamma.TabIndex = 120
         Me.lblPutGamma.Text = "0"
         Me.lblPutGamma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4730,10 +4763,10 @@ Partial Class analysis
         Me.lblEqDelta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblEqDelta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEqDelta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblEqDelta.Location = New System.Drawing.Point(223, 121)
-        Me.lblEqDelta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblEqDelta.Location = New System.Drawing.Point(336, 189)
+        Me.lblEqDelta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblEqDelta.Name = "lblEqDelta"
-        Me.lblEqDelta.Size = New System.Drawing.Size(128, 28)
+        Me.lblEqDelta.Size = New System.Drawing.Size(192, 43)
         Me.lblEqDelta.TabIndex = 129
         Me.lblEqDelta.Text = "0"
         Me.lblEqDelta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4745,10 +4778,10 @@ Partial Class analysis
         Me.lblFutDelta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblFutDelta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFutDelta.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblFutDelta.Location = New System.Drawing.Point(223, 91)
-        Me.lblFutDelta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblFutDelta.Location = New System.Drawing.Point(336, 142)
+        Me.lblFutDelta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblFutDelta.Name = "lblFutDelta"
-        Me.lblFutDelta.Size = New System.Drawing.Size(128, 28)
+        Me.lblFutDelta.Size = New System.Drawing.Size(192, 43)
         Me.lblFutDelta.TabIndex = 128
         Me.lblFutDelta.Text = "0"
         Me.lblFutDelta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4760,10 +4793,10 @@ Partial Class analysis
         Me.lblPutDelta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblPutDelta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPutDelta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblPutDelta.Location = New System.Drawing.Point(223, 61)
-        Me.lblPutDelta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblPutDelta.Location = New System.Drawing.Point(336, 95)
+        Me.lblPutDelta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblPutDelta.Name = "lblPutDelta"
-        Me.lblPutDelta.Size = New System.Drawing.Size(128, 28)
+        Me.lblPutDelta.Size = New System.Drawing.Size(192, 43)
         Me.lblPutDelta.TabIndex = 119
         Me.lblPutDelta.Text = "0"
         Me.lblPutDelta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4774,10 +4807,10 @@ Partial Class analysis
         Me.Label30.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label30.Location = New System.Drawing.Point(482, 0)
+        Me.Label30.Location = New System.Drawing.Point(726, 0)
         Me.Label30.Margin = New System.Windows.Forms.Padding(0)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(130, 30)
+        Me.Label30.Size = New System.Drawing.Size(196, 46)
         Me.Label30.TabIndex = 19
         Me.Label30.Text = "Vega"
         Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4788,10 +4821,10 @@ Partial Class analysis
         Me.Label54.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label54.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label54.Location = New System.Drawing.Point(352, 0)
+        Me.Label54.Location = New System.Drawing.Point(530, 0)
         Me.Label54.Margin = New System.Windows.Forms.Padding(0)
         Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(130, 30)
+        Me.Label54.Size = New System.Drawing.Size(196, 46)
         Me.Label54.TabIndex = 20
         Me.Label54.Text = "Gamma"
         Me.Label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4802,10 +4835,10 @@ Partial Class analysis
         Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label9.Location = New System.Drawing.Point(222, 0)
+        Me.Label9.Location = New System.Drawing.Point(334, 0)
         Me.Label9.Margin = New System.Windows.Forms.Padding(0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(130, 30)
+        Me.Label9.Size = New System.Drawing.Size(196, 46)
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Delta"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4816,10 +4849,10 @@ Partial Class analysis
         Me.lblCallTheta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblCallTheta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCallTheta.ForeColor = System.Drawing.Color.White
-        Me.lblCallTheta.Location = New System.Drawing.Point(613, 31)
-        Me.lblCallTheta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblCallTheta.Location = New System.Drawing.Point(924, 48)
+        Me.lblCallTheta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblCallTheta.Name = "lblCallTheta"
-        Me.lblCallTheta.Size = New System.Drawing.Size(104, 22)
+        Me.lblCallTheta.Size = New System.Drawing.Size(155, 33)
         Me.lblCallTheta.TabIndex = 118
         Me.lblCallTheta.Text = "0"
         Me.lblCallTheta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4831,10 +4864,10 @@ Partial Class analysis
         Me.lblCallVega.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblCallVega.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCallVega.ForeColor = System.Drawing.Color.White
-        Me.lblCallVega.Location = New System.Drawing.Point(483, 31)
-        Me.lblCallVega.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblCallVega.Location = New System.Drawing.Point(728, 48)
+        Me.lblCallVega.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblCallVega.Name = "lblCallVega"
-        Me.lblCallVega.Size = New System.Drawing.Size(128, 28)
+        Me.lblCallVega.Size = New System.Drawing.Size(192, 43)
         Me.lblCallVega.TabIndex = 117
         Me.lblCallVega.Text = "0"
         Me.lblCallVega.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4846,10 +4879,10 @@ Partial Class analysis
         Me.lblCallGamma.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblCallGamma.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCallGamma.ForeColor = System.Drawing.Color.White
-        Me.lblCallGamma.Location = New System.Drawing.Point(353, 31)
-        Me.lblCallGamma.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblCallGamma.Location = New System.Drawing.Point(532, 48)
+        Me.lblCallGamma.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblCallGamma.Name = "lblCallGamma"
-        Me.lblCallGamma.Size = New System.Drawing.Size(128, 28)
+        Me.lblCallGamma.Size = New System.Drawing.Size(192, 43)
         Me.lblCallGamma.TabIndex = 116
         Me.lblCallGamma.Text = "0"
         Me.lblCallGamma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4859,9 +4892,10 @@ Partial Class analysis
         Me.Label61.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label61.ForeColor = System.Drawing.Color.Black
-        Me.Label61.Location = New System.Drawing.Point(3, 90)
+        Me.Label61.Location = New System.Drawing.Point(4, 140)
+        Me.Label61.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(86, 30)
+        Me.Label61.Size = New System.Drawing.Size(130, 47)
         Me.Label61.TabIndex = 2
         Me.Label61.Text = "Future"
         Me.Label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4873,10 +4907,10 @@ Partial Class analysis
         Me.lblCallDelta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblCallDelta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCallDelta.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblCallDelta.Location = New System.Drawing.Point(223, 31)
-        Me.lblCallDelta.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblCallDelta.Location = New System.Drawing.Point(336, 48)
+        Me.lblCallDelta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblCallDelta.Name = "lblCallDelta"
-        Me.lblCallDelta.Size = New System.Drawing.Size(128, 28)
+        Me.lblCallDelta.Size = New System.Drawing.Size(192, 43)
         Me.lblCallDelta.TabIndex = 114
         Me.lblCallDelta.Text = "0"
         Me.lblCallDelta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4886,9 +4920,10 @@ Partial Class analysis
         Me.Label62.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label62.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label62.ForeColor = System.Drawing.Color.Black
-        Me.Label62.Location = New System.Drawing.Point(3, 120)
+        Me.Label62.Location = New System.Drawing.Point(4, 187)
+        Me.Label62.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(86, 30)
+        Me.Label62.Size = New System.Drawing.Size(130, 47)
         Me.Label62.TabIndex = 3
         Me.Label62.Text = "Equity"
         Me.Label62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4898,9 +4933,10 @@ Partial Class analysis
         Me.Label63.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label63.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label63.ForeColor = System.Drawing.Color.Black
-        Me.Label63.Location = New System.Drawing.Point(3, 150)
+        Me.Label63.Location = New System.Drawing.Point(4, 234)
+        Me.Label63.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(86, 30)
+        Me.Label63.Size = New System.Drawing.Size(130, 47)
         Me.Label63.TabIndex = 4
         Me.Label63.Text = "Total"
         Me.Label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -4910,10 +4946,10 @@ Partial Class analysis
         Me.Label28.BackColor = System.Drawing.Color.Black
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label28.Location = New System.Drawing.Point(612, 0)
+        Me.Label28.Location = New System.Drawing.Point(922, 0)
         Me.Label28.Margin = New System.Windows.Forms.Padding(0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(106, 30)
+        Me.Label28.Size = New System.Drawing.Size(159, 46)
         Me.Label28.TabIndex = 18
         Me.Label28.Text = "Theta"
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4923,10 +4959,10 @@ Partial Class analysis
         Me.Label59.BackColor = System.Drawing.Color.Black
         Me.Label59.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label59.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label59.Location = New System.Drawing.Point(742, 0)
+        Me.Label59.Location = New System.Drawing.Point(1118, 0)
         Me.Label59.Margin = New System.Windows.Forms.Padding(0)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(106, 30)
+        Me.Label59.Size = New System.Drawing.Size(159, 46)
         Me.Label59.TabIndex = 134
         Me.Label59.Text = "Volga"
         Me.Label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4936,10 +4972,10 @@ Partial Class analysis
         Me.Label64.BackColor = System.Drawing.Color.Black
         Me.Label64.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label64.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label64.Location = New System.Drawing.Point(872, 0)
+        Me.Label64.Location = New System.Drawing.Point(1314, 0)
         Me.Label64.Margin = New System.Windows.Forms.Padding(0)
         Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(108, 30)
+        Me.Label64.Size = New System.Drawing.Size(162, 46)
         Me.Label64.TabIndex = 135
         Me.Label64.Text = "Vanna"
         Me.Label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4950,10 +4986,10 @@ Partial Class analysis
         Me.lblCallVolga.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblCallVolga.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCallVolga.ForeColor = System.Drawing.Color.White
-        Me.lblCallVolga.Location = New System.Drawing.Point(743, 31)
-        Me.lblCallVolga.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblCallVolga.Location = New System.Drawing.Point(1120, 48)
+        Me.lblCallVolga.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblCallVolga.Name = "lblCallVolga"
-        Me.lblCallVolga.Size = New System.Drawing.Size(104, 22)
+        Me.lblCallVolga.Size = New System.Drawing.Size(155, 33)
         Me.lblCallVolga.TabIndex = 136
         Me.lblCallVolga.Text = "0"
         Me.lblCallVolga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4964,10 +5000,10 @@ Partial Class analysis
         Me.lblPutVolga.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblPutVolga.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPutVolga.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblPutVolga.Location = New System.Drawing.Point(743, 61)
-        Me.lblPutVolga.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblPutVolga.Location = New System.Drawing.Point(1120, 95)
+        Me.lblPutVolga.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblPutVolga.Name = "lblPutVolga"
-        Me.lblPutVolga.Size = New System.Drawing.Size(104, 22)
+        Me.lblPutVolga.Size = New System.Drawing.Size(155, 33)
         Me.lblPutVolga.TabIndex = 137
         Me.lblPutVolga.Text = "0"
         Me.lblPutVolga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4978,10 +5014,10 @@ Partial Class analysis
         Me.lblCallVanna.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblCallVanna.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCallVanna.ForeColor = System.Drawing.Color.White
-        Me.lblCallVanna.Location = New System.Drawing.Point(873, 31)
-        Me.lblCallVanna.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblCallVanna.Location = New System.Drawing.Point(1316, 48)
+        Me.lblCallVanna.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblCallVanna.Name = "lblCallVanna"
-        Me.lblCallVanna.Size = New System.Drawing.Size(106, 22)
+        Me.lblCallVanna.Size = New System.Drawing.Size(158, 33)
         Me.lblCallVanna.TabIndex = 138
         Me.lblCallVanna.Text = "0"
         Me.lblCallVanna.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -4992,10 +5028,10 @@ Partial Class analysis
         Me.lblPutVanna.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblPutVanna.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPutVanna.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblPutVanna.Location = New System.Drawing.Point(873, 61)
-        Me.lblPutVanna.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblPutVanna.Location = New System.Drawing.Point(1316, 95)
+        Me.lblPutVanna.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblPutVanna.Name = "lblPutVanna"
-        Me.lblPutVanna.Size = New System.Drawing.Size(106, 22)
+        Me.lblPutVanna.Size = New System.Drawing.Size(158, 33)
         Me.lblPutVanna.TabIndex = 139
         Me.lblPutVanna.Text = "0"
         Me.lblPutVanna.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5006,10 +5042,10 @@ Partial Class analysis
         Me.lblTotVolga.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblTotVolga.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotVolga.ForeColor = System.Drawing.Color.White
-        Me.lblTotVolga.Location = New System.Drawing.Point(743, 151)
-        Me.lblTotVolga.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblTotVolga.Location = New System.Drawing.Point(1120, 236)
+        Me.lblTotVolga.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblTotVolga.Name = "lblTotVolga"
-        Me.lblTotVolga.Size = New System.Drawing.Size(104, 22)
+        Me.lblTotVolga.Size = New System.Drawing.Size(155, 33)
         Me.lblTotVolga.TabIndex = 140
         Me.lblTotVolga.Text = "0"
         Me.lblTotVolga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5020,10 +5056,10 @@ Partial Class analysis
         Me.lblTotVanna.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblTotVanna.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotVanna.ForeColor = System.Drawing.Color.White
-        Me.lblTotVanna.Location = New System.Drawing.Point(873, 151)
-        Me.lblTotVanna.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblTotVanna.Location = New System.Drawing.Point(1316, 236)
+        Me.lblTotVanna.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblTotVanna.Name = "lblTotVanna"
-        Me.lblTotVanna.Size = New System.Drawing.Size(106, 22)
+        Me.lblTotVanna.Size = New System.Drawing.Size(158, 33)
         Me.lblTotVanna.TabIndex = 141
         Me.lblTotVanna.Text = "0"
         Me.lblTotVanna.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5033,10 +5069,10 @@ Partial Class analysis
         Me.Label65.BackColor = System.Drawing.Color.Black
         Me.Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label65.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label65.Location = New System.Drawing.Point(92, 0)
+        Me.Label65.Location = New System.Drawing.Point(138, 0)
         Me.Label65.Margin = New System.Windows.Forms.Padding(0)
         Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(106, 30)
+        Me.Label65.Size = New System.Drawing.Size(159, 46)
         Me.Label65.TabIndex = 142
         Me.Label65.Text = "Units"
         Me.Label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5047,10 +5083,10 @@ Partial Class analysis
         Me.lblCallUnits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblCallUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCallUnits.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblCallUnits.Location = New System.Drawing.Point(93, 31)
-        Me.lblCallUnits.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblCallUnits.Location = New System.Drawing.Point(140, 48)
+        Me.lblCallUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblCallUnits.Name = "lblCallUnits"
-        Me.lblCallUnits.Size = New System.Drawing.Size(104, 22)
+        Me.lblCallUnits.Size = New System.Drawing.Size(155, 33)
         Me.lblCallUnits.TabIndex = 147
         Me.lblCallUnits.Text = "0"
         Me.lblCallUnits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5061,10 +5097,10 @@ Partial Class analysis
         Me.lblPutUnits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblPutUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPutUnits.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblPutUnits.Location = New System.Drawing.Point(93, 61)
-        Me.lblPutUnits.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblPutUnits.Location = New System.Drawing.Point(140, 95)
+        Me.lblPutUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblPutUnits.Name = "lblPutUnits"
-        Me.lblPutUnits.Size = New System.Drawing.Size(104, 22)
+        Me.lblPutUnits.Size = New System.Drawing.Size(155, 33)
         Me.lblPutUnits.TabIndex = 143
         Me.lblPutUnits.Text = "0"
         Me.lblPutUnits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5075,10 +5111,10 @@ Partial Class analysis
         Me.lblFutUnits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblFutUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFutUnits.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblFutUnits.Location = New System.Drawing.Point(93, 91)
-        Me.lblFutUnits.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblFutUnits.Location = New System.Drawing.Point(140, 142)
+        Me.lblFutUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblFutUnits.Name = "lblFutUnits"
-        Me.lblFutUnits.Size = New System.Drawing.Size(104, 22)
+        Me.lblFutUnits.Size = New System.Drawing.Size(155, 33)
         Me.lblFutUnits.TabIndex = 144
         Me.lblFutUnits.Text = "0"
         Me.lblFutUnits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5089,10 +5125,10 @@ Partial Class analysis
         Me.lblEqUnits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblEqUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEqUnits.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblEqUnits.Location = New System.Drawing.Point(93, 121)
-        Me.lblEqUnits.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblEqUnits.Location = New System.Drawing.Point(140, 189)
+        Me.lblEqUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblEqUnits.Name = "lblEqUnits"
-        Me.lblEqUnits.Size = New System.Drawing.Size(104, 22)
+        Me.lblEqUnits.Size = New System.Drawing.Size(155, 33)
         Me.lblEqUnits.TabIndex = 145
         Me.lblEqUnits.Text = "0"
         Me.lblEqUnits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5103,10 +5139,10 @@ Partial Class analysis
         Me.lblTotUnits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblTotUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotUnits.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTotUnits.Location = New System.Drawing.Point(93, 151)
-        Me.lblTotUnits.Margin = New System.Windows.Forms.Padding(1)
+        Me.lblTotUnits.Location = New System.Drawing.Point(140, 236)
+        Me.lblTotUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblTotUnits.Name = "lblTotUnits"
-        Me.lblTotUnits.Size = New System.Drawing.Size(104, 22)
+        Me.lblTotUnits.Size = New System.Drawing.Size(155, 33)
         Me.lblTotUnits.TabIndex = 146
         Me.lblTotUnits.Text = "0"
         Me.lblTotUnits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5114,9 +5150,10 @@ Partial Class analysis
         'GreeksComparison
         '
         Me.GreeksComparison.Controls.Add(Me.TableLayoutPanel20)
-        Me.GreeksComparison.Location = New System.Drawing.Point(4, 22)
+        Me.GreeksComparison.Location = New System.Drawing.Point(4, 29)
+        Me.GreeksComparison.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GreeksComparison.Name = "GreeksComparison"
-        Me.GreeksComparison.Size = New System.Drawing.Size(1014, 246)
+        Me.GreeksComparison.Size = New System.Drawing.Size(1525, 385)
         Me.GreeksComparison.TabIndex = 3
         Me.GreeksComparison.Text = "GreeksComparision"
         Me.GreeksComparison.UseVisualStyleBackColor = True
@@ -5126,7 +5163,7 @@ Partial Class analysis
         Me.TableLayoutPanel20.BackColor = System.Drawing.Color.Gray
         Me.TableLayoutPanel20.ColumnCount = 2
         Me.TableLayoutPanel20.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel20.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91.0!))
+        Me.TableLayoutPanel20.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136.0!))
         Me.TableLayoutPanel20.Controls.Add(Me.TableLayoutPanel25, 0, 2)
         Me.TableLayoutPanel20.Controls.Add(Me.TableLayoutPanel22, 1, 1)
         Me.TableLayoutPanel20.Controls.Add(Me.TableLayoutPanel21, 1, 0)
@@ -5134,12 +5171,13 @@ Partial Class analysis
         Me.TableLayoutPanel20.Controls.Add(Me.TableLayoutPanel19, 0, 1)
         Me.TableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel20.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel20.Name = "TableLayoutPanel20"
         Me.TableLayoutPanel20.RowCount = 3
         Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 102.0!))
-        Me.TableLayoutPanel20.Size = New System.Drawing.Size(1014, 246)
+        Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 157.0!))
+        Me.TableLayoutPanel20.Size = New System.Drawing.Size(1525, 385)
         Me.TableLayoutPanel20.TabIndex = 2
         '
         'TableLayoutPanel25
@@ -5150,11 +5188,12 @@ Partial Class analysis
         Me.TableLayoutPanel25.Controls.Add(Me.TableLayoutPanel24, 1, 0)
         Me.TableLayoutPanel25.Controls.Add(Me.TableLayoutPanel23, 0, 0)
         Me.TableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel25.Location = New System.Drawing.Point(3, 147)
+        Me.TableLayoutPanel25.Location = New System.Drawing.Point(4, 233)
+        Me.TableLayoutPanel25.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel25.Name = "TableLayoutPanel25"
         Me.TableLayoutPanel25.RowCount = 1
         Me.TableLayoutPanel25.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel25.Size = New System.Drawing.Size(917, 96)
+        Me.TableLayoutPanel25.Size = New System.Drawing.Size(1381, 147)
         Me.TableLayoutPanel25.TabIndex = 3
         '
         'TableLayoutPanel24
@@ -5186,14 +5225,15 @@ Partial Class analysis
         Me.TableLayoutPanel24.Controls.Add(Me.txttotsqmtmF, 4, 3)
         Me.TableLayoutPanel24.Controls.Add(Me.Label89, 0, 0)
         Me.TableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel24.Location = New System.Drawing.Point(461, 3)
+        Me.TableLayoutPanel24.Location = New System.Drawing.Point(694, 5)
+        Me.TableLayoutPanel24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel24.Name = "TableLayoutPanel24"
         Me.TableLayoutPanel24.RowCount = 4
         Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel24.Size = New System.Drawing.Size(453, 90)
+        Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel24.Size = New System.Drawing.Size(683, 137)
         Me.TableLayoutPanel24.TabIndex = 3
         '
         'Label140
@@ -5204,10 +5244,10 @@ Partial Class analysis
         Me.Label140.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label140.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label140.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label140.Location = New System.Drawing.Point(326, 1)
-        Me.Label140.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label140.Location = New System.Drawing.Point(493, 2)
+        Me.Label140.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label140.Name = "Label140"
-        Me.Label140.Size = New System.Drawing.Size(126, 23)
+        Me.Label140.Size = New System.Drawing.Size(188, 33)
         Me.Label140.TabIndex = 109
         Me.Label140.Text = "Sq. off Exp."
         Me.Label140.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5220,10 +5260,10 @@ Partial Class analysis
         Me.Label141.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label141.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label141.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label141.Location = New System.Drawing.Point(1, 71)
-        Me.Label141.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label141.Location = New System.Drawing.Point(2, 107)
+        Me.Label141.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label141.Name = "Label141"
-        Me.Label141.Size = New System.Drawing.Size(67, 18)
+        Me.Label141.Size = New System.Drawing.Size(100, 28)
         Me.Label141.TabIndex = 68
         Me.Label141.Text = "Total"
         Me.Label141.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5236,10 +5276,10 @@ Partial Class analysis
         Me.Label142.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label142.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label142.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label142.Location = New System.Drawing.Point(1, 51)
-        Me.Label142.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label142.Location = New System.Drawing.Point(2, 76)
+        Me.Label142.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label142.Name = "Label142"
-        Me.Label142.Size = New System.Drawing.Size(67, 18)
+        Me.Label142.Size = New System.Drawing.Size(100, 27)
         Me.Label142.TabIndex = 67
         Me.Label142.Text = "Today"
         Me.Label142.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5252,10 +5292,10 @@ Partial Class analysis
         Me.Label143.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label143.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label143.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label143.Location = New System.Drawing.Point(1, 26)
-        Me.Label143.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label143.Location = New System.Drawing.Point(2, 39)
+        Me.Label143.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label143.Name = "Label143"
-        Me.Label143.Size = New System.Drawing.Size(67, 23)
+        Me.Label143.Size = New System.Drawing.Size(100, 33)
         Me.Label143.TabIndex = 66
         Me.Label143.Text = "Previous"
         Me.Label143.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5268,10 +5308,10 @@ Partial Class analysis
         Me.Label144.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label144.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label144.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label144.Location = New System.Drawing.Point(70, 1)
-        Me.Label144.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label144.Location = New System.Drawing.Point(106, 2)
+        Me.Label144.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label144.Name = "Label144"
-        Me.Label144.Size = New System.Drawing.Size(83, 23)
+        Me.Label144.Size = New System.Drawing.Size(125, 33)
         Me.Label144.TabIndex = 106
         Me.Label144.Text = "Gross MTM"
         Me.Label144.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5284,10 +5324,10 @@ Partial Class analysis
         Me.Label145.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label145.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label145.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label145.Location = New System.Drawing.Point(155, 1)
-        Me.Label145.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label145.Location = New System.Drawing.Point(235, 2)
+        Me.Label145.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label145.Name = "Label145"
-        Me.Label145.Size = New System.Drawing.Size(72, 23)
+        Me.Label145.Size = New System.Drawing.Size(108, 33)
         Me.Label145.TabIndex = 107
         Me.Label145.Text = "Expense"
         Me.Label145.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5300,10 +5340,10 @@ Partial Class analysis
         Me.Label146.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label146.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label146.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label146.Location = New System.Drawing.Point(229, 1)
-        Me.Label146.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label146.Location = New System.Drawing.Point(347, 2)
+        Me.Label146.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label146.Name = "Label146"
-        Me.Label146.Size = New System.Drawing.Size(95, 23)
+        Me.Label146.Size = New System.Drawing.Size(142, 33)
         Me.Label146.TabIndex = 108
         Me.Label146.Text = "Current MTM"
         Me.Label146.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5316,10 +5356,10 @@ Partial Class analysis
         Me.txtprGmtmF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprGmtmF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprGmtmF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprGmtmF.Location = New System.Drawing.Point(70, 26)
-        Me.txtprGmtmF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprGmtmF.Location = New System.Drawing.Point(106, 39)
+        Me.txtprGmtmF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprGmtmF.Name = "txtprGmtmF"
-        Me.txtprGmtmF.Size = New System.Drawing.Size(83, 23)
+        Me.txtprGmtmF.Size = New System.Drawing.Size(125, 33)
         Me.txtprGmtmF.TabIndex = 111
         Me.txtprGmtmF.Text = "0"
         Me.txtprGmtmF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5332,10 +5372,10 @@ Partial Class analysis
         Me.txtprexpF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprexpF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprexpF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprexpF.Location = New System.Drawing.Point(155, 26)
-        Me.txtprexpF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprexpF.Location = New System.Drawing.Point(235, 39)
+        Me.txtprexpF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprexpF.Name = "txtprexpF"
-        Me.txtprexpF.Size = New System.Drawing.Size(72, 23)
+        Me.txtprexpF.Size = New System.Drawing.Size(108, 33)
         Me.txtprexpF.TabIndex = 111
         Me.txtprexpF.Text = "0"
         Me.txtprexpF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5348,10 +5388,10 @@ Partial Class analysis
         Me.txtprnetmtmF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprnetmtmF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprnetmtmF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprnetmtmF.Location = New System.Drawing.Point(229, 26)
-        Me.txtprnetmtmF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprnetmtmF.Location = New System.Drawing.Point(347, 39)
+        Me.txtprnetmtmF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprnetmtmF.Name = "txtprnetmtmF"
-        Me.txtprnetmtmF.Size = New System.Drawing.Size(95, 23)
+        Me.txtprnetmtmF.Size = New System.Drawing.Size(142, 33)
         Me.txtprnetmtmF.TabIndex = 111
         Me.txtprnetmtmF.Text = "0"
         Me.txtprnetmtmF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5364,10 +5404,10 @@ Partial Class analysis
         Me.txttotsqexpF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotsqexpF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotsqexpF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotsqexpF.Location = New System.Drawing.Point(326, 26)
-        Me.txttotsqexpF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotsqexpF.Location = New System.Drawing.Point(493, 39)
+        Me.txttotsqexpF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotsqexpF.Name = "txttotsqexpF"
-        Me.txttotsqexpF.Size = New System.Drawing.Size(126, 23)
+        Me.txttotsqexpF.Size = New System.Drawing.Size(188, 33)
         Me.txttotsqexpF.TabIndex = 111
         Me.txttotsqexpF.Text = "0"
         Me.txttotsqexpF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5380,10 +5420,10 @@ Partial Class analysis
         Me.txttGmtmF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttGmtmF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttGmtmF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttGmtmF.Location = New System.Drawing.Point(70, 51)
-        Me.txttGmtmF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttGmtmF.Location = New System.Drawing.Point(106, 76)
+        Me.txttGmtmF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttGmtmF.Name = "txttGmtmF"
-        Me.txttGmtmF.Size = New System.Drawing.Size(83, 18)
+        Me.txttGmtmF.Size = New System.Drawing.Size(125, 27)
         Me.txttGmtmF.TabIndex = 112
         Me.txttGmtmF.Text = "0"
         Me.txttGmtmF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5396,10 +5436,10 @@ Partial Class analysis
         Me.txttexpF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttexpF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttexpF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttexpF.Location = New System.Drawing.Point(155, 51)
-        Me.txttexpF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttexpF.Location = New System.Drawing.Point(235, 76)
+        Me.txttexpF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttexpF.Name = "txttexpF"
-        Me.txttexpF.Size = New System.Drawing.Size(72, 18)
+        Me.txttexpF.Size = New System.Drawing.Size(108, 27)
         Me.txttexpF.TabIndex = 112
         Me.txttexpF.Text = "0"
         Me.txttexpF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5412,10 +5452,10 @@ Partial Class analysis
         Me.txttnetmtmF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttnetmtmF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttnetmtmF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttnetmtmF.Location = New System.Drawing.Point(229, 51)
-        Me.txttnetmtmF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttnetmtmF.Location = New System.Drawing.Point(347, 76)
+        Me.txttnetmtmF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttnetmtmF.Name = "txttnetmtmF"
-        Me.txttnetmtmF.Size = New System.Drawing.Size(95, 18)
+        Me.txttnetmtmF.Size = New System.Drawing.Size(142, 27)
         Me.txttnetmtmF.TabIndex = 112
         Me.txttnetmtmF.Text = "0"
         Me.txttnetmtmF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5428,10 +5468,10 @@ Partial Class analysis
         Me.txttotGmtmF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotGmtmF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotGmtmF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotGmtmF.Location = New System.Drawing.Point(70, 71)
-        Me.txttotGmtmF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotGmtmF.Location = New System.Drawing.Point(106, 107)
+        Me.txttotGmtmF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotGmtmF.Name = "txttotGmtmF"
-        Me.txttotGmtmF.Size = New System.Drawing.Size(83, 18)
+        Me.txttotGmtmF.Size = New System.Drawing.Size(125, 28)
         Me.txttotGmtmF.TabIndex = 112
         Me.txttotGmtmF.Text = "0"
         Me.txttotGmtmF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5444,10 +5484,10 @@ Partial Class analysis
         Me.txttotexpF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotexpF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotexpF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotexpF.Location = New System.Drawing.Point(155, 71)
-        Me.txttotexpF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotexpF.Location = New System.Drawing.Point(235, 107)
+        Me.txttotexpF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotexpF.Name = "txttotexpF"
-        Me.txttotexpF.Size = New System.Drawing.Size(72, 18)
+        Me.txttotexpF.Size = New System.Drawing.Size(108, 28)
         Me.txttotexpF.TabIndex = 112
         Me.txttotexpF.Text = "0"
         Me.txttotexpF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5460,10 +5500,10 @@ Partial Class analysis
         Me.txttotnetmtmF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotnetmtmF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotnetmtmF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotnetmtmF.Location = New System.Drawing.Point(229, 71)
-        Me.txttotnetmtmF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotnetmtmF.Location = New System.Drawing.Point(347, 107)
+        Me.txttotnetmtmF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotnetmtmF.Name = "txttotnetmtmF"
-        Me.txttotnetmtmF.Size = New System.Drawing.Size(95, 18)
+        Me.txttotnetmtmF.Size = New System.Drawing.Size(142, 28)
         Me.txttotnetmtmF.TabIndex = 112
         Me.txttotnetmtmF.Text = "0"
         Me.txttotnetmtmF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5476,10 +5516,10 @@ Partial Class analysis
         Me.Label147.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label147.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label147.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label147.Location = New System.Drawing.Point(326, 51)
-        Me.Label147.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label147.Location = New System.Drawing.Point(493, 76)
+        Me.Label147.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label147.Name = "Label147"
-        Me.Label147.Size = New System.Drawing.Size(126, 18)
+        Me.Label147.Size = New System.Drawing.Size(188, 27)
         Me.Label147.TabIndex = 110
         Me.Label147.Text = "Proj. MTM"
         Me.Label147.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5492,10 +5532,10 @@ Partial Class analysis
         Me.txttotsqmtmF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotsqmtmF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotsqmtmF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotsqmtmF.Location = New System.Drawing.Point(326, 71)
-        Me.txttotsqmtmF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotsqmtmF.Location = New System.Drawing.Point(493, 107)
+        Me.txttotsqmtmF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotsqmtmF.Name = "txttotsqmtmF"
-        Me.txttotsqmtmF.Size = New System.Drawing.Size(126, 18)
+        Me.txttotsqmtmF.Size = New System.Drawing.Size(188, 28)
         Me.txttotsqmtmF.TabIndex = 111
         Me.txttotsqmtmF.Text = "0"
         Me.txttotsqmtmF.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5507,9 +5547,10 @@ Partial Class analysis
         Me.Label89.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label89.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label89.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label89.Location = New System.Drawing.Point(3, 0)
+        Me.Label89.Location = New System.Drawing.Point(4, 0)
+        Me.Label89.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(63, 25)
+        Me.Label89.Size = New System.Drawing.Size(96, 37)
         Me.Label89.TabIndex = 113
         Me.Label89.Text = "Fix Vol"
         Me.Label89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5544,14 +5585,15 @@ Partial Class analysis
         Me.TableLayoutPanel23.Controls.Add(Me.txttotsqmtmR, 4, 3)
         Me.TableLayoutPanel23.Controls.Add(Me.Label87, 0, 0)
         Me.TableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel23.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel23.Location = New System.Drawing.Point(4, 5)
+        Me.TableLayoutPanel23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel23.Name = "TableLayoutPanel23"
         Me.TableLayoutPanel23.RowCount = 4
         Me.TableLayoutPanel23.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel23.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel23.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel23.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel23.Size = New System.Drawing.Size(452, 90)
+        Me.TableLayoutPanel23.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel23.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel23.Size = New System.Drawing.Size(682, 137)
         Me.TableLayoutPanel23.TabIndex = 3
         '
         'Label123
@@ -5562,10 +5604,10 @@ Partial Class analysis
         Me.Label123.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label123.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label123.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label123.Location = New System.Drawing.Point(330, 1)
-        Me.Label123.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label123.Location = New System.Drawing.Point(500, 2)
+        Me.Label123.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label123.Name = "Label123"
-        Me.Label123.Size = New System.Drawing.Size(121, 23)
+        Me.Label123.Size = New System.Drawing.Size(180, 33)
         Me.Label123.TabIndex = 109
         Me.Label123.Text = "Sq. off Exp."
         Me.Label123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5578,10 +5620,10 @@ Partial Class analysis
         Me.Label119.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label119.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label119.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label119.Location = New System.Drawing.Point(1, 71)
-        Me.Label119.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label119.Location = New System.Drawing.Point(2, 107)
+        Me.Label119.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label119.Name = "Label119"
-        Me.Label119.Size = New System.Drawing.Size(64, 18)
+        Me.Label119.Size = New System.Drawing.Size(96, 28)
         Me.Label119.TabIndex = 68
         Me.Label119.Text = "Total"
         Me.Label119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5594,10 +5636,10 @@ Partial Class analysis
         Me.Label118.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label118.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label118.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label118.Location = New System.Drawing.Point(1, 51)
-        Me.Label118.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label118.Location = New System.Drawing.Point(2, 76)
+        Me.Label118.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label118.Name = "Label118"
-        Me.Label118.Size = New System.Drawing.Size(64, 18)
+        Me.Label118.Size = New System.Drawing.Size(96, 27)
         Me.Label118.TabIndex = 67
         Me.Label118.Text = "Today"
         Me.Label118.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5610,10 +5652,10 @@ Partial Class analysis
         Me.Label117.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label117.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label117.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label117.Location = New System.Drawing.Point(1, 26)
-        Me.Label117.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label117.Location = New System.Drawing.Point(2, 39)
+        Me.Label117.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label117.Name = "Label117"
-        Me.Label117.Size = New System.Drawing.Size(64, 23)
+        Me.Label117.Size = New System.Drawing.Size(96, 33)
         Me.Label117.TabIndex = 66
         Me.Label117.Text = "Previous"
         Me.Label117.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5626,10 +5668,10 @@ Partial Class analysis
         Me.Label120.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label120.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label120.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label120.Location = New System.Drawing.Point(67, 1)
-        Me.Label120.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label120.Location = New System.Drawing.Point(102, 2)
+        Me.Label120.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label120.Name = "Label120"
-        Me.Label120.Size = New System.Drawing.Size(84, 23)
+        Me.Label120.Size = New System.Drawing.Size(126, 33)
         Me.Label120.TabIndex = 106
         Me.Label120.Text = "Gross MTM"
         Me.Label120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5642,10 +5684,10 @@ Partial Class analysis
         Me.Label121.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label121.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label121.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label121.Location = New System.Drawing.Point(153, 1)
-        Me.Label121.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label121.Location = New System.Drawing.Point(232, 2)
+        Me.Label121.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label121.Name = "Label121"
-        Me.Label121.Size = New System.Drawing.Size(76, 23)
+        Me.Label121.Size = New System.Drawing.Size(114, 33)
         Me.Label121.TabIndex = 107
         Me.Label121.Text = "Expense"
         Me.Label121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5658,10 +5700,10 @@ Partial Class analysis
         Me.Label122.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label122.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label122.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label122.Location = New System.Drawing.Point(231, 1)
-        Me.Label122.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label122.Location = New System.Drawing.Point(350, 2)
+        Me.Label122.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label122.Name = "Label122"
-        Me.Label122.Size = New System.Drawing.Size(97, 23)
+        Me.Label122.Size = New System.Drawing.Size(146, 33)
         Me.Label122.TabIndex = 108
         Me.Label122.Text = "Current MTM"
         Me.Label122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5674,10 +5716,10 @@ Partial Class analysis
         Me.txtprGmtmR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprGmtmR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprGmtmR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprGmtmR.Location = New System.Drawing.Point(67, 26)
-        Me.txtprGmtmR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprGmtmR.Location = New System.Drawing.Point(102, 39)
+        Me.txtprGmtmR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprGmtmR.Name = "txtprGmtmR"
-        Me.txtprGmtmR.Size = New System.Drawing.Size(84, 23)
+        Me.txtprGmtmR.Size = New System.Drawing.Size(126, 33)
         Me.txtprGmtmR.TabIndex = 111
         Me.txtprGmtmR.Text = "0"
         Me.txtprGmtmR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5690,10 +5732,10 @@ Partial Class analysis
         Me.txtprexpR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprexpR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprexpR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprexpR.Location = New System.Drawing.Point(153, 26)
-        Me.txtprexpR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprexpR.Location = New System.Drawing.Point(232, 39)
+        Me.txtprexpR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprexpR.Name = "txtprexpR"
-        Me.txtprexpR.Size = New System.Drawing.Size(76, 23)
+        Me.txtprexpR.Size = New System.Drawing.Size(114, 33)
         Me.txtprexpR.TabIndex = 111
         Me.txtprexpR.Text = "0"
         Me.txtprexpR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5706,10 +5748,10 @@ Partial Class analysis
         Me.txtprnetmtmR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtprnetmtmR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprnetmtmR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtprnetmtmR.Location = New System.Drawing.Point(231, 26)
-        Me.txtprnetmtmR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtprnetmtmR.Location = New System.Drawing.Point(350, 39)
+        Me.txtprnetmtmR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprnetmtmR.Name = "txtprnetmtmR"
-        Me.txtprnetmtmR.Size = New System.Drawing.Size(97, 23)
+        Me.txtprnetmtmR.Size = New System.Drawing.Size(146, 33)
         Me.txtprnetmtmR.TabIndex = 111
         Me.txtprnetmtmR.Text = "0"
         Me.txtprnetmtmR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5722,10 +5764,10 @@ Partial Class analysis
         Me.txttotsqexpR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotsqexpR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotsqexpR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotsqexpR.Location = New System.Drawing.Point(330, 26)
-        Me.txttotsqexpR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotsqexpR.Location = New System.Drawing.Point(500, 39)
+        Me.txttotsqexpR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotsqexpR.Name = "txttotsqexpR"
-        Me.txttotsqexpR.Size = New System.Drawing.Size(121, 23)
+        Me.txttotsqexpR.Size = New System.Drawing.Size(180, 33)
         Me.txttotsqexpR.TabIndex = 111
         Me.txttotsqexpR.Text = "0"
         Me.txttotsqexpR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5738,10 +5780,10 @@ Partial Class analysis
         Me.txttGmtmR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttGmtmR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttGmtmR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttGmtmR.Location = New System.Drawing.Point(67, 51)
-        Me.txttGmtmR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttGmtmR.Location = New System.Drawing.Point(102, 76)
+        Me.txttGmtmR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttGmtmR.Name = "txttGmtmR"
-        Me.txttGmtmR.Size = New System.Drawing.Size(84, 18)
+        Me.txttGmtmR.Size = New System.Drawing.Size(126, 27)
         Me.txttGmtmR.TabIndex = 112
         Me.txttGmtmR.Text = "0"
         Me.txttGmtmR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5754,10 +5796,10 @@ Partial Class analysis
         Me.txttexpR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttexpR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttexpR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttexpR.Location = New System.Drawing.Point(153, 51)
-        Me.txttexpR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttexpR.Location = New System.Drawing.Point(232, 76)
+        Me.txttexpR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttexpR.Name = "txttexpR"
-        Me.txttexpR.Size = New System.Drawing.Size(76, 18)
+        Me.txttexpR.Size = New System.Drawing.Size(114, 27)
         Me.txttexpR.TabIndex = 112
         Me.txttexpR.Text = "0"
         Me.txttexpR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5770,10 +5812,10 @@ Partial Class analysis
         Me.txttnetmtmR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttnetmtmR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttnetmtmR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttnetmtmR.Location = New System.Drawing.Point(231, 51)
-        Me.txttnetmtmR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttnetmtmR.Location = New System.Drawing.Point(350, 76)
+        Me.txttnetmtmR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttnetmtmR.Name = "txttnetmtmR"
-        Me.txttnetmtmR.Size = New System.Drawing.Size(97, 18)
+        Me.txttnetmtmR.Size = New System.Drawing.Size(146, 27)
         Me.txttnetmtmR.TabIndex = 112
         Me.txttnetmtmR.Text = "0"
         Me.txttnetmtmR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5786,10 +5828,10 @@ Partial Class analysis
         Me.txttotGmtmR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotGmtmR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotGmtmR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotGmtmR.Location = New System.Drawing.Point(67, 71)
-        Me.txttotGmtmR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotGmtmR.Location = New System.Drawing.Point(102, 107)
+        Me.txttotGmtmR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotGmtmR.Name = "txttotGmtmR"
-        Me.txttotGmtmR.Size = New System.Drawing.Size(84, 18)
+        Me.txttotGmtmR.Size = New System.Drawing.Size(126, 28)
         Me.txttotGmtmR.TabIndex = 112
         Me.txttotGmtmR.Text = "0"
         Me.txttotGmtmR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5802,10 +5844,10 @@ Partial Class analysis
         Me.txttotexpR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotexpR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotexpR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotexpR.Location = New System.Drawing.Point(153, 71)
-        Me.txttotexpR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotexpR.Location = New System.Drawing.Point(232, 107)
+        Me.txttotexpR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotexpR.Name = "txttotexpR"
-        Me.txttotexpR.Size = New System.Drawing.Size(76, 18)
+        Me.txttotexpR.Size = New System.Drawing.Size(114, 28)
         Me.txttotexpR.TabIndex = 112
         Me.txttotexpR.Text = "0"
         Me.txttotexpR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5818,10 +5860,10 @@ Partial Class analysis
         Me.txttotnetmtmR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotnetmtmR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotnetmtmR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotnetmtmR.Location = New System.Drawing.Point(231, 71)
-        Me.txttotnetmtmR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotnetmtmR.Location = New System.Drawing.Point(350, 107)
+        Me.txttotnetmtmR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotnetmtmR.Name = "txttotnetmtmR"
-        Me.txttotnetmtmR.Size = New System.Drawing.Size(97, 18)
+        Me.txttotnetmtmR.Size = New System.Drawing.Size(146, 28)
         Me.txttotnetmtmR.TabIndex = 112
         Me.txttotnetmtmR.Text = "0"
         Me.txttotnetmtmR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5834,10 +5876,10 @@ Partial Class analysis
         Me.Label124.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label124.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label124.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label124.Location = New System.Drawing.Point(330, 51)
-        Me.Label124.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label124.Location = New System.Drawing.Point(500, 76)
+        Me.Label124.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label124.Name = "Label124"
-        Me.Label124.Size = New System.Drawing.Size(121, 18)
+        Me.Label124.Size = New System.Drawing.Size(180, 27)
         Me.Label124.TabIndex = 110
         Me.Label124.Text = "Proj. MTM"
         Me.Label124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5850,10 +5892,10 @@ Partial Class analysis
         Me.txttotsqmtmR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttotsqmtmR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttotsqmtmR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttotsqmtmR.Location = New System.Drawing.Point(330, 71)
-        Me.txttotsqmtmR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttotsqmtmR.Location = New System.Drawing.Point(500, 107)
+        Me.txttotsqmtmR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttotsqmtmR.Name = "txttotsqmtmR"
-        Me.txttotsqmtmR.Size = New System.Drawing.Size(121, 18)
+        Me.txttotsqmtmR.Size = New System.Drawing.Size(180, 28)
         Me.txttotsqmtmR.TabIndex = 111
         Me.txttotsqmtmR.Text = "0"
         Me.txttotsqmtmR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -5865,9 +5907,10 @@ Partial Class analysis
         Me.Label87.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label87.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label87.Location = New System.Drawing.Point(3, 0)
+        Me.Label87.Location = New System.Drawing.Point(4, 0)
+        Me.Label87.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label87.Name = "Label87"
-        Me.Label87.Size = New System.Drawing.Size(60, 25)
+        Me.Label87.Size = New System.Drawing.Size(92, 37)
         Me.Label87.TabIndex = 113
         Me.Label87.Text = "Curr. Vol"
         Me.Label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5880,12 +5923,13 @@ Partial Class analysis
         Me.TableLayoutPanel22.Controls.Add(Me.txtshareF, 0, 1)
         Me.TableLayoutPanel22.Controls.Add(Me.Label116, 0, 0)
         Me.TableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel22.Location = New System.Drawing.Point(926, 75)
+        Me.TableLayoutPanel22.Location = New System.Drawing.Point(1393, 119)
+        Me.TableLayoutPanel22.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel22.Name = "TableLayoutPanel22"
         Me.TableLayoutPanel22.RowCount = 2
         Me.TableLayoutPanel22.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel22.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel22.Size = New System.Drawing.Size(85, 66)
+        Me.TableLayoutPanel22.Size = New System.Drawing.Size(128, 104)
         Me.TableLayoutPanel22.TabIndex = 3
         '
         'txtshareF
@@ -5895,11 +5939,11 @@ Partial Class analysis
         Me.txtshareF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtshareF.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtshareF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtshareF.Location = New System.Drawing.Point(1, 34)
-        Me.txtshareF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtshareF.Location = New System.Drawing.Point(2, 54)
+        Me.txtshareF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtshareF.Name = "txtshareF"
         Me.txtshareF.ReadOnly = True
-        Me.txtshareF.Size = New System.Drawing.Size(83, 31)
+        Me.txtshareF.Size = New System.Drawing.Size(124, 43)
         Me.txtshareF.TabIndex = 4
         Me.txtshareF.TabStop = False
         Me.txtshareF.Text = "0"
@@ -5912,10 +5956,10 @@ Partial Class analysis
         Me.Label116.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label116.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label116.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label116.Location = New System.Drawing.Point(1, 1)
-        Me.Label116.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label116.Location = New System.Drawing.Point(2, 2)
+        Me.Label116.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label116.Name = "Label116"
-        Me.Label116.Size = New System.Drawing.Size(83, 31)
+        Me.Label116.Size = New System.Drawing.Size(124, 48)
         Me.Label116.TabIndex = 2
         Me.Label116.Text = "To Neutralize"
         Me.Label116.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -5927,12 +5971,13 @@ Partial Class analysis
         Me.TableLayoutPanel21.Controls.Add(Me.txtshareR, 0, 1)
         Me.TableLayoutPanel21.Controls.Add(Me.Label115, 0, 0)
         Me.TableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel21.Location = New System.Drawing.Point(926, 3)
+        Me.TableLayoutPanel21.Location = New System.Drawing.Point(1393, 5)
+        Me.TableLayoutPanel21.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel21.Name = "TableLayoutPanel21"
         Me.TableLayoutPanel21.RowCount = 2
         Me.TableLayoutPanel21.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel21.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel21.Size = New System.Drawing.Size(85, 66)
+        Me.TableLayoutPanel21.Size = New System.Drawing.Size(128, 104)
         Me.TableLayoutPanel21.TabIndex = 3
         '
         'txtshareR
@@ -5942,11 +5987,11 @@ Partial Class analysis
         Me.txtshareR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtshareR.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtshareR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtshareR.Location = New System.Drawing.Point(1, 34)
-        Me.txtshareR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtshareR.Location = New System.Drawing.Point(2, 54)
+        Me.txtshareR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtshareR.Name = "txtshareR"
         Me.txtshareR.ReadOnly = True
-        Me.txtshareR.Size = New System.Drawing.Size(83, 31)
+        Me.txtshareR.Size = New System.Drawing.Size(124, 43)
         Me.txtshareR.TabIndex = 4
         Me.txtshareR.TabStop = False
         Me.txtshareR.Text = "0"
@@ -5959,10 +6004,10 @@ Partial Class analysis
         Me.Label115.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label115.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label115.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label115.Location = New System.Drawing.Point(1, 1)
-        Me.Label115.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label115.Location = New System.Drawing.Point(2, 2)
+        Me.Label115.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label115.Name = "Label115"
-        Me.Label115.Size = New System.Drawing.Size(83, 31)
+        Me.Label115.Size = New System.Drawing.Size(124, 48)
         Me.Label115.TabIndex = 2
         Me.Label115.Text = "To Neutralize"
         Me.Label115.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6000,13 +6045,13 @@ Partial Class analysis
         Me.TableLayoutPanel17.Controls.Add(Me.Label94, 5, 0)
         Me.TableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel17.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel17.Margin = New System.Windows.Forms.Padding(0, 0, 0, 1)
+        Me.TableLayoutPanel17.Margin = New System.Windows.Forms.Padding(0, 0, 0, 2)
         Me.TableLayoutPanel17.Name = "TableLayoutPanel17"
         Me.TableLayoutPanel17.RowCount = 3
         Me.TableLayoutPanel17.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.11111!))
         Me.TableLayoutPanel17.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.55555!))
         Me.TableLayoutPanel17.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel17.Size = New System.Drawing.Size(923, 71)
+        Me.TableLayoutPanel17.Size = New System.Drawing.Size(1389, 112)
         Me.TableLayoutPanel17.TabIndex = 1
         '
         'Label67
@@ -6016,10 +6061,10 @@ Partial Class analysis
         Me.Label67.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label67.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label67.Location = New System.Drawing.Point(168, 1)
-        Me.Label67.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label67.Location = New System.Drawing.Point(252, 2)
+        Me.Label67.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(146, 20)
+        Me.Label67.Size = New System.Drawing.Size(220, 30)
         Me.Label67.TabIndex = 13
         Me.Label67.Text = "Gamma"
         Me.Label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6031,10 +6076,10 @@ Partial Class analysis
         Me.Label68.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label68.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label68.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label68.Location = New System.Drawing.Point(17, 1)
-        Me.Label68.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label68.Location = New System.Drawing.Point(24, 2)
+        Me.Label68.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(149, 20)
+        Me.Label68.Size = New System.Drawing.Size(224, 30)
         Me.Label68.TabIndex = 10
         Me.Label68.Text = "Delta"
         Me.Label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6046,10 +6091,10 @@ Partial Class analysis
         Me.Label69.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label69.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label69.Location = New System.Drawing.Point(467, 1)
-        Me.Label69.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label69.Location = New System.Drawing.Point(704, 2)
+        Me.Label69.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(149, 20)
+        Me.Label69.Size = New System.Drawing.Size(224, 30)
         Me.Label69.TabIndex = 11
         Me.Label69.Text = "Theta"
         Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6063,10 +6108,10 @@ Partial Class analysis
         Me.txttdelvalR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelvalR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelvalR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttdelvalR.Location = New System.Drawing.Point(17, 23)
-        Me.txttdelvalR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelvalR.Location = New System.Drawing.Point(24, 36)
+        Me.txttdelvalR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelvalR.Name = "txttdelvalR"
-        Me.txttdelvalR.Size = New System.Drawing.Size(149, 23)
+        Me.txttdelvalR.Size = New System.Drawing.Size(224, 35)
         Me.txttdelvalR.TabIndex = 108
         Me.txttdelvalR.Text = "0"
         Me.txttdelvalR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6078,10 +6123,10 @@ Partial Class analysis
         Me.Label79.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label79.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label79.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label79.Location = New System.Drawing.Point(316, 1)
-        Me.Label79.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label79.Location = New System.Drawing.Point(476, 2)
+        Me.Label79.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label79.Name = "Label79"
-        Me.Label79.Size = New System.Drawing.Size(149, 20)
+        Me.Label79.Size = New System.Drawing.Size(224, 30)
         Me.Label79.TabIndex = 12
         Me.Label79.Text = "Vega"
         Me.Label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6093,10 +6138,10 @@ Partial Class analysis
         Me.Label80.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label80.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label80.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label80.Location = New System.Drawing.Point(769, 1)
-        Me.Label80.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label80.Location = New System.Drawing.Point(1160, 2)
+        Me.Label80.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label80.Name = "Label80"
-        Me.Label80.Size = New System.Drawing.Size(153, 20)
+        Me.Label80.Size = New System.Drawing.Size(227, 30)
         Me.Label80.TabIndex = 122
         Me.Label80.Text = "Vanna"
         Me.Label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6109,10 +6154,10 @@ Partial Class analysis
         Me.txtttheta1R.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtttheta1R.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtttheta1R.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtttheta1R.Location = New System.Drawing.Point(467, 48)
-        Me.txtttheta1R.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtttheta1R.Location = New System.Drawing.Point(704, 75)
+        Me.txtttheta1R.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtttheta1R.Name = "txtttheta1R"
-        Me.txtttheta1R.Size = New System.Drawing.Size(149, 22)
+        Me.txtttheta1R.Size = New System.Drawing.Size(224, 35)
         Me.txtttheta1R.TabIndex = 107
         Me.txtttheta1R.Text = "0"
         Me.txtttheta1R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6125,10 +6170,10 @@ Partial Class analysis
         Me.txttdelta1R.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelta1R.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelta1R.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttdelta1R.Location = New System.Drawing.Point(17, 48)
-        Me.txttdelta1R.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelta1R.Location = New System.Drawing.Point(24, 75)
+        Me.txttdelta1R.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelta1R.Name = "txttdelta1R"
-        Me.txttdelta1R.Size = New System.Drawing.Size(149, 22)
+        Me.txttdelta1R.Size = New System.Drawing.Size(224, 35)
         Me.txttdelta1R.TabIndex = 104
         Me.txttdelta1R.Text = "0"
         Me.txttdelta1R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6142,10 +6187,10 @@ Partial Class analysis
         Me.txttthvalR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttthvalR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttthvalR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttthvalR.Location = New System.Drawing.Point(467, 23)
-        Me.txttthvalR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttthvalR.Location = New System.Drawing.Point(704, 36)
+        Me.txttthvalR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttthvalR.Name = "txttthvalR"
-        Me.txttthvalR.Size = New System.Drawing.Size(149, 23)
+        Me.txttthvalR.Size = New System.Drawing.Size(224, 35)
         Me.txttthvalR.TabIndex = 111
         Me.txttthvalR.Text = "0"
         Me.txttthvalR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6157,10 +6202,10 @@ Partial Class analysis
         Me.Label84.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label84.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label84.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label84.Location = New System.Drawing.Point(0, 22)
+        Me.Label84.Location = New System.Drawing.Point(0, 34)
         Me.Label84.Margin = New System.Windows.Forms.Padding(0)
         Me.Label84.Name = "Label84"
-        Me.Label84.Size = New System.Drawing.Size(16, 25)
+        Me.Label84.Size = New System.Drawing.Size(22, 39)
         Me.Label84.TabIndex = 5
         Me.Label84.Text = "T"
         Me.Label84.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -6173,10 +6218,10 @@ Partial Class analysis
         Me.txttvega1R.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvega1R.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvega1R.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvega1R.Location = New System.Drawing.Point(316, 48)
-        Me.txttvega1R.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvega1R.Location = New System.Drawing.Point(476, 75)
+        Me.txttvega1R.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvega1R.Name = "txttvega1R"
-        Me.txttvega1R.Size = New System.Drawing.Size(149, 22)
+        Me.txttvega1R.Size = New System.Drawing.Size(224, 35)
         Me.txttvega1R.TabIndex = 106
         Me.txttvega1R.Text = "0"
         Me.txttvega1R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6190,10 +6235,10 @@ Partial Class analysis
         Me.txttvanna1R.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvanna1R.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvanna1R.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvanna1R.Location = New System.Drawing.Point(769, 48)
-        Me.txttvanna1R.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvanna1R.Location = New System.Drawing.Point(1160, 75)
+        Me.txttvanna1R.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvanna1R.Name = "txttvanna1R"
-        Me.txttvanna1R.Size = New System.Drawing.Size(153, 22)
+        Me.txttvanna1R.Size = New System.Drawing.Size(227, 35)
         Me.txttvanna1R.TabIndex = 119
         Me.txttvanna1R.Text = "0"
         Me.txttvanna1R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6207,10 +6252,10 @@ Partial Class analysis
         Me.txttvannavalR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvannavalR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvannavalR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvannavalR.Location = New System.Drawing.Point(769, 23)
-        Me.txttvannavalR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvannavalR.Location = New System.Drawing.Point(1160, 36)
+        Me.txttvannavalR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvannavalR.Name = "txttvannavalR"
-        Me.txttvannavalR.Size = New System.Drawing.Size(153, 23)
+        Me.txttvannavalR.Size = New System.Drawing.Size(227, 35)
         Me.txttvannavalR.TabIndex = 117
         Me.txttvannavalR.Text = "0"
         Me.txttvannavalR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6222,10 +6267,10 @@ Partial Class analysis
         Me.Label88.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label88.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label88.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label88.Location = New System.Drawing.Point(0, 47)
+        Me.Label88.Location = New System.Drawing.Point(0, 73)
         Me.Label88.Margin = New System.Windows.Forms.Padding(0)
         Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(16, 24)
+        Me.Label88.Size = New System.Drawing.Size(22, 39)
         Me.Label88.TabIndex = 26
         Me.Label88.Text = "N"
         Me.Label88.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -6239,10 +6284,10 @@ Partial Class analysis
         Me.txttgmvalR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgmvalR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgmvalR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttgmvalR.Location = New System.Drawing.Point(168, 23)
-        Me.txttgmvalR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgmvalR.Location = New System.Drawing.Point(252, 36)
+        Me.txttgmvalR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgmvalR.Name = "txttgmvalR"
-        Me.txttgmvalR.Size = New System.Drawing.Size(146, 23)
+        Me.txttgmvalR.Size = New System.Drawing.Size(220, 35)
         Me.txttgmvalR.TabIndex = 109
         Me.txttgmvalR.Text = "0"
         Me.txttgmvalR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6256,10 +6301,10 @@ Partial Class analysis
         Me.txttvolgavalR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolgavalR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolgavalR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvolgavalR.Location = New System.Drawing.Point(618, 23)
-        Me.txttvolgavalR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolgavalR.Location = New System.Drawing.Point(932, 36)
+        Me.txttvolgavalR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolgavalR.Name = "txttvolgavalR"
-        Me.txttvolgavalR.Size = New System.Drawing.Size(149, 23)
+        Me.txttvolgavalR.Size = New System.Drawing.Size(224, 35)
         Me.txttvolgavalR.TabIndex = 116
         Me.txttvolgavalR.Text = "0"
         Me.txttvolgavalR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6273,10 +6318,10 @@ Partial Class analysis
         Me.txttvolga1R.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolga1R.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolga1R.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvolga1R.Location = New System.Drawing.Point(618, 48)
-        Me.txttvolga1R.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolga1R.Location = New System.Drawing.Point(932, 75)
+        Me.txttvolga1R.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolga1R.Name = "txttvolga1R"
-        Me.txttvolga1R.Size = New System.Drawing.Size(149, 22)
+        Me.txttvolga1R.Size = New System.Drawing.Size(224, 35)
         Me.txttvolga1R.TabIndex = 118
         Me.txttvolga1R.Text = "0"
         Me.txttvolga1R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6290,10 +6335,10 @@ Partial Class analysis
         Me.txttvgvalR.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvgvalR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvgvalR.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvgvalR.Location = New System.Drawing.Point(316, 23)
-        Me.txttvgvalR.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvgvalR.Location = New System.Drawing.Point(476, 36)
+        Me.txttvgvalR.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvgvalR.Name = "txttvgvalR"
-        Me.txttvgvalR.Size = New System.Drawing.Size(149, 23)
+        Me.txttvgvalR.Size = New System.Drawing.Size(224, 35)
         Me.txttvgvalR.TabIndex = 110
         Me.txttvgvalR.Text = "0"
         Me.txttvgvalR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6306,10 +6351,10 @@ Partial Class analysis
         Me.txttgamma1R.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgamma1R.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgamma1R.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttgamma1R.Location = New System.Drawing.Point(168, 48)
-        Me.txttgamma1R.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgamma1R.Location = New System.Drawing.Point(252, 75)
+        Me.txttgamma1R.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgamma1R.Name = "txttgamma1R"
-        Me.txttgamma1R.Size = New System.Drawing.Size(146, 22)
+        Me.txttgamma1R.Size = New System.Drawing.Size(220, 35)
         Me.txttgamma1R.TabIndex = 105
         Me.txttgamma1R.Text = "0"
         Me.txttgamma1R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6321,10 +6366,10 @@ Partial Class analysis
         Me.Label94.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label94.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label94.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label94.Location = New System.Drawing.Point(618, 1)
-        Me.Label94.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label94.Location = New System.Drawing.Point(932, 2)
+        Me.Label94.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label94.Name = "Label94"
-        Me.Label94.Size = New System.Drawing.Size(149, 20)
+        Me.Label94.Size = New System.Drawing.Size(224, 30)
         Me.Label94.TabIndex = 121
         Me.Label94.Text = "Volga"
         Me.Label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6361,15 +6406,15 @@ Partial Class analysis
         Me.TableLayoutPanel19.Controls.Add(Me.txttvannavalF, 6, 1)
         Me.TableLayoutPanel19.Controls.Add(Me.Label86, 5, 0)
         Me.TableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel19.Location = New System.Drawing.Point(0, 72)
-        Me.TableLayoutPanel19.Margin = New System.Windows.Forms.Padding(0, 0, 0, 1)
+        Me.TableLayoutPanel19.Location = New System.Drawing.Point(0, 114)
+        Me.TableLayoutPanel19.Margin = New System.Windows.Forms.Padding(0, 0, 0, 2)
         Me.TableLayoutPanel19.Name = "TableLayoutPanel19"
         Me.TableLayoutPanel19.RowCount = 3
         Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.66667!))
         Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.33333!))
-        Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel19.Size = New System.Drawing.Size(923, 71)
+        Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel19.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel19.Size = New System.Drawing.Size(1389, 112)
         Me.TableLayoutPanel19.TabIndex = 1
         '
         'Label81
@@ -6379,10 +6424,10 @@ Partial Class analysis
         Me.Label81.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label81.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label81.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label81.Location = New System.Drawing.Point(166, 1)
-        Me.Label81.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label81.Location = New System.Drawing.Point(251, 2)
+        Me.Label81.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label81.Name = "Label81"
-        Me.Label81.Size = New System.Drawing.Size(147, 21)
+        Me.Label81.Size = New System.Drawing.Size(220, 33)
         Me.Label81.TabIndex = 13
         Me.Label81.Text = "Gamma"
         Me.Label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6393,10 +6438,10 @@ Partial Class analysis
         Me.Label108.BackColor = System.Drawing.Color.Transparent
         Me.Label108.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label108.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label108.Location = New System.Drawing.Point(0, 50)
+        Me.Label108.Location = New System.Drawing.Point(0, 80)
         Me.Label108.Margin = New System.Windows.Forms.Padding(0)
         Me.Label108.Name = "Label108"
-        Me.Label108.Size = New System.Drawing.Size(16, 13)
+        Me.Label108.Size = New System.Drawing.Size(22, 20)
         Me.Label108.TabIndex = 26
         Me.Label108.Text = "N"
         Me.Label108.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -6408,10 +6453,10 @@ Partial Class analysis
         Me.Label83.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label83.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label83.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label83.Location = New System.Drawing.Point(464, 1)
-        Me.Label83.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label83.Location = New System.Drawing.Point(699, 2)
+        Me.Label83.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label83.Name = "Label83"
-        Me.Label83.Size = New System.Drawing.Size(150, 21)
+        Me.Label83.Size = New System.Drawing.Size(225, 33)
         Me.Label83.TabIndex = 11
         Me.Label83.Text = "Theta"
         Me.Label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6423,10 +6468,10 @@ Partial Class analysis
         Me.Label77.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label77.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label77.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label77.Location = New System.Drawing.Point(18, 1)
-        Me.Label77.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label77.Location = New System.Drawing.Point(28, 2)
+        Me.Label77.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label77.Name = "Label77"
-        Me.Label77.Size = New System.Drawing.Size(146, 21)
+        Me.Label77.Size = New System.Drawing.Size(219, 33)
         Me.Label77.TabIndex = 10
         Me.Label77.Text = "Delta"
         Me.Label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6437,10 +6482,10 @@ Partial Class analysis
         Me.Label104.BackColor = System.Drawing.Color.Transparent
         Me.Label104.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label104.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label104.Location = New System.Drawing.Point(0, 23)
+        Me.Label104.Location = New System.Drawing.Point(0, 37)
         Me.Label104.Margin = New System.Windows.Forms.Padding(0)
         Me.Label104.Name = "Label104"
-        Me.Label104.Size = New System.Drawing.Size(15, 13)
+        Me.Label104.Size = New System.Drawing.Size(20, 20)
         Me.Label104.TabIndex = 5
         Me.Label104.Text = "T"
         Me.Label104.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -6452,10 +6497,10 @@ Partial Class analysis
         Me.Label85.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label85.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label85.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label85.Location = New System.Drawing.Point(769, 1)
-        Me.Label85.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label85.Location = New System.Drawing.Point(1158, 2)
+        Me.Label85.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label85.Name = "Label85"
-        Me.Label85.Size = New System.Drawing.Size(153, 21)
+        Me.Label85.Size = New System.Drawing.Size(229, 33)
         Me.Label85.TabIndex = 122
         Me.Label85.Text = "Vanna"
         Me.Label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6467,10 +6512,10 @@ Partial Class analysis
         Me.Label82.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label82.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label82.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label82.Location = New System.Drawing.Point(315, 1)
-        Me.Label82.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label82.Location = New System.Drawing.Point(475, 2)
+        Me.Label82.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label82.Name = "Label82"
-        Me.Label82.Size = New System.Drawing.Size(147, 21)
+        Me.Label82.Size = New System.Drawing.Size(220, 33)
         Me.Label82.TabIndex = 12
         Me.Label82.Text = "Vega"
         Me.Label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6483,10 +6528,10 @@ Partial Class analysis
         Me.txttdelta1F.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelta1F.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelta1F.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttdelta1F.Location = New System.Drawing.Point(18, 51)
-        Me.txttdelta1F.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelta1F.Location = New System.Drawing.Point(28, 82)
+        Me.txttdelta1F.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelta1F.Name = "txttdelta1F"
-        Me.txttdelta1F.Size = New System.Drawing.Size(146, 19)
+        Me.txttdelta1F.Size = New System.Drawing.Size(219, 28)
         Me.txttdelta1F.TabIndex = 104
         Me.txttdelta1F.Text = "0"
         Me.txttdelta1F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6499,10 +6544,10 @@ Partial Class analysis
         Me.txttdelvalF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttdelvalF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttdelvalF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttdelvalF.Location = New System.Drawing.Point(18, 24)
-        Me.txttdelvalF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttdelvalF.Location = New System.Drawing.Point(28, 39)
+        Me.txttdelvalF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttdelvalF.Name = "txttdelvalF"
-        Me.txttdelvalF.Size = New System.Drawing.Size(146, 25)
+        Me.txttdelvalF.Size = New System.Drawing.Size(219, 39)
         Me.txttdelvalF.TabIndex = 108
         Me.txttdelvalF.Text = "0"
         Me.txttdelvalF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6515,10 +6560,10 @@ Partial Class analysis
         Me.txttgamma1F.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgamma1F.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgamma1F.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttgamma1F.Location = New System.Drawing.Point(166, 51)
-        Me.txttgamma1F.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgamma1F.Location = New System.Drawing.Point(251, 82)
+        Me.txttgamma1F.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgamma1F.Name = "txttgamma1F"
-        Me.txttgamma1F.Size = New System.Drawing.Size(147, 19)
+        Me.txttgamma1F.Size = New System.Drawing.Size(220, 28)
         Me.txttgamma1F.TabIndex = 105
         Me.txttgamma1F.Text = "0"
         Me.txttgamma1F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6531,10 +6576,10 @@ Partial Class analysis
         Me.txttgmvalF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttgmvalF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttgmvalF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttgmvalF.Location = New System.Drawing.Point(166, 24)
-        Me.txttgmvalF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttgmvalF.Location = New System.Drawing.Point(251, 39)
+        Me.txttgmvalF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttgmvalF.Name = "txttgmvalF"
-        Me.txttgmvalF.Size = New System.Drawing.Size(147, 25)
+        Me.txttgmvalF.Size = New System.Drawing.Size(220, 39)
         Me.txttgmvalF.TabIndex = 109
         Me.txttgmvalF.Text = "0"
         Me.txttgmvalF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6547,10 +6592,10 @@ Partial Class analysis
         Me.txttvega1F.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvega1F.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvega1F.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvega1F.Location = New System.Drawing.Point(315, 51)
-        Me.txttvega1F.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvega1F.Location = New System.Drawing.Point(475, 82)
+        Me.txttvega1F.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvega1F.Name = "txttvega1F"
-        Me.txttvega1F.Size = New System.Drawing.Size(147, 19)
+        Me.txttvega1F.Size = New System.Drawing.Size(220, 28)
         Me.txttvega1F.TabIndex = 106
         Me.txttvega1F.Text = "0"
         Me.txttvega1F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6563,10 +6608,10 @@ Partial Class analysis
         Me.txttvgvalF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvgvalF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvgvalF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvgvalF.Location = New System.Drawing.Point(315, 24)
-        Me.txttvgvalF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvgvalF.Location = New System.Drawing.Point(475, 39)
+        Me.txttvgvalF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvgvalF.Name = "txttvgvalF"
-        Me.txttvgvalF.Size = New System.Drawing.Size(147, 25)
+        Me.txttvgvalF.Size = New System.Drawing.Size(220, 39)
         Me.txttvgvalF.TabIndex = 110
         Me.txttvgvalF.Text = "0"
         Me.txttvgvalF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6579,10 +6624,10 @@ Partial Class analysis
         Me.txtttheta1F.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtttheta1F.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtttheta1F.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtttheta1F.Location = New System.Drawing.Point(464, 51)
-        Me.txtttheta1F.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtttheta1F.Location = New System.Drawing.Point(699, 82)
+        Me.txtttheta1F.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtttheta1F.Name = "txtttheta1F"
-        Me.txtttheta1F.Size = New System.Drawing.Size(150, 19)
+        Me.txtttheta1F.Size = New System.Drawing.Size(225, 28)
         Me.txtttheta1F.TabIndex = 107
         Me.txtttheta1F.Text = "0"
         Me.txtttheta1F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6595,10 +6640,10 @@ Partial Class analysis
         Me.txttthvalF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttthvalF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttthvalF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttthvalF.Location = New System.Drawing.Point(464, 24)
-        Me.txttthvalF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttthvalF.Location = New System.Drawing.Point(699, 39)
+        Me.txttthvalF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttthvalF.Name = "txttthvalF"
-        Me.txttthvalF.Size = New System.Drawing.Size(150, 25)
+        Me.txttthvalF.Size = New System.Drawing.Size(225, 39)
         Me.txttthvalF.TabIndex = 111
         Me.txttthvalF.Text = "0"
         Me.txttthvalF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6611,10 +6656,10 @@ Partial Class analysis
         Me.txttvolga1F.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolga1F.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolga1F.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvolga1F.Location = New System.Drawing.Point(616, 51)
-        Me.txttvolga1F.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolga1F.Location = New System.Drawing.Point(928, 82)
+        Me.txttvolga1F.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolga1F.Name = "txttvolga1F"
-        Me.txttvolga1F.Size = New System.Drawing.Size(151, 19)
+        Me.txttvolga1F.Size = New System.Drawing.Size(226, 28)
         Me.txttvolga1F.TabIndex = 118
         Me.txttvolga1F.Text = "0"
         Me.txttvolga1F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6627,10 +6672,10 @@ Partial Class analysis
         Me.txttvolgavalF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvolgavalF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvolgavalF.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvolgavalF.Location = New System.Drawing.Point(616, 24)
-        Me.txttvolgavalF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvolgavalF.Location = New System.Drawing.Point(928, 39)
+        Me.txttvolgavalF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvolgavalF.Name = "txttvolgavalF"
-        Me.txttvolgavalF.Size = New System.Drawing.Size(151, 25)
+        Me.txttvolgavalF.Size = New System.Drawing.Size(226, 39)
         Me.txttvolgavalF.TabIndex = 116
         Me.txttvolgavalF.Text = "0"
         Me.txttvolgavalF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6643,10 +6688,10 @@ Partial Class analysis
         Me.txttvanna1F.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvanna1F.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvanna1F.ForeColor = System.Drawing.SystemColors.Window
-        Me.txttvanna1F.Location = New System.Drawing.Point(769, 51)
-        Me.txttvanna1F.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvanna1F.Location = New System.Drawing.Point(1158, 82)
+        Me.txttvanna1F.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvanna1F.Name = "txttvanna1F"
-        Me.txttvanna1F.Size = New System.Drawing.Size(153, 19)
+        Me.txttvanna1F.Size = New System.Drawing.Size(229, 28)
         Me.txttvanna1F.TabIndex = 117
         Me.txttvanna1F.Text = "0"
         Me.txttvanna1F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6659,10 +6704,10 @@ Partial Class analysis
         Me.txttvannavalF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txttvannavalF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttvannavalF.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txttvannavalF.Location = New System.Drawing.Point(769, 24)
-        Me.txttvannavalF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txttvannavalF.Location = New System.Drawing.Point(1158, 39)
+        Me.txttvannavalF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttvannavalF.Name = "txttvannavalF"
-        Me.txttvannavalF.Size = New System.Drawing.Size(153, 25)
+        Me.txttvannavalF.Size = New System.Drawing.Size(229, 39)
         Me.txttvannavalF.TabIndex = 119
         Me.txttvannavalF.Text = "0"
         Me.txttvannavalF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6674,10 +6719,10 @@ Partial Class analysis
         Me.Label86.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label86.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label86.ForeColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Label86.Location = New System.Drawing.Point(616, 1)
-        Me.Label86.Margin = New System.Windows.Forms.Padding(1)
+        Me.Label86.Location = New System.Drawing.Point(928, 2)
+        Me.Label86.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(151, 21)
+        Me.Label86.Size = New System.Drawing.Size(226, 33)
         Me.Label86.TabIndex = 121
         Me.Label86.Text = "Volga"
         Me.Label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -6689,49 +6734,50 @@ Partial Class analysis
         Me.DGTrading.AllowUserToOrderColumns = True
         Me.DGTrading.BackgroundColor = System.Drawing.Color.Black
         Me.DGTrading.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HotTrack
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGTrading.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle107.BackColor = System.Drawing.SystemColors.ActiveBorder
+        DataGridViewCellStyle107.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle107.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle107.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle107.SelectionForeColor = System.Drawing.SystemColors.HotTrack
+        DataGridViewCellStyle107.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGTrading.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle107
         Me.DGTrading.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGTrading.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IsCalc, Me.liq, Me.Maturity, Me.script, Me.mdate, Me.Payinout, Me.Distance, Me.WAVV, Me.Strikes, Me.CP, Me.prqty, Me.Toqty, Me.units, Me.Lots, Me.traded, Me.last, Me.Buyval, Me.Saleval, Me.TimeValue, Me.Synfut, Me.lv, Me.MktVol, Me.TradingVol, Me.delta, Me.deltaval, Me.DeltaN, Me.gamma, Me.gmval, Me.GammaN, Me.vega, Me.vgval, Me.VegaN, Me.theta, Me.thetaval, Me.ThetaN, Me.volga, Me.volgaVal, Me.VolgaN, Me.vanna, Me.vannaval, Me.VannaN, Me.grossmtm, Me.remarks, Me.company, Me.tokanno, Me.entry_date, Me.token1, Me.ftoken, Me.toatp, Me.pratp, Me.deltaval1, Me.gammaval1, Me.vegaval1, Me.thetaval1, Me.volgaval1, Me.vannaval1, Me.status, Me.ltp1, Me.lv1, Me.mdate_months, Me.fut_mdate, Me.totExp, Me.netmtm, Me.IsCurrency, Me.deltavval, Me.IsVolFix, Me.preDate, Me.preSpot, Me.preVol, Me.preDelVal, Me.preVegVal, Me.preTheVal, Me.curSpot, Me.curVol, Me.curDelVal, Me.curVegVal, Me.curTheVal, Me.preTotalMTM, Me.preGrossMTM, Me.curTotalMTM, Me.curGrossMTM, Me.preQty, Me.Flast})
         Me.DGTrading.ContextMenuStrip = Me.menuGrid
-        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle45.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGTrading.DefaultCellStyle = DataGridViewCellStyle45
+        DataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle151.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle151.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle151.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle151.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle151.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle151.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGTrading.DefaultCellStyle = DataGridViewCellStyle151
         Me.DGTrading.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGTrading.EnableHeadersVisualStyles = False
         Me.DGTrading.GridColor = System.Drawing.SystemColors.MenuBar
-        Me.DGTrading.Location = New System.Drawing.Point(3, 179)
+        Me.DGTrading.Location = New System.Drawing.Point(4, 278)
+        Me.DGTrading.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DGTrading.Name = "DGTrading"
         Me.DGTrading.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.AppWorkspace
-        DataGridViewCellStyle46.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HotTrack
-        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGTrading.RowHeadersDefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle152.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle152.BackColor = System.Drawing.SystemColors.AppWorkspace
+        DataGridViewCellStyle152.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle152.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle152.SelectionBackColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle152.SelectionForeColor = System.Drawing.SystemColors.HotTrack
+        DataGridViewCellStyle152.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGTrading.RowHeadersDefaultCellStyle = DataGridViewCellStyle152
         Me.DGTrading.RowHeadersVisible = False
         Me.DGTrading.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        DataGridViewCellStyle47.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle47.ForeColor = System.Drawing.Color.White
-        Me.DGTrading.RowsDefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle153.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle153.ForeColor = System.Drawing.Color.White
+        Me.DGTrading.RowsDefaultCellStyle = DataGridViewCellStyle153
         Me.DGTrading.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Black
         Me.DGTrading.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White
         Me.DGTrading.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGTrading.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGTrading.Size = New System.Drawing.Size(1022, 116)
+        Me.DGTrading.Size = New System.Drawing.Size(1534, 175)
         Me.DGTrading.TabIndex = 3
         Me.DGTrading.VirtualMode = True
         '
@@ -6756,11 +6802,11 @@ Partial Class analysis
         'Maturity
         '
         Me.Maturity.DataPropertyName = "month"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.Format = "MMMM"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Maturity.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle108.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle108.Format = "MMMM"
+        DataGridViewCellStyle108.NullValue = Nothing
+        Me.Maturity.DefaultCellStyle = DataGridViewCellStyle108
         Me.Maturity.HeaderText = "Maturity"
         Me.Maturity.MinimumWidth = 8
         Me.Maturity.Name = "Maturity"
@@ -6770,8 +6816,8 @@ Partial Class analysis
         'script
         '
         Me.script.DataPropertyName = "script"
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.script.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle109.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.script.DefaultCellStyle = DataGridViewCellStyle109
         Me.script.HeaderText = "script"
         Me.script.MinimumWidth = 8
         Me.script.Name = "script"
@@ -6781,8 +6827,8 @@ Partial Class analysis
         'mdate
         '
         Me.mdate.DataPropertyName = "mdate"
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mdate.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle110.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mdate.DefaultCellStyle = DataGridViewCellStyle110
         Me.mdate.HeaderText = "MDate"
         Me.mdate.MinimumWidth = 8
         Me.mdate.Name = "mdate"
@@ -6792,8 +6838,8 @@ Partial Class analysis
         'Payinout
         '
         Me.Payinout.DataPropertyName = "Payinout"
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Payinout.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle111.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Payinout.DefaultCellStyle = DataGridViewCellStyle111
         Me.Payinout.HeaderText = "Payinout"
         Me.Payinout.MinimumWidth = 8
         Me.Payinout.Name = "Payinout"
@@ -6802,8 +6848,8 @@ Partial Class analysis
         'Distance
         '
         Me.Distance.DataPropertyName = "Distance"
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Distance.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle112.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Distance.DefaultCellStyle = DataGridViewCellStyle112
         Me.Distance.HeaderText = "Distance"
         Me.Distance.MinimumWidth = 8
         Me.Distance.Name = "Distance"
@@ -6812,8 +6858,8 @@ Partial Class analysis
         'WAVV
         '
         Me.WAVV.DataPropertyName = "WAVV"
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.WAVV.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle113.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.WAVV.DefaultCellStyle = DataGridViewCellStyle113
         Me.WAVV.HeaderText = "WAVV"
         Me.WAVV.MinimumWidth = 8
         Me.WAVV.Name = "WAVV"
@@ -6822,9 +6868,9 @@ Partial Class analysis
         'Strikes
         '
         Me.Strikes.DataPropertyName = "Strikes"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Strikes.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle114.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Strikes.DefaultCellStyle = DataGridViewCellStyle114
         Me.Strikes.HeaderText = "Strike"
         Me.Strikes.MinimumWidth = 8
         Me.Strikes.Name = "Strikes"
@@ -6834,9 +6880,9 @@ Partial Class analysis
         'CP
         '
         Me.CP.DataPropertyName = "cp"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CP.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle115.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CP.DefaultCellStyle = DataGridViewCellStyle115
         Me.CP.HeaderText = "Type"
         Me.CP.MinimumWidth = 8
         Me.CP.Name = "CP"
@@ -6846,8 +6892,8 @@ Partial Class analysis
         'prqty
         '
         Me.prqty.DataPropertyName = "prqty"
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.prqty.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle116.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prqty.DefaultCellStyle = DataGridViewCellStyle116
         Me.prqty.HeaderText = "PrQty"
         Me.prqty.MinimumWidth = 8
         Me.prqty.Name = "prqty"
@@ -6858,8 +6904,8 @@ Partial Class analysis
         'Toqty
         '
         Me.Toqty.DataPropertyName = "toqty"
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Toqty.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle117.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Toqty.DefaultCellStyle = DataGridViewCellStyle117
         Me.Toqty.HeaderText = "ToQty"
         Me.Toqty.MinimumWidth = 8
         Me.Toqty.Name = "Toqty"
@@ -6870,11 +6916,11 @@ Partial Class analysis
         'units
         '
         Me.units.DataPropertyName = "units"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.Format = "N0"
-        DataGridViewCellStyle12.NullValue = Nothing
-        Me.units.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle118.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle118.Format = "N0"
+        DataGridViewCellStyle118.NullValue = Nothing
+        Me.units.DefaultCellStyle = DataGridViewCellStyle118
         Me.units.HeaderText = "Units"
         Me.units.MinimumWidth = 8
         Me.units.Name = "units"
@@ -6884,9 +6930,9 @@ Partial Class analysis
         'Lots
         '
         Me.Lots.DataPropertyName = "Lots"
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Lots.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle119.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Lots.DefaultCellStyle = DataGridViewCellStyle119
         Me.Lots.HeaderText = "Lots"
         Me.Lots.MinimumWidth = 8
         Me.Lots.Name = "Lots"
@@ -6896,11 +6942,11 @@ Partial Class analysis
         'traded
         '
         Me.traded.DataPropertyName = "traded"
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.Format = "N2"
-        DataGridViewCellStyle14.NullValue = Nothing
-        Me.traded.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle120.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle120.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle120.Format = "N2"
+        DataGridViewCellStyle120.NullValue = Nothing
+        Me.traded.DefaultCellStyle = DataGridViewCellStyle120
         Me.traded.HeaderText = "Net Price"
         Me.traded.MinimumWidth = 8
         Me.traded.Name = "traded"
@@ -6911,11 +6957,11 @@ Partial Class analysis
         '
         Me.last.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.last.DataPropertyName = "last"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.Format = "N2"
-        DataGridViewCellStyle15.NullValue = Nothing
-        Me.last.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle121.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle121.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle121.Format = "N2"
+        DataGridViewCellStyle121.NullValue = Nothing
+        Me.last.DefaultCellStyle = DataGridViewCellStyle121
         Me.last.HeaderText = "LTP"
         Me.last.MinimumWidth = 8
         Me.last.Name = "last"
@@ -6925,9 +6971,9 @@ Partial Class analysis
         'Buyval
         '
         Me.Buyval.DataPropertyName = "buypr"
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Buyval.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle122.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle122.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Buyval.DefaultCellStyle = DataGridViewCellStyle122
         Me.Buyval.HeaderText = "Buy Price"
         Me.Buyval.MinimumWidth = 8
         Me.Buyval.Name = "Buyval"
@@ -6936,9 +6982,9 @@ Partial Class analysis
         'Saleval
         '
         Me.Saleval.DataPropertyName = "salepr"
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Saleval.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle123.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle123.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Saleval.DefaultCellStyle = DataGridViewCellStyle123
         Me.Saleval.HeaderText = "Sale Price"
         Me.Saleval.MinimumWidth = 8
         Me.Saleval.Name = "Saleval"
@@ -6947,9 +6993,9 @@ Partial Class analysis
         'TimeValue
         '
         Me.TimeValue.DataPropertyName = "TimeValue"
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.TimeValue.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle124.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle124.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.TimeValue.DefaultCellStyle = DataGridViewCellStyle124
         Me.TimeValue.HeaderText = "TimeValue"
         Me.TimeValue.MinimumWidth = 8
         Me.TimeValue.Name = "TimeValue"
@@ -6959,8 +7005,8 @@ Partial Class analysis
         'Synfut
         '
         Me.Synfut.DataPropertyName = "Synfut"
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Synfut.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle125.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Synfut.DefaultCellStyle = DataGridViewCellStyle125
         Me.Synfut.HeaderText = "Synfut"
         Me.Synfut.MinimumWidth = 8
         Me.Synfut.Name = "Synfut"
@@ -6969,11 +7015,11 @@ Partial Class analysis
         'lv
         '
         Me.lv.DataPropertyName = "lv"
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.Format = "N2"
-        DataGridViewCellStyle20.NullValue = Nothing
-        Me.lv.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle126.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle126.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle126.Format = "N2"
+        DataGridViewCellStyle126.NullValue = Nothing
+        Me.lv.DefaultCellStyle = DataGridViewCellStyle126
         Me.lv.HeaderText = "Vol (%)"
         Me.lv.MinimumWidth = 8
         Me.lv.Name = "lv"
@@ -6983,11 +7029,11 @@ Partial Class analysis
         'MktVol
         '
         Me.MktVol.DataPropertyName = "MktVol"
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle21.Format = "N2"
-        DataGridViewCellStyle21.NullValue = Nothing
-        Me.MktVol.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle127.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle127.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle127.Format = "N2"
+        DataGridViewCellStyle127.NullValue = Nothing
+        Me.MktVol.DefaultCellStyle = DataGridViewCellStyle127
         Me.MktVol.HeaderText = "Mkt Vol(%)"
         Me.MktVol.MinimumWidth = 8
         Me.MktVol.Name = "MktVol"
@@ -6997,9 +7043,9 @@ Partial Class analysis
         'TradingVol
         '
         Me.TradingVol.DataPropertyName = "TradingVol"
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.TradingVol.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle128.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle128.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.TradingVol.DefaultCellStyle = DataGridViewCellStyle128
         Me.TradingVol.HeaderText = "TradingVol"
         Me.TradingVol.MinimumWidth = 8
         Me.TradingVol.Name = "TradingVol"
@@ -7008,11 +7054,11 @@ Partial Class analysis
         'delta
         '
         Me.delta.DataPropertyName = "delta"
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle23.Format = "N2"
-        DataGridViewCellStyle23.NullValue = "0.00"
-        Me.delta.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle129.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle129.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle129.Format = "N2"
+        DataGridViewCellStyle129.NullValue = "0.00"
+        Me.delta.DefaultCellStyle = DataGridViewCellStyle129
         Me.delta.HeaderText = "Delta"
         Me.delta.MinimumWidth = 8
         Me.delta.Name = "delta"
@@ -7022,9 +7068,9 @@ Partial Class analysis
         'deltaval
         '
         Me.deltaval.DataPropertyName = "deltaval"
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.deltaval.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle130.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle130.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deltaval.DefaultCellStyle = DataGridViewCellStyle130
         Me.deltaval.HeaderText = "D. V"
         Me.deltaval.MinimumWidth = 8
         Me.deltaval.Name = "deltaval"
@@ -7034,9 +7080,9 @@ Partial Class analysis
         'DeltaN
         '
         Me.DeltaN.DataPropertyName = "DeltaN"
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeltaN.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle131.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle131.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeltaN.DefaultCellStyle = DataGridViewCellStyle131
         Me.DeltaN.HeaderText = "D. N."
         Me.DeltaN.MinimumWidth = 8
         Me.DeltaN.Name = "DeltaN"
@@ -7046,9 +7092,9 @@ Partial Class analysis
         'gamma
         '
         Me.gamma.DataPropertyName = "gamma"
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gamma.DefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle132.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle132.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gamma.DefaultCellStyle = DataGridViewCellStyle132
         Me.gamma.HeaderText = "Gamma"
         Me.gamma.MinimumWidth = 8
         Me.gamma.Name = "gamma"
@@ -7058,9 +7104,9 @@ Partial Class analysis
         'gmval
         '
         Me.gmval.DataPropertyName = "gmval"
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gmval.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle133.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle133.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gmval.DefaultCellStyle = DataGridViewCellStyle133
         Me.gmval.HeaderText = "G. V"
         Me.gmval.MinimumWidth = 8
         Me.gmval.Name = "gmval"
@@ -7070,9 +7116,9 @@ Partial Class analysis
         'GammaN
         '
         Me.GammaN.DataPropertyName = "GammaN"
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GammaN.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle134.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle134.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GammaN.DefaultCellStyle = DataGridViewCellStyle134
         Me.GammaN.HeaderText = "G. N."
         Me.GammaN.MinimumWidth = 8
         Me.GammaN.Name = "GammaN"
@@ -7082,9 +7128,9 @@ Partial Class analysis
         'vega
         '
         Me.vega.DataPropertyName = "vega"
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vega.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle135.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle135.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vega.DefaultCellStyle = DataGridViewCellStyle135
         Me.vega.HeaderText = "Vega"
         Me.vega.MinimumWidth = 8
         Me.vega.Name = "vega"
@@ -7094,9 +7140,9 @@ Partial Class analysis
         'vgval
         '
         Me.vgval.DataPropertyName = "vgval"
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vgval.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle136.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle136.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vgval.DefaultCellStyle = DataGridViewCellStyle136
         Me.vgval.HeaderText = "V. V"
         Me.vgval.MinimumWidth = 8
         Me.vgval.Name = "vgval"
@@ -7106,9 +7152,9 @@ Partial Class analysis
         'VegaN
         '
         Me.VegaN.DataPropertyName = "VegaN"
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VegaN.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle137.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle137.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VegaN.DefaultCellStyle = DataGridViewCellStyle137
         Me.VegaN.HeaderText = "V. N."
         Me.VegaN.MinimumWidth = 8
         Me.VegaN.Name = "VegaN"
@@ -7118,9 +7164,9 @@ Partial Class analysis
         'theta
         '
         Me.theta.DataPropertyName = "theta"
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.theta.DefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle138.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle138.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.theta.DefaultCellStyle = DataGridViewCellStyle138
         Me.theta.HeaderText = "Theta"
         Me.theta.MinimumWidth = 8
         Me.theta.Name = "theta"
@@ -7130,9 +7176,9 @@ Partial Class analysis
         'thetaval
         '
         Me.thetaval.DataPropertyName = "thetaval"
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.thetaval.DefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle139.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle139.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.thetaval.DefaultCellStyle = DataGridViewCellStyle139
         Me.thetaval.HeaderText = "T. V"
         Me.thetaval.MinimumWidth = 8
         Me.thetaval.Name = "thetaval"
@@ -7142,9 +7188,9 @@ Partial Class analysis
         'ThetaN
         '
         Me.ThetaN.DataPropertyName = "ThetaN"
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ThetaN.DefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle140.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle140.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ThetaN.DefaultCellStyle = DataGridViewCellStyle140
         Me.ThetaN.HeaderText = "T. N."
         Me.ThetaN.MinimumWidth = 8
         Me.ThetaN.Name = "ThetaN"
@@ -7154,9 +7200,9 @@ Partial Class analysis
         'volga
         '
         Me.volga.DataPropertyName = "volga"
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.volga.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle141.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle141.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.volga.DefaultCellStyle = DataGridViewCellStyle141
         Me.volga.HeaderText = "Volga"
         Me.volga.MinimumWidth = 8
         Me.volga.Name = "volga"
@@ -7166,9 +7212,9 @@ Partial Class analysis
         'volgaVal
         '
         Me.volgaVal.DataPropertyName = "volgaval"
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle36.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.volgaVal.DefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle142.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle142.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.volgaVal.DefaultCellStyle = DataGridViewCellStyle142
         Me.volgaVal.HeaderText = "Vo. V"
         Me.volgaVal.MinimumWidth = 8
         Me.volgaVal.Name = "volgaVal"
@@ -7178,9 +7224,9 @@ Partial Class analysis
         'VolgaN
         '
         Me.VolgaN.DataPropertyName = "VolgaN"
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VolgaN.DefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle143.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle143.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VolgaN.DefaultCellStyle = DataGridViewCellStyle143
         Me.VolgaN.HeaderText = "Vo. N."
         Me.VolgaN.MinimumWidth = 8
         Me.VolgaN.Name = "VolgaN"
@@ -7190,9 +7236,9 @@ Partial Class analysis
         'vanna
         '
         Me.vanna.DataPropertyName = "vanna"
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle38.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vanna.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle144.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle144.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vanna.DefaultCellStyle = DataGridViewCellStyle144
         Me.vanna.HeaderText = "Vanna"
         Me.vanna.MinimumWidth = 8
         Me.vanna.Name = "vanna"
@@ -7202,9 +7248,9 @@ Partial Class analysis
         'vannaval
         '
         Me.vannaval.DataPropertyName = "vannaval"
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vannaval.DefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle145.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle145.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vannaval.DefaultCellStyle = DataGridViewCellStyle145
         Me.vannaval.HeaderText = "Va. V"
         Me.vannaval.MinimumWidth = 8
         Me.vannaval.Name = "vannaval"
@@ -7214,9 +7260,9 @@ Partial Class analysis
         'VannaN
         '
         Me.VannaN.DataPropertyName = "VannaN"
-        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle40.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VannaN.DefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle146.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle146.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VannaN.DefaultCellStyle = DataGridViewCellStyle146
         Me.VannaN.HeaderText = "Va. N."
         Me.VannaN.MinimumWidth = 8
         Me.VannaN.Name = "VannaN"
@@ -7226,11 +7272,11 @@ Partial Class analysis
         'grossmtm
         '
         Me.grossmtm.DataPropertyName = "grossmtm"
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle41.Format = "N0"
-        DataGridViewCellStyle41.NullValue = Nothing
-        Me.grossmtm.DefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle147.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle147.Format = "N0"
+        DataGridViewCellStyle147.NullValue = Nothing
+        Me.grossmtm.DefaultCellStyle = DataGridViewCellStyle147
         Me.grossmtm.HeaderText = "GrossMTM"
         Me.grossmtm.MinimumWidth = 8
         Me.grossmtm.Name = "grossmtm"
@@ -7240,9 +7286,9 @@ Partial Class analysis
         'remarks
         '
         Me.remarks.DataPropertyName = "remarks"
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.remarks.DefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle148.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle148.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.remarks.DefaultCellStyle = DataGridViewCellStyle148
         Me.remarks.HeaderText = "Remarks"
         Me.remarks.MinimumWidth = 8
         Me.remarks.Name = "remarks"
@@ -7427,11 +7473,11 @@ Partial Class analysis
         'totExp
         '
         Me.totExp.DataPropertyName = "totExp"
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle43.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle43.Format = "N0"
-        DataGridViewCellStyle43.NullValue = Nothing
-        Me.totExp.DefaultCellStyle = DataGridViewCellStyle43
+        DataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle149.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle149.Format = "N0"
+        DataGridViewCellStyle149.NullValue = Nothing
+        Me.totExp.DefaultCellStyle = DataGridViewCellStyle149
         Me.totExp.HeaderText = "Expense"
         Me.totExp.MinimumWidth = 8
         Me.totExp.Name = "totExp"
@@ -7442,11 +7488,11 @@ Partial Class analysis
         'netmtm
         '
         Me.netmtm.DataPropertyName = "netmtm"
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle44.Format = "N0"
-        DataGridViewCellStyle44.NullValue = Nothing
-        Me.netmtm.DefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle150.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle150.Format = "N0"
+        DataGridViewCellStyle150.NullValue = Nothing
+        Me.netmtm.DefaultCellStyle = DataGridViewCellStyle150
         Me.netmtm.HeaderText = "NetMTM"
         Me.netmtm.MinimumWidth = 8
         Me.netmtm.Name = "netmtm"
@@ -7641,14 +7687,14 @@ Partial Class analysis
         Me.menuGrid.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.menuGrid.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeltaToolStripMenuItem, Me.DVToolStripMenuItem, Me.GammaToolStripMenuItem, Me.GVToolStripMenuItem, Me.TheToolStripMenuItem, Me.TVToolStripMenuItem, Me.VegaToolStripMenuItem, Me.VVToolStripMenuItem, Me.VolgaToolStripMenuItem, Me.VoVToolStripMenuItem, Me.VannaToolStripMenuItem, Me.VaVToolStripMenuItem, Me.IlliqToolStripMenuItem, Me.ExpenseToolStripMenuItem, Me.GrossMTMToolStripMenuItem, Me.RemarksToolStripMenuItem, Me.NetMTMToolStripMenuItem, Me.HideGreeksToolStripMenuItem, Me.HideGreeksValToolStripMenuItem, Me.HideGreeksNutToolStripMenuItem, Me.GridCellSelectToolStripMenuItem, Me.GridFullrowselectToolStripMenuItem, Me.ScriptToolStripMenuItem, Me.MDateToolStripMenuItem, Me.SaveProfileToolStripMenuItem1})
         Me.menuGrid.Name = "menuGrid"
-        Me.menuGrid.Size = New System.Drawing.Size(170, 554)
+        Me.menuGrid.Size = New System.Drawing.Size(227, 804)
         '
         'DeltaToolStripMenuItem
         '
         Me.DeltaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DeltaToolStripMenuItem.CheckOnClick = True
         Me.DeltaToolStripMenuItem.Name = "DeltaToolStripMenuItem"
-        Me.DeltaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.DeltaToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.DeltaToolStripMenuItem.Text = "Delta"
         Me.DeltaToolStripMenuItem.Visible = False
         '
@@ -7656,7 +7702,7 @@ Partial Class analysis
         '
         Me.DVToolStripMenuItem.CheckOnClick = True
         Me.DVToolStripMenuItem.Name = "DVToolStripMenuItem"
-        Me.DVToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.DVToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.DVToolStripMenuItem.Text = "D.V."
         Me.DVToolStripMenuItem.Visible = False
         '
@@ -7664,7 +7710,7 @@ Partial Class analysis
         '
         Me.GammaToolStripMenuItem.CheckOnClick = True
         Me.GammaToolStripMenuItem.Name = "GammaToolStripMenuItem"
-        Me.GammaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.GammaToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.GammaToolStripMenuItem.Text = "Gamma"
         Me.GammaToolStripMenuItem.Visible = False
         '
@@ -7672,7 +7718,7 @@ Partial Class analysis
         '
         Me.GVToolStripMenuItem.CheckOnClick = True
         Me.GVToolStripMenuItem.Name = "GVToolStripMenuItem"
-        Me.GVToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.GVToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.GVToolStripMenuItem.Text = "G.V."
         Me.GVToolStripMenuItem.Visible = False
         '
@@ -7680,7 +7726,7 @@ Partial Class analysis
         '
         Me.TheToolStripMenuItem.CheckOnClick = True
         Me.TheToolStripMenuItem.Name = "TheToolStripMenuItem"
-        Me.TheToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.TheToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.TheToolStripMenuItem.Text = "Theta"
         Me.TheToolStripMenuItem.Visible = False
         '
@@ -7688,7 +7734,7 @@ Partial Class analysis
         '
         Me.TVToolStripMenuItem.CheckOnClick = True
         Me.TVToolStripMenuItem.Name = "TVToolStripMenuItem"
-        Me.TVToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.TVToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.TVToolStripMenuItem.Text = "T.V."
         Me.TVToolStripMenuItem.Visible = False
         '
@@ -7696,7 +7742,7 @@ Partial Class analysis
         '
         Me.VegaToolStripMenuItem.CheckOnClick = True
         Me.VegaToolStripMenuItem.Name = "VegaToolStripMenuItem"
-        Me.VegaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.VegaToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.VegaToolStripMenuItem.Text = "Vega"
         Me.VegaToolStripMenuItem.Visible = False
         '
@@ -7704,35 +7750,35 @@ Partial Class analysis
         '
         Me.VVToolStripMenuItem.CheckOnClick = True
         Me.VVToolStripMenuItem.Name = "VVToolStripMenuItem"
-        Me.VVToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.VVToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.VVToolStripMenuItem.Text = "V.V."
         Me.VVToolStripMenuItem.Visible = False
         '
         'VolgaToolStripMenuItem
         '
         Me.VolgaToolStripMenuItem.Name = "VolgaToolStripMenuItem"
-        Me.VolgaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.VolgaToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.VolgaToolStripMenuItem.Text = "Volga"
         Me.VolgaToolStripMenuItem.Visible = False
         '
         'VoVToolStripMenuItem
         '
         Me.VoVToolStripMenuItem.Name = "VoVToolStripMenuItem"
-        Me.VoVToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.VoVToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.VoVToolStripMenuItem.Text = "Vo.V."
         Me.VoVToolStripMenuItem.Visible = False
         '
         'VannaToolStripMenuItem
         '
         Me.VannaToolStripMenuItem.Name = "VannaToolStripMenuItem"
-        Me.VannaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.VannaToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.VannaToolStripMenuItem.Text = "Vanna"
         Me.VannaToolStripMenuItem.Visible = False
         '
         'VaVToolStripMenuItem
         '
         Me.VaVToolStripMenuItem.Name = "VaVToolStripMenuItem"
-        Me.VaVToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.VaVToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.VaVToolStripMenuItem.Text = "Va.V."
         Me.VaVToolStripMenuItem.Visible = False
         '
@@ -7740,14 +7786,14 @@ Partial Class analysis
         '
         Me.IlliqToolStripMenuItem.CheckOnClick = True
         Me.IlliqToolStripMenuItem.Name = "IlliqToolStripMenuItem"
-        Me.IlliqToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.IlliqToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.IlliqToolStripMenuItem.Text = "Illiq"
         '
         'ExpenseToolStripMenuItem
         '
         Me.ExpenseToolStripMenuItem.CheckOnClick = True
         Me.ExpenseToolStripMenuItem.Name = "ExpenseToolStripMenuItem"
-        Me.ExpenseToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ExpenseToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.ExpenseToolStripMenuItem.Text = "Expense"
         Me.ExpenseToolStripMenuItem.Visible = False
         '
@@ -7755,47 +7801,47 @@ Partial Class analysis
         '
         Me.GrossMTMToolStripMenuItem.CheckOnClick = True
         Me.GrossMTMToolStripMenuItem.Name = "GrossMTMToolStripMenuItem"
-        Me.GrossMTMToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.GrossMTMToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.GrossMTMToolStripMenuItem.Text = "GrossMTM"
         '
         'RemarksToolStripMenuItem
         '
         Me.RemarksToolStripMenuItem.CheckOnClick = True
         Me.RemarksToolStripMenuItem.Name = "RemarksToolStripMenuItem"
-        Me.RemarksToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.RemarksToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.RemarksToolStripMenuItem.Text = "Remarks"
         '
         'NetMTMToolStripMenuItem
         '
         Me.NetMTMToolStripMenuItem.CheckOnClick = True
         Me.NetMTMToolStripMenuItem.Name = "NetMTMToolStripMenuItem"
-        Me.NetMTMToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.NetMTMToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.NetMTMToolStripMenuItem.Text = "NetMTM"
         Me.NetMTMToolStripMenuItem.Visible = False
         '
         'HideGreeksToolStripMenuItem
         '
         Me.HideGreeksToolStripMenuItem.Name = "HideGreeksToolStripMenuItem"
-        Me.HideGreeksToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.HideGreeksToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.HideGreeksToolStripMenuItem.Text = "Hide Greeks"
         '
         'HideGreeksValToolStripMenuItem
         '
         Me.HideGreeksValToolStripMenuItem.Name = "HideGreeksValToolStripMenuItem"
-        Me.HideGreeksValToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.HideGreeksValToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.HideGreeksValToolStripMenuItem.Text = "Hide Greeks Val"
         '
         'HideGreeksNutToolStripMenuItem
         '
         Me.HideGreeksNutToolStripMenuItem.Name = "HideGreeksNutToolStripMenuItem"
-        Me.HideGreeksNutToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.HideGreeksNutToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.HideGreeksNutToolStripMenuItem.Text = "Hide Greeks Neut."
         '
         'GridCellSelectToolStripMenuItem
         '
         Me.GridCellSelectToolStripMenuItem.CheckOnClick = True
         Me.GridCellSelectToolStripMenuItem.Name = "GridCellSelectToolStripMenuItem"
-        Me.GridCellSelectToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.GridCellSelectToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.GridCellSelectToolStripMenuItem.Text = "GridCellSelect"
         '
         'GridFullrowselectToolStripMenuItem
@@ -7805,27 +7851,27 @@ Partial Class analysis
         Me.GridFullrowselectToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.GridFullrowselectToolStripMenuItem.ForeColor = System.Drawing.Color.Blue
         Me.GridFullrowselectToolStripMenuItem.Name = "GridFullrowselectToolStripMenuItem"
-        Me.GridFullrowselectToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.GridFullrowselectToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.GridFullrowselectToolStripMenuItem.Text = "GridFullrowselect"
         '
         'ScriptToolStripMenuItem
         '
         Me.ScriptToolStripMenuItem.CheckOnClick = True
         Me.ScriptToolStripMenuItem.Name = "ScriptToolStripMenuItem"
-        Me.ScriptToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.ScriptToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.ScriptToolStripMenuItem.Text = "Script"
         '
         'MDateToolStripMenuItem
         '
         Me.MDateToolStripMenuItem.CheckOnClick = True
         Me.MDateToolStripMenuItem.Name = "MDateToolStripMenuItem"
-        Me.MDateToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.MDateToolStripMenuItem.Size = New System.Drawing.Size(226, 32)
         Me.MDateToolStripMenuItem.Text = "MDate"
         '
         'SaveProfileToolStripMenuItem1
         '
         Me.SaveProfileToolStripMenuItem1.Name = "SaveProfileToolStripMenuItem1"
-        Me.SaveProfileToolStripMenuItem1.Size = New System.Drawing.Size(169, 22)
+        Me.SaveProfileToolStripMenuItem1.Size = New System.Drawing.Size(226, 32)
         Me.SaveProfileToolStripMenuItem1.Text = "Save Profile"
         '
         'Panel1
@@ -7833,10 +7879,10 @@ Partial Class analysis
         Me.Panel1.BackColor = System.Drawing.Color.DarkGray
         Me.Panel1.Controls.Add(Me.pan2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 52)
+        Me.Panel1.Location = New System.Drawing.Point(0, 80)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1028, 27)
+        Me.Panel1.Size = New System.Drawing.Size(1542, 42)
         Me.Panel1.TabIndex = 1
         '
         'pan2
@@ -7844,8 +7890,9 @@ Partial Class analysis
         Me.pan2.Controls.Add(Me.TableLayoutPanel9)
         Me.pan2.Dock = System.Windows.Forms.DockStyle.Top
         Me.pan2.Location = New System.Drawing.Point(0, 0)
+        Me.pan2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pan2.Name = "pan2"
-        Me.pan2.Size = New System.Drawing.Size(1028, 27)
+        Me.pan2.Size = New System.Drawing.Size(1542, 42)
         Me.pan2.TabIndex = 24
         Me.pan2.Visible = False
         '
@@ -7853,7 +7900,7 @@ Partial Class analysis
         '
         Me.TableLayoutPanel9.AutoSize = True
         Me.TableLayoutPanel9.ColumnCount = 17
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92.0!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138.0!))
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.26874!))
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.647517!))
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.532875!))
@@ -7891,7 +7938,7 @@ Partial Class analysis
         Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
         Me.TableLayoutPanel9.RowCount = 1
         Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel9.Size = New System.Drawing.Size(1028, 27)
+        Me.TableLayoutPanel9.Size = New System.Drawing.Size(1542, 42)
         Me.TableLayoutPanel9.TabIndex = 7
         '
         'txtfut2
@@ -7901,11 +7948,11 @@ Partial Class analysis
         Me.txtfut2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtfut2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtfut2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtfut2.Location = New System.Drawing.Point(627, 0)
+        Me.txtfut2.Location = New System.Drawing.Point(942, 0)
         Me.txtfut2.Margin = New System.Windows.Forms.Padding(0)
         Me.txtfut2.Name = "txtfut2"
         Me.txtfut2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtfut2.Size = New System.Drawing.Size(70, 21)
+        Me.txtfut2.Size = New System.Drawing.Size(106, 28)
         Me.txtfut2.TabIndex = 31
         Me.txtfut2.Text = "0"
         Me.txtfut2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -7918,10 +7965,11 @@ Partial Class analysis
         Me.dtexp.Enabled = False
         Me.dtexp.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtexp.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtexp.Location = New System.Drawing.Point(876, 3)
+        Me.dtexp.Location = New System.Drawing.Point(1321, 5)
+        Me.dtexp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dtexp.Name = "dtexp"
         Me.dtexp.ShowUpDown = True
-        Me.dtexp.Size = New System.Drawing.Size(16, 25)
+        Me.dtexp.Size = New System.Drawing.Size(22, 33)
         Me.dtexp.TabIndex = 121
         Me.dtexp.Visible = False
         '
@@ -7933,10 +7981,11 @@ Partial Class analysis
         Me.dtexp1.Enabled = False
         Me.dtexp1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtexp1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtexp1.Location = New System.Drawing.Point(3, 3)
+        Me.dtexp1.Location = New System.Drawing.Point(4, 5)
+        Me.dtexp1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dtexp1.Name = "dtexp1"
         Me.dtexp1.ShowUpDown = True
-        Me.dtexp1.Size = New System.Drawing.Size(86, 25)
+        Me.dtexp1.Size = New System.Drawing.Size(130, 33)
         Me.dtexp1.TabIndex = 120
         Me.dtexp1.Visible = False
         '
@@ -7946,10 +7995,10 @@ Partial Class analysis
         Me.lfut2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lfut2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lfut2.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.lfut2.Location = New System.Drawing.Point(586, 0)
+        Me.lfut2.Location = New System.Drawing.Point(881, 0)
         Me.lfut2.Margin = New System.Windows.Forms.Padding(0)
         Me.lfut2.Name = "lfut2"
-        Me.lfut2.Size = New System.Drawing.Size(41, 27)
+        Me.lfut2.Size = New System.Drawing.Size(61, 42)
         Me.lfut2.TabIndex = 27
         Me.lfut2.Text = "Future"
         Me.lfut2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -7960,9 +8009,10 @@ Partial Class analysis
         Me.Label29.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label29.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label29.Location = New System.Drawing.Point(566, 0)
+        Me.Label29.Location = New System.Drawing.Point(850, 0)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(17, 27)
+        Me.Label29.Size = New System.Drawing.Size(27, 42)
         Me.Label29.TabIndex = 26
         Me.Label29.Text = "%"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -7974,11 +8024,11 @@ Partial Class analysis
         Me.txtpvol1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtpvol1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtpvol1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpvol1.Location = New System.Drawing.Point(525, 0)
+        Me.txtpvol1.Location = New System.Drawing.Point(788, 0)
         Me.txtpvol1.Margin = New System.Windows.Forms.Padding(0)
         Me.txtpvol1.Name = "txtpvol1"
         Me.txtpvol1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtpvol1.Size = New System.Drawing.Size(38, 21)
+        Me.txtpvol1.Size = New System.Drawing.Size(58, 28)
         Me.txtpvol1.TabIndex = 30
         Me.txtpvol1.Text = "0"
         Me.txtpvol1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -7989,10 +8039,10 @@ Partial Class analysis
         Me.Label31.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label31.Location = New System.Drawing.Point(476, 0)
+        Me.Label31.Location = New System.Drawing.Point(714, 0)
         Me.Label31.Margin = New System.Windows.Forms.Padding(0)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(49, 27)
+        Me.Label31.Size = New System.Drawing.Size(74, 42)
         Me.Label31.TabIndex = 24
         Me.Label31.Text = "Put Vol"
         Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8003,10 +8053,10 @@ Partial Class analysis
         Me.Label34.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label34.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label34.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label34.Location = New System.Drawing.Point(456, 0)
+        Me.Label34.Location = New System.Drawing.Point(684, 0)
         Me.Label34.Margin = New System.Windows.Forms.Padding(0)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(20, 27)
+        Me.Label34.Size = New System.Drawing.Size(30, 42)
         Me.Label34.TabIndex = 23
         Me.Label34.Text = "%"
         Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8018,11 +8068,11 @@ Partial Class analysis
         Me.txtcvol1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtcvol1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtcvol1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcvol1.Location = New System.Drawing.Point(419, 0)
+        Me.txtcvol1.Location = New System.Drawing.Point(628, 0)
         Me.txtcvol1.Margin = New System.Windows.Forms.Padding(0)
         Me.txtcvol1.Name = "txtcvol1"
         Me.txtcvol1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtcvol1.Size = New System.Drawing.Size(37, 21)
+        Me.txtcvol1.Size = New System.Drawing.Size(56, 28)
         Me.txtcvol1.TabIndex = 29
         Me.txtcvol1.Text = "0"
         Me.txtcvol1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8033,10 +8083,10 @@ Partial Class analysis
         Me.Label52.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label52.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label52.Location = New System.Drawing.Point(363, 0)
+        Me.Label52.Location = New System.Drawing.Point(544, 0)
         Me.Label52.Margin = New System.Windows.Forms.Padding(0)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(56, 27)
+        Me.Label52.Size = New System.Drawing.Size(84, 42)
         Me.Label52.TabIndex = 21
         Me.Label52.Text = "Call Vol"
         Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8048,11 +8098,11 @@ Partial Class analysis
         Me.txtrate1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtrate1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtrate1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtrate1.Location = New System.Drawing.Point(293, 0)
+        Me.txtrate1.Location = New System.Drawing.Point(439, 0)
         Me.txtrate1.Margin = New System.Windows.Forms.Padding(0)
         Me.txtrate1.Name = "txtrate1"
         Me.txtrate1.ReadOnly = True
-        Me.txtrate1.Size = New System.Drawing.Size(70, 21)
+        Me.txtrate1.Size = New System.Drawing.Size(105, 28)
         Me.txtrate1.TabIndex = 18
         Me.txtrate1.TabStop = False
         Me.txtrate1.Text = "0"
@@ -8065,11 +8115,11 @@ Partial Class analysis
         Me.txtdays1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtdays1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdays1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtdays1.Location = New System.Drawing.Point(260, 0)
+        Me.txtdays1.Location = New System.Drawing.Point(390, 0)
         Me.txtdays1.Margin = New System.Windows.Forms.Padding(0)
         Me.txtdays1.Name = "txtdays1"
         Me.txtdays1.ReadOnly = True
-        Me.txtdays1.Size = New System.Drawing.Size(33, 21)
+        Me.txtdays1.Size = New System.Drawing.Size(49, 28)
         Me.txtdays1.TabIndex = 19
         Me.txtdays1.TabStop = False
         Me.txtdays1.Text = "0"
@@ -8082,11 +8132,11 @@ Partial Class analysis
         Me.txtexp1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtexp1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtexp1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtexp1.Location = New System.Drawing.Point(207, 0)
+        Me.txtexp1.Location = New System.Drawing.Point(311, 0)
         Me.txtexp1.Margin = New System.Windows.Forms.Padding(0)
         Me.txtexp1.Name = "txtexp1"
         Me.txtexp1.ReadOnly = True
-        Me.txtexp1.Size = New System.Drawing.Size(53, 21)
+        Me.txtexp1.Size = New System.Drawing.Size(79, 28)
         Me.txtexp1.TabIndex = 20
         Me.txtexp1.TabStop = False
         Me.txtexp1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8098,10 +8148,10 @@ Partial Class analysis
         Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label53.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Label53.Location = New System.Drawing.Point(92, 0)
+        Me.Label53.Location = New System.Drawing.Point(138, 0)
         Me.Label53.Margin = New System.Windows.Forms.Padding(0)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(115, 27)
+        Me.Label53.Size = New System.Drawing.Size(173, 42)
         Me.Label53.TabIndex = 17
         Me.Label53.Text = "Expiry/Days/Rate2"
         Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8111,10 +8161,10 @@ Partial Class analysis
         Me.panel2.BackColor = System.Drawing.Color.DarkGray
         Me.panel2.Controls.Add(Me.pan1)
         Me.panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panel2.Location = New System.Drawing.Point(0, 25)
+        Me.panel2.Location = New System.Drawing.Point(0, 38)
         Me.panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.panel2.Name = "panel2"
-        Me.panel2.Size = New System.Drawing.Size(1028, 27)
+        Me.panel2.Size = New System.Drawing.Size(1542, 42)
         Me.panel2.TabIndex = 0
         '
         'pan1
@@ -8125,7 +8175,7 @@ Partial Class analysis
         Me.pan1.Location = New System.Drawing.Point(0, 0)
         Me.pan1.Margin = New System.Windows.Forms.Padding(0)
         Me.pan1.Name = "pan1"
-        Me.pan1.Size = New System.Drawing.Size(1028, 27)
+        Me.pan1.Size = New System.Drawing.Size(1542, 42)
         Me.pan1.TabIndex = 1
         '
         'TableLayoutPanel8
@@ -8171,12 +8221,12 @@ Partial Class analysis
         Me.TableLayoutPanel8.Controls.Add(Me.txteqrate, 13, 0)
         Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel8.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(102, 0)
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(153, 0)
         Me.TableLayoutPanel8.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(926, 27)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(1389, 42)
         Me.TableLayoutPanel8.TabIndex = 5
         '
         'txtfut1
@@ -8186,11 +8236,11 @@ Partial Class analysis
         Me.txtfut1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtfut1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtfut1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtfut1.Location = New System.Drawing.Point(518, 0)
+        Me.txtfut1.Location = New System.Drawing.Point(780, 0)
         Me.txtfut1.Margin = New System.Windows.Forms.Padding(0)
         Me.txtfut1.Name = "txtfut1"
         Me.txtfut1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtfut1.Size = New System.Drawing.Size(60, 21)
+        Me.txtfut1.Size = New System.Drawing.Size(90, 28)
         Me.txtfut1.TabIndex = 26
         Me.txtfut1.Text = "0"
         Me.txtfut1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8201,10 +8251,10 @@ Partial Class analysis
         Me.lbleq.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbleq.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbleq.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.lbleq.Location = New System.Drawing.Point(578, 0)
+        Me.lbleq.Location = New System.Drawing.Point(870, 0)
         Me.lbleq.Margin = New System.Windows.Forms.Padding(0)
         Me.lbleq.Name = "lbleq"
-        Me.lbleq.Size = New System.Drawing.Size(40, 27)
+        Me.lbleq.Size = New System.Drawing.Size(60, 42)
         Me.lbleq.TabIndex = 37
         Me.lbleq.Text = "Equity"
         Me.lbleq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8216,9 +8266,10 @@ Partial Class analysis
         Me.Label96.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label96.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label96.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label96.Location = New System.Drawing.Point(845, 0)
+        Me.Label96.Location = New System.Drawing.Point(1271, 0)
+        Me.Label96.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label96.Name = "Label96"
-        Me.Label96.Size = New System.Drawing.Size(23, 27)
+        Me.Label96.Size = New System.Drawing.Size(36, 42)
         Me.Label96.TabIndex = 122
         Me.Label96.Text = "Cal ON"
         '
@@ -8229,11 +8280,11 @@ Partial Class analysis
         Me.txtdays.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtdays.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdays.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtdays.Location = New System.Drawing.Point(161, 0)
+        Me.txtdays.Location = New System.Drawing.Point(241, 0)
         Me.txtdays.Margin = New System.Windows.Forms.Padding(0)
         Me.txtdays.Name = "txtdays"
         Me.txtdays.ReadOnly = True
-        Me.txtdays.Size = New System.Drawing.Size(31, 21)
+        Me.txtdays.Size = New System.Drawing.Size(46, 28)
         Me.txtdays.TabIndex = 19
         Me.txtdays.TabStop = False
         Me.txtdays.Text = "0"
@@ -8246,11 +8297,11 @@ Partial Class analysis
         Me.txtrate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtrate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtrate.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtrate.Location = New System.Drawing.Point(192, 0)
+        Me.txtrate.Location = New System.Drawing.Point(287, 0)
         Me.txtrate.Margin = New System.Windows.Forms.Padding(0)
         Me.txtrate.Name = "txtrate"
         Me.txtrate.ReadOnly = True
-        Me.txtrate.Size = New System.Drawing.Size(69, 21)
+        Me.txtrate.Size = New System.Drawing.Size(104, 28)
         Me.txtrate.TabIndex = 18
         Me.txtrate.TabStop = False
         Me.txtrate.Text = "0"
@@ -8262,10 +8313,10 @@ Partial Class analysis
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label4.Location = New System.Drawing.Point(261, 0)
+        Me.Label4.Location = New System.Drawing.Point(391, 0)
         Me.Label4.Margin = New System.Windows.Forms.Padding(0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 27)
+        Me.Label4.Size = New System.Drawing.Size(83, 42)
         Me.Label4.TabIndex = 21
         Me.Label4.Text = "Call Vol"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8277,11 +8328,11 @@ Partial Class analysis
         Me.txtcvol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtcvol.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtcvol.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcvol.Location = New System.Drawing.Point(316, 0)
+        Me.txtcvol.Location = New System.Drawing.Point(474, 0)
         Me.txtcvol.Margin = New System.Windows.Forms.Padding(0)
         Me.txtcvol.Name = "txtcvol"
         Me.txtcvol.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtcvol.Size = New System.Drawing.Size(36, 21)
+        Me.txtcvol.Size = New System.Drawing.Size(55, 28)
         Me.txtcvol.TabIndex = 22
         Me.txtcvol.Text = "0"
         Me.txtcvol.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8292,10 +8343,10 @@ Partial Class analysis
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label6.Location = New System.Drawing.Point(352, 0)
+        Me.Label6.Location = New System.Drawing.Point(529, 0)
         Me.Label6.Margin = New System.Windows.Forms.Padding(0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(22, 27)
+        Me.Label6.Size = New System.Drawing.Size(33, 42)
         Me.Label6.TabIndex = 23
         Me.Label6.Text = "%"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8306,10 +8357,10 @@ Partial Class analysis
         Me.Label16.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label16.Location = New System.Drawing.Point(374, 0)
+        Me.Label16.Location = New System.Drawing.Point(562, 0)
         Me.Label16.Margin = New System.Windows.Forms.Padding(0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(48, 27)
+        Me.Label16.Size = New System.Drawing.Size(72, 42)
         Me.Label16.TabIndex = 24
         Me.Label16.Text = "Put Vol"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8320,9 +8371,10 @@ Partial Class analysis
         Me.Label17.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label17.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label17.Location = New System.Drawing.Point(459, 0)
+        Me.Label17.Location = New System.Drawing.Point(690, 0)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(17, 27)
+        Me.Label17.Size = New System.Drawing.Size(27, 42)
         Me.Label17.TabIndex = 26
         Me.Label17.Text = "%"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8333,10 +8385,10 @@ Partial Class analysis
         Me.lfut1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lfut1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lfut1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.lfut1.Location = New System.Drawing.Point(479, 0)
+        Me.lfut1.Location = New System.Drawing.Point(721, 0)
         Me.lfut1.Margin = New System.Windows.Forms.Padding(0)
         Me.lfut1.Name = "lfut1"
-        Me.lfut1.Size = New System.Drawing.Size(39, 27)
+        Me.lfut1.Size = New System.Drawing.Size(59, 42)
         Me.lfut1.TabIndex = 27
         Me.lfut1.Text = "Future"
         Me.lfut1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8345,9 +8397,10 @@ Partial Class analysis
         '
         Me.cmbbidask.FormattingEnabled = True
         Me.cmbbidask.Items.AddRange(New Object() {"LTP", "BID/ASK"})
-        Me.cmbbidask.Location = New System.Drawing.Point(874, 3)
+        Me.cmbbidask.Location = New System.Drawing.Point(1315, 5)
+        Me.cmbbidask.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmbbidask.Name = "cmbbidask"
-        Me.cmbbidask.Size = New System.Drawing.Size(41, 21)
+        Me.cmbbidask.Size = New System.Drawing.Size(60, 28)
         Me.cmbbidask.TabIndex = 123
         '
         'txtexp
@@ -8357,11 +8410,11 @@ Partial Class analysis
         Me.txtexp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtexp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtexp.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtexp.Location = New System.Drawing.Point(106, 0)
+        Me.txtexp.Location = New System.Drawing.Point(159, 0)
         Me.txtexp.Margin = New System.Windows.Forms.Padding(0)
         Me.txtexp.Name = "txtexp"
         Me.txtexp.ReadOnly = True
-        Me.txtexp.Size = New System.Drawing.Size(55, 21)
+        Me.txtexp.Size = New System.Drawing.Size(82, 28)
         Me.txtexp.TabIndex = 20
         Me.txtexp.TabStop = False
         Me.txtexp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8376,10 +8429,10 @@ Partial Class analysis
         Me.cmdStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
         Me.cmdStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmdStart.ForeColor = System.Drawing.SystemColors.Window
-        Me.cmdStart.Location = New System.Drawing.Point(673, 0)
+        Me.cmdStart.Location = New System.Drawing.Point(1013, 0)
         Me.cmdStart.Margin = New System.Windows.Forms.Padding(0)
         Me.cmdStart.Name = "cmdStart"
-        Me.cmdStart.Size = New System.Drawing.Size(39, 27)
+        Me.cmdStart.Size = New System.Drawing.Size(59, 42)
         Me.cmdStart.TabIndex = 28
         Me.cmdStart.Text = "Stop"
         Me.ToolTip1.SetToolTip(Me.cmdStart, "F12")
@@ -8395,10 +8448,10 @@ Partial Class analysis
         Me.cmdstart_future_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
         Me.cmdstart_future_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmdstart_future_update.ForeColor = System.Drawing.SystemColors.Window
-        Me.cmdstart_future_update.Location = New System.Drawing.Point(712, 0)
+        Me.cmdstart_future_update.Location = New System.Drawing.Point(1072, 0)
         Me.cmdstart_future_update.Margin = New System.Windows.Forms.Padding(0)
         Me.cmdstart_future_update.Name = "cmdstart_future_update"
-        Me.cmdstart_future_update.Size = New System.Drawing.Size(130, 27)
+        Me.cmdstart_future_update.Size = New System.Drawing.Size(195, 42)
         Me.cmdstart_future_update.TabIndex = 29
         Me.cmdstart_future_update.Text = "Start Future Update(F11)"
         Me.ToolTip1.SetToolTip(Me.cmdstart_future_update, "F11")
@@ -8414,7 +8467,7 @@ Partial Class analysis
         Me.Label51.Location = New System.Drawing.Point(0, 0)
         Me.Label51.Margin = New System.Windows.Forms.Padding(0)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(106, 27)
+        Me.Label51.Size = New System.Drawing.Size(159, 42)
         Me.Label51.TabIndex = 17
         Me.Label51.Text = "Expiry/Days/Rate1"
         Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8426,11 +8479,11 @@ Partial Class analysis
         Me.txtpvol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtpvol.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtpvol.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpvol.Location = New System.Drawing.Point(422, 0)
+        Me.txtpvol.Location = New System.Drawing.Point(634, 0)
         Me.txtpvol.Margin = New System.Windows.Forms.Padding(0)
         Me.txtpvol.Name = "txtpvol"
         Me.txtpvol.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtpvol.Size = New System.Drawing.Size(34, 21)
+        Me.txtpvol.Size = New System.Drawing.Size(52, 28)
         Me.txtpvol.TabIndex = 25
         Me.txtpvol.Text = "0"
         Me.txtpvol.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8442,11 +8495,11 @@ Partial Class analysis
         Me.txteqrate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txteqrate.Font = New System.Drawing.Font("Verdana", 8.25!)
         Me.txteqrate.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txteqrate.Location = New System.Drawing.Point(618, 3)
-        Me.txteqrate.Margin = New System.Windows.Forms.Padding(0, 3, 3, 0)
+        Me.txteqrate.Location = New System.Drawing.Point(930, 5)
+        Me.txteqrate.Margin = New System.Windows.Forms.Padding(0, 5, 4, 0)
         Me.txteqrate.Name = "txteqrate"
         Me.txteqrate.ReadOnly = True
-        Me.txteqrate.Size = New System.Drawing.Size(52, 21)
+        Me.txteqrate.Size = New System.Drawing.Size(79, 28)
         Me.txteqrate.TabIndex = 27
         Me.txteqrate.Text = "0"
         Me.txteqrate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8458,8 +8511,9 @@ Partial Class analysis
         Me.Panel5.Controls.Add(Me.dttoday)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(102, 27)
+        Me.Panel5.Size = New System.Drawing.Size(153, 42)
         Me.Panel5.TabIndex = 4
         '
         'txtdttoday
@@ -8470,9 +8524,10 @@ Partial Class analysis
         Me.txtdttoday.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdttoday.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtdttoday.Location = New System.Drawing.Point(0, 0)
+        Me.txtdttoday.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtdttoday.Name = "txtdttoday"
         Me.txtdttoday.ReadOnly = True
-        Me.txtdttoday.Size = New System.Drawing.Size(102, 25)
+        Me.txtdttoday.Size = New System.Drawing.Size(153, 33)
         Me.txtdttoday.TabIndex = 36
         Me.txtdttoday.TabStop = False
         '
@@ -8483,10 +8538,11 @@ Partial Class analysis
         Me.dttoday.Enabled = False
         Me.dttoday.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dttoday.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dttoday.Location = New System.Drawing.Point(3, 1)
+        Me.dttoday.Location = New System.Drawing.Point(4, 2)
+        Me.dttoday.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dttoday.Name = "dttoday"
         Me.dttoday.ShowUpDown = True
-        Me.dttoday.Size = New System.Drawing.Size(81, 25)
+        Me.dttoday.Size = New System.Drawing.Size(120, 33)
         Me.dttoday.TabIndex = 35
         Me.dttoday.Visible = False
         '
@@ -8495,10 +8551,11 @@ Partial Class analysis
         Me.tbcomp.ContextMenuStrip = Me.ContextMentuCompTag
         Me.tbcomp.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.tbcomp.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed
-        Me.tbcomp.Location = New System.Drawing.Point(3, 4)
+        Me.tbcomp.Location = New System.Drawing.Point(4, 5)
+        Me.tbcomp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tbcomp.Name = "tbcomp"
         Me.tbcomp.SelectedIndex = 0
-        Me.tbcomp.Size = New System.Drawing.Size(1022, 18)
+        Me.tbcomp.Size = New System.Drawing.Size(1534, 28)
         Me.tbcomp.TabIndex = 2
         Me.tbcomp.TabStop = False
         '
@@ -8507,30 +8564,30 @@ Partial Class analysis
         Me.ContextMentuCompTag.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.ContextMentuCompTag.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RenameTagToolStripMenuItem, Me.RefreshToolStripMenuItem, Me.CopyToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ContextMentuCompTag.Name = "ContextMentuCompTag"
-        Me.ContextMentuCompTag.Size = New System.Drawing.Size(140, 92)
+        Me.ContextMentuCompTag.Size = New System.Drawing.Size(180, 132)
         '
         'RenameTagToolStripMenuItem
         '
         Me.RenameTagToolStripMenuItem.Name = "RenameTagToolStripMenuItem"
-        Me.RenameTagToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.RenameTagToolStripMenuItem.Size = New System.Drawing.Size(179, 32)
         Me.RenameTagToolStripMenuItem.Text = "Rename Tag"
         '
         'RefreshToolStripMenuItem
         '
         Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(179, 32)
         Me.RefreshToolStripMenuItem.Text = "Refresh"
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(179, 32)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(179, 32)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'Panel3
@@ -8538,10 +8595,10 @@ Partial Class analysis
         Me.Panel3.BackColor = System.Drawing.Color.DarkGray
         Me.Panel3.Controls.Add(Me.pan3)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 79)
+        Me.Panel3.Location = New System.Drawing.Point(0, 122)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1028, 27)
+        Me.Panel3.Size = New System.Drawing.Size(1542, 42)
         Me.Panel3.TabIndex = 2
         '
         'pan3
@@ -8552,7 +8609,7 @@ Partial Class analysis
         Me.pan3.Location = New System.Drawing.Point(0, 0)
         Me.pan3.Margin = New System.Windows.Forms.Padding(0)
         Me.pan3.Name = "pan3"
-        Me.pan3.Size = New System.Drawing.Size(1028, 25)
+        Me.pan3.Size = New System.Drawing.Size(1542, 38)
         Me.pan3.TabIndex = 25
         Me.pan3.Visible = False
         '
@@ -8560,7 +8617,7 @@ Partial Class analysis
         '
         Me.TableLayoutPanel10.AutoSize = True
         Me.TableLayoutPanel10.ColumnCount = 17
-        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89.0!))
+        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134.0!))
         Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.52427!))
         Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.728155!))
         Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.522505!))
@@ -8597,7 +8654,7 @@ Partial Class analysis
         Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
         Me.TableLayoutPanel10.RowCount = 1
         Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel10.Size = New System.Drawing.Size(1028, 25)
+        Me.TableLayoutPanel10.Size = New System.Drawing.Size(1542, 38)
         Me.TableLayoutPanel10.TabIndex = 8
         '
         'txtfut3
@@ -8607,11 +8664,11 @@ Partial Class analysis
         Me.txtfut3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtfut3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtfut3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtfut3.Location = New System.Drawing.Point(635, 0)
+        Me.txtfut3.Location = New System.Drawing.Point(954, 0)
         Me.txtfut3.Margin = New System.Windows.Forms.Padding(0)
         Me.txtfut3.Name = "txtfut3"
         Me.txtfut3.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtfut3.Size = New System.Drawing.Size(62, 21)
+        Me.txtfut3.Size = New System.Drawing.Size(94, 28)
         Me.txtfut3.TabIndex = 34
         Me.txtfut3.Text = "0"
         Me.txtfut3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8624,10 +8681,11 @@ Partial Class analysis
         Me.dtexp2.Enabled = False
         Me.dtexp2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtexp2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtexp2.Location = New System.Drawing.Point(3, 3)
+        Me.dtexp2.Location = New System.Drawing.Point(4, 5)
+        Me.dtexp2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dtexp2.Name = "dtexp2"
         Me.dtexp2.ShowUpDown = True
-        Me.dtexp2.Size = New System.Drawing.Size(83, 25)
+        Me.dtexp2.Size = New System.Drawing.Size(126, 33)
         Me.dtexp2.TabIndex = 120
         Me.dtexp2.Visible = False
         '
@@ -8637,10 +8695,10 @@ Partial Class analysis
         Me.lfut3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lfut3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lfut3.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.lfut3.Location = New System.Drawing.Point(588, 0)
+        Me.lfut3.Location = New System.Drawing.Point(884, 0)
         Me.lfut3.Margin = New System.Windows.Forms.Padding(0)
         Me.lfut3.Name = "lfut3"
-        Me.lfut3.Size = New System.Drawing.Size(47, 25)
+        Me.lfut3.Size = New System.Drawing.Size(70, 38)
         Me.lfut3.TabIndex = 27
         Me.lfut3.Text = "Future"
         Me.lfut3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8651,9 +8709,10 @@ Partial Class analysis
         Me.Label23.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label23.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label23.Location = New System.Drawing.Point(567, 0)
+        Me.Label23.Location = New System.Drawing.Point(852, 0)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(18, 25)
+        Me.Label23.Size = New System.Drawing.Size(28, 38)
         Me.Label23.TabIndex = 26
         Me.Label23.Text = "%"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8665,11 +8724,11 @@ Partial Class analysis
         Me.txtpvol2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtpvol2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtpvol2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpvol2.Location = New System.Drawing.Point(526, 0)
+        Me.txtpvol2.Location = New System.Drawing.Point(790, 0)
         Me.txtpvol2.Margin = New System.Windows.Forms.Padding(0)
         Me.txtpvol2.Name = "txtpvol2"
         Me.txtpvol2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtpvol2.Size = New System.Drawing.Size(38, 21)
+        Me.txtpvol2.Size = New System.Drawing.Size(58, 28)
         Me.txtpvol2.TabIndex = 33
         Me.txtpvol2.Text = "0"
         Me.txtpvol2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8680,10 +8739,10 @@ Partial Class analysis
         Me.Label35.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label35.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label35.Location = New System.Drawing.Point(475, 0)
+        Me.Label35.Location = New System.Drawing.Point(713, 0)
         Me.Label35.Margin = New System.Windows.Forms.Padding(0)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(51, 25)
+        Me.Label35.Size = New System.Drawing.Size(77, 38)
         Me.Label35.TabIndex = 24
         Me.Label35.Text = "Put Vol"
         Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8694,10 +8753,10 @@ Partial Class analysis
         Me.Label38.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label38.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label38.Location = New System.Drawing.Point(455, 0)
+        Me.Label38.Location = New System.Drawing.Point(683, 0)
         Me.Label38.Margin = New System.Windows.Forms.Padding(0)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(20, 25)
+        Me.Label38.Size = New System.Drawing.Size(30, 38)
         Me.Label38.TabIndex = 23
         Me.Label38.Text = "%"
         Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8709,11 +8768,11 @@ Partial Class analysis
         Me.txtcvol2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtcvol2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtcvol2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcvol2.Location = New System.Drawing.Point(418, 0)
+        Me.txtcvol2.Location = New System.Drawing.Point(627, 0)
         Me.txtcvol2.Margin = New System.Windows.Forms.Padding(0)
         Me.txtcvol2.Name = "txtcvol2"
         Me.txtcvol2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtcvol2.Size = New System.Drawing.Size(37, 21)
+        Me.txtcvol2.Size = New System.Drawing.Size(56, 28)
         Me.txtcvol2.TabIndex = 32
         Me.txtcvol2.Text = "0"
         Me.txtcvol2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8724,10 +8783,10 @@ Partial Class analysis
         Me.Label39.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label39.Location = New System.Drawing.Point(364, 0)
+        Me.Label39.Location = New System.Drawing.Point(546, 0)
         Me.Label39.Margin = New System.Windows.Forms.Padding(0)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(54, 25)
+        Me.Label39.Size = New System.Drawing.Size(81, 38)
         Me.Label39.TabIndex = 21
         Me.Label39.Text = "Call Vol"
         Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8739,11 +8798,11 @@ Partial Class analysis
         Me.txtrate2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtrate2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtrate2.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtrate2.Location = New System.Drawing.Point(294, 0)
+        Me.txtrate2.Location = New System.Drawing.Point(441, 0)
         Me.txtrate2.Margin = New System.Windows.Forms.Padding(0)
         Me.txtrate2.Name = "txtrate2"
         Me.txtrate2.ReadOnly = True
-        Me.txtrate2.Size = New System.Drawing.Size(70, 21)
+        Me.txtrate2.Size = New System.Drawing.Size(105, 28)
         Me.txtrate2.TabIndex = 18
         Me.txtrate2.TabStop = False
         Me.txtrate2.Text = "0"
@@ -8756,11 +8815,11 @@ Partial Class analysis
         Me.txtdays2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtdays2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdays2.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtdays2.Location = New System.Drawing.Point(261, 0)
+        Me.txtdays2.Location = New System.Drawing.Point(392, 0)
         Me.txtdays2.Margin = New System.Windows.Forms.Padding(0)
         Me.txtdays2.Name = "txtdays2"
         Me.txtdays2.ReadOnly = True
-        Me.txtdays2.Size = New System.Drawing.Size(33, 21)
+        Me.txtdays2.Size = New System.Drawing.Size(49, 28)
         Me.txtdays2.TabIndex = 19
         Me.txtdays2.TabStop = False
         Me.txtdays2.Text = "0"
@@ -8773,11 +8832,11 @@ Partial Class analysis
         Me.txtexp2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtexp2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtexp2.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtexp2.Location = New System.Drawing.Point(207, 0)
+        Me.txtexp2.Location = New System.Drawing.Point(311, 0)
         Me.txtexp2.Margin = New System.Windows.Forms.Padding(0)
         Me.txtexp2.Name = "txtexp2"
         Me.txtexp2.ReadOnly = True
-        Me.txtexp2.Size = New System.Drawing.Size(54, 21)
+        Me.txtexp2.Size = New System.Drawing.Size(81, 28)
         Me.txtexp2.TabIndex = 20
         Me.txtexp2.TabStop = False
         Me.txtexp2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -8789,10 +8848,10 @@ Partial Class analysis
         Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label40.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label40.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Label40.Location = New System.Drawing.Point(89, 0)
+        Me.Label40.Location = New System.Drawing.Point(134, 0)
         Me.Label40.Margin = New System.Windows.Forms.Padding(0)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(118, 25)
+        Me.Label40.Size = New System.Drawing.Size(177, 38)
         Me.Label40.TabIndex = 17
         Me.Label40.Text = "Expiry/Days/Rate3"
         Me.Label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8815,16 +8874,16 @@ Partial Class analysis
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 9
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 278.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1028, 581)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1542, 894)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'PnlIncFixVol
@@ -8832,9 +8891,10 @@ Partial Class analysis
         Me.PnlIncFixVol.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.PnlIncFixVol.Controls.Add(Me.TableLayoutPanel27)
         Me.PnlIncFixVol.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PnlIncFixVol.Location = New System.Drawing.Point(845, 109)
+        Me.PnlIncFixVol.Location = New System.Drawing.Point(1268, 169)
+        Me.PnlIncFixVol.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PnlIncFixVol.Name = "PnlIncFixVol"
-        Me.PnlIncFixVol.Size = New System.Drawing.Size(180, 44)
+        Me.PnlIncFixVol.Size = New System.Drawing.Size(270, 68)
         Me.PnlIncFixVol.TabIndex = 6
         '
         'TableLayoutPanel27
@@ -8846,11 +8906,12 @@ Partial Class analysis
         Me.TableLayoutPanel27.Controls.Add(Me.PictureBox1, 0, 0)
         Me.TableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel27.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel27.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel27.Name = "TableLayoutPanel27"
         Me.TableLayoutPanel27.RowCount = 1
         Me.TableLayoutPanel27.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel27.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44.0!))
-        Me.TableLayoutPanel27.Size = New System.Drawing.Size(180, 44)
+        Me.TableLayoutPanel27.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68.0!))
+        Me.TableLayoutPanel27.Size = New System.Drawing.Size(270, 68)
         Me.TableLayoutPanel27.TabIndex = 1
         '
         'TableLayoutPanel26
@@ -8870,13 +8931,13 @@ Partial Class analysis
         Me.TableLayoutPanel26.Controls.Add(Me.txtCallvolIncF, 1, 0)
         Me.TableLayoutPanel26.Controls.Add(Me.txtPutvolIncF, 1, 1)
         Me.TableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel26.Location = New System.Drawing.Point(16, 1)
-        Me.TableLayoutPanel26.Margin = New System.Windows.Forms.Padding(1)
+        Me.TableLayoutPanel26.Location = New System.Drawing.Point(24, 2)
+        Me.TableLayoutPanel26.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel26.Name = "TableLayoutPanel26"
         Me.TableLayoutPanel26.RowCount = 2
         Me.TableLayoutPanel26.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.09793!))
         Me.TableLayoutPanel26.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.90207!))
-        Me.TableLayoutPanel26.Size = New System.Drawing.Size(163, 42)
+        Me.TableLayoutPanel26.Size = New System.Drawing.Size(244, 64)
         Me.TableLayoutPanel26.TabIndex = 0
         '
         'Label91
@@ -8886,10 +8947,10 @@ Partial Class analysis
         Me.Label91.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label91.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label91.ForeColor = System.Drawing.Color.Yellow
-        Me.Label91.Location = New System.Drawing.Point(2, 2)
-        Me.Label91.Margin = New System.Windows.Forms.Padding(2)
+        Me.Label91.Location = New System.Drawing.Point(3, 3)
+        Me.Label91.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
         Me.Label91.Name = "Label91"
-        Me.Label91.Size = New System.Drawing.Size(51, 17)
+        Me.Label91.Size = New System.Drawing.Size(76, 26)
         Me.Label91.TabIndex = 0
         Me.Label91.Text = "Call Vol"
         Me.Label91.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8901,10 +8962,10 @@ Partial Class analysis
         Me.Label92.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label92.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label92.ForeColor = System.Drawing.Color.GreenYellow
-        Me.Label92.Location = New System.Drawing.Point(2, 23)
-        Me.Label92.Margin = New System.Windows.Forms.Padding(2)
+        Me.Label92.Location = New System.Drawing.Point(3, 35)
+        Me.Label92.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
         Me.Label92.Name = "Label92"
-        Me.Label92.Size = New System.Drawing.Size(51, 17)
+        Me.Label92.Size = New System.Drawing.Size(76, 26)
         Me.Label92.TabIndex = 0
         Me.Label92.Text = "Put Vol"
         Me.Label92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -8919,10 +8980,10 @@ Partial Class analysis
         Me.btnCallvolIncFP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCallvolIncFP.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnCallvolIncFP.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnCallvolIncFP.Location = New System.Drawing.Point(119, 0)
+        Me.btnCallvolIncFP.Location = New System.Drawing.Point(178, 0)
         Me.btnCallvolIncFP.Margin = New System.Windows.Forms.Padding(0)
         Me.btnCallvolIncFP.Name = "btnCallvolIncFP"
-        Me.btnCallvolIncFP.Size = New System.Drawing.Size(22, 21)
+        Me.btnCallvolIncFP.Size = New System.Drawing.Size(33, 32)
         Me.btnCallvolIncFP.TabIndex = 1
         Me.btnCallvolIncFP.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnCallvolIncFP.UseVisualStyleBackColor = False
@@ -8936,10 +8997,10 @@ Partial Class analysis
         Me.btPutvolIncFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btPutvolIncFP.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btPutvolIncFP.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btPutvolIncFP.Location = New System.Drawing.Point(120, 22)
-        Me.btPutvolIncFP.Margin = New System.Windows.Forms.Padding(1)
+        Me.btPutvolIncFP.Location = New System.Drawing.Point(180, 34)
+        Me.btPutvolIncFP.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btPutvolIncFP.Name = "btPutvolIncFP"
-        Me.btPutvolIncFP.Size = New System.Drawing.Size(20, 19)
+        Me.btPutvolIncFP.Size = New System.Drawing.Size(29, 28)
         Me.btPutvolIncFP.TabIndex = 1
         Me.btPutvolIncFP.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btPutvolIncFP.UseVisualStyleBackColor = False
@@ -8953,10 +9014,10 @@ Partial Class analysis
         Me.btnCallvolIncFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCallvolIncFM.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCallvolIncFM.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnCallvolIncFM.Location = New System.Drawing.Point(142, 0)
-        Me.btnCallvolIncFM.Margin = New System.Windows.Forms.Padding(1, 0, 1, 1)
+        Me.btnCallvolIncFM.Location = New System.Drawing.Point(213, 0)
+        Me.btnCallvolIncFM.Margin = New System.Windows.Forms.Padding(2, 0, 2, 2)
         Me.btnCallvolIncFM.Name = "btnCallvolIncFM"
-        Me.btnCallvolIncFM.Size = New System.Drawing.Size(20, 20)
+        Me.btnCallvolIncFM.Size = New System.Drawing.Size(29, 30)
         Me.btnCallvolIncFM.TabIndex = 2
         Me.btnCallvolIncFM.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnCallvolIncFM.UseVisualStyleBackColor = False
@@ -8970,10 +9031,10 @@ Partial Class analysis
         Me.btPutvolIncFM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btPutvolIncFM.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btPutvolIncFM.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btPutvolIncFM.Location = New System.Drawing.Point(142, 22)
-        Me.btPutvolIncFM.Margin = New System.Windows.Forms.Padding(1)
+        Me.btPutvolIncFM.Location = New System.Drawing.Point(213, 34)
+        Me.btPutvolIncFM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btPutvolIncFM.Name = "btPutvolIncFM"
-        Me.btPutvolIncFM.Size = New System.Drawing.Size(20, 19)
+        Me.btPutvolIncFM.Size = New System.Drawing.Size(29, 28)
         Me.btPutvolIncFM.TabIndex = 3
         Me.btPutvolIncFM.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btPutvolIncFM.UseVisualStyleBackColor = False
@@ -8982,10 +9043,10 @@ Partial Class analysis
         '
         Me.txtCallvolIncF.BackColor = System.Drawing.SystemColors.HighlightText
         Me.txtCallvolIncF.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtCallvolIncF.Location = New System.Drawing.Point(56, 1)
-        Me.txtCallvolIncF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtCallvolIncF.Location = New System.Drawing.Point(84, 2)
+        Me.txtCallvolIncF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCallvolIncF.Name = "txtCallvolIncF"
-        Me.txtCallvolIncF.Size = New System.Drawing.Size(62, 20)
+        Me.txtCallvolIncF.Size = New System.Drawing.Size(92, 26)
         Me.txtCallvolIncF.TabIndex = 4
         Me.txtCallvolIncF.Text = "0.25"
         Me.txtCallvolIncF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -8994,10 +9055,10 @@ Partial Class analysis
         '
         Me.txtPutvolIncF.BackColor = System.Drawing.SystemColors.HighlightText
         Me.txtPutvolIncF.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtPutvolIncF.Location = New System.Drawing.Point(56, 22)
-        Me.txtPutvolIncF.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtPutvolIncF.Location = New System.Drawing.Point(84, 34)
+        Me.txtPutvolIncF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPutvolIncF.Name = "txtPutvolIncF"
-        Me.txtPutvolIncF.Size = New System.Drawing.Size(62, 20)
+        Me.txtPutvolIncF.Size = New System.Drawing.Size(92, 26)
         Me.txtPutvolIncF.TabIndex = 4
         Me.txtPutvolIncF.Text = "0.25"
         Me.txtPutvolIncF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -9009,7 +9070,7 @@ Partial Class analysis
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(15, 44)
+        Me.PictureBox1.Size = New System.Drawing.Size(22, 68)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
@@ -9018,11 +9079,11 @@ Partial Class analysis
         '
         Me.TabStrategy.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabStrategy.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed
-        Me.TabStrategy.Location = New System.Drawing.Point(3, 156)
-        Me.TabStrategy.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.TabStrategy.Location = New System.Drawing.Point(4, 242)
+        Me.TabStrategy.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TabStrategy.Name = "TabStrategy"
         Me.TabStrategy.SelectedIndex = 0
-        Me.TabStrategy.Size = New System.Drawing.Size(1022, 20)
+        Me.TabStrategy.Size = New System.Drawing.Size(1534, 31)
         Me.TabStrategy.TabIndex = 23
         Me.TabStrategy.TabStop = False
         '
@@ -9049,60 +9110,60 @@ Partial Class analysis
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Panel1ToolStripMenuItem, Me.Panel2ToolStripMenuItem, Me.Panel3ToolStripMenuItem, Me.TradGridToolStripMenuItem, Me.Pan3ToolStripMenuItem, Me.ButtonsToolStripMenuItem, Me.SortingCompanyToolStripMenuItem, Me.SearchCompToolStripMenuItem, Me.IncreshToolStripMenuItem, Me.IncreaseFixVolCallToolStripMenuItem, Me.DeleteToolStripMenuItem1, Me.HideVolgaToolStripMenuItem, Me.ShowHideVannaToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(248, 290)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(343, 420)
         '
         'Panel1ToolStripMenuItem
         '
         Me.Panel1ToolStripMenuItem.CheckOnClick = True
         Me.Panel1ToolStripMenuItem.Name = "Panel1ToolStripMenuItem"
-        Me.Panel1ToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.Panel1ToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.Panel1ToolStripMenuItem.Text = "Current Expiry"
         '
         'Panel2ToolStripMenuItem
         '
         Me.Panel2ToolStripMenuItem.CheckOnClick = True
         Me.Panel2ToolStripMenuItem.Name = "Panel2ToolStripMenuItem"
-        Me.Panel2ToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.Panel2ToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.Panel2ToolStripMenuItem.Text = "Next Expiry"
         '
         'Panel3ToolStripMenuItem
         '
         Me.Panel3ToolStripMenuItem.CheckOnClick = True
         Me.Panel3ToolStripMenuItem.Name = "Panel3ToolStripMenuItem"
-        Me.Panel3ToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.Panel3ToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.Panel3ToolStripMenuItem.Text = "Far Expiry"
         '
         'TradGridToolStripMenuItem
         '
         Me.TradGridToolStripMenuItem.CheckOnClick = True
         Me.TradGridToolStripMenuItem.Name = "TradGridToolStripMenuItem"
-        Me.TradGridToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.TradGridToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.TradGridToolStripMenuItem.Text = "AnalysisGrid"
         '
         'Pan3ToolStripMenuItem
         '
         Me.Pan3ToolStripMenuItem.CheckOnClick = True
         Me.Pan3ToolStripMenuItem.Name = "Pan3ToolStripMenuItem"
-        Me.Pan3ToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.Pan3ToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.Pan3ToolStripMenuItem.Text = "Analysis Watch"
         '
         'ButtonsToolStripMenuItem
         '
         Me.ButtonsToolStripMenuItem.CheckOnClick = True
         Me.ButtonsToolStripMenuItem.Name = "ButtonsToolStripMenuItem"
-        Me.ButtonsToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.ButtonsToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.ButtonsToolStripMenuItem.Text = "Button Pad"
         '
         'SortingCompanyToolStripMenuItem
         '
         Me.SortingCompanyToolStripMenuItem.Name = "SortingCompanyToolStripMenuItem"
-        Me.SortingCompanyToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.SortingCompanyToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.SortingCompanyToolStripMenuItem.Text = "Sort Scrips"
         '
         'SearchCompToolStripMenuItem
         '
         Me.SearchCompToolStripMenuItem.Name = "SearchCompToolStripMenuItem"
-        Me.SearchCompToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.SearchCompToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.SearchCompToolStripMenuItem.Text = "Search Scrip"
         Me.SearchCompToolStripMenuItem.Visible = False
         '
@@ -9111,7 +9172,7 @@ Partial Class analysis
         Me.IncreshToolStripMenuItem.Name = "IncreshToolStripMenuItem"
         Me.IncreshToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.IncreshToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.IncreshToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.IncreshToolStripMenuItem.Text = "Increase FixVol Call"
         '
         'IncreaseFixVolCallToolStripMenuItem
@@ -9119,25 +9180,25 @@ Partial Class analysis
         Me.IncreaseFixVolCallToolStripMenuItem.Name = "IncreaseFixVolCallToolStripMenuItem"
         Me.IncreaseFixVolCallToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.IncreaseFixVolCallToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.IncreaseFixVolCallToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.IncreaseFixVolCallToolStripMenuItem.Text = "Increase FixVol Put"
         '
         'DeleteToolStripMenuItem1
         '
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
-        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(247, 22)
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(342, 32)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
         '
         'HideVolgaToolStripMenuItem
         '
         Me.HideVolgaToolStripMenuItem.Name = "HideVolgaToolStripMenuItem"
-        Me.HideVolgaToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.HideVolgaToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.HideVolgaToolStripMenuItem.Text = "Show/Hide Volga"
         '
         'ShowHideVannaToolStripMenuItem
         '
         Me.ShowHideVannaToolStripMenuItem.Name = "ShowHideVannaToolStripMenuItem"
-        Me.ShowHideVannaToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.ShowHideVannaToolStripMenuItem.Size = New System.Drawing.Size(342, 32)
         Me.ShowHideVannaToolStripMenuItem.Text = "Show/Hide Vanna"
         '
         'Timer_span
@@ -9179,11 +9240,11 @@ Partial Class analysis
         'DataGridViewCheckBoxColumn2
         '
         Me.DataGridViewCheckBoxColumn2.DataPropertyName = "IsCalc"
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle48.NullValue = False
-        DataGridViewCellStyle48.Padding = New System.Windows.Forms.Padding(3)
-        Me.DataGridViewCheckBoxColumn2.DefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.NullValue = False
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(3)
+        Me.DataGridViewCheckBoxColumn2.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewCheckBoxColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DataGridViewCheckBoxColumn2.Frozen = True
         Me.DataGridViewCheckBoxColumn2.HeaderText = "Select"
@@ -9195,11 +9256,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "month"
-        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle49.Format = "MMMM"
-        DataGridViewCellStyle49.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle49
+        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle45.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle45.Format = "MMMM"
+        DataGridViewCellStyle45.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle45
         Me.DataGridViewTextBoxColumn1.HeaderText = "Maturity"
         Me.DataGridViewTextBoxColumn1.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
@@ -9209,9 +9270,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "Strikes"
-        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle50.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle46.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle46
         Me.DataGridViewTextBoxColumn2.HeaderText = "Strike"
         Me.DataGridViewTextBoxColumn2.MinimumWidth = 62
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
@@ -9221,9 +9282,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "cp"
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle51.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle47.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle47
         Me.DataGridViewTextBoxColumn3.HeaderText = "Type"
         Me.DataGridViewTextBoxColumn3.MinimumWidth = 30
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
@@ -9233,8 +9294,8 @@ Partial Class analysis
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "prqty"
-        DataGridViewCellStyle52.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle154.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle154
         Me.DataGridViewTextBoxColumn4.HeaderText = "PrQty"
         Me.DataGridViewTextBoxColumn4.MinimumWidth = 50
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
@@ -9245,8 +9306,8 @@ Partial Class analysis
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "toqty"
-        DataGridViewCellStyle53.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle155.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle155
         Me.DataGridViewTextBoxColumn5.HeaderText = "ToQty"
         Me.DataGridViewTextBoxColumn5.MinimumWidth = 50
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
@@ -9257,11 +9318,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "units"
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle54.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle54.Format = "N0"
-        DataGridViewCellStyle54.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle156.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle156.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle156.Format = "N0"
+        DataGridViewCellStyle156.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle156
         Me.DataGridViewTextBoxColumn6.HeaderText = "Units"
         Me.DataGridViewTextBoxColumn6.MinimumWidth = 65
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
@@ -9272,9 +9333,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "Lots"
-        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle55.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle55
+        DataGridViewCellStyle157.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle157.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle157
         Me.DataGridViewTextBoxColumn7.HeaderText = "Lots"
         Me.DataGridViewTextBoxColumn7.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
@@ -9285,11 +9346,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "traded"
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle56.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle56.Format = "N2"
-        DataGridViewCellStyle56.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle56
+        DataGridViewCellStyle158.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle158.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle158.Format = "N2"
+        DataGridViewCellStyle158.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle158
         Me.DataGridViewTextBoxColumn8.HeaderText = "Net Price"
         Me.DataGridViewTextBoxColumn8.MinimumWidth = 100
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
@@ -9301,11 +9362,11 @@ Partial Class analysis
         '
         Me.DataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.DataGridViewTextBoxColumn9.DataPropertyName = "last"
-        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle57.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle57.Format = "N2"
-        DataGridViewCellStyle57.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle57
+        DataGridViewCellStyle159.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle159.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle159.Format = "N2"
+        DataGridViewCellStyle159.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle159
         Me.DataGridViewTextBoxColumn9.HeaderText = "LTP"
         Me.DataGridViewTextBoxColumn9.MinimumWidth = 65
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
@@ -9317,11 +9378,11 @@ Partial Class analysis
         '
         Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.DataGridViewTextBoxColumn10.DataPropertyName = "lv"
-        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle58.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle58.Format = "N2"
-        DataGridViewCellStyle58.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle58
+        DataGridViewCellStyle160.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle160.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle160.Format = "N2"
+        DataGridViewCellStyle160.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle160
         Me.DataGridViewTextBoxColumn10.HeaderText = "Vol (%)"
         Me.DataGridViewTextBoxColumn10.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
@@ -9333,11 +9394,11 @@ Partial Class analysis
         '
         Me.DataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.DataGridViewTextBoxColumn11.DataPropertyName = "delta"
-        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle59.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle59.Format = "N2"
-        DataGridViewCellStyle59.NullValue = "0.00"
-        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle161.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle161.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle161.Format = "N2"
+        DataGridViewCellStyle161.NullValue = "0.00"
+        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle161
         Me.DataGridViewTextBoxColumn11.HeaderText = "Delta"
         Me.DataGridViewTextBoxColumn11.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
@@ -9348,9 +9409,9 @@ Partial Class analysis
         '
         Me.DataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.DataGridViewTextBoxColumn12.DataPropertyName = "deltaval"
-        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle60.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle60
+        DataGridViewCellStyle162.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle162.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle162
         Me.DataGridViewTextBoxColumn12.HeaderText = "D. V"
         Me.DataGridViewTextBoxColumn12.MinimumWidth = 65
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
@@ -9361,9 +9422,9 @@ Partial Class analysis
         '
         Me.DataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.DataGridViewTextBoxColumn13.DataPropertyName = "gamma"
-        DataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle61.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle61
+        DataGridViewCellStyle163.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle163.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle163
         Me.DataGridViewTextBoxColumn13.HeaderText = "Gamma"
         Me.DataGridViewTextBoxColumn13.MinimumWidth = 65
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
@@ -9374,9 +9435,9 @@ Partial Class analysis
         '
         Me.DataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.DataGridViewTextBoxColumn14.DataPropertyName = "gmval"
-        DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle62.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn14.DefaultCellStyle = DataGridViewCellStyle62
+        DataGridViewCellStyle164.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle164.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn14.DefaultCellStyle = DataGridViewCellStyle164
         Me.DataGridViewTextBoxColumn14.HeaderText = "G. V"
         Me.DataGridViewTextBoxColumn14.MinimumWidth = 65
         Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
@@ -9386,9 +9447,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn15
         '
         Me.DataGridViewTextBoxColumn15.DataPropertyName = "vega"
-        DataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle63.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle63
+        DataGridViewCellStyle165.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle165.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle165
         Me.DataGridViewTextBoxColumn15.HeaderText = "Vega"
         Me.DataGridViewTextBoxColumn15.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
@@ -9398,9 +9459,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn16
         '
         Me.DataGridViewTextBoxColumn16.DataPropertyName = "vgval"
-        DataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle64.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn16.DefaultCellStyle = DataGridViewCellStyle64
+        DataGridViewCellStyle166.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle166.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn16.DefaultCellStyle = DataGridViewCellStyle166
         Me.DataGridViewTextBoxColumn16.HeaderText = "V. V"
         Me.DataGridViewTextBoxColumn16.MinimumWidth = 65
         Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
@@ -9410,9 +9471,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn17
         '
         Me.DataGridViewTextBoxColumn17.DataPropertyName = "theta"
-        DataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle65.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn17.DefaultCellStyle = DataGridViewCellStyle65
+        DataGridViewCellStyle167.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle167.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn17.DefaultCellStyle = DataGridViewCellStyle167
         Me.DataGridViewTextBoxColumn17.HeaderText = "Theta"
         Me.DataGridViewTextBoxColumn17.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
@@ -9422,9 +9483,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn18
         '
         Me.DataGridViewTextBoxColumn18.DataPropertyName = "thetaval"
-        DataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle66.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle66
+        DataGridViewCellStyle168.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle168.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle168
         Me.DataGridViewTextBoxColumn18.HeaderText = "T. V"
         Me.DataGridViewTextBoxColumn18.MinimumWidth = 65
         Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
@@ -9434,9 +9495,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn19
         '
         Me.DataGridViewTextBoxColumn19.DataPropertyName = "volga"
-        DataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle67.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn19.DefaultCellStyle = DataGridViewCellStyle67
+        DataGridViewCellStyle169.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle169.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn19.DefaultCellStyle = DataGridViewCellStyle169
         Me.DataGridViewTextBoxColumn19.HeaderText = "Volga"
         Me.DataGridViewTextBoxColumn19.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
@@ -9447,9 +9508,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn20
         '
         Me.DataGridViewTextBoxColumn20.DataPropertyName = "volgaval"
-        DataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle68.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn20.DefaultCellStyle = DataGridViewCellStyle68
+        DataGridViewCellStyle170.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle170.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn20.DefaultCellStyle = DataGridViewCellStyle170
         Me.DataGridViewTextBoxColumn20.HeaderText = "Vo. V"
         Me.DataGridViewTextBoxColumn20.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
@@ -9459,9 +9520,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn21
         '
         Me.DataGridViewTextBoxColumn21.DataPropertyName = "vanna"
-        DataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle69.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn21.DefaultCellStyle = DataGridViewCellStyle69
+        DataGridViewCellStyle171.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle171.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn21.DefaultCellStyle = DataGridViewCellStyle171
         Me.DataGridViewTextBoxColumn21.HeaderText = "Vanna"
         Me.DataGridViewTextBoxColumn21.MinimumWidth = 65
         Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
@@ -9471,9 +9532,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn22
         '
         Me.DataGridViewTextBoxColumn22.DataPropertyName = "vannaval"
-        DataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle70.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn22.DefaultCellStyle = DataGridViewCellStyle70
+        DataGridViewCellStyle172.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle172.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn22.DefaultCellStyle = DataGridViewCellStyle172
         Me.DataGridViewTextBoxColumn22.HeaderText = "Va. V"
         Me.DataGridViewTextBoxColumn22.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
@@ -9484,9 +9545,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn23
         '
         Me.DataGridViewTextBoxColumn23.DataPropertyName = "company"
-        DataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle71.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle71
+        DataGridViewCellStyle173.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle173.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle173
         Me.DataGridViewTextBoxColumn23.HeaderText = "company"
         Me.DataGridViewTextBoxColumn23.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
@@ -9497,8 +9558,8 @@ Partial Class analysis
         'DataGridViewTextBoxColumn24
         '
         Me.DataGridViewTextBoxColumn24.DataPropertyName = "mdate"
-        DataGridViewCellStyle72.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn24.DefaultCellStyle = DataGridViewCellStyle72
+        DataGridViewCellStyle174.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn24.DefaultCellStyle = DataGridViewCellStyle174
         Me.DataGridViewTextBoxColumn24.HeaderText = "MDate"
         Me.DataGridViewTextBoxColumn24.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
@@ -9509,9 +9570,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn25
         '
         Me.DataGridViewTextBoxColumn25.DataPropertyName = "tokanno"
-        DataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle73.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle73
+        DataGridViewCellStyle175.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle175.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle175
         Me.DataGridViewTextBoxColumn25.HeaderText = "tokanno"
         Me.DataGridViewTextBoxColumn25.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
@@ -9522,9 +9583,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn26
         '
         Me.DataGridViewTextBoxColumn26.DataPropertyName = "entrydate"
-        DataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle74.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle74
+        DataGridViewCellStyle176.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle176.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle176
         Me.DataGridViewTextBoxColumn26.HeaderText = "entrydate"
         Me.DataGridViewTextBoxColumn26.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
@@ -9535,9 +9596,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn27
         '
         Me.DataGridViewTextBoxColumn27.DataPropertyName = "script"
-        DataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle75.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle75
+        DataGridViewCellStyle177.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle177.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle177
         Me.DataGridViewTextBoxColumn27.HeaderText = "script"
         Me.DataGridViewTextBoxColumn27.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
@@ -9548,9 +9609,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn28
         '
         Me.DataGridViewTextBoxColumn28.DataPropertyName = "token1"
-        DataGridViewCellStyle76.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle76.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn28.DefaultCellStyle = DataGridViewCellStyle76
+        DataGridViewCellStyle178.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle178.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn28.DefaultCellStyle = DataGridViewCellStyle178
         Me.DataGridViewTextBoxColumn28.HeaderText = "token1"
         Me.DataGridViewTextBoxColumn28.MinimumWidth = 60
         Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
@@ -9561,11 +9622,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn29
         '
         Me.DataGridViewTextBoxColumn29.DataPropertyName = "ftoken"
-        DataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle77.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle77.Format = "N0"
-        DataGridViewCellStyle77.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn29.DefaultCellStyle = DataGridViewCellStyle77
+        DataGridViewCellStyle179.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle179.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle179.Format = "N0"
+        DataGridViewCellStyle179.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn29.DefaultCellStyle = DataGridViewCellStyle179
         Me.DataGridViewTextBoxColumn29.HeaderText = "ftoken"
         Me.DataGridViewTextBoxColumn29.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
@@ -9576,8 +9637,8 @@ Partial Class analysis
         'DataGridViewTextBoxColumn30
         '
         Me.DataGridViewTextBoxColumn30.DataPropertyName = "toatp"
-        DataGridViewCellStyle78.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn30.DefaultCellStyle = DataGridViewCellStyle78
+        DataGridViewCellStyle180.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn30.DefaultCellStyle = DataGridViewCellStyle180
         Me.DataGridViewTextBoxColumn30.HeaderText = "toatp"
         Me.DataGridViewTextBoxColumn30.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
@@ -9588,9 +9649,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn31
         '
         Me.DataGridViewTextBoxColumn31.DataPropertyName = "pratp"
-        DataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle79.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn31.DefaultCellStyle = DataGridViewCellStyle79
+        DataGridViewCellStyle181.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle181.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn31.DefaultCellStyle = DataGridViewCellStyle181
         Me.DataGridViewTextBoxColumn31.HeaderText = "pratp"
         Me.DataGridViewTextBoxColumn31.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
@@ -9601,8 +9662,8 @@ Partial Class analysis
         'DataGridViewTextBoxColumn32
         '
         Me.DataGridViewTextBoxColumn32.DataPropertyName = "deltaval1"
-        DataGridViewCellStyle80.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn32.DefaultCellStyle = DataGridViewCellStyle80
+        DataGridViewCellStyle182.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn32.DefaultCellStyle = DataGridViewCellStyle182
         Me.DataGridViewTextBoxColumn32.HeaderText = "deltaval1"
         Me.DataGridViewTextBoxColumn32.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
@@ -9613,8 +9674,8 @@ Partial Class analysis
         'DataGridViewTextBoxColumn33
         '
         Me.DataGridViewTextBoxColumn33.DataPropertyName = "gmval1"
-        DataGridViewCellStyle81.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn33.DefaultCellStyle = DataGridViewCellStyle81
+        DataGridViewCellStyle183.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn33.DefaultCellStyle = DataGridViewCellStyle183
         Me.DataGridViewTextBoxColumn33.HeaderText = "gammaval1"
         Me.DataGridViewTextBoxColumn33.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
@@ -9625,8 +9686,8 @@ Partial Class analysis
         'DataGridViewTextBoxColumn34
         '
         Me.DataGridViewTextBoxColumn34.DataPropertyName = "vgval1"
-        DataGridViewCellStyle82.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn34.DefaultCellStyle = DataGridViewCellStyle82
+        DataGridViewCellStyle184.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn34.DefaultCellStyle = DataGridViewCellStyle184
         Me.DataGridViewTextBoxColumn34.HeaderText = "vegaval1"
         Me.DataGridViewTextBoxColumn34.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
@@ -9637,9 +9698,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn35
         '
         Me.DataGridViewTextBoxColumn35.DataPropertyName = "thetaval1"
-        DataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle83.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn35.DefaultCellStyle = DataGridViewCellStyle83
+        DataGridViewCellStyle185.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle185.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn35.DefaultCellStyle = DataGridViewCellStyle185
         Me.DataGridViewTextBoxColumn35.HeaderText = "thetaval1"
         Me.DataGridViewTextBoxColumn35.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
@@ -9650,11 +9711,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn36
         '
         Me.DataGridViewTextBoxColumn36.DataPropertyName = "volgaval1"
-        DataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle84.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle84.Format = "N0"
-        DataGridViewCellStyle84.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn36.DefaultCellStyle = DataGridViewCellStyle84
+        DataGridViewCellStyle186.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle186.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle186.Format = "N0"
+        DataGridViewCellStyle186.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn36.DefaultCellStyle = DataGridViewCellStyle186
         Me.DataGridViewTextBoxColumn36.HeaderText = "volgaval1"
         Me.DataGridViewTextBoxColumn36.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn36.Name = "DataGridViewTextBoxColumn36"
@@ -9665,9 +9726,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn37
         '
         Me.DataGridViewTextBoxColumn37.DataPropertyName = "vannaval1"
-        DataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle85.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn37.DefaultCellStyle = DataGridViewCellStyle85
+        DataGridViewCellStyle187.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle187.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn37.DefaultCellStyle = DataGridViewCellStyle187
         Me.DataGridViewTextBoxColumn37.HeaderText = "vannaval1"
         Me.DataGridViewTextBoxColumn37.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
@@ -9678,9 +9739,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn38
         '
         Me.DataGridViewTextBoxColumn38.DataPropertyName = "status"
-        DataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle86.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn38.DefaultCellStyle = DataGridViewCellStyle86
+        DataGridViewCellStyle188.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle188.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn38.DefaultCellStyle = DataGridViewCellStyle188
         Me.DataGridViewTextBoxColumn38.HeaderText = "status"
         Me.DataGridViewTextBoxColumn38.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
@@ -9691,11 +9752,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn39
         '
         Me.DataGridViewTextBoxColumn39.DataPropertyName = "last1"
-        DataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle87.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle87.Format = "N0"
-        DataGridViewCellStyle87.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn39.DefaultCellStyle = DataGridViewCellStyle87
+        DataGridViewCellStyle189.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle189.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle189.Format = "N0"
+        DataGridViewCellStyle189.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn39.DefaultCellStyle = DataGridViewCellStyle189
         Me.DataGridViewTextBoxColumn39.HeaderText = "ltp1"
         Me.DataGridViewTextBoxColumn39.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
@@ -9706,9 +9767,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn40
         '
         Me.DataGridViewTextBoxColumn40.DataPropertyName = "lv1"
-        DataGridViewCellStyle88.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle88.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn40.DefaultCellStyle = DataGridViewCellStyle88
+        DataGridViewCellStyle190.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle190.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn40.DefaultCellStyle = DataGridViewCellStyle190
         Me.DataGridViewTextBoxColumn40.HeaderText = "lv1"
         Me.DataGridViewTextBoxColumn40.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
@@ -9719,9 +9780,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn41
         '
         Me.DataGridViewTextBoxColumn41.DataPropertyName = "mdate_months"
-        DataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle89.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn41.DefaultCellStyle = DataGridViewCellStyle89
+        DataGridViewCellStyle191.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle191.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn41.DefaultCellStyle = DataGridViewCellStyle191
         Me.DataGridViewTextBoxColumn41.HeaderText = "mdate_months"
         Me.DataGridViewTextBoxColumn41.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn41.Name = "DataGridViewTextBoxColumn41"
@@ -9742,11 +9803,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn43
         '
         Me.DataGridViewTextBoxColumn43.DataPropertyName = "grossmtm"
-        DataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle90.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle90.Format = "N0"
-        DataGridViewCellStyle90.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn43.DefaultCellStyle = DataGridViewCellStyle90
+        DataGridViewCellStyle192.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle192.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle192.Format = "N0"
+        DataGridViewCellStyle192.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn43.DefaultCellStyle = DataGridViewCellStyle192
         Me.DataGridViewTextBoxColumn43.HeaderText = "GrossMTM"
         Me.DataGridViewTextBoxColumn43.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn43.Name = "DataGridViewTextBoxColumn43"
@@ -9757,11 +9818,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn44
         '
         Me.DataGridViewTextBoxColumn44.DataPropertyName = "totExp"
-        DataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle91.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle91.Format = "N0"
-        DataGridViewCellStyle91.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle91
+        DataGridViewCellStyle193.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle193.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle193.Format = "N0"
+        DataGridViewCellStyle193.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle193
         Me.DataGridViewTextBoxColumn44.HeaderText = "Expense"
         Me.DataGridViewTextBoxColumn44.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn44.Name = "DataGridViewTextBoxColumn44"
@@ -9772,11 +9833,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn45
         '
         Me.DataGridViewTextBoxColumn45.DataPropertyName = "netmtm"
-        DataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle92.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle92.Format = "N0"
-        DataGridViewCellStyle92.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle92
+        DataGridViewCellStyle194.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle194.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle194.Format = "N0"
+        DataGridViewCellStyle194.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle194
         Me.DataGridViewTextBoxColumn45.HeaderText = "NetMTM"
         Me.DataGridViewTextBoxColumn45.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
@@ -9787,9 +9848,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn46
         '
         Me.DataGridViewTextBoxColumn46.DataPropertyName = "remarks"
-        DataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle93.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn46.DefaultCellStyle = DataGridViewCellStyle93
+        DataGridViewCellStyle195.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle195.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn46.DefaultCellStyle = DataGridViewCellStyle195
         Me.DataGridViewTextBoxColumn46.HeaderText = "Remarks"
         Me.DataGridViewTextBoxColumn46.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
@@ -9820,11 +9881,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn49
         '
         Me.DataGridViewTextBoxColumn49.DataPropertyName = "IsVolFix"
-        DataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle94.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle94.Format = "N0"
-        DataGridViewCellStyle94.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn49.DefaultCellStyle = DataGridViewCellStyle94
+        DataGridViewCellStyle196.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle196.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle196.Format = "N0"
+        DataGridViewCellStyle196.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn49.DefaultCellStyle = DataGridViewCellStyle196
         Me.DataGridViewTextBoxColumn49.HeaderText = "IsVolFix"
         Me.DataGridViewTextBoxColumn49.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
@@ -9835,11 +9896,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn50
         '
         Me.DataGridViewTextBoxColumn50.DataPropertyName = "totExp"
-        DataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle95.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle95.Format = "N0"
-        DataGridViewCellStyle95.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn50.DefaultCellStyle = DataGridViewCellStyle95
+        DataGridViewCellStyle197.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle197.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle197.Format = "N0"
+        DataGridViewCellStyle197.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn50.DefaultCellStyle = DataGridViewCellStyle197
         Me.DataGridViewTextBoxColumn50.HeaderText = "Expense"
         Me.DataGridViewTextBoxColumn50.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn50.Name = "DataGridViewTextBoxColumn50"
@@ -9850,11 +9911,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn51
         '
         Me.DataGridViewTextBoxColumn51.DataPropertyName = "netmtm"
-        DataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle96.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle96.Format = "N0"
-        DataGridViewCellStyle96.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn51.DefaultCellStyle = DataGridViewCellStyle96
+        DataGridViewCellStyle198.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle198.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle198.Format = "N0"
+        DataGridViewCellStyle198.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn51.DefaultCellStyle = DataGridViewCellStyle198
         Me.DataGridViewTextBoxColumn51.HeaderText = "NetMTM"
         Me.DataGridViewTextBoxColumn51.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn51.Name = "DataGridViewTextBoxColumn51"
@@ -9865,9 +9926,9 @@ Partial Class analysis
         'DataGridViewTextBoxColumn52
         '
         Me.DataGridViewTextBoxColumn52.DataPropertyName = "remarks"
-        DataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle97.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewTextBoxColumn52.DefaultCellStyle = DataGridViewCellStyle97
+        DataGridViewCellStyle199.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle199.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn52.DefaultCellStyle = DataGridViewCellStyle199
         Me.DataGridViewTextBoxColumn52.HeaderText = "Remarks"
         Me.DataGridViewTextBoxColumn52.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn52.Name = "DataGridViewTextBoxColumn52"
@@ -9878,11 +9939,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn53
         '
         Me.DataGridViewTextBoxColumn53.DataPropertyName = "IsCurrency"
-        DataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle98.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle98.Format = "N0"
-        DataGridViewCellStyle98.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn53.DefaultCellStyle = DataGridViewCellStyle98
+        DataGridViewCellStyle200.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle200.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle200.Format = "N0"
+        DataGridViewCellStyle200.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn53.DefaultCellStyle = DataGridViewCellStyle200
         Me.DataGridViewTextBoxColumn53.HeaderText = "IsCurrency"
         Me.DataGridViewTextBoxColumn53.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn53.Name = "DataGridViewTextBoxColumn53"
@@ -9893,11 +9954,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn54
         '
         Me.DataGridViewTextBoxColumn54.DataPropertyName = "deltavval"
-        DataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle99.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle99.Format = "N0"
-        DataGridViewCellStyle99.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn54.DefaultCellStyle = DataGridViewCellStyle99
+        DataGridViewCellStyle201.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle201.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle201.Format = "N0"
+        DataGridViewCellStyle201.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn54.DefaultCellStyle = DataGridViewCellStyle201
         Me.DataGridViewTextBoxColumn54.HeaderText = "deltavval"
         Me.DataGridViewTextBoxColumn54.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn54.Name = "DataGridViewTextBoxColumn54"
@@ -9908,11 +9969,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn55
         '
         Me.DataGridViewTextBoxColumn55.DataPropertyName = "IsVolFix"
-        DataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle100.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle100.Format = "N0"
-        DataGridViewCellStyle100.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn55.DefaultCellStyle = DataGridViewCellStyle100
+        DataGridViewCellStyle202.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle202.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle202.Format = "N0"
+        DataGridViewCellStyle202.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn55.DefaultCellStyle = DataGridViewCellStyle202
         Me.DataGridViewTextBoxColumn55.HeaderText = "IsVolFix"
         Me.DataGridViewTextBoxColumn55.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn55.Name = "DataGridViewTextBoxColumn55"
@@ -9923,11 +9984,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn56
         '
         Me.DataGridViewTextBoxColumn56.DataPropertyName = "preDate"
-        DataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle101.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle101.Format = "N0"
-        DataGridViewCellStyle101.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn56.DefaultCellStyle = DataGridViewCellStyle101
+        DataGridViewCellStyle203.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle203.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle203.Format = "N0"
+        DataGridViewCellStyle203.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn56.DefaultCellStyle = DataGridViewCellStyle203
         Me.DataGridViewTextBoxColumn56.HeaderText = "preDate"
         Me.DataGridViewTextBoxColumn56.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn56.Name = "DataGridViewTextBoxColumn56"
@@ -9938,11 +9999,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn57
         '
         Me.DataGridViewTextBoxColumn57.DataPropertyName = "preSpot"
-        DataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle102.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle102.Format = "N0"
-        DataGridViewCellStyle102.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn57.DefaultCellStyle = DataGridViewCellStyle102
+        DataGridViewCellStyle204.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle204.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle204.Format = "N0"
+        DataGridViewCellStyle204.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn57.DefaultCellStyle = DataGridViewCellStyle204
         Me.DataGridViewTextBoxColumn57.HeaderText = "preSpot"
         Me.DataGridViewTextBoxColumn57.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn57.Name = "DataGridViewTextBoxColumn57"
@@ -9953,11 +10014,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn58
         '
         Me.DataGridViewTextBoxColumn58.DataPropertyName = "preVol"
-        DataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle103.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle103.Format = "N0"
-        DataGridViewCellStyle103.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn58.DefaultCellStyle = DataGridViewCellStyle103
+        DataGridViewCellStyle205.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle205.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle205.Format = "N0"
+        DataGridViewCellStyle205.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn58.DefaultCellStyle = DataGridViewCellStyle205
         Me.DataGridViewTextBoxColumn58.HeaderText = "preVol"
         Me.DataGridViewTextBoxColumn58.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn58.Name = "DataGridViewTextBoxColumn58"
@@ -9968,11 +10029,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn59
         '
         Me.DataGridViewTextBoxColumn59.DataPropertyName = "preDelVal"
-        DataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle104.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle104.Format = "N0"
-        DataGridViewCellStyle104.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn59.DefaultCellStyle = DataGridViewCellStyle104
+        DataGridViewCellStyle206.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle206.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle206.Format = "N0"
+        DataGridViewCellStyle206.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn59.DefaultCellStyle = DataGridViewCellStyle206
         Me.DataGridViewTextBoxColumn59.HeaderText = "preDelVal"
         Me.DataGridViewTextBoxColumn59.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn59.Name = "DataGridViewTextBoxColumn59"
@@ -9983,11 +10044,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn60
         '
         Me.DataGridViewTextBoxColumn60.DataPropertyName = "preVegVal"
-        DataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle105.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle105.Format = "N0"
-        DataGridViewCellStyle105.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn60.DefaultCellStyle = DataGridViewCellStyle105
+        DataGridViewCellStyle207.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle207.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle207.Format = "N0"
+        DataGridViewCellStyle207.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn60.DefaultCellStyle = DataGridViewCellStyle207
         Me.DataGridViewTextBoxColumn60.HeaderText = "preVegVal"
         Me.DataGridViewTextBoxColumn60.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn60.Name = "DataGridViewTextBoxColumn60"
@@ -9998,11 +10059,11 @@ Partial Class analysis
         'DataGridViewTextBoxColumn61
         '
         Me.DataGridViewTextBoxColumn61.DataPropertyName = "preTheVal"
-        DataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle106.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle106.Format = "N0"
-        DataGridViewCellStyle106.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn61.DefaultCellStyle = DataGridViewCellStyle106
+        DataGridViewCellStyle208.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle208.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle208.Format = "N0"
+        DataGridViewCellStyle208.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn61.DefaultCellStyle = DataGridViewCellStyle208
         Me.DataGridViewTextBoxColumn61.HeaderText = "preTheVal"
         Me.DataGridViewTextBoxColumn61.MinimumWidth = 8
         Me.DataGridViewTextBoxColumn61.Name = "DataGridViewTextBoxColumn61"
@@ -10203,16 +10264,17 @@ Partial Class analysis
         '
         'analysis
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(1028, 581)
+        Me.ClientSize = New System.Drawing.Size(1542, 894)
         Me.ContextMenuStrip = Me.ContextMenuStrip1
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "analysis"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Analysis"

@@ -30347,8 +30347,21 @@ Read_curspn_output:
     End Sub
 
 #End Region
+    Dim mFrmMarginBse As FrmMarginBse
+    Private Sub OpenMarginCalc()
 
-
+        If mFrmMarginBse Is Nothing Then
+            mFrmMarginBse = New FrmMarginBse()
+        Else
+            Try
+                mFrmMarginBse.Show()
+            Catch ex As Exception
+                mFrmMarginBse = New FrmMarginBse()
+            End Try
+        End If
+        mFrmMarginBse.Show()
+        mFrmMarginBse.Activate()
+    End Sub
 
     ''' <summary>
     ''' Label24_Click
@@ -30357,6 +30370,7 @@ Read_curspn_output:
     ''' <param name="e"></param>
     ''' <remarks>This method call to click Margin lable to caclulate Exposure Margin</remarks>
     Private Sub Label24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label24.Click
+        OpenMarginCalc()
         If FlgThr_Span = True Then
             Exit Sub
         Else
@@ -33660,9 +33674,6 @@ Add:
 
     End Sub
 
-
-
-
     Private Sub txtCallvolIncF_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCallvolIncF.Enter
         txtCallvolIncF.SelectAll()
 
@@ -33804,7 +33815,6 @@ Add:
 
     End Function
 
-
     Private Sub MDateToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MDateToolStripMenuItem.Click
         If DGTrading.Columns("MDate").Visible = True Then
             DGTrading.Columns("MDate").Visible = False
@@ -33830,8 +33840,6 @@ Add:
             HideGreeksNutToolStripMenuItem.Enabled = True
         End If
     End Sub
-
-
 
     Private Sub txtCallvolIncF_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCallvolIncF.Click
         txtCallvolIncF.SelectAll()
@@ -33946,12 +33954,6 @@ Add:
 
                 hashsyn(drow("mdate") + "_" + GetSymbol(drow("company"))) = 0
             End Try
-
-
-
-
-
-
         Next
         flg_calcSynFut = False
         'hashsyn
