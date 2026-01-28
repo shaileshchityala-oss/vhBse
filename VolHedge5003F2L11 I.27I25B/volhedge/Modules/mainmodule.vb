@@ -1898,7 +1898,7 @@ lblAppCrash:
                     'Call cal_position_expense(drow, prExp, toExp, "EQ")
                     dr("prExp") = prExp
                     dr("toExp") = toExp
-
+                    dr("exchange") = drow("exchange").ToString()
 
 
 
@@ -1916,7 +1916,7 @@ lblAppCrash:
                 Else
                     dvdata = New DataView(dtdtable, "script='" & drow("script").ToString.Trim & "'and Company='" & drow("Company").ToString.Trim & "'", "", DataViewRowState.CurrentRows).ToTable
                     dr = eqtable.NewRow()
-                    dr("exchange") = drow("exchange").ToString()
+
                     dr("script") = drow("script").ToString.Trim
                     dr("company") = drcount(0)("company").ToString.Trim
                     dr("eq") = CStr(drcount(0)("eq"))
@@ -1940,6 +1940,7 @@ lblAppCrash:
                     '    dr("tokanno") = CStr(row("token"))
                     '    eqtable.Rows.Add(dr)
                     'Next
+                    dr("exchange") = drow("exchange").ToString()
                     If Token <> 0 Then
                         dr("tokanno") = CStr(Token)
                         eqtable.Rows.Add(dr)
@@ -1981,8 +1982,10 @@ lblAppCrash:
 
                     Dim token As Double
                     Dim asset_tokan As Double
-                    If Not HT_FOContrct(drow("script").ToString().ToUpper()) Is Nothing Then
-                        objStr = HT_FOContrct(drow("script").ToString().ToUpper())
+                    Dim strScript As String = drow("script").ToString().ToUpper() & Space(2) & exchange
+
+                    If Not HT_FOContrct(strScript) Is Nothing Then
+                        objStr = HT_FOContrct(strScript)
                         token = objStr.Token
                         asset_tokan = objStr.asset_tokan
                     Else
@@ -1997,14 +2000,15 @@ lblAppCrash:
                     '    asset_tokan = 0
                     'End If
                     If drcount.Length > 1 Then
-                        dvdata = New DataView(dtdtable, "script='" & drow("script").ToString.Trim & "' and Company='" & drow("Company") & "'", "", DataViewRowState.CurrentRows).ToTable
+                        Dim strFilter As String = "script='" & drow("script").ToString.Trim & "' and Company='" & drow("Company") & "' and exchange='" & exchange & "'"
+                        dvdata = New DataView(dtdtable, strFilter, "", DataViewRowState.CurrentRows).ToTable
                         'DVcpfmaster = New DataView(cpfmaster, "script='" & drow("script").ToString.Trim & "'", "", DataViewRowState.CurrentRows).ToTable
 
                         Dim brate As Double = 0
                         Dim srate As Double = 0
                         dr = dtable.NewRow()
                         dr("strikes") = Val(drcount(0)("strikerate").ToString)
-
+                        dr("exchange") = drow("exchange")
                         dr("prqty") = Val(dvdata.Compute("sum(qty)", "entry_date < #" & Format(Today, "dd-MMM-yyyy") & "#").ToString)
 
                         dr("toqty") = Val(dvdata.Compute("sum(qty)", "entry_date >= #" & Format(Today, "dd-MMM-yyyy") & "# ").ToString)
@@ -2076,7 +2080,7 @@ lblAppCrash:
                         '==========================================
                         'dr("tokanno") = Val(cpfmaster.Compute("max(token)", "script='" & drow("script") & "'").ToString)
                         dr("tokanno") = Val(token)
-                        dr("ftoken") = Val(cpfmaster.Compute("max(token)", "Symbol='" & GetSymbol(dr("company")) & "' and expdate1=#" & Format(dr("mdate"), "dd-MMM-yyyy") & "# AND option_type='XX'").ToString)
+                        dr("ftoken") = Val(cpfmaster.Compute("max(token)", "Symbol='" & GetSymbol(dr("company")) & "' and expdate1=#" & Format(dr("mdate"), "dd-MMM-yyyy") & "# AND option_type='XX' AND exchange='" & exchange & "'").ToString)
                         dr("fut_mdate") = dr("mdate")
                         If dr("ftoken") = 0 Then
                             Dim DtFMonthDate1 As DataTable = New DataView(cpfmaster, "Symbol='" & GetSymbol(dr("company")) & "' AND option_type='XX'and expdate1>=#" & Format(dr("mdate"), "dd-MMM-yyyy") & "#", "expdate1", DataViewRowState.CurrentRows).ToTable(True, "expdate1", "token")
@@ -3142,7 +3146,7 @@ lblAppCrash:
                 dr("last1") = drow("ltp1")
                 dr("lv") = drow("vol")
                 dr("MktVol") = drow("MktVol")
-
+                dr("exchange") = drow("exchange")
                 dr("lv1") = 0 ' drow("vol1")
                 If drow("Cp") = "F" Then
                     dr("delta") = 1
@@ -3600,7 +3604,7 @@ lblAppCrash:
                 dr("units") = Val(drow("qty"))
                 dr("traded") = Val(drow("rate"))
                 ''divyesh
-
+                dr("exchange") = drow("exchange")
                 If GdtCurrencyTrades.Select("Script='" & drow("script") & "' And company='" & drow("company") & "'").Length > 0 Then
                     dr("IsCurrency") = True
                     dr("Lots") = dr("units") / Currencymaster.Compute("MAX(multiplier)", "Script='" & drow("script") & "'")
@@ -3724,7 +3728,7 @@ lblAppCrash:
                     dr("curTotalMTM") = 0
                     dr("curGrossMTM") = 0
                 End If
-                If maintable.Select("Script='" & drow("script") & "' And company='" & drow("company") & "'").Length = 0 Then
+                If maintable.Select("Script='" & drow("script") & "' And company='" & drow("company") & "' AND exchange='" & drow("exchange") & "'").Length = 0 Then
                     maintable.Rows.Add(dr)
                 End If
 
@@ -5744,11 +5748,38 @@ lblAppCrash:
         End Try
 
 
-        Dim DtFMonthDate1 As DataTable = New DataView(cpfmaster, "option_type='XX'", "Symbol,Expdate Desc", DataViewRowState.CurrentRows).ToTable(True, "expdate", "token", "Symbol")
+        'Dim DtFMonthDate1 As DataTable = New DataView(cpfmaster, "option_type='XX'", "Symbol,Expdate Desc", DataViewRowState.CurrentRows).ToTable(True, "expdate", "token", "Symbol")
+        'Dim i As Integer = 1
+        'Dim str As String = ""
+        'For Each drow As DataRow In DtFMonthDate1.Select("")
+        '    If HT_CurrNextFar.Contains(drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy")) = False Then
+        '        If i = 1 Then
+        '            str = drow("Symbol")
+        '        Else
+        '            If drow("Symbol") <> str Then
+        '                i = 1
+        '                str = drow("Symbol")
+        '            End If
+        '        End If
+
+        '        HT_CurrNextFar.Add(drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy"), i)
+        '        HT_CurrNextFar1.Add(drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy"), drow("Token"))
+        '        i = i + 1
+        '        str = drow("Symbol")
+        '    End If
+
+        'Next
+
+
+        'TODO
+
+        Dim DtFMonthDate1 As DataTable = New DataView(cpfmaster, "option_type='XX'", "Symbol,Expdate Desc", DataViewRowState.CurrentRows).ToTable(True, "expdate", "token", "Symbol", "exchange")
         Dim i As Integer = 1
         Dim str As String = ""
+        Dim strScriptNextFar As String
         For Each drow As DataRow In DtFMonthDate1.Select("")
-            If HT_CurrNextFar.Contains(drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy")) = False Then
+            strScriptNextFar = drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy") & "  " & drow("exchange")
+            If HT_CurrNextFar.Contains(strScriptNextFar) = False Then
                 If i = 1 Then
                     str = drow("Symbol")
                 Else
@@ -5757,14 +5788,21 @@ lblAppCrash:
                         str = drow("Symbol")
                     End If
                 End If
+                Dim sym As String = drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy")
+                Dim sym1 As String = drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy")
+                If Not HT_CurrNextFar.Contains(sym) Then
+                    HT_CurrNextFar.Add(sym, i)
+                    HT_CurrNextFar1.Add(sym1, drow("Token"))
+                End If
 
-                HT_CurrNextFar.Add(drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy"), i)
-                HT_CurrNextFar1.Add(drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("MMMyyyy"), drow("Token"))
+
                 i = i + 1
                 str = drow("Symbol")
-            End If
+                End If
 
         Next
+
+
 
         Dim DtFMonthDatecurr As DataTable = New DataView(Currencymaster, "option_type='XX'", "Symbol,Expdate Desc", DataViewRowState.CurrentRows).ToTable(True, "expdate", "token", "Symbol")
         Dim icurr As Integer = 1
@@ -5796,6 +5834,7 @@ lblAppCrash:
         Dim drcpfmaster() As DataRow = cpfmaster.Select("")
         For Each drow As DataRow In drcpfmaster
             Dim strApiIdentifier As String = ""
+            Dim exchange As String = drow("exchange").ToString()
             If drow("option_type") = "XX" Then
                 If CDate(drow("ExpDate").ToString()).Month = Now.Month Then
                     If CDate(drow("ExpDate").ToString()) >= Now.Date Then
@@ -5825,7 +5864,8 @@ lblAppCrash:
             End If
 
 
-            If Not HT_FOContrct.Contains(drow("Script").ToString().ToUpper()) Then
+            Dim strFoContractScript As String = drow("Script").ToString().ToUpper() & "  " & exchange
+            If Not HT_FOContrct.Contains(strFoContractScript) Then
                 objSt = New Struct_FOContract
                 objSt.lotsize = drow("lotsize")
                 objSt.Token = drow("token")
@@ -5833,10 +5873,15 @@ lblAppCrash:
                 objSt.asset_tokan = drow("asset_tokan")
                 objSt.InstrumentType = drow("InstrumentName")
                 objSt.symbol = drow("Symbol")
-                HT_FOContrct.Add(drow("Script").ToString().ToUpper(), objSt)
+                objSt.exhange = exchange
+                HT_FOContrct.Add(strFoContractScript, objSt)
+            End If
+
+            Dim strLotScript As String = drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("ddMMMyyyy") & "  " & exchange
 
 
-
+            If HT_FOLotContrct.Contains(strLotScript) = False Then
+                HT_FOLotContrct.Add(strLotScript, drow("lotsize").ToString())
             End If
             If HT_FOLotContrct.Contains(drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("ddMMMyyyy")) = False Then
                 HT_FOLotContrct.Add(drow("Symbol").ToString() & CDate(drow("Expdate")).ToString("ddMMMyyyy"), drow("lotsize").ToString())
@@ -5854,8 +5899,16 @@ lblAppCrash:
             If Not HT_AssetToken.Contains(CLng(drow("Token"))) Then
                 HT_AssetToken.Add(CLng(drow("Token")), CLng(drow("Asset_Tokan")))
             End If
-            If HT_symboltoken.Contains(drow("Symbol").ToString()) = False Then
-                HT_symboltoken.Add(drow("Symbol").ToString(), drow("token"))
+
+            Dim strSymbolToken As String = drow("Symbol").ToString() & "  " & exchange
+            Dim token As Long = CLng(drow("token"))
+
+            If HT_symboltoken.Contains(strSymbolToken) = False Then
+                HT_symboltoken.Add(strSymbolToken, drow("token"))
+            End If
+
+            If HT_TokenSymbol.ContainsKey(token) = False Then
+                HT_TokenSymbol.Add(token, strSymbolToken)
             End If
 
         Next
@@ -5876,19 +5929,28 @@ lblAppCrash:
             Currfuttoken.Add(CLng(drow("token")))
         Next
 
+        Dim strScript As String
+        Dim strSymbol As String
         eqtoken = New ArrayList
         Dim dreqmaster() As DataRow = eqmaster.Select("")
         For Each drow As DataRow In dreqmaster
             eqtoken.Add(CLng(drow("token")))
-            If Not HT_EQContrct.Contains(drow("Script").ToString().ToUpper()) Then
+            strScript = drow("Script").ToString().ToUpper() & "  " & drow("exchange").ToString()
+            If Not HT_EQContrct.Contains(strScript) Then
                 objEQ = New Struct_EQContract
                 objEQ.Token = drow("token")
                 objEQ.script = drow("script")
                 objEQ.symbol = drow("Symbol")
-                HT_EQContrct.Add(drow("Script").ToString().ToUpper(), objEQ)
+                objEQ.exhange = drow("exchange").ToString()
+                HT_EQContrct.Add(strScript, objEQ)
             End If
-            If HT_symboltoken.Contains(drow("Symbol").ToString()) = False Then
-                HT_symboltoken.Add(drow("Symbol").ToString(), drow("token"))
+            strSymbol = drow("Symbol").ToString() & "  " & drow("exchange")
+            If HT_symboltoken.Contains(strSymbol) = False Then
+                HT_symboltoken.Add(strSymbol, drow("token"))
+            End If
+
+            If HT_TokenSymbol.ContainsKey(objEQ.Token) = False Then
+                HT_TokenSymbol.Add(objEQ.Token, objEQ.symbol)
             End If
         Next
         Dim drCurrmaster() As DataRow = Currencymaster.Select("")
@@ -5909,6 +5971,12 @@ lblAppCrash:
             If HT_symboltoken.Contains(drow("Symbol").ToString()) = False Then
                 HT_symboltoken.Add(drow("Symbol").ToString(), drow("token"))
             End If
+
+            Dim lnToken As Long = objEQ.Token
+            If HT_TokenSymbol.ContainsKey(lnToken) = False Then
+                HT_TokenSymbol.Add(lnToken, objEQ.symbol)
+            End If
+
         Next
 
 
