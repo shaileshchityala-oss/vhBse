@@ -796,7 +796,9 @@ Public Class MDI
 
 
     End Sub
-    Private Function DownloadContract()
+
+    Private Function DownloadContract() As Boolean
+
         Dim ObjImpData As New import_Data
         Dim ObjIO As New ImportData.ImportOperation
         Me.Cursor = Cursors.WaitCursor
@@ -1020,11 +1022,147 @@ CURR:
         End If
         fill_token()
         Me.Cursor = Cursors.Default
-        MessageBox.Show("Contract Import Successfully..")
-
+        Return True
     End Function
+    '    Private Function DownloadContract()
+    '        Dim ObjImpData As New import_Data
+    '        Dim ObjIO As New ImportData.ImportOperation
+    '        Me.Cursor = Cursors.WaitCursor
+    '        Dim ftpURL As String = "https://support.finideas.com/Contract"
+    '        'Host URL or address of the FTP serve
+    '        Dim userName As String = "strategybuilder" '"FI-strategybuilder"
+    '        'User Name of the FTP server
+    '        Dim password As String = "finideas#123"
+    '        'Password of the FTP server
+    '        'string _ftpDirectory = "FinTesterCSV";          //The directory in FTP server where the files are present
+    '        Dim FileNameToDownload As String = "Contract.zip"
+    '        Dim tempDirPath As String = Application.StartupPath + "\Contract\"
+    '        If Not System.IO.Directory.Exists(Application.StartupPath + "\" + "Contract\") Then
+    '            System.IO.Directory.CreateDirectory(Application.StartupPath + "\" + "Contract")
+    '        End If
+    '        '-----Download file Fo---
+    '        Dim StrContract As String = Application.StartupPath & "\Contract\contract.zip"
+    '        Dim StrContractfotxt As String = Application.StartupPath & "\Contract\contract.txt"
+    '        If File.Exists(StrContract) Then
+    '            File.Delete(StrContract)
+    '        End If
+    '        If File.Exists(StrContractfotxt) Then
+    '            File.Delete(StrContractfotxt)
+    '        End If
+
+    '        DownloadFile(ftpURL, FileNameToDownload, userName, password, tempDirPath)
+
+
+    'back:
+    '        Threading.Thread.Sleep(1000)
+    '        If File.Exists(StrContract) Then
+    '            'txtpath.Text = "Zip Downloaded."
+    '        Else
+    '            GoTo back
+    '        End If
+    'back2:
+    '        Threading.Thread.Sleep(1000)
+
+
+    '        Try
+    '            'ZipHelp.UnZip(StrContract, Path.GetDirectoryName(StrContract), 4096)
+    '            UnZip1(StrContract, Path.GetDirectoryName(StrContract), 4096)
+    '        Catch ex As Exception
+    '            GoTo back
+    '        End Try
+    '        Dim StrContracttxt As String = Application.StartupPath & "\Contract\contract.txt"
+    '        If File.Exists(StrContracttxt) Then
+    '            'txtpath.Text = StrContracttxt
+
+
+
+    '            flgimportContract = True
+    '            import_Data.ContractImport(StrContracttxt, ObjIO, True)
+    '            flgimportContract = False
+
+
+    '            ' objimpmaster.fo(StrContracttxt)
+    '        Else
+    '            GoTo back2
+    '        End If
+
+    '        '-----Download file Eq---
+    '        StrContracttxt = Application.StartupPath & "\Contract\security.txt"
+    '        FileNameToDownload = "security.zip"
+    '        StrContract = Application.StartupPath & "\Contract\security.zip"
+    '        If File.Exists(StrContract) Then
+    '            File.Delete(StrContract)
+    '        End If
+    '        If File.Exists(StrContracttxt) Then
+    '            File.Delete(StrContracttxt)
+    '        End If
+    '        DownloadFile(ftpURL, FileNameToDownload, userName, password, tempDirPath)
+
+
+
+    '        Try
+
+    '            'ZipHelp.UnZip(StrContract, Path.GetDirectoryName(StrContract), 4096)
+    '            UnZip1(StrContract, Path.GetDirectoryName(StrContract), 4096)
+    '        Catch ex As Exception
+    '            GoTo back
+    '        End Try
+
+    '        If File.Exists(StrContracttxt) Then
+
+    '            flgimportContract = True
+    '            import_Data.SecurityImport(StrContracttxt, ObjIO, True)
+    '            flgimportContract = False
+
+    '            'objimpmaster.EQ(StrContracttxt)
+    '        Else
+    '            GoTo back2
+    '        End If
+
+    '        Me.Cursor = Cursors.Default
+
+
+
+    '        '-----Download file Curr---
+    '        StrContracttxt = Application.StartupPath & "\Contract\cd_contract.txt"
+    '        FileNameToDownload = "cd_contract.zip"
+    '        StrContract = Application.StartupPath & "\Contract\cd_contract.zip"
+    '        If File.Exists(StrContract) Then
+    '            File.Delete(StrContract)
+    '        End If
+    '        If File.Exists(StrContracttxt) Then
+    '            File.Delete(StrContracttxt)
+    '        End If
+    '        DownloadFile(ftpURL, FileNameToDownload, userName, password, tempDirPath)
+
+    '        Try
+
+    '            'ZipHelp.UnZip(StrContract, Path.GetDirectoryName(StrContract), 4096)
+    '            UnZip1(StrContract, Path.GetDirectoryName(StrContract), 4096)
+    '        Catch ex As Exception
+    '            GoTo back
+    '        End Try
+    '        'Dim FileNameToDownload1 As String = "csv_Data_Put_" + Fromdate1 + ".rar"
+    '        If File.Exists(StrContracttxt) Then
+    '            flgimportContract = True
+    '            import_Data.CurrencyImport(StrContracttxt, ObjIO, True)
+    '            flgimportContract = False
+    '            'objimpmaster.CURR(StrContracttxt)
+    '        Else
+    '            GoTo back2
+    '        End If
+    '        fill_token()
+    '        Me.Cursor = Cursors.Default
+
+    '    End Function
 
     Public Sub CHECKCONTRACT()
+
+        If Not CUtils.IsConnectedToInternet() Then
+            MessageBox.Show("Internet Not Availabe")
+            Return
+        End If
+
         If CONTRACT_NOTIFICATION = 0 Then
             Exit Sub
         End If
@@ -1089,11 +1227,38 @@ CURR:
                     '    objMast.insert(dtfo)
                     '    objMast.Equity_insert(dtEQ)
                     '    objMast.Insert_Currency_Contract(dtCURR)
+                    MessageBox.Show("Contract Import Successfully..")
                 End If
             End If
         End If
 
     End Sub
+
+ Dim mBseExchange As CBseExchange
+    Private Sub BseExchangeInit()
+        clsGlobal.CreateBseExchange()
+        mBseExchange = clsGlobal.mBseExchange
+        Dim foIp As String = GdtSettings.Compute("max(SettingKey)", "SettingName='BSE_FO_UDP_IP'").ToString()
+        Dim foPort As String = GdtSettings.Compute("max(SettingKey)", "SettingName='BSE_FO_UDP_PORT'").ToString()
+
+        Dim eqIp As String = GdtSettings.Compute("max(SettingKey)", "SettingName='BSE_EQ_UDP_IP'").ToString()
+        Dim eqPort As String = GdtSettings.Compute("max(SettingKey)", "SettingName='BSE_EQ_UDP_PORT'").ToString()
+
+        mBseExchange.mIpEq = eqIp
+        mBseExchange.mIpPortEq = eqPort
+        mBseExchange.mIpFo = foIp
+        mBseExchange.mIpPortFo = foPort
+        mBseExchange.CreateBroadCast(clsGlobal.H_All_token_FO, clsGlobal.H_All_token_EQ, buyprice, saleprice)
+    End Sub
+
+
+
+
+
+
+
+
+
     Public Sub NewSetUpContract()
         If Not IO.File.Exists(Application.StartupPath & "\NewSetup.txt") = True Then
 
@@ -1238,6 +1403,27 @@ CURR:
         CSqlConnection.CreateConStr(RegServerIP, RegServerUserid, RegServerpwd)
 
         Dim str As String = CHardwareFingerprint.GetHardwareFingerprint()
+
+        BseExchangeInit()
+        'Dim foExchange As String = clsGlobal.mContract.GetExchangeFromToken("1117307", ETokenType.Fo_Token)
+        'Dim BseEqExchange As String = clsGlobal.mContract.GetExchangeFromToken("500325", ETokenType.Eq_Token)
+        'Dim NseEqExchange As String = clsGlobal.mContract.GetExchangeFromToken("2885", ETokenType.Eq_Token)
+
+        'Dim foScript As String = clsGlobal.mContract.GetScriptFromToken("1117307", ETokenType.Fo_Token)
+        'Dim BseScript As String = clsGlobal.mContract.GetScriptFromToken("500325", ETokenType.Eq_Token)
+        'Dim NseScript As String = clsGlobal.mContract.GetScriptFromToken("2885", ETokenType.Eq_Token)
+
+        'foScript = clsGlobal.mContract.GetScriptExchangeFromToken("1117307", ETokenType.Fo_Token)
+        'BseScript = clsGlobal.mContract.GetScriptExchangeFromToken("500325", ETokenType.Eq_Token)
+        'NseScript = clsGlobal.mContract.GetScriptExchangeFromToken("2885", ETokenType.Eq_Token)
+
+        'Dim scriptObj As script
+        'scriptObj = clsGlobal.mContract.GetScriptObjectFromToken("1117307", ETokenType.Fo_Token)
+        'scriptObj = clsGlobal.mContract.GetScriptObjectFromToken("500325", ETokenType.Eq_Token)
+
+        ' Dim bsetrade As CBseTrades = New CBseTrades()
+        '  bsetrade.FromGetsFOTEXT(New DataTable, "")
+        '  bsetrade.FromGetsEQTEXT(New DataTable, "")
 
 9:
         mPerf = New CPerfCheck()
@@ -2438,9 +2624,6 @@ CURR:
         End Try
     End Sub
 
-
-
-
     ''' <summary>
     ''' sub_ReceiveMessages_fo
     ''' </summary>
@@ -3085,8 +3268,6 @@ Recheck:
         'Me.Cursor = Cursors.Default
         'refreshstarted = True
     End Sub
-
-
 
     Private Sub AboutVolHedgeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutVolHedgeToolStripMenuItem.Click
         FrmAboutVolHedge1.ShowDialog()
@@ -4135,10 +4316,6 @@ Recheck:
             '=========================REM:END===============
         End If
     End Sub
-
-
-
-
 
     Private Sub chkudp_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkudp.CheckedChanged
 
@@ -6096,6 +6273,7 @@ aa:
 
 
     Private Sub ImportAllFileToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ImportAllFileToolStripMenuItem.Click
+        CloseAllForms()
         Dim analysis1 As New FrmImportAllfile
         analysis1.ShowDialog()
     End Sub
@@ -6204,6 +6382,48 @@ aa:
         mFrmOnlineSupportDn.Show()
         mFrmOnlineSupportDn.Activate()
     End Sub
+
+    Public Sub CloseAllForms()
+        For Each frm As Form In Me.MdiChildren
+            frm.Close()
+        Next
+    End Sub
+
+
+
+    Dim mFrmIndexView As FrmBseIndexView
+    Private Sub tsmiMarketIndex_Click(sender As Object, e As EventArgs) Handles tsmiMarketIndex.Click
+
+        If mFrmIndexView Is Nothing Then
+            mFrmIndexView = New FrmBseIndexView()
+        Else
+            Try
+                mFrmIndexView.Show()
+            Catch ex As Exception
+                mFrmIndexView = New FrmBseIndexView()
+            End Try
+        End If
+        mFrmIndexView.Show()
+        mFrmIndexView.Activate()
+    End Sub
+
+    Dim mFrmMarginBse As FrmMarginBse
+    'Private Sub tsmiExchangeMargin_Click(sender As Object, e As EventArgs) Handles tsmiExchangeMargin.Click
+
+    '    If mFrmMarginBse Is Nothing Then
+    '        mFrmMarginBse = New FrmMarginBse()
+    '    Else
+    '        Try
+    '            mFrmMarginBse.Show()
+    '        Catch ex As Exception
+    '            mFrmMarginBse = New FrmMarginBse()
+    '        End Try
+    '    End If
+    '    mFrmMarginBse.Show()
+    '    mFrmMarginBse.Activate()
+    'End Sub
+
+
 End Class
 
 'Private Sub SynthFutureSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SynthFutureSettingsToolStripMenuItem.Click

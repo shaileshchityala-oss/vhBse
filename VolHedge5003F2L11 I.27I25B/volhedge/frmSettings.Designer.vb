@@ -731,6 +731,36 @@ Partial Class frmSettings
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewCheckBoxColumn4 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.GroupBox62 = New System.Windows.Forms.GroupBox()
+        Me.Label267 = New System.Windows.Forms.Label()
+        Me.Label268 = New System.Windows.Forms.Label()
+        Me.Label269 = New System.Windows.Forms.Label()
+        Me.Label270 = New System.Windows.Forms.Label()
+        Me.Label271 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label272 = New System.Windows.Forms.Label()
+        Me.Label273 = New System.Windows.Forms.Label()
+        Me.Label274 = New System.Windows.Forms.Label()
+        Me.Label283 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label284 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtBseEqUdpPort = New System.Windows.Forms.TextBox()
+        Me.Label285 = New System.Windows.Forms.Label()
+        Me.txtBseEqIp4 = New System.Windows.Forms.TextBox()
+        Me.txtBseEqIp3 = New System.Windows.Forms.TextBox()
+        Me.txtBseFoIp4 = New System.Windows.Forms.TextBox()
+        Me.txtBseFoIp3 = New System.Windows.Forms.TextBox()
+        Me.txtBseEqIp2 = New System.Windows.Forms.TextBox()
+        Me.txtBseFoIp2 = New System.Windows.Forms.TextBox()
+        Me.txtBseEqIp1 = New System.Windows.Forms.TextBox()
+        Me.txtBseFoIp1 = New System.Windows.Forms.TextBox()
+        Me.txtBseFOUdpPort = New System.Windows.Forms.TextBox()
         Me.TabPage8.SuspendLayout
         Me.GroupBox51.SuspendLayout
         Me.GroupBox5.SuspendLayout
@@ -819,6 +849,7 @@ Partial Class frmSettings
         Me.GroupBox8.SuspendLayout
         Me.GroupBox42.SuspendLayout
         Me.TabControl1.SuspendLayout
+        Me.GroupBox62.SuspendLayout
         Me.SuspendLayout
         '
         'TabPage8
@@ -4036,6 +4067,7 @@ Partial Class frmSettings
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.GroupBox62)
         Me.TabPage4.Controls.Add(Me.chkcmbroadcastMT)
         Me.TabPage4.Controls.Add(Me.GBInternet)
         Me.TabPage4.Controls.Add(Me.GrpBoxSqlServer)
@@ -8857,6 +8889,368 @@ Partial Class frmSettings
         Me.DataGridViewCheckBoxColumn4.Name = "DataGridViewCheckBoxColumn4"
         Me.DataGridViewCheckBoxColumn4.Width = 55
         '
+        'GroupBox62
+        '
+        Me.GroupBox62.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox62.Controls.Add(Me.Label267)
+        Me.GroupBox62.Controls.Add(Me.Label268)
+        Me.GroupBox62.Controls.Add(Me.Label269)
+        Me.GroupBox62.Controls.Add(Me.Label270)
+        Me.GroupBox62.Controls.Add(Me.Label271)
+        Me.GroupBox62.Controls.Add(Me.Button4)
+        Me.GroupBox62.Controls.Add(Me.Button5)
+        Me.GroupBox62.Controls.Add(Me.Button6)
+        Me.GroupBox62.Controls.Add(Me.Label272)
+        Me.GroupBox62.Controls.Add(Me.Label273)
+        Me.GroupBox62.Controls.Add(Me.Label274)
+        Me.GroupBox62.Controls.Add(Me.Label283)
+        Me.GroupBox62.Controls.Add(Me.TextBox2)
+        Me.GroupBox62.Controls.Add(Me.TextBox5)
+        Me.GroupBox62.Controls.Add(Me.TextBox6)
+        Me.GroupBox62.Controls.Add(Me.TextBox7)
+        Me.GroupBox62.Controls.Add(Me.Label284)
+        Me.GroupBox62.Controls.Add(Me.TextBox8)
+        Me.GroupBox62.Controls.Add(Me.txtBseEqUdpPort)
+        Me.GroupBox62.Controls.Add(Me.Label285)
+        Me.GroupBox62.Controls.Add(Me.txtBseEqIp4)
+        Me.GroupBox62.Controls.Add(Me.txtBseEqIp3)
+        Me.GroupBox62.Controls.Add(Me.txtBseFoIp4)
+        Me.GroupBox62.Controls.Add(Me.txtBseFoIp3)
+        Me.GroupBox62.Controls.Add(Me.txtBseEqIp2)
+        Me.GroupBox62.Controls.Add(Me.txtBseFoIp2)
+        Me.GroupBox62.Controls.Add(Me.txtBseEqIp1)
+        Me.GroupBox62.Controls.Add(Me.txtBseFoIp1)
+        Me.GroupBox62.Controls.Add(Me.txtBseFOUdpPort)
+        Me.GroupBox62.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox62.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox62.Location = New System.Drawing.Point(158, 319)
+        Me.GroupBox62.Name = "GroupBox62"
+        Me.GroupBox62.Size = New System.Drawing.Size(450, 167)
+        Me.GroupBox62.TabIndex = 38
+        Me.GroupBox62.TabStop = False
+        Me.GroupBox62.Text = "BSE UDP Server Setting"
+        '
+        'Label267
+        '
+        Me.Label267.AutoSize = True
+        Me.Label267.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label267.Location = New System.Drawing.Point(283, 134)
+        Me.Label267.Name = "Label267"
+        Me.Label267.Size = New System.Drawing.Size(13, 14)
+        Me.Label267.TabIndex = 33
+        Me.Label267.Text = "-"
+        Me.Label267.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label268
+        '
+        Me.Label268.AutoSize = True
+        Me.Label268.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label268.Location = New System.Drawing.Point(283, 96)
+        Me.Label268.Name = "Label268"
+        Me.Label268.Size = New System.Drawing.Size(13, 14)
+        Me.Label268.TabIndex = 32
+        Me.Label268.Text = "-"
+        Me.Label268.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label269
+        '
+        Me.Label269.AutoSize = True
+        Me.Label269.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label269.Location = New System.Drawing.Point(283, 55)
+        Me.Label269.Name = "Label269"
+        Me.Label269.Size = New System.Drawing.Size(13, 14)
+        Me.Label269.TabIndex = 31
+        Me.Label269.Text = "-"
+        Me.Label269.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label270
+        '
+        Me.Label270.AutoSize = True
+        Me.Label270.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.Label270.Location = New System.Drawing.Point(18, 92)
+        Me.Label270.Name = "Label270"
+        Me.Label270.Size = New System.Drawing.Size(46, 14)
+        Me.Label270.TabIndex = 30
+        Me.Label270.Text = "Equity"
+        '
+        'Label271
+        '
+        Me.Label271.AutoSize = True
+        Me.Label271.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.Label271.Location = New System.Drawing.Point(18, 52)
+        Me.Label271.Name = "Label271"
+        Me.Label271.Size = New System.Drawing.Size(33, 14)
+        Me.Label271.TabIndex = 29
+        Me.Label271.Text = "F&&O"
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button4.Font = New System.Drawing.Font("Verdana", 8.25!)
+        Me.Button4.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.Button4.Location = New System.Drawing.Point(379, 133)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(48, 23)
+        Me.Button4.TabIndex = 28
+        Me.Button4.Text = "TEST"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button5.Font = New System.Drawing.Font("Verdana", 8.25!)
+        Me.Button5.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.Button5.Location = New System.Drawing.Point(379, 92)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(48, 23)
+        Me.Button5.TabIndex = 27
+        Me.Button5.Text = "TEST"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button6.Font = New System.Drawing.Font("Verdana", 8.25!)
+        Me.Button6.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.Button6.Location = New System.Drawing.Point(379, 49)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(48, 23)
+        Me.Button6.TabIndex = 4
+        Me.Button6.Text = "TEST"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Label272
+        '
+        Me.Label272.AutoSize = True
+        Me.Label272.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label272.Location = New System.Drawing.Point(97, 133)
+        Me.Label272.Name = "Label272"
+        Me.Label272.Size = New System.Drawing.Size(12, 14)
+        Me.Label272.TabIndex = 19
+        Me.Label272.Text = ":"
+        Me.Label272.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label273
+        '
+        Me.Label273.AutoSize = True
+        Me.Label273.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label273.Location = New System.Drawing.Point(94, 90)
+        Me.Label273.Name = "Label273"
+        Me.Label273.Size = New System.Drawing.Size(12, 14)
+        Me.Label273.TabIndex = 10
+        Me.Label273.Text = ":"
+        Me.Label273.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label274
+        '
+        Me.Label274.AutoSize = True
+        Me.Label274.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label274.Location = New System.Drawing.Point(94, 49)
+        Me.Label274.Name = "Label274"
+        Me.Label274.Size = New System.Drawing.Size(12, 14)
+        Me.Label274.TabIndex = 1
+        Me.Label274.Text = ":"
+        Me.Label274.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label283
+        '
+        Me.Label283.AutoSize = True
+        Me.Label283.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label283.Location = New System.Drawing.Point(18, 135)
+        Me.Label283.Name = "Label283"
+        Me.Label283.Size = New System.Drawing.Size(67, 14)
+        Me.Label283.TabIndex = 18
+        Me.Label283.Text = "Currency "
+        Me.Label283.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(234, 128)
+        Me.TextBox2.MaxLength = 3
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(34, 23)
+        Me.TextBox2.TabIndex = 23
+        Me.TextBox2.Text = "000"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox5.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(197, 128)
+        Me.TextBox5.MaxLength = 3
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(34, 23)
+        Me.TextBox5.TabIndex = 22
+        Me.TextBox5.Text = "000"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox6.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(160, 128)
+        Me.TextBox6.MaxLength = 3
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(34, 23)
+        Me.TextBox6.TabIndex = 21
+        Me.TextBox6.Text = "000"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox7.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(123, 128)
+        Me.TextBox7.MaxLength = 3
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(34, 23)
+        Me.TextBox7.TabIndex = 20
+        Me.TextBox7.Text = "000"
+        '
+        'Label284
+        '
+        Me.Label284.AutoSize = True
+        Me.Label284.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label284.Location = New System.Drawing.Point(122, 29)
+        Me.Label284.Name = "Label284"
+        Me.Label284.Size = New System.Drawing.Size(75, 14)
+        Me.Label284.TabIndex = 0
+        Me.Label284.Text = "IP Address"
+        Me.Label284.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TextBox8
+        '
+        Me.TextBox8.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox8.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.Location = New System.Drawing.Point(307, 131)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(52, 23)
+        Me.TextBox8.TabIndex = 26
+        '
+        'txtBseEqUdpPort
+        '
+        Me.txtBseEqUdpPort.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseEqUdpPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseEqUdpPort.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseEqUdpPort.Location = New System.Drawing.Point(307, 92)
+        Me.txtBseEqUdpPort.Name = "txtBseEqUdpPort"
+        Me.txtBseEqUdpPort.Size = New System.Drawing.Size(52, 23)
+        Me.txtBseEqUdpPort.TabIndex = 17
+        '
+        'Label285
+        '
+        Me.Label285.AutoSize = True
+        Me.Label285.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label285.Location = New System.Drawing.Point(301, 29)
+        Me.Label285.Name = "Label285"
+        Me.Label285.Size = New System.Drawing.Size(58, 14)
+        Me.Label285.TabIndex = 6
+        Me.Label285.Text = "Port No."
+        Me.Label285.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtBseEqIp4
+        '
+        Me.txtBseEqIp4.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseEqIp4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseEqIp4.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseEqIp4.Location = New System.Drawing.Point(235, 89)
+        Me.txtBseEqIp4.MaxLength = 3
+        Me.txtBseEqIp4.Name = "txtBseEqIp4"
+        Me.txtBseEqIp4.Size = New System.Drawing.Size(34, 23)
+        Me.txtBseEqIp4.TabIndex = 14
+        '
+        'txtBseEqIp3
+        '
+        Me.txtBseEqIp3.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseEqIp3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseEqIp3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseEqIp3.Location = New System.Drawing.Point(198, 89)
+        Me.txtBseEqIp3.MaxLength = 3
+        Me.txtBseEqIp3.Name = "txtBseEqIp3"
+        Me.txtBseEqIp3.Size = New System.Drawing.Size(34, 23)
+        Me.txtBseEqIp3.TabIndex = 13
+        '
+        'txtBseFoIp4
+        '
+        Me.txtBseFoIp4.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseFoIp4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseFoIp4.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseFoIp4.Location = New System.Drawing.Point(235, 49)
+        Me.txtBseFoIp4.MaxLength = 3
+        Me.txtBseFoIp4.Name = "txtBseFoIp4"
+        Me.txtBseFoIp4.Size = New System.Drawing.Size(34, 23)
+        Me.txtBseFoIp4.TabIndex = 5
+        '
+        'txtBseFoIp3
+        '
+        Me.txtBseFoIp3.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseFoIp3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseFoIp3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseFoIp3.Location = New System.Drawing.Point(198, 49)
+        Me.txtBseFoIp3.MaxLength = 3
+        Me.txtBseFoIp3.Name = "txtBseFoIp3"
+        Me.txtBseFoIp3.Size = New System.Drawing.Size(34, 23)
+        Me.txtBseFoIp3.TabIndex = 4
+        '
+        'txtBseEqIp2
+        '
+        Me.txtBseEqIp2.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseEqIp2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseEqIp2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseEqIp2.Location = New System.Drawing.Point(161, 89)
+        Me.txtBseEqIp2.MaxLength = 3
+        Me.txtBseEqIp2.Name = "txtBseEqIp2"
+        Me.txtBseEqIp2.Size = New System.Drawing.Size(34, 23)
+        Me.txtBseEqIp2.TabIndex = 12
+        '
+        'txtBseFoIp2
+        '
+        Me.txtBseFoIp2.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseFoIp2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseFoIp2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseFoIp2.Location = New System.Drawing.Point(161, 49)
+        Me.txtBseFoIp2.MaxLength = 3
+        Me.txtBseFoIp2.Name = "txtBseFoIp2"
+        Me.txtBseFoIp2.Size = New System.Drawing.Size(34, 23)
+        Me.txtBseFoIp2.TabIndex = 3
+        '
+        'txtBseEqIp1
+        '
+        Me.txtBseEqIp1.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseEqIp1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseEqIp1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseEqIp1.Location = New System.Drawing.Point(124, 89)
+        Me.txtBseEqIp1.MaxLength = 3
+        Me.txtBseEqIp1.Name = "txtBseEqIp1"
+        Me.txtBseEqIp1.Size = New System.Drawing.Size(34, 23)
+        Me.txtBseEqIp1.TabIndex = 11
+        '
+        'txtBseFoIp1
+        '
+        Me.txtBseFoIp1.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseFoIp1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseFoIp1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseFoIp1.Location = New System.Drawing.Point(124, 49)
+        Me.txtBseFoIp1.MaxLength = 3
+        Me.txtBseFoIp1.Name = "txtBseFoIp1"
+        Me.txtBseFoIp1.Size = New System.Drawing.Size(34, 23)
+        Me.txtBseFoIp1.TabIndex = 2
+        '
+        'txtBseFOUdpPort
+        '
+        Me.txtBseFOUdpPort.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtBseFOUdpPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBseFOUdpPort.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBseFOUdpPort.Location = New System.Drawing.Point(307, 50)
+        Me.txtBseFOUdpPort.Name = "txtBseFOUdpPort"
+        Me.txtBseFOUdpPort.Size = New System.Drawing.Size(52, 23)
+        Me.txtBseFOUdpPort.TabIndex = 8
+        '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -9025,6 +9419,8 @@ Partial Class frmSettings
         Me.GroupBox42.ResumeLayout(False)
         Me.GroupBox42.PerformLayout
         Me.TabControl1.ResumeLayout(False)
+        Me.GroupBox62.ResumeLayout(False)
+        Me.GroupBox62.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub
@@ -9721,4 +10117,34 @@ Partial Class frmSettings
     Friend WithEvents txtIsExclude As CheckBox
     Friend WithEvents chkCompactMdbAuto As CheckBox
     Friend WithEvents txtCompactMdbDays As TextBox
+    Friend WithEvents GroupBox62 As GroupBox
+    Friend WithEvents Label267 As Label
+    Friend WithEvents Label268 As Label
+    Friend WithEvents Label269 As Label
+    Friend WithEvents Label270 As Label
+    Friend WithEvents Label271 As Label
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Label272 As Label
+    Friend WithEvents Label273 As Label
+    Friend WithEvents Label274 As Label
+    Friend WithEvents Label283 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label284 As Label
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtBseEqUdpPort As TextBox
+    Friend WithEvents Label285 As Label
+    Friend WithEvents txtBseEqIp4 As TextBox
+    Friend WithEvents txtBseEqIp3 As TextBox
+    Friend WithEvents txtBseFoIp4 As TextBox
+    Friend WithEvents txtBseFoIp3 As TextBox
+    Friend WithEvents txtBseEqIp2 As TextBox
+    Friend WithEvents txtBseFoIp2 As TextBox
+    Friend WithEvents txtBseEqIp1 As TextBox
+    Friend WithEvents txtBseFoIp1 As TextBox
+    Friend WithEvents txtBseFOUdpPort As TextBox
 End Class

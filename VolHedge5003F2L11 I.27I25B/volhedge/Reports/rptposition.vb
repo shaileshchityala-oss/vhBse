@@ -41,6 +41,7 @@ Public Class rptposition
             .Add("traded", GetType(Double))
             .Add("folots", GetType(Double))
             .Add("Dealer")
+            .Add("Exchange")
         End With
 
         eqtable = New DataTable
@@ -54,6 +55,7 @@ Public Class rptposition
             .Columns.Add("entrydate", GetType(Date))
             .Columns.Add("instrument")
             .Columns.Add("Dealer")
+            .Columns.Add("Exchange")
         End With
 
         CurrTable = New DataTable
@@ -193,11 +195,11 @@ Public Class rptposition
 
         Dim dtdtable As DataTable = New DataView(table, " ", "Script", DataViewRowState.CurrentRows).ToTable
         Dim dtdtableView As DataView = New DataView(table, "", "Script", DataViewRowState.CurrentRows)
-        Dim dtScriptdtable As DataTable = dtdtableView.ToTable(True, "Script", "Company")
+        Dim dtScriptdtable As DataTable = dtdtableView.ToTable(True, "Script", "Company", "exchange")
 
         For Each drow As DataRow In dtScriptdtable.Rows
 
-            Dim drcount() As DataRow = table.Select("script='" & drow("script").ToString.Trim & "' and Company='" & drow("Company").ToString.Trim & "' ", "")
+            Dim drcount() As DataRow = table.Select("script='" & drow("script").ToString.Trim & "' and Company='" & drow("Company").ToString.Trim & "' AND exchange='" + drow("exchange").ToString() + "'", "")
             count = drcount.Length
             Dim dvdata As DataTable
 
@@ -250,7 +252,7 @@ Public Class rptposition
                 dr("company") = CStr(drcount(0)("company")).ToString.Trim
                 dr("mdate") = CDate(Format(CDate(drcount(0)("mdate")), "MMM/dd/yyyy"))
                 dr("entrydate") = drcount(0)("entry_date")
-
+                dr("exchange") = drcount(0)("exchange")
                 ''divyesh
                 'Dim dblltsize As Double = IIf(IsDBNull(cpfmaster.Compute("MAX(lotsize)", "script = '" & drow("script") & "'")), 0, cpfmaster.Compute("MAX(lotsize)", "script = '" & drow("script") & "'"))
 
@@ -279,6 +281,7 @@ Public Class rptposition
                 dr("mdate") = CDate(Format(CDate(drcount(0)("mdate")), "MMM/dd/yyyy"))
                 dr("entrydate") = drcount(0)("entry_date")
                 dr("Dealer") = drcount(0)("Dealer")
+                dr("exchange") = drcount(0)("exchange")
                 ''divyesh
                 'Dim dblltsize As Double = cpfmaster.Compute("MAX(lotsize)", "script = '" & drow("script") & "'")
                 If dblltsize = 0 Then
@@ -1391,6 +1394,8 @@ Public Class rptposition
             End If
             tempdata.Columns.Add("tot", GetType(Double))
             tempdata.Columns.Add("tot2", GetType(Double))
+            'tempdata.Columns.Add("exchange", GetType(String))
+
             For Each dr5 As DataRow In tempdata.Rows
                 Dim strdata1 As [String]()
                 Dim strValue As String

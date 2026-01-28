@@ -106,12 +106,12 @@ Public Class analysis
     ''' DouIntMrg
     ''' </summary>
     ''' <remarks>This veriable store Initial Margin</remarks>
-    Dim DouIntMrg As Double ''
+    Public DouIntMrg As Double ''
     ''' <summary>
     ''' DouExpMrg
     ''' </summary>
     ''' <remarks>This veriable store Exp. Margin</remarks>
-    Dim DouExpMrg As Double ''
+    Public DouExpMrg As Double ''
     '''' <summary>
     '''' DouEquity
     '''' </summary>
@@ -2661,6 +2661,11 @@ Public Class analysis
                         If valToken <> 0 Then
                             If Not fltpprice.Contains(CLng(drow("tokanno"))) Then
                                 fltpprice.Add(CLng(drow("tokanno")), valToken)
+                                If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("tokanno"))) Then
+                                    'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("tokanno")))
+                                    clsGlobal.H_All_token_FO.Add(CLng(drow("tokanno")), 0)
+                                    'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("tokanno")), 0)
+                                End If
                             End If
                         Else
                             If arr(3) = CDate(drow("mdate")) Then
@@ -2675,6 +2680,11 @@ Public Class analysis
                                 If Not fltpprice.Contains(CLng(drow("tokanno"))) Then
                                     fltpprice.Add(CLng(drow("tokanno")), CDbl(arr(6)))
                                 End If
+                            End If
+                            If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("tokanno"))) Then
+                                'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("tokanno")))
+                                clsGlobal.H_All_token_FO.Add(CLng(drow("tokanno")), 0)
+                                'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("tokanno")), 0)
                             End If
                         End If
                     End If
@@ -2727,6 +2737,12 @@ Public Class analysis
                     eqarray.Add(CLng(drow("tokanno")))
                     If Not eltpprice.Contains(CLng(drow("tokanno"))) Then
                         eltpprice.Add(CLng(drow("tokanno")), drow("last"))
+
+
+                        If Not clsGlobal.H_All_token_EQ.Contains(CLng(drow("tokanno"))) Then
+                            clsGlobal.H_All_token_EQ.Add(CLng(drow("tokanno")), 0)
+                        End If
+
                     End If
                 Else  REM Option Script
 
@@ -2866,6 +2882,13 @@ Public Class analysis
                         If Not fltpprice.Contains(CLng(drow("ftoken"))) Then
                             If drow("curSpot").ToString() <> DBNull.Value.ToString() Then
                                 fltpprice.Add(CLng(drow("ftoken")), drow("curSpot"))
+
+                                If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("ftoken"))) Then
+                                    'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("ftoken")))
+
+                                    'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("ftoken")), 0)
+                                    clsGlobal.H_All_token_FO.Add(CLng(drow("tokanno")), 0)
+                                End If
                             End If
                         End If
                     End If
@@ -2896,6 +2919,12 @@ Public Class analysis
                         If Not fltpprice.Contains(CLng(drow("ftoken"))) Then
                             fltpprice.Add(CLng(drow("ftoken")), CDbl(arr(6)))
                         End If
+                    End If
+                    If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("ftoken"))) Then
+                        'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("ftoken")))
+
+                        'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("ftoken")), 0)
+                        clsGlobal.H_All_token_FO.Add(CLng(drow("ftoken")), 0)
                     End If
                     'end of perticular options future is not there in hashtable then add it
                 End If
@@ -3674,6 +3703,12 @@ Public Class analysis
                         If valToken <> 0 Then
                             If Not fltpprice.Contains(CLng(drow("token"))) Then
                                 fltpprice.Add(CLng(drow("token")), valToken)
+                                If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("token"))) Then
+                                    'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("token")))
+
+                                    clsGlobal.H_All_token_FO.Add(CLng(drow("tokanno")), 0)
+                                    'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("token")), 0)
+                                End If
                             End If
                         Else
                             If arr(3) = CDate(drow("expdate1")) Then
@@ -3684,6 +3719,12 @@ Public Class analysis
                                 If Not fltpprice.Contains(CLng(drow("token"))) Then
                                     fltpprice.Add(CLng(drow("token")), 0)
                                 End If
+                            End If
+                            If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("token"))) Then
+                                'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("token")))
+
+                                clsGlobal.H_All_token_FO.Add(CLng(drow("token")), 0)
+                                'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("token")), 0)
                             End If
                         End If
 
@@ -3704,6 +3745,12 @@ Public Class analysis
 
                             End If
                         End If
+                        If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("token"))) Then
+                            ' mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("token")))
+
+                            'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("token")), 0)
+                            clsGlobal.H_All_token_FO.Add(CLng(drow("token")), 0)
+                        End If
                     End If
                 ElseIf pan3.Visible = True And dtexp2.Value = CDate(drow("expdate1")) Then
                     If Not futarray.Contains(CLng(drow("token"))) Then
@@ -3719,6 +3766,12 @@ Public Class analysis
                                     fltpprice.Add(CLng(drow("token")), CDbl(arr(6)))
                                 End If
                             End If
+                        End If
+                        If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("token"))) Then
+                            'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("token")))
+
+                            'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("token")), 0)
+                            clsGlobal.H_All_token_FO.Add(CLng(drow("token")), 0)
                         End If
                     End If
                 End If
@@ -3846,6 +3899,12 @@ Public Class analysis
             'End If
             ' setGridColumn()
             '  loadanalysisprofile()
+            clsGlobal.SkAddTokkensFromCurTable(currtable)
+            If clsGlobal.mFrmExchangeMargin IsNot Nothing Then
+                'clsGlobal.mFrmExchanegMargin.btnGetCurComp.Text = str
+                clsGlobal.mFrmExchangeMargin.lblSymbol.Text = str
+                clsGlobal.mFrmExchangeMargin.CalcSymbol()
+            End If
             Call AssignLots()
             loadanalysisprofilechangetab()
             DGTrading.DataSource = currtable
@@ -9845,6 +9904,29 @@ lbl1:
                                                     End If
                                                 End If
 
+                                                '------------ SENSEX INDEX PRICE
+                                            ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                                If CAL_USING_EQ_WITHINDEX = True Then
+                                                    eltppr = Val(eIdxprice("SENSEX"))
+                                                Else
+                                                    If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                        eltppr = Val(eIdxprice("SENSEX"))
+                                                    Else
+                                                        eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+
+                                                    End If
+                                                End If
+                                            ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                                If CAL_USING_EQ_WITHINDEX = True Then
+                                                    eltppr = Val(eIdxprice("SENSEX"))
+                                                Else
+                                                    If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                        eltppr = Val(eIdxprice("BANKEX"))
+                                                    Else
+                                                        eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+
+                                                    End If
+                                                End If
                                             Else
                                                 If IsDBNull(drow("asset_tokan")) = False Then
                                                     eltppr = Val(eltpprice(CLng(drow("asset_tokan"))))
@@ -11489,7 +11571,10 @@ lbl1:
                     nextmonth = txtexp1.Text.ToString()
                     farmonth = txtexp2.Text.ToString()
                     If currmonth = CDate(fdv(0)("Expdate")).ToString("MMM yy") Then
-                        txtrate.Invoke(mdel, fltpprice.Item(CLng(fdv(0)("token").ToString)))
+                        Dim lnTokens As Long = CLng(fdv(0)("token").ToString())
+                        Dim str As String = fltpprice.Item(lnTokens)
+                        Dim dblRate As Double = CUtils.StringToDouble(str)
+                        txtrate.Invoke(mdel, dblRate)
                     Else
                         If currmonth = CDate(fdv(1)("Expdate")).ToString("MMM yy") Then
                             txtrate.Invoke(mdel, fltpprice.Item(CLng(fdv(1)("token").ToString)))
@@ -12535,6 +12620,22 @@ lbl1:
         Else
             Monthname = TabStrategy.SelectedTab.Text
         End If
+
+        mTbl_SPAN_output.Rows.Clear()
+
+        If clsGlobal.mNseSr IsNot Nothing Then
+            If clsGlobal.mNseSr.mTblSpanOutput IsNot Nothing Then
+                mTbl_SPAN_output.Merge(clsGlobal.mNseSr.mTblSpanOutput)
+            End If
+        End If
+        If clsGlobal.mBseSr IsNot Nothing Then
+            If clsGlobal.mBseSr.mTblSpanOutput IsNot Nothing Then
+                mTbl_SPAN_output.Merge(clsGlobal.mBseSr.mTblSpanOutput)
+            End If
+        End If
+
+
+
         If mTbl_SPAN_output.Rows.Count > 0 Then
             'For Each drow As DataRow In mTbl_SPAN_output.Select("ClientCode='" & compname & "'")
             For Each drow As DataRow In mTbl_SPAN_output.Select("ClientCode='" & compname & "/" & Monthname & "'")
@@ -13498,6 +13599,7 @@ lbl1:
                 display.token = CLng(drow("tokanno"))
                 script = CStr(drow("script"))
                 display.script = CStr(drow("script"))
+                display.lblExchange.Text = drow("exchange").ToString()
                 display.cpfe = CStr(CStr(drow("cp")))
                 display.company = CStr(drow("company"))
                 If CStr(CStr(drow("cp"))) <> "E" Then
@@ -14124,7 +14226,7 @@ lbl1:
                     cal_future_RVol()
                 End If
                 '    Call get_AtmCalc()
-                Dim tb As DataTable = maintable
+                'Dim tb As DataTable = maintable
                 'Try
                 '    dtBCopy.Rows.Clear()
                 '    dtBCopy.AcceptChanges()
@@ -15124,7 +15226,7 @@ lbl1:
                 End If
             Next
 
-            For Each item As DataRow In dtspan_data.Rows
+            For Each item As DataRow In dtable.Rows
                 If item("month").ToString <> "" Then
                     '  Dim MONTH As String = item("month").ToString.Substring(0, 3)
                     Dim str As String = CDate(item("mdate")).ToString("MMMdd")
@@ -15596,6 +15698,7 @@ lbl1:
 
                     End If
                 Next
+                mTbl_AEL_Expo_calc.AcceptChanges()
                 sw.WriteLine("</ccPort>")
                 'end of loop for each position
 
@@ -20481,6 +20584,42 @@ Read_curspn_output:
 
     '    'End Try
     'End Sub
+
+    Public Shared Sub CalculateSpanMargins(
+    mrow As DataRow, spanTable As DataTable,
+    inmargstr As String, exmargstr As String)
+
+        Dim company As String = mrow("company").ToString()
+        Dim expiryKey As String = "All"
+
+        If mrow("Expiry").ToString() <> "ALL" Then
+            expiryKey = CDate(mrow("mdate")).ToString("MMMdd")
+
+            If expiryKey = company Then
+                expiryKey = "All"
+            End If
+        End If
+
+        If spanTable Is Nothing OrElse spanTable.Rows.Count = 0 Then
+            mrow("initMargin") = 0
+            mrow("ExpoMargin") = 0
+            Exit Sub
+        End If
+
+        Dim clientCode As String = company & "/" & expiryKey
+        Dim filter As String = "ClientCode='" & clientCode & "'"
+
+        Dim spanReq As Double = CUtils.GetSumTableFieldCompute(spanTable, "spanreq", filter, 2)
+        Dim anov As Double = CUtils.GetSumTableFieldCompute(spanTable, "anov", filter, 2)
+        Dim expo As Double = CUtils.GetSumTableFieldCompute(spanTable, "exposure_margin", filter, 2)
+
+        mrow("initMargin") = Val(Format(spanReq, inmargstr)) - Val(Format(anov, inmargstr))
+        mrow("ExpoMargin") = Val(Format(expo, exmargstr))
+
+    End Sub
+
+
+
     Public Sub Cal_DeltaGammaVegaThetaSummary()
         '  Try
 
@@ -22588,11 +22727,64 @@ Read_curspn_output:
     End Sub
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
-        If alertmsg = True Then
-            'cal_comp()
-        Else
-            Timer2.Stop()
-        End If
+        'If alertmsg = True Then
+        '    'cal_comp()
+        'Else
+        '    Timer2.Stop()
+        'End If
+
+        'If ShowPanel3 = True Then
+        '    If tlpUnitsSum.Location.X <= -10 Then
+        '        If tlpUnitsSum.Location.X = 0 Then
+        '            'txtmkt.Focus()
+        '            If KeyF7Togal = True Then
+        '                'Call BtnFixPnl3_Click(sender, e)
+        '            End If
+        '        End If
+        '        'TabLPanel3.Top = TabLPanel3.Location.Y + 1
+        '        'tlpUnitsSum.Left = tlpUnitsSum.Location.X + 1380
+        '        tlpUnitsSum.Left = Me.Width - tlpUnitsSum.Width - 25
+
+        '    End If
+
+        '    '   tlpSynFut.Left = Me.Width - (tlpSynFut.Width + tlpUnitsSum.Width) - 30
+        '    '   tlpSynFut.Top = (tlpUnitsSum.Location.Y + tlpUnitsSum.Height) - tlpSynFut.Height
+
+
+        'Else
+        '    If tlpUnitsSum.Location.X >= -180 Then
+        '        If tlpUnitsSum.Location.X = -180 Then
+        '            'grdtrad.Focus()
+        '        End If
+        '        tlpUnitsSum.Left = tlpUnitsSum.Location.X - 1380
+        '    End If        'If ShowPanel3 = True Then
+        '    If tlpUnitsSum.Location.X <= -10 Then
+        '        If tlpUnitsSum.Location.X = 0 Then
+        '            'txtmkt.Focus()
+        '            If KeyF7Togal = True Then
+        '                'Call BtnFixPnl3_Click(sender, e)
+        '            End If
+        '        End If
+        '        'TabLPanel3.Top = TabLPanel3.Location.Y + 1
+        '        'tlpUnitsSum.Left = tlpUnitsSum.Location.X + 1380
+        '        tlpUnitsSum.Left = Me.Width - tlpUnitsSum.Width - 25
+
+        '    End If
+
+        '    '   tlpSynFut.Left = Me.Width - (tlpSynFut.Width + tlpUnitsSum.Width) - 30
+        '    '   tlpSynFut.Top = (tlpUnitsSum.Location.Y + tlpUnitsSum.Height) - tlpSynFut.Height
+
+
+        'Else
+        '    If tlpUnitsSum.Location.X >= -180 Then
+        '        If tlpUnitsSum.Location.X = -180 Then
+        '            'grdtrad.Focus()
+        '        End If
+        '        tlpUnitsSum.Left = tlpUnitsSum.Location.X - 1380
+        '    End If
+
+        '  tlpSynFut.Left = tlpSynFut.Location.X - 1380
+        ' End If
     End Sub
     ''' <summary>
     ''' summary
@@ -24203,6 +24395,11 @@ Read_curspn_output:
                         eqarray.Add(CLng(drow("tokanno")))
                         If Not eltpprice.Contains(CLng(drow("tokanno"))) Then
                             eltpprice.Add(CLng(drow("tokanno")), drow("last"))
+
+
+                            If Not clsGlobal.H_All_token_EQ.Contains(CLng(drow("tokanno"))) Then
+                                clsGlobal.H_All_token_EQ.Add(CLng(drow("tokanno")), 0)
+                            End If
                         End If
                     Else  REM Option Script
                         If IsDBNull(drow("isliq")) = True Then
@@ -27459,6 +27656,16 @@ Read_curspn_output:
                 'Objsql.DeleteEqToken()
                 'Objsql.DeleteCurToken()
                 '===========================
+                '======send request API for each token===========
+                If Not clsGlobal.H_PendingTokens_EQ.Contains(strEqTokens) Then
+
+                    clsGlobal.H_PendingTokens_EQ.Add(strEqTokens, 0)
+                ElseIf Not clsGlobal.H_PendingTokens_FO.Contains(strEqTokens) Then
+
+                    clsGlobal.H_PendingTokens_FO.Add(strEqTokens, 0)
+
+                End If
+
                 If strCurTokens <> "" Then
                     Objsql.AppendCurTokens(IIf(strCurTokens.Length = 0, "0", strCurTokens))
                 End If
@@ -28889,9 +29096,27 @@ Read_curspn_output:
     Private ImportStatus As Boolean = False
 
 
+    Private Function ShouldImport(pType As String, pPath As String) As Boolean
 
+        If Not File.Exists(pPath) Then
+            Return False
+        End If
 
+        Dim lastWrite As DateTime = File.GetLastWriteTime(pPath)
 
+        If RefreshAll Then
+            HT_RefreshTrde(pType) = lastWrite.ToString()
+            Return True
+        End If
+
+        If Not HT_RefreshTrde.ContainsKey(pType) _
+        OrElse HT_RefreshTrde(pType) <> lastWrite.ToString() Then
+
+            Return True
+        End If
+
+        Return False
+    End Function
 
 
     ''' <summary>
@@ -29417,6 +29642,11 @@ Read_curspn_output:
                 For Each dr As DataRow In DtImportSetting.Rows
                     Dim VarFileNameFormat As String
                     VarFileNameFormat = dr("FileName_Format").Split(".")(0)
+
+
+
+                    Dim exchange As String = dr("exchange").ToString()
+
                     Dim VarFilePath As String
                     Dim ftype As String
                     Select Case dr("Import_Type").ToString
@@ -29579,10 +29809,10 @@ Read_curspn_output:
                             Dim lastwritetime1 As String = HT_RefreshTrde(dr("text_Type"))
                             lastWriteTime = File.GetLastWriteTime(VarFilePath)
                             If RefreshAll = True Then
-                                Call ObjImpData.FromGetsFOTEXT(False, DTTMPManualFOImportDate, VarFilePath, "", ObjIOTrade)
+                                Call ObjImpData.FromGetsFOTEXTAll(False, DTTMPManualFOImportDate, VarFilePath, "", ObjIOTrade, exchange)
                             Else
                                 If lastWriteTime.ToString <> lastwritetime1.ToString Then
-                                    Call ObjImpData.FromGetsFOTEXT(False, DTTMPManualFOImportDate, VarFilePath, "", ObjIOTrade)
+                                    Call ObjImpData.FromGetsFOTEXTAll(False, DTTMPManualFOImportDate, VarFilePath, "", ObjIOTrade, exchange)
                                     HT_RefreshTrde(dr("text_Type")) = lastWriteTime.ToString()
                                 End If
                             End If
@@ -32182,7 +32412,9 @@ Add:
             objScript.Units = Val(drow("units") & "")
             objScript.Rate = Val(drow("traded") & "")
             objScript.EntryDate = CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")) ' Date.Now
+            objScript.Exchange = drow("exchange")
             objScript.Dealer = "OP"
+            Dim exchg As String = drow("exchange")
             If UCase(Mid(drow("CP"), 1, 1)) = "C" Or UCase(Mid(drow("CP"), 1, 1)) = "P" Then
                 a = Mid(drow("script"), Len(drow("script")) - 1, 1)
                 a1 = Mid(drow("script"), Len(drow("script")), 1)
@@ -32268,9 +32500,9 @@ Add:
             'insert FO trade to analysis table
 
 
-            dtAna = objAna.fill_table_process(drow("script"), CInt(drow("units")), Val(drow("traded")), prExp, toExp, CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")), drow("company") & "/" & strTagName)
+            dtAna = objAna.fill_table_process(drow("script"), CInt(drow("units")), Val(drow("traded")), prExp, toExp, CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")), drow("company") & "/" & strTagName, exchg)
             'insert FO trade to analysis table
-            objScript.insert_FOTrade_in_maintable(drow("script"), dtAna, prExp, toExp, CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")), drow("company") & "/" & strTagName)
+            objScript.insert_FOTrade_in_maintable(drow("script"), dtAna, prExp, toExp, CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")), drow("company") & "/" & strTagName, exchg)
 
             'MsgBox("Script saved Successfully.", MsgBoxStyle.Information)
 
@@ -32286,8 +32518,6 @@ Add:
         For Each drow As DataRow In cmtrd.Rows
             GVarMAXEQTradingOrderNo = GVarMAXEQTradingOrderNo + 1
             objScript.Company = drow("company") & "/" & strTagName
-
-
             objScript.Script = drow("script")
             objScript.CP = "EQ"
             objScript.Units = Val(drow("units") & "")
@@ -32295,8 +32525,9 @@ Add:
             objScript.EntryDate = CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")) 'Date.Now
             objScript.orderno = GVarMAXEQTradingOrderNo
             objScript.Dealer = "OP"
+            objScript.Exchange = drow("exchange")
             objScript.insert_equity()
-
+            Dim exchg As String = drow("exchange")
             'get uid from equity_trading
             Dim dtUid As DataTable = objScript.select_equity_uid
 
@@ -32341,9 +32572,9 @@ Add:
             'insert FO trade to analysis table
             Dim dtEntdate As Date = CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")) ' Date.Today.Date
 
-            dtAna = objAna.fill_equity_process(drow("script"), CInt(drow("units")), Val(drow("traded")), prExp, toExp, dtEntdate, drow("company") & "/" & strTagName)
+            dtAna = objAna.fill_equity_process(drow("script"), CInt(drow("units")), Val(drow("traded")), prExp, toExp, dtEntdate, drow("company") & "/" & strTagName, exchg)
             'insert FO trade to analysis table													   
-            objScript.insert_EQTrade_in_maintable(drow("script"), dtAna, prExp, toExp, dtEntdate, drow("company") & "/" & strTagName)
+            objScript.insert_EQTrade_in_maintable(drow("script"), dtAna, prExp, toExp, dtEntdate, drow("company") & "/" & strTagName, exchg)
             'MsgBox("Script saved Successfully.", MsgBoxStyle.Information)
             LastOpenPosition = drow("company") & "/" & strTagName
         Next
@@ -32375,6 +32606,9 @@ Add:
             objScript.Rate = Val(drow("traded") & "")
             objScript.EntryDate = CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")) 'Date.Now
             objScript.Dealer = "OP"
+            objScript.Exchange = drow("exchange")
+            Dim exchg As String = drow("exchange")
+
             If UCase(Mid(drow("CP"), 1, 1)) = "C" Or UCase(Mid(drow("CP"), 1, 1)) = "P" Then
                 a = Mid(drow("script"), Len(drow("script")) - 1, 1)
                 a1 = Mid(drow("script"), Len(drow("script")), 1)
@@ -32463,7 +32697,7 @@ Add:
             'insert Currency trade to analysis table
             Dim dtEntdate As Date = CDate(CDate(Date.Now).ToString("dd/MMM/yyyy")) 'Date.Today.Date
 
-            dtAna = objAna.fill_table_process(drow("script"), CInt(drow("units")), Val(drow("traded")), prExp, toExp, dtEntdate, drow("company") & "/" & strTagName)
+            dtAna = objAna.fill_table_process(drow("script"), CInt(drow("units")), Val(drow("traded")), prExp, toExp, dtEntdate, drow("company") & "/" & strTagName, exchg)
             'insert Currency trade to analysis table
             objScript.insert_CurrencyTrade_in_maintable(drow("script"), dtAna, prExp, toExp, dtEntdate, drow("company") & "/" & strTagName)
 

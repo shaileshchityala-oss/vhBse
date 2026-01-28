@@ -16,6 +16,9 @@ Public Class OpenPosition
     Dim IsUserDefTag As Boolean = False
     Dim sUdSymbol As String = ""
     Dim sUdName As String = ""
+
+    Dim mContracts As CContract
+
     Public Sub ShowForm(ByVal sUDTag As String, ByVal sUDTagName As String)
         sUdSymbol = GetSymbol(sUDTag.Trim)
         sUdName = sUDTagName.Trim
@@ -30,6 +33,7 @@ Public Class OpenPosition
     End Sub
 
     Private Sub OpenPosition_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        mIsLoading = True
         If openposition = False Then
             Panel6.Enabled = True
             CmbComp.Enabled = False
@@ -78,7 +82,10 @@ Public Class OpenPosition
 
         TabControl1.SelectedIndex = 0
         openposyes = False
-        Call TabControl1_Click(sender, e)
+
+        masterdata = cpfmaster
+        eqmasterdata = eqmaster
+
         'masterdata = New DataTable
         'masterdata = cpfmasterFgetrate
 
@@ -108,7 +115,26 @@ Public Class OpenPosition
         'cmbCurrencyComp.ValueMember = "symbol"
         'openposyes = False
         'CmbComp.Focus()
+
+        mContracts = New CContract()
+
+        FillExchagesCmb(cmbEqExchange)
+        FillExchagesCmb(cmbFoExchange)
+
+        Call TabControl1_Click(sender, e)
+        mIsLoading = False
     End Sub
+    Dim mIsLoading As Boolean
+
+
+    Public Sub FillExchagesCmb(pCmb As ComboBox)
+        pCmb.Items.Add("NSE")
+        pCmb.Items.Add("BSE")
+        pCmb.SelectedIndex = 0
+        pCmb.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+
     Private Sub CmbInstru_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CmbInstru.KeyDown
         If e.KeyCode = Keys.Enter Then
             If CmbInstru.SelectedIndex = 0 Then
@@ -119,6 +145,7 @@ Public Class OpenPosition
         End If
     End Sub
     Private Sub CmbInstru_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmbInstru.Leave
+        Dim exchange As String = cmbFoExchange.Text
         cmbcp.Enabled = True
         cmbstrike.Enabled = True
         If CmbInstru.Text.Trim <> "" And CmbInstru.Items.Count > 0 Then
@@ -230,6 +257,7 @@ Public Class OpenPosition
         End If
     End Sub
     Private Sub cmbstrike_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbstrike.Leave
+        Dim exchange As String = cmbFoExchange.Text
         If cmbstrike.Text.Trim = "" Then
             cmbstrike.Text = 0
         End If
@@ -249,14 +277,14 @@ Public Class OpenPosition
                     cmbdate.SelectedIndex = 0
                 End If
             Else
-                Dim dv As DataView = New DataView(masterdata, "symbol='" & CmbComp.Text & "' and InstrumentName='" & CmbInstru.Text & "' and option_type='" & cmbcp.Text & "'  ", "strike_price", DataViewRowState.CurrentRows)
+                Dim dv As DataView = New DataView(masterdata, "symbol='" & CmbComp.Text & "' and InstrumentName='" & CmbInstru.Text & "' and option_type='" & cmbcp.Text & "' AND exchange ='" & exchange & "'", "strike_price", DataViewRowState.CurrentRows)
                 cmbdate.DataSource = dv.ToTable(True, "expdate")
                 cmbdate.DisplayMember = "expdate"
                 cmbdate.ValueMember = "expdate"
             End If
         Else
             If (Mid(cmbcp.Text, 1, 1) = "C" Or Mid(cmbcp.Text, 1, 1) = "P") And cmbstrike.Text <> "0" Then
-                Dim dv As DataView = New DataView(masterdata, "symbol='" & CmbComp.Text & "' and InstrumentName='" & CmbInstru.Text & "' and option_type='" & cmbcp.Text & "' and strike_price=" & Val(cmbstrike.Text) & " AND expdate1 >='" & Now.Date & "' ", "strike_price", DataViewRowState.CurrentRows)
+                Dim dv As DataView = New DataView(masterdata, "symbol='" & CmbComp.Text & "' and InstrumentName='" & CmbInstru.Text & "' and option_type='" & cmbcp.Text & "' and strike_price=" & Val(cmbstrike.Text) & " AND expdate1 >='" & Now.Date & "' AND exchange ='" & exchange & "'", "strike_price", DataViewRowState.CurrentRows)
                 If dv.ToTable.Rows.Count <= 0 Then
                     MsgBox("Select valid Strike rate.")
                     cmbstrike.Text = ""
@@ -270,7 +298,7 @@ Public Class OpenPosition
                     cmbdate.SelectedIndex = 0
                 End If
             Else
-                Dim dv As DataView = New DataView(masterdata, "symbol='" & CmbComp.Text & "' and InstrumentName='" & CmbInstru.Text & "' and option_type='" & cmbcp.Text & "' AND expdate1 >='" & Now.Date & "'   ", "strike_price", DataViewRowState.CurrentRows)
+                Dim dv As DataView = New DataView(masterdata, "symbol='" & CmbComp.Text & "' and InstrumentName='" & CmbInstru.Text & "' and option_type='" & cmbcp.Text & "' AND expdate1 >='" & Now.Date & "' AND exchange ='" & exchange & "'", "strike_price", DataViewRowState.CurrentRows)
                 cmbdate.DataSource = dv.ToTable(True, "expdate")
                 cmbdate.DisplayMember = "expdate"
                 cmbdate.ValueMember = "expdate"
@@ -475,6 +503,8 @@ Public Class OpenPosition
 
     Private Sub cmdsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsave.Click
 
+        Dim exchange As String = cmbFoExchange.Text
+
         Try
             If IsUserDefTag = True Then
                 If CmbComp.Text.ToUpper <> GetSymbol(sUdName).ToUpper Then
@@ -492,7 +522,7 @@ Public Class OpenPosition
             End If
             txtscript.Text = txtscript.Text.ToUpper
             If form_validation() Then
-                Dim tkk As Long = CLng(Val(GdtFOTrades.Compute("max(token)", "script='" & txtscript.Text & "'").ToString))
+                Dim tkk As Long = CLng(Val(GdtFOTrades.Compute("max(token)", "script='" & txtscript.Text & "' AND exchange='" & exchange & "'").ToString))
                 If tkk > 0 Then
                     MsgBox(txtscript.Text & " script already exist in Traded")
                     Exit Sub
@@ -516,6 +546,8 @@ Public Class OpenPosition
                 objScript.Rate = Val(txtrate.Text)
                 objScript.Dealer = Convert.ToString("OP")
                 objScript.EntryDate = CDate(dtent.Value.Date.ToString("dd/MMM/yyyy") & " " & Date.Now.ToString("hh:mm:ss tt"))
+                objScript.Exchange = exchange
+
                 If UCase(Mid(cmbcp.SelectedValue, 1, 1)) = "C" Or UCase(Mid(cmbcp.SelectedValue, 1, 1)) = "P" Then
                     a = Mid(txtscript.Text, Len(txtscript.Text) - 1, 1)
                     a1 = Mid(txtscript.Text, Len(txtscript.Text), 1)
@@ -525,10 +557,11 @@ Public Class OpenPosition
                         script1 = Mid(txtscript.Text, 1, Len(txtscript.Text) - 2) & "C" & a1
                     End If
                     script1 = script1.ToUpper
-                    If masterdata.Compute("max(token)", "script='" & script1 & "'").ToString() = "" Then
+                    Dim strFilter As String = "script='" & script1 & "' AND exchange='" & exchange & "'"
+                    If masterdata.Compute("max(token)", strFilter).ToString() = "" Then
                         tk = 0
                     Else
-                        tk = CLng(masterdata.Compute("max(token)", "script='" & script1 & "'").ToString)
+                        tk = CLng(masterdata.Compute("max(token)", "script='" & script1 & "' AND exchange='" & exchange & "'").ToString)
                     End If
 
                     objScript.Token = tk
@@ -598,6 +631,7 @@ Public Class OpenPosition
                 tprow("tot2") = Val(txtunit.Text) * (Val(txtrate.Text) + Val(cmbstrike.Text))
                 tprow("issummary") = True
                 tprow("isdisplay") = True
+                tprow("exchange") = exchange
                 DtTempFO_trad.Rows.Add(tprow)
 
 
@@ -615,13 +649,13 @@ Public Class OpenPosition
                 'insert FO trade to analysis table
                 Dim dtEntdate As Date = IIf(IsDBNull(dtent.Value.Date), Now.Date, dtent.Value.Date)
                 If IsUserDefTag = True Then
-                    dtAna = objAna.fill_table_process(txtscript.Text.Trim, CInt(txtunit.Text), Val(txtrate.Text), prExp, toExp, dtent.Value.Date, sUdName)
+                    dtAna = objAna.fill_table_process(txtscript.Text.Trim, CInt(txtunit.Text), Val(txtrate.Text), prExp, toExp, dtent.Value.Date, sUdName, exchange)
                     'insert FO trade to analysis table
-                    objScript.insert_FOTrade_in_maintable(txtscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, sUdName)
+                    objScript.insert_FOTrade_in_maintable(txtscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, sUdName, exchange)
                 Else
-                    dtAna = objAna.fill_table_process(txtscript.Text.Trim, CInt(txtunit.Text), Val(txtrate.Text), prExp, toExp, dtent.Value.Date, CmbComp.Text)
+                    dtAna = objAna.fill_table_process(txtscript.Text.Trim, CInt(txtunit.Text), Val(txtrate.Text), prExp, toExp, dtent.Value.Date, CmbComp.Text, exchange)
                     'insert FO trade to analysis table
-                    objScript.insert_FOTrade_in_maintable(txtscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, CmbComp.Text)
+                    objScript.insert_FOTrade_in_maintable(txtscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, CmbComp.Text, exchange)
                 End If
                 MsgBox("Script saved Successfully.", MsgBoxStyle.Information)
                 If IsUserDefTag = True Then
@@ -1285,6 +1319,7 @@ Public Class OpenPosition
                     Exit Sub
                 End If
                 txteqscript.Text = cmbeqcomp.SelectedValue.ToString & Space(2) & cmbeqopt.Text
+                '& Space(1) & cmbEqExchange.Text
                 If eqmasterdata.Compute("count(symbol)", "script='" & txteqscript.Text.Trim & "'") <= 0 Then
                     MsgBox("Not valid Script.")
                     eqform_clear()
@@ -1365,6 +1400,9 @@ Public Class OpenPosition
     '50051 Code 
     '-------------------------------
     Private Sub cmdeqsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdeqsave.Click
+
+        Dim exch As String = cmbEqExchange.Text
+
         Try
 
             If IsUserDefTag = True Then
@@ -1401,6 +1439,7 @@ Public Class OpenPosition
                 objScript.EntryDate = CDate(dteqent.Value.Date.ToString("dd/MMM/yyyy") & " " & Date.Now.ToString("hh:mm:ss tt")) 'dteqent.Value.Date
                 objScript.orderno = GVarMAXEQTradingOrderNo
                 objScript.Dealer = "OP"
+                objScript.Exchange = exch
                 objScript.insert_equity()
                 'objAna.fill_equity_process(UCase(txteqscript.Text.Trim))
                 'If dteqent.Value.Date < Now.Date Then
@@ -1436,6 +1475,7 @@ Public Class OpenPosition
                 tprow("isdisplay") = True
                 tprow("tot") = Val(txtequnit.Text) * Val(txteqrate.Text)
                 tprow("tot2") = Val(txtequnit.Text) * Val(txteqrate.Text)
+                tprow("exchange") = exch
                 DtTempEQ_trad.Rows.Add(tprow)
 
                 Call insert_EQTradeToGlobalTable(DtTempEQ_trad)
@@ -1455,13 +1495,13 @@ Public Class OpenPosition
                 'insert FO trade to analysis table
                 Dim dtEntdate As Date = IIf(IsDBNull(dteqent.Value.Date), Now.Date, dteqent.Value.Date)
                 If IsUserDefTag = True Then
-                    dtAna = objAna.fill_equity_process(UCase(txteqscript.Text.Trim), CInt(txtequnit.Text), Val(txteqrate.Text), prExp, toExp, dtEntdate, sUdName)
+                    dtAna = objAna.fill_equity_process(UCase(txteqscript.Text.Trim), CInt(txtequnit.Text), Val(txteqrate.Text), prExp, toExp, dtEntdate, sUdName, exch)
                     'insert FO trade to analysis table													   
-                    objScript.insert_EQTrade_in_maintable(txteqscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, sUdName)
+                    objScript.insert_EQTrade_in_maintable(txteqscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, sUdName, exch)
                 Else
-                    dtAna = objAna.fill_equity_process(UCase(txteqscript.Text.Trim), CInt(txtequnit.Text), Val(txteqrate.Text), prExp, toExp, dtEntdate, cmbeqcomp.Text)
+                    dtAna = objAna.fill_equity_process(UCase(txteqscript.Text.Trim), CInt(txtequnit.Text), Val(txteqrate.Text), prExp, toExp, dtEntdate, cmbeqcomp.Text, exch)
                     'insert FO trade to analysis table
-                    objScript.insert_EQTrade_in_maintable(txteqscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, cmbeqcomp.Text)
+                    objScript.insert_EQTrade_in_maintable(txteqscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, cmbeqcomp.Text, exch)
                 End If
                 MsgBox("Script saved Successfully.", MsgBoxStyle.Information)
 
@@ -1937,6 +1977,9 @@ Public Class OpenPosition
     '50051 Code 
     '------------------------------
     Private Sub btnCurrencySave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCurrencySave.Click
+
+        Dim exchange As String = cmbFoExchange.Text
+
         Try
             If IsUserDefTag = True Then
                 If cmbCurrencyComp.Text.ToUpper <> GetSymbol(sUdName).ToUpper Then
@@ -2071,11 +2114,11 @@ Public Class OpenPosition
                 'insert Currency trade to analysis table
                 Dim dtEntdate As Date = IIf(IsDBNull(DTPCurrencyEntryDate.Value.Date), Now.Date, DTPCurrencyEntryDate.Value.Date)
                 If IsUserDefTag = True Then
-                    dtAna = objAna.fill_table_process(txtCurrencyscript.Text.Trim, CInt(txtCurrencyunit.Text) * Varmultiplier, Val(txtCurrencyrate.Text), prExp, toExp, dtEntdate, sUdName)
+                    dtAna = objAna.fill_table_process(txtCurrencyscript.Text.Trim, CInt(txtCurrencyunit.Text) * Varmultiplier, Val(txtCurrencyrate.Text), prExp, toExp, dtEntdate, sUdName, exchange)
                     'insert Currency trade to analysis table
                     objScript.insert_CurrencyTrade_in_maintable(txtCurrencyscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, sUdName)
                 Else
-                    dtAna = objAna.fill_table_process(txtCurrencyscript.Text.Trim, CInt(txtCurrencyunit.Text) * Varmultiplier, Val(txtCurrencyrate.Text), prExp, toExp, dtEntdate, cmbCurrencyComp.Text)
+                    dtAna = objAna.fill_table_process(txtCurrencyscript.Text.Trim, CInt(txtCurrencyunit.Text) * Varmultiplier, Val(txtCurrencyrate.Text), prExp, toExp, dtEntdate, cmbCurrencyComp.Text, exchange)
                     'insert Currency trade to analysis table
                     objScript.insert_CurrencyTrade_in_maintable(txtCurrencyscript.Text.Trim, dtAna, prExp, toExp, dtEntdate, cmbCurrencyComp.Text)
                 End If
@@ -2223,13 +2266,18 @@ Public Class OpenPosition
     End Sub
 
     Private Sub TabControl1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.Click
+        Dim exchFo As String = cmbFoExchange.Text
+        Dim exchEq As String = cmbEqExchange.Text
 
         If IsUserDefTag = True Then
             If TabControl1.SelectedIndex = 0 Then
                 If masterdata.Rows.Count = 0 Then
                     masterdata = New DataTable
                     masterdata = cpfmaster.Copy
-                    Dim dv As DataView = New DataView(masterdata, "symbol = '" & sUdSymbol & "'", "symbol", DataViewRowState.CurrentRows)
+                    Dim filter As String = "exchange='" & exchFo & "'"
+                    'Dim dv As DataView = New DataView(masterdata, "", "symbol", DataViewRowState.CurrentRows)
+                    Dim dv As DataView = New DataView(masterdata, filter, "symbol", DataViewRowState.CurrentRows)
+                    '                    Dim dv As DataView = New DataView(masterdata, "symbol = '" & sUdSymbol & "'", "symbol", DataViewRowState.CurrentRows)
                     CmbComp.DataSource = dv.ToTable(True, "symbol")
                     CmbComp.DisplayMember = "symbol"
                     CmbComp.ValueMember = "symbol"
@@ -2247,9 +2295,10 @@ Public Class OpenPosition
                     Application.DoEvents()
                     cmbeqcomp.DisplayMember = "symbol"
                     cmbeqcomp.ValueMember = "symbol"
+                    'Dim dv1 As DataView = New DataView(eqmasterdata, "symbol = '" & sUdSymbol & "'", "symbol", DataViewRowState.CurrentRows)
                     Dim dv1 As DataView = New DataView(eqmasterdata, "symbol = '" & sUdSymbol & "'", "symbol", DataViewRowState.CurrentRows)
                     cmbeqcomp.DataSource = dv1.ToTable(True, "symbol")
-                    Application.DoEvents()
+                    'Application.DoEvents()
                     'cmbeqcomp.DisplayMember = "symbol"
                     'cmbeqcomp.ValueMember = "symbol"
                     'If eqmasterdata.Rows.Count > 0 Then
@@ -2280,47 +2329,55 @@ Public Class OpenPosition
             End If
         Else
             If TabControl1.SelectedIndex = 0 Then
-                If masterdata.Rows.Count = 0 Then
-                    masterdata = New DataTable
-                    masterdata = cpfmaster
-                    Dim dv As DataView = New DataView(masterdata, "", "symbol", DataViewRowState.CurrentRows)
-                    CmbComp.DataSource = dv.ToTable(True, "symbol")
-                    CmbComp.DisplayMember = "symbol"
-                    CmbComp.ValueMember = "symbol"
-                    If dv.ToTable(True, "symbol").Compute("count(symbol)", "symbol='NIFTY'") > 0 Then
-                        CmbComp.SelectedValue = "NIFTY"
-                        CmbComp.Select()
-                    End If
+                'If masterdata.Rows.Count = 0 Then
+                'masterdata = New DataTable
+                'masterdata = cpfmaster
+                'Dim filter As String = "exchange='" & exchFo & "'"
+                ''Dim dv As DataView = New DataView(masterdata, "", "symbol", DataViewRowState.CurrentRows)
+                'Dim dv As DataView = New DataView(masterdata, filter, "symbol", DataViewRowState.CurrentRows)
+                'CmbComp.DataSource = dv.ToTable(True, "symbol")
+                CmbComp.DataSource = mContracts.GetFoSymbolList(cmbFoExchange.Text)
+                CmbComp.DisplayMember = "symbol"
+                CmbComp.ValueMember = "symbol"
+
+                If cmbFoExchange.Text = "NSE" Then
+                    CmbComp.SelectedValue = "NIFTY"
+                    CmbComp.Select()
                 End If
 
             ElseIf TabControl1.SelectedIndex = 1 Then
                 Me.Cursor = Cursors.WaitCursor
-                If eqmasterdata.Rows.Count = 0 Then
-                    eqmasterdata = New DataTable
-                    eqmasterdata = eqmaster
-                    Application.DoEvents()
-                    cmbeqcomp.DisplayMember = "symbol"
-                    cmbeqcomp.ValueMember = "symbol"
+                'If eqmasterdata.Rows.Count = 0 Then
+                'eqmasterdata = New DataTable
+                'eqmasterdata = eqmaster
+                'Application.DoEvents()
+                'cmbeqcomp.DisplayMember = "symbol"
+                'cmbeqcomp.ValueMember = "symbol"
 
+                'Dim filterStr As String = "exchange='" & exchEq & "'"
 
-                    Dim dv1 As DataView = New DataView(eqmasterdata, "", "symbol", DataViewRowState.CurrentRows)
+                ''Dim dv1 As DataView = New DataView(eqmasterdata, "", "symbol", DataViewRowState.CurrentRows)
+                'Dim dv1 As DataView = New DataView(eqmasterdata, filterStr, "symbol", DataViewRowState.CurrentRows)
 
-                    cmbeqcomp.DataSource = dv1.ToTable(True, "symbol")
+                'cmbeqcomp.DataSource = dv1.ToTable(True, "symbol")
+                cmbeqcomp.DisplayMember = "symbol"
+                cmbeqcomp.ValueMember = "symbol"
+                cmbeqcomp.DataSource = mContracts.GetEqSymbolList(cmbEqExchange.Text)
 
-                    Application.DoEvents()
-                    'cmbeqcomp.DisplayMember = "symbol"
-                    'cmbeqcomp.ValueMember = "symbol"
-                    'If eqmasterdata.Rows.Count > 0 Then
-                    '    'cmbeqcomp.SelectedValue = dv1.ToTable(True, "Symbol").Rows(1).Item(0).ToString()
-                    '    'cmbeqcomp.Select()
-                    '    cmbeqcomp.SelectedIndex = 1 'dv1.ToTable(True, "Symbol").Rows(1).Item(0).ToString()
-                    cmbeqcomp.SelectAll()
-                    cmbeqcomp.Text = ""
-                    'End If
-                    '   cmbeqcomp.SelectedValue = 
+                ' Application.DoEvents()
+                'cmbeqcomp.DisplayMember = "symbol"
+                'cmbeqcomp.ValueMember = "symbol"
+                'If eqmasterdata.Rows.Count > 0 Then
+                '    'cmbeqcomp.SelectedValue = dv1.ToTable(True, "Symbol").Rows(1).Item(0).ToString()
+                '    'cmbeqcomp.Select()
+                '    cmbeqcomp.SelectedIndex = 1 'dv1.ToTable(True, "Symbol").Rows(1).Item(0).ToString()
+                'cmbeqcomp.SelectAll()
 
-                End If
-                cmbeqcomp.Select()
+                'End If
+                '   cmbeqcomp.SelectedValue = 
+
+                'End If
+                'cmbeqcomp.Select()
                 Me.Cursor = Cursors.Default
             ElseIf TabControl1.SelectedIndex = 2 Then
                 If DTCurrencyContract.Rows.Count = 0 Then
@@ -2686,4 +2743,17 @@ Public Class OpenPosition
     Private Sub cmbstrike_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbstrike.SelectedValueChanged
         'txtscript.Text = ""
     End Sub
+
+    Private Sub cmbFoExchange_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFoExchange.SelectedIndexChanged
+        If mIsLoading = False Then
+            TabControl1_Click(sender, e)
+        End If
+    End Sub
+
+    Private Sub cmbEqExchange_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEqExchange.SelectedIndexChanged
+        If mIsLoading = False Then
+            TabControl1_Click(sender, e)
+        End If
+    End Sub
+
 End Class

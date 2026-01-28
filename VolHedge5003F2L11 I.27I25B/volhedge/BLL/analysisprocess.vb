@@ -111,13 +111,10 @@ Public Class analysisprocess
             .Add("VannaN", GetType(Double))
             .Add("flast", GetType(Double))
             .Add("Synfut", GetType(Double))
-            .Add("Payinout", GetType(Double))
-            .Add("Distance", GetType(Double))
-            .Add("WAVV", GetType(Double))
-            .Add("BuyPr", GetType(Double))
-            .Add("SalePr", GetType(Double))
-            .Add("TradingVol", GetType(Double))
+            .Add("exchange")
+
         End With
+        dtable.AcceptChanges()
         pmaintable = dtable.Clone
         eqtable = New DataTable
         With eqtable
@@ -137,8 +134,10 @@ Public Class analysisprocess
             .Columns.Add("prExp", GetType(Double))
             .Columns.Add("toExp", GetType(Double))
             .Columns.Add("totExp", GetType(Double))
+            .Columns.Add("exchange")
 
         End With
+        eqtable.AcceptChanges()
     End Sub
 
     Private Sub update_maintable(ByVal dtTemp As DataTable, ByVal type As String)
@@ -384,6 +383,7 @@ Public Class analysisprocess
                         Else
                             dr("Cp") = "F"
                         End If
+                        dr("exchange") = drow("exchange").ToString()
                         dr("company") = CStr(drow("company"))
                         dr("script") = CStr(drow("script"))
                         dr("mdate") = CDate(drow("mdate"))
@@ -588,7 +588,7 @@ Public Class analysisprocess
             'scripttable = cpfmaster
             Dim cpfmasterxx As DataTable = New DataView(cpfmaster, "option_type='XX'", "expdate1", DataViewRowState.CurrentRows).ToTable(True, "expdate1", "token", "symbol", "option_type")
             Dim dtdata As DataTable = table.DefaultView.ToTable(True, "script", "company", "cp", "token1", "strikerate", "mdate")
-            For Each drow As DataRow In table.DefaultView.ToTable(True, "script", "company", "cp", "token1", "strikerate", "mdate").Rows
+            For Each drow As DataRow In table.DefaultView.ToTable(True, "script", "company", "cp", "token1", "strikerate", "mdate", "exchange").Rows
                 ' Dim DRdtdata() As DataRow = dtdata.Select("")
                 ' For Each drow As DataRow In dtdata.Rows
                 '  For Each drow As DataRow In DRdtdata
@@ -598,8 +598,12 @@ Public Class analysisprocess
                 Dim dblltsize As Double = 0
                 Dim token As Double = 0
                 Dim asset_tokan As Double = 0
-                If Not HT_FOContrct(drow("script").ToString().ToUpper()) Is Nothing Then
-                    objStrfo = HT_FOContrct(drow("script").ToString().ToUpper())
+
+                Dim strScriptExch As String = drow("script").ToString().ToUpper() + Space(2) + drow("exchange")
+                '  clsGlobal.mPerf.PrintHashtable(HT_FOContrct)
+
+                If Not HT_FOContrct(strScriptExch) Is Nothing Then
+                    objStrfo = HT_FOContrct(strScriptExch)
                     dblltsize = objStrfo.lotsize
                     token = objStrfo.Token
                     asset_tokan = objStrfo.asset_tokan
@@ -617,8 +621,11 @@ Public Class analysisprocess
                 'Else
                 '    token = 0
                 'End If
-                Dim dtcomp As DataTable = New DataView(table, "script='" & drow("script") & "'", "", DataViewRowState.CurrentRows).ToTable()
-                For Each mrow As DataRow In maintable.Select("script = '" & drow("script").ToString.Trim & "' And company='" & drow("company").ToString.Trim & "'")
+                ' Dim dtcomp As DataTable = New DataView(table, "script='" & drow("script") & "'", "", DataViewRowState.CurrentRows).ToTable()
+                Dim filter1 As String = "script='" & drow("script") & "' AND exchange='" + drow("exchange") + "'"
+                Dim dtcomp As DataTable = New DataView(table, filter1, "", DataViewRowState.CurrentRows).ToTable()
+                Dim filter2 As String = "script = '" & drow("script").ToString.Trim & "' And company='" & drow("company").ToString.Trim & "' AND exchange='" + drow("exchange") + "'"
+                For Each mrow As DataRow In maintable.Select(filter2)
                     newPos = False
                     'Dim brate As Double = 0
                     'Dim srate As Double = 0
@@ -665,7 +672,7 @@ Public Class analysisprocess
 
                     drow("script") = drow("script").ToString.Trim
                     drow("company") = drow("company").ToString.Trim
-
+                    dr("exchange") = drow("exchange")
                     dr("company") = drow("company")
                     dr("script") = drow("script")
                     dr("entrydate") = Format(Today, "dd-MMM-yyyy") 'CDate(Format(CDate(Today), "MM/dd/yyyy"))
@@ -1337,20 +1344,21 @@ Public Class analysisprocess
             Dim dr As DataRow
             Dim ar As New ArrayList
             For Each drow As DataRow In temtable.Rows
-                count = CInt(temtable.Compute("count(script)", "script='" & drow("script") & "' And company='" & drow("company") & "'"))
+                count = CInt(temtable.Compute("count(script)", "script='" & drow("script") & "' And company='" & drow("company") & "' AND exchange='" & drow("exchange") & "'"))
                 If count > 1 Then
-                    If Not ar.Contains(drow("script").ToString & drow("company").ToString) Then
+                    If Not ar.Contains(drow("script").ToString & drow("company").ToString() & drow("exchange")) Then
                         Dim brate As Double = 0
                         Dim srate As Double = 0
-                        ar.Add(drow("script").ToString & drow("company").ToString)
+                        ar.Add(drow("script").ToString & drow("company").ToString() & drow("exchange"))
                         dr = eqtable.NewRow()
+                        dr("exchange") = drow("exchange").ToString()
                         dr("script") = drow("script")
                         dr("company") = drow("company")
                         dr("eq") = CStr(drow("eq"))
-                        dr("prqty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' and entry_date < #" & Format(Today, "dd-MMM-yyyy") & "# And company='" & drow("company") & "'").ToString)
-                        dr("toqty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' and entry_date >= #" & Format(Today, "dd-MMM-yyyy") & "# And company='" & drow("company") & "'").ToString)
-                        dr("qty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' And company='" & drow("company") & "'"))
-                        For Each row As DataRow In temtable.Select("script='" & drow("script") & "' And company='" & drow("company") & "'")
+                        dr("prqty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' and entry_date < #" & Format(Today, "dd-MMM-yyyy") & "# And company='" & drow("company") & "' AND exchange='" & drow("exchange") & "'").ToString())
+                        dr("toqty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' and entry_date >= #" & Format(Today, "dd-MMM-yyyy") & "# And company='" & drow("company") & "' AND exchange='" & drow("exchange") & "'").ToString())
+                        dr("qty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' And company='" & drow("company") & "' AND  exchange='" & drow("exchange") & "'"))
+                        For Each row As DataRow In temtable.Select("script='" & drow("script") & "' And company='" & drow("company") & "' AND  exchange='" & drow("exchange") & "'")
                             If Val(row("qty")) < 0 Then
                                 srate = srate + (-Val(row("tot")))
                             Else
@@ -1379,8 +1387,8 @@ Public Class analysisprocess
                     dr("script") = drow("script")
                     dr("company") = drow("company")
                     dr("eq") = CStr(drow("eq"))
-                    dr("prqty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' and entry_date < #" & Format(Today, "dd-MMM-yyyy") & "# And company='" & drow("company") & "'").ToString)
-                    dr("toqty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' and entry_date >= #" & Format(Today, "dd-MMM-yyyy") & "# And company='" & drow("company") & "'").ToString)
+                    dr("prqty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' and entry_date < #" & Format(Today, "dd-MMM-yyyy") & "# And company='" & drow("company") & "' AND  exchange='" & drow("exchange") & "'").ToString())
+                    dr("toqty") = Val(temtable.Compute("sum(qty)", "script='" & drow("script") & "' and entry_date >= #" & Format(Today, "dd-MMM-yyyy") & "# And company='" & drow("company") & "' AND  exchange='" & drow("exchange") & "'").ToString())
 
                     dr("qty") = Val(drow("qty"))
                     dr("rate") = Val(drow("rate"))
@@ -1389,7 +1397,7 @@ Public Class analysisprocess
                     dr("entryno") = Val(drow("entryno"))
                     dr("toatp") = 0
                     dr("pratp") = 0
-                    For Each row As DataRow In eqsecurity.Select("script='" & drow("script") & "'")
+                    For Each row As DataRow In eqsecurity.Select("script='" & drow("script") & "' AND exchange='" & drow("script") & "'")
                         dr("tokanno") = CStr(row("token"))
                         eqtable.Rows.Add(dr)
                     Next
@@ -1836,6 +1844,7 @@ Public Class analysisprocess
             dr = pmaintable.NewRow()
             dr("strikes") = 0
             dr("cp") = "E"
+            dr("exchange") = drow("exchange")
             dr("prqty") = drow("prqty")
             dr("toqty") = drow("toqty")
             dr("units") = Val(drow("qty"))
@@ -1890,6 +1899,7 @@ Public Class analysisprocess
 
         For Each row As DataRow In pmaintable.Rows
             dr = maintable.NewRow
+            dr("exchange") = row("exchange")
             dr("strikes") = row("strikes")
             dr("cp") = row("cp")
             dr("prqty") = row("prqty")
@@ -1911,9 +1921,11 @@ Public Class analysisprocess
             dr("isliq") = row("isliq")
             dr("tokanno") = row("tokanno")
             Dim asset_tokan As Double = 0
+            Dim exch As String = row("exchange").ToString()
+            Dim selScript = dr("script").ToString().ToUpper() & "  " & exch
 
-            If Not HT_FOContrct(dr("script").ToString().ToUpper()) Is Nothing Then
-                objStrfo = HT_FOContrct(dr("script").ToString().ToUpper())
+            If Not HT_FOContrct(selScript) Is Nothing Then
+                objStrfo = HT_FOContrct(selScript)
                 'dblltsize = objStrfo.lotsize
                 'token = objStrfo.Token
                 asset_tokan = objStrfo.asset_tokan
@@ -2910,8 +2922,8 @@ Public Class analysisprocess
 
         Write_TradeLog_viral("get_ltp", tik, System.Environment.TickCount)
     End Sub
-    
-    Public Function fill_table_process(ByVal script As String, ByVal qty As Integer, ByVal rate As Double, ByRef prExp As Double, ByRef toExp As Double, ByVal entrydt As Date, ByVal sCompName As String) As DataTable
+
+    Public Function fill_table_process(ByVal script As String, ByVal qty As Integer, ByVal rate As Double, ByRef prExp As Double, ByRef toExp As Double, ByVal entrydt As Date, ByVal sCompName As String, pExchange As String) As DataTable
         init_table()
         Dim tmdtable As New DataTable
         Dim remarks As String = ""
@@ -2927,13 +2939,19 @@ Public Class analysisprocess
         Dim CurrTable As New DataTable
         CurrTable = GdtCurrencyTrades REM Currency Trades
         tmdtable.Rows.Clear()
+        Dim DrTrades() As DataRow
+        Dim strFilter1 As String = "script='" & script & "' And company='" & sCompName & "' AND exchange='" & pExchange & "'"
+        ' Dim dt As DataTable = CUtils.GetFilteredTable(table, "script='" & script & "' And company='" & sCompName & "' AND exchange='" & pExchange & "'")
 
-        Dim DrTrades() As DataRow = table.Select("script='" & script & "' And company='" & sCompName & "'")
+        DrTrades = table.Select(strFilter1)
+        'DrTrades = table.Select("script='" & script & "' And company='" & sCompName & "'")
+        'Dim DrTrades() As DataRow = tradList.Rows
         If DrTrades.Length > 0 Then
             For Each drow As DataRow In DrTrades
                 'if position already in maintable, take token1 , ftoken from maintable
                 Dim mrow1(), mrow As DataRow
-                mrow1 = maintable.Select("script = '" & script & "' And company='" & sCompName & "'", "")
+                'mrow1 = maintable.Select("script = '" & script & "' And company='" & sCompName & "'")
+                mrow1 = maintable.Select("script = '" & script & "' And company='" & sCompName & "' AND exchange='" & pExchange & "'", "")
                 If Not mrow1 Is Nothing Then
                     If mrow1.Length <> 0 Then
                         mrow = mrow1(0)
@@ -2962,11 +2980,11 @@ Public Class analysisprocess
 
                         If Val(dr("units")) = 0 Then
                             Dim brate, srate As Double
-                            srate = -Val(table.Compute("sum(tot)", "script='" & drow("script") & "' and tot < 0  And company='" & drow("company") & "'").ToString)
-                            brate = Val(table.Compute("sum(tot)", "script='" & drow("script") & "' and tot > 0  And company='" & drow("company") & "'").ToString)
+                            srate = -Val(table.Compute("sum(tot)", "script='" & drow("script") & "' and tot < 0  And company='" & drow("company") & "' AND exchange='" & pExchange & "'").ToString)
+                            brate = Val(table.Compute("sum(tot)", "script='" & drow("script") & "' and tot > 0  And company='" & drow("company") & "' AND exchange='" & pExchange & "'").ToString)
                             netprice = Math.Round(brate - srate, 2)
                         Else
-                            Dim VarTotAmount As Double = Val(table.Compute("sum(tot)", "script='" & drow("script") & "' And company='" & drow("company") & "'").ToString)
+                            Dim VarTotAmount As Double = Val(table.Compute("sum(tot)", "script='" & drow("script") & "' And company='" & drow("company") & "' AND exchange='" & pExchange & "'").ToString)
                             'netprice = netprice / Val(dr("units"))
                             'netprice += (qty * rate) / Val(dr("units"))
                             netprice = VarTotAmount / dr("units")
@@ -3042,7 +3060,8 @@ Public Class analysisprocess
                         dr("preGrossMTM") = 0
                         dr("curTotalMTM") = 0
                         dr("curGrossMTM") = 0
-
+                        'AND exchange='" & pExchange & "'
+                        dr("exchange") = pExchange
                         tmdtable.Rows.Add(dr)
                         'End If
                     Else
@@ -3145,15 +3164,15 @@ Public Class analysisprocess
                             dr("curVegVal") = 0
                             dr("curTheVal") = 0
 
-                            dr("preTotalMTM") = 0
-                            dr("preGrossMTM") = 0
-                            dr("curTotalMTM") = 0
-                            dr("curGrossMTM") = 0
-
-                            If CLng(dr("tokanno")) <> 0 Then
-                                tmdtable.Rows.Add(dr)
-                            End If
+                        dr("preTotalMTM") = 0
+                        dr("preGrossMTM") = 0
+                        dr("curTotalMTM") = 0
+                        dr("curGrossMTM") = 0
+                        dr("exchange") = drow("exchange")
+                        If CLng(dr("tokanno")) <> 0 Then
+                            tmdtable.Rows.Add(dr)
                         End If
+                    End If
                 End If
                 Exit For
             Next
@@ -3237,7 +3256,7 @@ Public Class analysisprocess
                         dr("toExp") = toExp
                         dr("status") = 1
                         If IsDBNull(mrow("IsVolFix")) Then mrow("IsVolFix") = False
-						dr("IsVolFix") = CBool(mrow("IsVolFix"))
+                        dr("IsVolFix") = CBool(mrow("IsVolFix"))
                         If CBool(dr("IsVolFix")) Then
                             dr("last") = mrow("last")
                             dr("lv") = mrow("lv")
@@ -3268,7 +3287,7 @@ Public Class analysisprocess
                         dr("preGrossMTM") = 0
                         dr("curTotalMTM") = 0
                         dr("curGrossMTM") = 0
-
+                        dr("exchange") = pExchange
                         'If CLng(dr("tokanno")) <> 0 Then
                         tmdtable.Rows.Add(dr)
                         'End If
@@ -3359,7 +3378,7 @@ Public Class analysisprocess
                         dr("preGrossMTM") = 0
                         dr("curTotalMTM") = 0
                         dr("curGrossMTM") = 0
-
+                        dr("exchange") = pExchange
                         If CLng(dr("tokanno")) <> 0 Then
                             tmdtable.Rows.Add(dr)
                         End If
@@ -3383,7 +3402,7 @@ Public Class analysisprocess
 
     End Function
 
-    Public Function fill_equity_process(ByVal script As String, ByVal qty As Integer, ByVal rate As Double, ByRef prExp As Double, ByRef toExp As Double, ByVal entrydt As Date, ByVal sCompName As String) As DataTable
+    Public Function fill_equity_process(ByVal script As String, ByVal qty As Integer, ByVal rate As Double, ByRef prExp As Double, ByRef toExp As Double, ByVal entrydt As Date, ByVal sCompName As String, pExchange As String) As DataTable
         init_table()
         Dim tmdtable As New DataTable
         tmdtable = eqtable.Clone
@@ -3395,10 +3414,11 @@ Public Class analysisprocess
         'Dim count As Integer
         Dim dr As DataRow
         'Dim ar As New ArrayList
-
-        For Each drow As DataRow In temtable.Select("script='" & script & "' And company='" & sCompName & "'")
+        Dim rowsList As DataRow() = temtable.Select("script='" & script & "' And company='" & sCompName & "' AND exchange='" & pExchange & "'")
+        'For Each drow As DataRow In temtable.Select("script='" & script & "' And company='" & sCompName & "'")
+        For Each drow As DataRow In rowsList
             Dim mrow1(), mrow As DataRow
-            mrow1 = maintable.Select("script = '" & script & "' And company='" & sCompName & "'", "")
+            mrow1 = maintable.Select("script = '" & script & "' And company='" & sCompName & "' AND exchange='" & pExchange & "'", "")
             If Not mrow1 Is Nothing Then
                 If mrow1.Length <> 0 Then
                     mrow = mrow1(0)
@@ -3448,11 +3468,11 @@ Public Class analysisprocess
                     'End If
 
                     If Val(dr("qty")) = 0 Then
-                        srate = -Val(temtable.Compute("sum(tot)", "script='" & drow("script") & "' and tot < 0  And company='" & drow("company") & "'").ToString)
-                        brate = Val(temtable.Compute("sum(tot)", "script='" & drow("script") & "' and tot > 0  And company='" & drow("company") & "'").ToString)
+                        srate = -Val(temtable.Compute("sum(tot)", "script='" & drow("script") & "' and tot < 0  And company='" & drow("company") & "' AND exchange='" & pExchange & "'").ToString)
+                        brate = Val(temtable.Compute("sum(tot)", "script='" & drow("script") & "' and tot > 0  And company='" & drow("company") & "'  AND exchange='" & pExchange & "'").ToString)
                         netprice = Math.Round(brate - srate, 2)
                     Else
-                        Dim VarTotAmount As Double = Val(temtable.Compute("sum(tot)", "script='" & drow("script") & "' And company='" & drow("company") & "'").ToString)
+                        Dim VarTotAmount As Double = Val(temtable.Compute("sum(tot)", "script='" & drow("script") & "' And company='" & drow("company") & "'  AND exchange='" & pExchange & "'").ToString)
                         'netprice = netprice / Val(dr("units"))
                         'netprice += (qty * rate) / Val(dr("units"))
                         netprice = VarTotAmount / dr("qty")
@@ -3466,9 +3486,9 @@ Public Class analysisprocess
                     '    dr("rate") = Math.Round((brate - srate) / Val(dr("qty")), 2)
                     'End If
 
-
+                    ' dr("exchange") = pExchange
                     dr("entrydate") = CDate(drow("entrydate")).Date
-                    For Each row As DataRow In eqsecurity.Select("script='" & drow("script") & "'")
+                    For Each row As DataRow In eqsecurity.Select("script='" & drow("script") & "' AND exchange='" & pExchange & "'")
                         dr("tokanno") = CStr(row("token"))
                         '=====================================keval
                         'dr("asset_tokan") = 0 'CStr(row("asset_tokan"))
@@ -3496,7 +3516,11 @@ Public Class analysisprocess
                     'dr("uid") = CInt(drow("uid"))
                     dr("entrydate") = CDate(drow("entrydate")).Date
                     dr("entryno") = Val(drow("entryno"))
-                    For Each row As DataRow In eqsecurity.Select("script='" & drow("script") & "'")
+                    dr("exchange") = pExchange
+
+                    Dim rows As DataRow() = eqsecurity.Select("script='" & drow("script") & "' AND exchange='" & pExchange & "'")
+                    For Each row As DataRow In rows
+                        'For Each row As DataRow In eqsecurity.Select("script='" & drow("script") & "'")
                         dr("tokanno") = CStr(row("token"))
                         tmdtable.Rows.Add(dr)
                     Next
@@ -3585,7 +3609,7 @@ Public Class analysisprocess
             dr("preGrossMTM") = 0
             dr("curTotalMTM") = 0
             dr("curGrossMTM") = 0
-
+            dr("exchange") = pExchange
             pmaintable.Rows.Add(dr)
         Next
         dtanalysisData = sel_analysis()
@@ -3734,10 +3758,13 @@ Public Class analysisprocess
             data_access.AddParam("@preQty", OleDbType.Double, 18, Val(drow("preQty").ToString & ""))
             data_access.AddParam("@fltp", OleDbType.Double, 18, Val(drow("flast") & ""))
             data_access.AddParam("@MktVol", OleDbType.Double, 18, Val(drow("MktVol").ToString & ""))
-
+            Dim exch As String = drow("exchange").ToString()
+            '  Write_TradeAnlyExch(exch, 0)
+            data_access.AddParam("@exchange", OleDbType.VarChar, 25, drow("exchange"))
+            'TODO FIX ERORR EXCEPTION  ({"Parameter [@exchange] has no default value."})
         Next
         data_access.Cmd_Text = SP_insert_analysis
-        data_access.ExecuteMultiple(43)
+        data_access.ExecuteMultiple(44)
     End Sub
     Public Sub delete_analysis()
         data_access.ParamClear()

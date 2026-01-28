@@ -38,47 +38,116 @@ Namespace ImportData
         '                                   " IIf((Trim(Left([contract].[Field9],1))='C' Or Trim(Left([contract].[Field9],1))='P'),[Contract].[Field3] & '  ' & [Contract].[Field4] & '  ' & Format(DateAdd('s',Val([Contract].[Field7]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contract].[Field8]/100),'0.00') & '  ' &  iif((Trim(Left([contract].[Field9],1))='C'),'PE','CE') ,'') AS OScript" & _
         '                                   " FROM Contract " & _
         '                                   " WHERE (((Trim([Contract].[Field3]))<>''));"
+        'Private Insert_Contractcsv As String = "INSERT INTO [" & DbPath & "].Contract ( Token, Asset_Tokan, InstrumentName, Symbol, series, expiry_date, strike_price, option_type, script, lotsize,OScript,expdate1) " &
+        '    "SELECT Contractcsv.Field1 , Contractcsv.Field2 , Contractcsv.Field3 , Contractcsv.Field4, Contractcsv.Field16 , Contractcsv.Field5, Val([Contractcsv].[Field6])/100, Contractcsv.Field7, IIf((Trim(Left([Contractcsv].[Field7],1))='C' Or Trim(Left([Contractcsv].[Field7],1))='P'),[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field5]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contractcsv].[Field6])/100,'0.00') & '  ' & [Contractcsv].[Field7],[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field5]),CDate('1/1/1980')),'ddmmmyyyy')) AS Script " &
+        '    ", Contractcsv.Field9 ,  IIf((Trim(Left([Contractcsv].[Field7],1))='C' Or Trim(Left([Contractcsv].[Field7],1))='P'),[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field5]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contractcsv].[Field6]/100),'0.00') & '  ' &  iif((Trim(Left([Contractcsv].[Field7],1))='C'),'PE','CE') ,'') AS OScript,CDate(Format(DateAdd('s',[Contractcsv].[Field5],'1/1/1980'),'mmm/dd/yyyy')) as expdate1  " &
+        '    "FROM Contractcsv   " &
+        '    "WHERE (((Trim([Contractcsv].[Field3]))<>'FinInstrmNm'));"
+        Private Insert_Contractcsv As String =
+"INSERT INTO [" & DbPath & "].Contract (
+    Token, Asset_Tokan, InstrumentName, Symbol, series, expiry_date,
+    strike_price, option_type, script, lotsize, OScript, expdate1,exchange
+)
+SELECT 
+    Field1,
+    Field2,
+    Field3,
+    Field4,
+    Field16,
 
-        Private Insert_Contractcsv As String = "INSERT INTO [" & DbPath & "].Contract ( Token, Asset_Tokan, InstrumentName, Symbol, series, expiry_date, strike_price, option_type, script, lotsize,OScript,expdate1) " & _
-            "SELECT Contractcsv.Field1 , Contractcsv.Field2 , Contractcsv.Field3 , Contractcsv.Field4, Contractcsv.Field16 , Contractcsv.Field5, Val([Contractcsv].[Field6])/100, Contractcsv.Field7, IIf((Trim(Left([Contractcsv].[Field7],1))='C' Or Trim(Left([Contractcsv].[Field7],1))='P'),[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field5]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contractcsv].[Field6])/100,'0.00') & '  ' & [Contractcsv].[Field7],[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field5]),CDate('1/1/1980')),'ddmmmyyyy')) AS Script " & _
-            ", Contractcsv.Field9 ,  IIf((Trim(Left([Contractcsv].[Field7],1))='C' Or Trim(Left([Contractcsv].[Field7],1))='P'),[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field5]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contractcsv].[Field6]/100),'0.00') & '  ' &  iif((Trim(Left([Contractcsv].[Field7],1))='C'),'PE','CE') ,'') AS OScript,CDate(Format(DateAdd('s',[Contractcsv].[Field5],'1/1/1980'),'mmm/dd/yyyy')) as expdate1  " & _
-            "FROM Contractcsv   " & _
-            "WHERE (((Trim([Contractcsv].[Field3]))<>'FinInstrmNm'));"
+    Val(Field5)  AS expiry_date,        -- NUMBER 100% OK
 
-        '" SELECT Contractcsv.Field1 , Contractcsv.Field2 , Contractcsv.Field3 , Contractcsv.Field4, Contractcsv.Field5, Contractcsv.Field7, Val([Contractcsv].[Field5])/100, Contractcsv.Field9, IIf((Trim(Left([Contractcsv].[Field9],1))='C' Or Trim(Left([Contractcsv].[Field9],1))='P'),[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field7]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contractcsv].[Field5])/100,'0.00') & '  ' & [Contractcsv].[Field9],[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field7]),CDate('1/1/1980')),'ddmmmyyyy')) AS Script, Contractcsv.Field32 , " & _
-        '                                        " IIf((Trim(Left([Contractcsv].[Field9],1))='C' Or Trim(Left([Contractcsv].[Field9],1))='P'),[Contractcsv].[Field3] & '  ' & [Contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Contractcsv].[Field7]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contractcsv].[Field5]/100),'0.00') & '  ' &  iif((Trim(Left([Contractcsv].[Field9],1))='C'),'PE','CE') ,'') AS OScript,CDate(Format(DateAdd('s',[Contractcsv].[Field5],'1/1/1980'),'mmm/dd/yyyy')) as expdate1" & _
-        '                                        " FROM Contractcsv " & _
-        '                                        " WHERE (((Trim([Contractcsv].[Field3]))<>'FinInstrmNm'));"
+    Val(Field6)/100 AS strike_price,
+    Field7 AS option_type,
+
+    IIf(
+        Left(Trim(Field7),1)='C' OR Left(Trim(Field7),1)='P',
+        Field3 & '  ' & Field4 & '  ' &
+        Format(DateAdd('s', Val(Field5), #1/1/1980#),'ddmmmyyyy') & '  ' &
+        Format(Val(Field6)/100, '0') & '  ' & Field7,
+        Field3 & '  ' & Field4 & '  ' &
+        Format(DateAdd('s', Val(Field5), #1/1/1980#),'ddmmmyyyy')
+    ) AS Script,
+
+    Val(Field9) AS lotsize,
+
+    IIf(
+        Left(Trim(Field7),1)='C' OR Left(Trim(Field7),1)='P',
+        Field3 & '  ' & Field4 & '  ' &
+        Format(DateAdd('s', Val(Field5), #1/1/1980#),'ddmmmyyyy') & '  ' &
+        Format(Val(Field6)/100,'0') & '  ' &
+        IIf(Left(Field7,1)='C','PE','CE'),
+        ''
+    ) AS OScript,
+
+    DateAdd('s', Val(Field5), #1/1/1980#) AS expdate1,
+
+    'NSE'
+FROM Contractcsv
+WHERE Trim(Field3) <> 'FinInstrmNm';"
 
 
 
+        'Private Insert_Currency_Contractcsv As String = "INSERT INTO [" & DbPath & "].Currency_Contract (Token, Asset_Tokan, InstrumentName, Symbol, series, expiry_date, strike_price, option_type, script, lotsize, multiplier,expdate1 ) " &
+        '                                           " SELECT Cd_contractcsv.Field1, Cd_contractcsv.Field2, Cd_contractcsv.Field3, Cd_contractcsv.Field4, Cd_contractcsv.Field14, Cd_contractcsv.Field5, format(Val([Cd_contractcsv].[Field6])/10000000,'#0.0000'), Cd_contractcsv.Field7, IIf((Trim(Left([Cd_contractcsv].[Field7],1))='C' Or Trim(Left([Cd_contractcsv].[Field7],1))='P'),[Cd_contractcsv].[Field3] & '  ' & [Cd_contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Cd_contractcsv].[Field5]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Cd_contractcsv].[Field6])/10000000,'0.0000') & '  ' & [Cd_contractcsv].[Field7],[Cd_contractcsv].[Field3] & '  ' & [Cd_contractcsv].[Field4] & '  ' & Format(DateAdd('s',Val([Cd_contractcsv].[Field5]),CDate('1/1/1980')),'ddmmmyyyy')) AS Script, Cd_contractcsv.Field8, Cd_contractcsv.Field71 ,CDate(Format(DateAdd('s',[Cd_contractcsv].[Field5],'1/1/1980'),'mmm/dd/yyyy')) as expdate1" &
+        '                                           " FROM Cd_contractcsv " &
+        '                                           " WHERE TRIM(Cd_contractcsv.Field3)<>'' and  TRIM(Cd_contractcsv.Field3)<>'FinInstrmNm' And TRIM(Cd_contractcsv.Field5)<>'-1' ;"
+        Private Insert_Securitycsv As String = "INSERT INTO [" & DbPath & "].Security ( token, symbol, series, isin, script ) " &
+                                           " SELECT Securitycsv.Field1, Securitycsv.Field2, Securitycsv.Field3, Securitycsv.Field5, [Field2] & '  ' & [Field3] AS Script " &
+                                           " FROM Securitycsv " &
+                                           " WHERE ((([Field3])<>'SctySrs'));"
 
-        Private Insert_Contract As String = "INSERT INTO [" & DbPath & "].Contract ( Token, Asset_Tokan, InstrumentName, Symbol, series, expiry_date, strike_price, option_type, script, lotsize,OScript,expdate1) " & _
-                                         " SELECT Contract.Field1 , Contract.Field2 , Contract.Field3 , Contract.Field4, Contract.Field5, Contract.Field7, Val([Contract].[Field8])/100, Contract.Field9, IIf((Trim(Left([contract].[Field9],1))='C' Or Trim(Left([contract].[Field9],1))='P'),[Contract].[Field3] & '  ' & [Contract].[Field4] & '  ' & Format(DateAdd('s',Val([Contract].[Field7]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contract].[Field8])/100,'0.00') & '  ' & [Contract].[Field9],[Contract].[Field3] & '  ' & [Contract].[Field4] & '  ' & Format(DateAdd('s',Val([Contract].[Field7]),CDate('1/1/1980')),'ddmmmyyyy')) AS Script, Contract.Field32 , " & _
-                                         " IIf((Trim(Left([contract].[Field9],1))='C' Or Trim(Left([contract].[Field9],1))='P'),[Contract].[Field3] & '  ' & [Contract].[Field4] & '  ' & Format(DateAdd('s',Val([Contract].[Field7]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contract].[Field8]/100),'0.00') & '  ' &  iif((Trim(Left([contract].[Field9],1))='C'),'PE','CE') ,'') AS OScript,CDate(Format(DateAdd('s',[Contract].[Field7],'1/1/1980'),'mmm/dd/yyyy')) as expdate1" & _
-                                         " FROM Contract " & _
+        Private Insert_Contract As String = "INSERT INTO [" & DbPath & "].Contract ( Token, Asset_Tokan, InstrumentName, Symbol, series, expiry_date, strike_price, option_type, script, lotsize,OScript,expdate1,exchange) " &
+                                         " SELECT Contract.Field1 , Contract.Field2 , Contract.Field3 , Contract.Field4, Contract.Field5, Contract.Field7, Val([Contract].[Field8])/100, Contract.Field9, IIf((Trim(Left([contract].[Field9],1))='C' Or Trim(Left([contract].[Field9],1))='P'),[Contract].[Field3] & '  ' & [Contract].[Field4] & '  ' & Format(DateAdd('s',Val([Contract].[Field7]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contract].[Field8])/100,'0.00') & '  ' & [Contract].[Field9],[Contract].[Field3] & '  ' & [Contract].[Field4] & '  ' & Format(DateAdd('s',Val([Contract].[Field7]),CDate('1/1/1980')),'ddmmmyyyy')) AS Script, Contract.Field32 , " &
+                                         " IIf((Trim(Left([contract].[Field9],1))='C' Or Trim(Left([contract].[Field9],1))='P'),[Contract].[Field3] & '  ' & [Contract].[Field4] & '  ' & Format(DateAdd('s',Val([Contract].[Field7]),CDate('1/1/1980')),'ddmmmyyyy') & '  ' & Format(Val([Contract].[Field8]/100),'0.00') & '  ' &  iif((Trim(Left([contract].[Field9],1))='C'),'PE','CE') ,'') AS OScript,CDate(Format(DateAdd('s',[Contract].[Field7],'1/1/1980'),'mmm/dd/yyyy')) as expdate1,'NSE'" &
+                                         " FROM Contract " &
                                          " WHERE (((Trim([Contract].[Field3]))<>''));"
 
 
-      
-
-
-        Private Insert_Security As String = "INSERT INTO [" & DbPath & "].Security ( token, symbol, series, isin, script ) " & _
-                                           " SELECT Security.Field1, Security.Field2, Security.Field3, Security.Field46, [Field2] & '  ' & [Field3] AS Script " & _
-                                           " FROM Security " & _
+        Private Insert_Security As String = "INSERT INTO [" & DbPath & "].Security ( token, symbol, series, isin, script,exchange ) " &
+                                           " SELECT Security.Field1, Security.Field2, Security.Field3, Security.Field46, [Field2] & '  ' & [Field3] AS Script,'NSE' " &
+                                           " FROM Security " &
                                            " WHERE (((val([Field1]))<>0));"
 
-        Private Insert_Securitycsv As String = "INSERT INTO [" & DbPath & "].Security ( token, symbol, series, isin, script ) " & _
-                                           " SELECT Securitycsv.Field1, Securitycsv.Field2, Securitycsv.Field3, Securitycsv.Field5, [Field2] & '  ' & [Field3] AS Script " & _
-                                           " FROM Securitycsv " & _
-                                           " WHERE ((([Field3])<>'SctySrs'));"
-        
-
-        Private Insert_Bhavcopy As String = "INSERT INTO [" & DbPath & "].TblBhavcopy  " & _
+        Private Insert_Bhavcopy As String = "INSERT INTO [" & DbPath & "].TblBhavcopy  " &
                                                 " SELECT * FROM Bhavcopy "
 
         Private Insert_BhavcopyNew As String = "INSERT INTO [" & DbPath & "].TblBhavcopy  " &
-                                                " Select  iif(FinInstrmTp ='STO','OPTSTK',iif(FinInstrmTp='STF','FUTSTK',iif( FinInstrmTp='IDF' ,'FUTIDX',iif( FinInstrmTp='IDO' ,'OPTIDX','')))) as INSTRUMENT  , TckrSymb as [SYMBOL],XpryDt as EXPIRY_DT,iif(FinInstrmTp='STF','0',iif( FinInstrmTp='IDF' ,'0' , StrkPric))  as STRIKE_PR,iif(FinInstrmTp='STF','XX',iif( FinInstrmTp='IDF' ,'XX' , OptnTp)) as OPTION_TYP,OpnPric as [OPEN],HghPric AS [HIGH],LwPric as [LOW],ClsPric as [CLOSE],SttlmPric as SETTLE_PR,0 as CONTRACTS,TtlTrfVal as VAL_INLAKH,OpnIntrst as OPEN_INT,ChngInOpnIntrst as CHG_IN_OI,TradDt  as [TIMESTAMP] from Bhavcopyfo;"
+                                                " Select  iif(FinInstrmTp ='STO','OPTSTK',iif(FinInstrmTp='STF','FUTSTK',iif( FinInstrmTp='IDF' ,'FUTIDX',iif( FinInstrmTp='IDO' ,'OPTIDX','')))) as INSTRUMENT  , TckrSymb as [SYMBOL],XpryDt as EXPIRY_DT,iif(FinInstrmTp='STF','0',iif( FinInstrmTp='IDF' ,'0' , StrkPric))  as STRIKE_PR,iif(FinInstrmTp='STF','XX',iif( FinInstrmTp='IDF' ,'XX' , OptnTp)) as OPTION_TYP,OpnPric as [OPEN],HghPric AS [HIGH],LwPric as [LOW],ClsPric as [CLOSE],SttlmPric as SETTLE_PR,0 as CONTRACTS,TtlTrfVal as VAL_INLAKH,OpnIntrst as OPEN_INT,ChngInOpnIntrst as CHG_IN_OI,TradDt  as [TIMESTAMP],'NSE' AS exchange from Bhavcopyfo;"
+
+
+
+
+        Public ReadOnly Insert_BhavcopyNewNse As String =
+        "INSERT INTO [" & DbPath & "].TblBhavcopy " &
+        "(" &
+        " INSTRUMENT, SYMBOL, EXPIRY_DT, STRIKE_PR, OPTION_TYP, " &
+        " [OPEN], [HIGH], [LOW], [CLOSE], SETTLE_PR, " &
+        " CONTRACTS, VAL_INLAKH, OPEN_INT, CHG_IN_OI, [TIMESTAMP], exchange " &
+        ") " &
+        "SELECT " &
+        " IIf(FinInstrmTp='STO','OPTSTK', " &
+        "     IIf(FinInstrmTp='STF','FUTSTK', " &
+        "         IIf(FinInstrmTp='IDF','FUTIDX', " &
+        "             IIf(FinInstrmTp='IDO','OPTIDX','')))) AS INSTRUMENT, " &
+        " TckrSymb AS [SYMBOL], " &
+        " XpryDt AS EXPIRY_DT, " &
+        " IIf(FinInstrmTp IN ('STF','IDF'),0,StrkPric) AS STRIKE_PR, " &
+        " IIf(FinInstrmTp IN ('STF','IDF'),'XX',OptnTp) AS OPTION_TYP, " &
+        " OpnPric AS [OPEN], " &
+        " HghPric AS [HIGH], " &
+        " LwPric AS [LOW], " &
+        " ClsPric AS [CLOSE], " &
+        " SttlmPric AS SETTLE_PR, " &
+        " 0 AS CONTRACTS, " &
+        " TtlTrfVal AS VAL_INLAKH, " &
+        " OpnIntrst AS OPEN_INT, " &
+        " ChngInOpnIntrst AS CHG_IN_OI, " &
+        " TradDt AS [TIMESTAMP], " &
+        " 'NSE' AS exchange " &
+        "FROM Bhavcopyfo;"
+
+
 
 
 
@@ -87,9 +156,9 @@ Namespace ImportData
 #Region "Delete Query"
         REM Contract
         Private Delete_Currency_Contract As String = "Delete * From [" & DbPath & "].Currency_Contract;"
-        Private Delete_Contract As String = "Delete * From  [" & DbPath & "].Contract;"
-        Private Delete_Security As String = "Delete * From  [" & DbPath & "].Security;"
-        Private Delete_Bhavcopy As String = "Delete * From  [" & DbPath & "].TblBhavcopy;"
+        Private Delete_Contract As String = "Delete * From  [" & DbPath & "].Contract WHERE exchange='NSE';"
+        Private Delete_Security As String = "Delete * From  [" & DbPath & "].Security WHERE exchange='NSE';"
+        Private Delete_Bhavcopy As String = "Delete * From  [" & DbPath & "].TblBhavcopy WHERE exchange='NSE';"
 #End Region
 
         Private Function Insert_Trd(ByVal sTrd As String) As String
@@ -343,6 +412,25 @@ Namespace ImportData
                 MsgBox(ex.ToString)
             End Try
         End Sub
+
+        Public Sub ImportGetBseFoTrd()
+            Try
+                REM Delete Contract
+                DA.ParamClear()
+                DA.Cmd_Text = Delete_Trd("BSEGetFoTrd")
+                DA.ExecuteNonQuery(CommandType.Text)
+
+                REM import Contract
+                DA.ParamClear()
+                DA.Cmd_Text = Insert_Trd("BSEGetFoTrd")
+                DA.ExecuteNonQuery(CommandType.Text)
+
+            Catch ex As Exception
+                'FSTimerLogFile.WriteLine("Data_access::ExecuteNonQuery:-" & ex.ToString)
+                MsgBox(ex.ToString)
+            End Try
+        End Sub
+
         Public Sub ImportGetCurTrd()
             Try
                 REM Delete Contract
@@ -693,7 +781,7 @@ Namespace ImportData
 
                 If NEW_BHAVCOPY = 1 Then
 
-                    DA.Cmd_Text = Insert_BhavcopyNew
+                    DA.Cmd_Text = Insert_BhavcopyNewNse
                     DA.ExecuteNonQuery(CommandType.Text)
                 Else
 

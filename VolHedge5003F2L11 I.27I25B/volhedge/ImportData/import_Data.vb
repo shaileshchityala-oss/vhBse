@@ -58,11 +58,40 @@ Public Class import_Data
                           " FROM QFadFoTrd INNER JOIN Contract ON QFadFoTrd.script = Contract.script Where 1 = 1 "
 
     REM Gets
-    Dim Select_GetFoTrd As String = "SELECT   QGetFoTrd.company, QGetFoTrd.entryno, QGetFoTrd.buysell, QGetFoTrd.orderno, QGetFoTrd.script, QGetFoTrd.instrumentname, QGetFoTrd.strikerate, QGetFoTrd.cp, QGetFoTrd.mdate, QGetFoTrd.Dealer, QGetFoTrd.entrydate, QGetFoTrd.Qty, QGetFoTrd.Rate, QGetFoTrd.IsLiq, QGetFoTrd.lActivityTime, QGetFoTrd.entry_date, QGetFoTrd.Tot,  QGetFoTrd.FileFlag, Contract.Token AS Tokenno, IIf(([contract].[OScript]<>''),[contract].[Token],0) AS Token1,QGetFoTrd.OrgDealer,0 AS token, Format(mdate,'mm/yyyy') AS mo, (IIf(qty=0,1,qty)*rate) AS tot, CDate(Format([entrydate],'mmm/dd/yyyy')) AS entry_date, (IIf(qty=0,1,qty)*(strikeRate+rate)) AS tot2, IIf((cp='X' Or cp=''),'F',cp) AS cpf, IIf([qty]>0,[qty],0) AS BuyQty, IIf([qty]<0,[qty],0) AS SaleQty, IIf([qty]>0,[qty]*rate,0) AS BuyVal, IIf([qty]<0,[qty]*rate,0) AS SaleVal   " &
+    Public Select_GetFoTrd As String = "SELECT   QGetFoTrd.company, QGetFoTrd.entryno, QGetFoTrd.buysell, QGetFoTrd.orderno, QGetFoTrd.script, QGetFoTrd.instrumentname, QGetFoTrd.strikerate, QGetFoTrd.cp, QGetFoTrd.mdate, QGetFoTrd.Dealer, QGetFoTrd.entrydate, QGetFoTrd.Qty, QGetFoTrd.Rate, QGetFoTrd.IsLiq, QGetFoTrd.lActivityTime, QGetFoTrd.entry_date, QGetFoTrd.Tot,  QGetFoTrd.FileFlag, Contract.Token AS Tokenno, IIf(([contract].[OScript]<>''),[contract].[Token],0) AS Token1,QGetFoTrd.OrgDealer,0 AS token, Format(mdate,'mm/yyyy') AS mo, (IIf(qty=0,1,qty)*rate) AS tot, CDate(Format([entrydate],'mmm/dd/yyyy')) AS entry_date, (IIf(qty=0,1,qty)*(strikeRate+rate)) AS tot2, IIf((cp='X' Or cp=''),'F',cp) AS cpf, IIf([qty]>0,[qty],0) AS BuyQty, IIf([qty]<0,[qty],0) AS SaleQty, IIf([qty]>0,[qty]*rate,0) AS BuyVal, IIf([qty]<0,[qty]*rate,0) AS SaleVal,Contract.exchange as exchange" &
                           " FROM QGetFoTrd INNER JOIN Contract ON QGetFoTrd.script = Contract.script;"
-    Dim Select_GetCurTrd As String = "SELECT   QGetCurTrd.company, QGetCurTrd.entryno, QGetCurTrd.buysell, QGetCurTrd.orderno, QGetCurTrd.script, QGetCurTrd.instrumentname, QGetCurTrd.strikerate, QGetCurTrd.cp, QGetCurTrd.mdate, QGetCurTrd.Dealer, QGetCurTrd.entrydate, [Q]*[multiplier] AS Qty, QGetCurTrd.Rate, QGetCurTrd.IsLiq, QGetCurTrd.lActivityTime, QGetCurTrd.entry_date, ([Q]*[multiplier])*[Rate] AS Tot, QGetCurTrd.FileFlag, Currency_Contract.Token AS Tokenno, IIf(([cp]='F'),0,IIf(IsNull([contract].[Token]),0,[contract].[Token])) AS Token1,QGetCurTrd.OrgDealer " &
+
+    'Public Select_GetBseFoTrd As String = "SELECT   qBseGetFoTrd.company, qBseGetFoTrd.entryno, qBseGetFoTrd.buysell, qBseGetFoTrd.orderno, QGetFoTrd.script, QGetFoTrd.instrumentname, QGetFoTrd.strikerate, QGetFoTrd.cp, QGetFoTrd.mdate, QGetFoTrd.Dealer, QGetFoTrd.entrydate, QGetFoTrd.Qty, QGetFoTrd.Rate, QGetFoTrd.IsLiq, QGetFoTrd.lActivityTime, QGetFoTrd.entry_date, QGetFoTrd.Tot,  QGetFoTrd.FileFlag, Contract.Token AS Tokenno, IIf(([contract].[OScript]<>''),[contract].[Token],0) AS Token1,QGetFoTrd.OrgDealer,0 AS token, Format(mdate,'mm/yyyy') AS mo, (IIf(qty=0,1,qty)*rate) AS tot, CDate(Format([entrydate],'mmm/dd/yyyy')) AS entry_date, (IIf(qty=0,1,qty)*(strikeRate+rate)) AS tot2, IIf((cp='X' Or cp=''),'F',cp) AS cpf, IIf([qty]>0,[qty],0) AS BuyQty, IIf([qty]<0,[qty],0) AS SaleQty, IIf([qty]>0,[qty]*rate,0) AS BuyVal, IIf([qty]<0,[qty]*rate,0) AS SaleVal,Contract.exchange as exchange" &
+    '                      " FROM QGetFoTrd INNER JOIN Contract ON QGetFoTrd.script = Contract.script;"
+
+    Public Select_GetBseFoTrd As String =
+"SELECT " &
+" qBseGetFoTrd.company, qBseGetFoTrd.entryno, qBseGetFoTrd.buysell, qBseGetFoTrd.orderno," &
+" qBseGetFoTrd.script, qBseGetFoTrd.instrumentname, qBseGetFoTrd.strikerate, qBseGetFoTrd.cp," &
+" qBseGetFoTrd.mdate, qBseGetFoTrd.Dealer, qBseGetFoTrd.entrydate, qBseGetFoTrd.Qty," &
+" qBseGetFoTrd.Rate, qBseGetFoTrd.IsLiq, qBseGetFoTrd.lActivityTime," &
+" qBseGetFoTrd.entry_date, qBseGetFoTrd.Tot, qBseGetFoTrd.FileFlag," &
+" Contract.Token AS Tokenno," &
+" IIf([Contract].[OScript] <> '', [Contract].[Token], 0) AS Token1," &
+" qBseGetFoTrd.OrgDealer, 0 AS token," &
+" Format(mdate,'mm/yyyy') AS mo," &
+" (IIf(qty=0,1,qty)*rate) AS tot," &
+" CDate(Format([entrydate],'mmm/dd/yyyy')) AS entry_date," &
+" (IIf(qty=0,1,qty)*(strikeRate+rate)) AS tot2," &
+" IIf((cp='X' OR cp=''),'F',cp) AS cpf," &
+" IIf([qty]>0,[qty],0) AS BuyQty," &
+" IIf([qty]<0,[qty],0) AS SaleQty," &
+" IIf([qty]>0,[qty]*rate,0) AS BuyVal," &
+" IIf([qty]<0,[qty]*rate,0) AS SaleVal," &
+" Contract.exchange AS exchange" &
+" FROM qBseGetFoTrd INNER JOIN Contract" &
+" ON qBseGetFoTrd.script = Contract.script;"
+
+
+    Public Select_GetCurTrd As String = "SELECT   QGetCurTrd.company, QGetCurTrd.entryno, QGetCurTrd.buysell, QGetCurTrd.orderno, QGetCurTrd.script, QGetCurTrd.instrumentname, QGetCurTrd.strikerate, QGetCurTrd.cp, QGetCurTrd.mdate, QGetCurTrd.Dealer, QGetCurTrd.entrydate, [Q]*[multiplier] AS Qty, QGetCurTrd.Rate, QGetCurTrd.IsLiq, QGetCurTrd.lActivityTime, QGetCurTrd.entry_date, ([Q]*[multiplier])*[Rate] AS Tot, QGetCurTrd.FileFlag, Currency_Contract.Token AS Tokenno, IIf(([cp]='F'),0,IIf(IsNull([contract].[Token]),0,[contract].[Token])) AS Token1,QGetCurTrd.OrgDealer" &
                            " FROM (QGetCurTrd INNER JOIN Currency_Contract ON QGetCurTrd.script = Currency_Contract.script) LEFT JOIN Contract ON QGetCurTrd.script = Contract.OScript Where 1 = 1"
-    Dim Select_GetEqTrd As String = "SELECT   QGetEqTrd.entryno, QGetEqTrd.company, QGetEqTrd.cp, QGetEqTrd.Script, QGetEqTrd.Dealer, QGetEqTrd.buysell, QGetEqTrd.Qty, QGetEqTrd.Rate, QGetEqTrd.tot, QGetEqTrd.entrydate, QGetEqTrd.orderno, QGetEqTrd.IsLiq, QGetEqTrd.lActivityTime, QGetEqTrd.entry_date, QGetEqTrd.FileFlag, QGetEqTrd.eq, Security.token AS tokenno,QGetEqTrd.OrgDealer " &
+
+    Public Select_GetEqTrd As String = "SELECT   QGetEqTrd.entryno, QGetEqTrd.company, QGetEqTrd.cp, QGetEqTrd.Script, QGetEqTrd.Dealer, QGetEqTrd.buysell, QGetEqTrd.Qty, QGetEqTrd.Rate, QGetEqTrd.tot, QGetEqTrd.entrydate, QGetEqTrd.orderno, QGetEqTrd.IsLiq, QGetEqTrd.lActivityTime, QGetEqTrd.entry_date, QGetEqTrd.FileFlag, QGetEqTrd.eq, Security.token AS tokenno,QGetEqTrd.OrgDealer,Contract.exchange as exchange " &
                           " FROM QGetEqTrd INNER JOIN Security ON QGetEqTrd.Script = Security.script;"
 
 
@@ -104,7 +133,9 @@ Public Class import_Data
     Dim Select_NeaCurTrd As String = "SELECT   QNeaCurTrd.company, QNeaCurTrd.entryno, QNeaCurTrd.buysell, QNeaCurTrd.orderno, QNeaCurTrd.script, QNeaCurTrd.instrumentname, QNeaCurTrd.strikerate, QNeaCurTrd.cp, QNeaCurTrd.mdate, QNeaCurTrd.Dealer, QNeaCurTrd.entrydate, [Q]*[multiplier] AS Qty, QNeaCurTrd.Rate, QNeaCurTrd.IsLiq, QNeaCurTrd.lActivityTime, QNeaCurTrd.entry_date, ([Q]*[multiplier])*[Rate] AS Tot, QNeaCurTrd.FileFlag,QNeaCurTrd.OrgDealer, Currency_Contract.Token AS Tokenno, IIf(([cp]='F'),0,IIf(IsNull([contract].[Token]),0,[contract].[Token])) AS Token1  " &
                          " FROM (QNeaCurTrd INNER JOIN Currency_Contract ON QNeaCurTrd.script = Currency_Contract.script) LEFT JOIN Contract ON QNeaCurTrd.script = Contract.OScript Where 1 = 1 "
 
+    'Public Sub New()
 
+    'End Sub
 
     Public Function SelectdataofDealer() As DataTable
         Try
@@ -293,7 +324,7 @@ Public Class import_Data
     ''' <param name="Var"></param>
     ''' <returns>Return Type Boolean</returns>
     ''' <remarks></remarks>
-    Private Shared Function ValidateTxtFile(ByVal FilePath As String, ByVal Var As String) As Boolean
+    Public Shared Function ValidateTxtFile(ByVal FilePath As String, ByVal Var As String) As Boolean
         REM Check File exist from Path
         Try
             If File.Exists(FilePath) = False Then
@@ -396,6 +427,8 @@ Public Class import_Data
                 Case "FADM FO"
                     VarFileName = "FadFoTrd.txt"
                     '===================================================
+                Case "BSE GETS FO"
+                    VarFileName = "BseGetFoTrd.txt"
                 Case "GETS FO"
                     VarFileName = "GetFoTrd.txt"
                 Case "GETS EQ"
@@ -520,6 +553,7 @@ Public Class import_Data
                     ObjTrad.SettingKey = sLWT
                     ObjTrad.Uid = CInt(DR("uid"))
                     ObjTrad.Update_setting()
+                    ObjTrad.Update_NewToken()
                     ObjTrad.Update_NewToken()
                     Return True
                 Else
@@ -857,14 +891,30 @@ Public Class import_Data
             MsgBox("Error in inserting EQ. trade." & vbCrLf & ex.Message)
         End Try
     End Sub
+    Private Sub InsertgetsFoTrd()
+        Dim StrSql As String
+        Try
 
+
+            StrSql = "INSERT INTO trading (instrumentname, company, mdate, strikerate, cp, script, qty, rate, entrydate, entryno, token1, isliq, orderno, lActivityTime, FileFlag,Dealer )" &
+                     " SELECT instrumentname,company,mdate,strikerate,cp,script,Qty,Rate,entrydate,entryno,Token1,IsLiq,orderno,lActivityTime,FileFlag,OrgDealer  " &
+                     " FROM (" & Replace(Select_GetFoTrd, ";", "") & ") as tlb; "
+
+            data_access.ParamClear()
+            data_access.ExecuteNonQuery(StrSql, CommandType.Text)
+            data_access.cmd_type = CommandType.StoredProcedure
+        Catch ex As Exception
+            MsgBox("Error in inserting EQ. trade." & vbCrLf & ex.Message)
+        End Try
+    End Sub
     ''' <summary>
     ''' InsertFoTrd This Function is use to insert FO trade which data is imported by ImportOperation
     ''' by Viral
     ''' </summary>
     ''' <param name="sSql"></param>
     ''' <remarks></remarks>
-    Private Sub InsertFoTrd(ByVal sSql As String)
+    Public Sub InsertFoTrd(ByVal sSql As String)
+        sSql = sSql.Replace(";", "")
         Dim StrSql As String
         Try
 
@@ -872,8 +922,8 @@ Public Class import_Data
             '         " SELECT instrumentname,company,mdate,strikerate,cp,script,Qty,Rate,entrydate,entryno,Token1,IsLiq,orderno,lActivityTime,FileFlag  " & _
             '         " FROM (" & sSql & ") as tlb; "
 
-            StrSql = "INSERT INTO trading (instrumentname, company, mdate, strikerate, cp, script, qty, rate, entrydate, entryno, token1, isliq, orderno, lActivityTime, FileFlag,Dealer, token,mo, tot, entry_date, tot2, cpf, BuyQty, SaleQty, BuyVal, SaleVal )" &
-                     " SELECT instrumentname,company,mdate,strikerate,cp,script,Qty,Rate,entrydate,entryno,Token1,IsLiq,orderno,lActivityTime,FileFlag,OrgDealer, token,mo, tot, entry_date, tot2, cpf, BuyQty, SaleQty, BuyVal, SaleVal " &
+            StrSql = "INSERT INTO trading (instrumentname, company, mdate, strikerate, cp, script, qty, rate, entrydate, entryno, token1, isliq, orderno, lActivityTime, FileFlag,Dealer, token,mo, tot, entry_date, tot2, cpf, BuyQty, SaleQty, BuyVal, SaleVal,exchange )" &
+                     " SELECT instrumentname,company,mdate,strikerate,cp,script,Qty,Rate,entrydate,entryno,Token1,IsLiq,orderno,lActivityTime,FileFlag,OrgDealer, token,mo, tot, entry_date, tot2, cpf, BuyQty, SaleQty, BuyVal, SaleVal,'NSE'" &
                     " FROM (" & sSql & ") as tlb; "
             data_access.ParamClear()
             data_access.ExecuteNonQuery(StrSql, CommandType.Text)
@@ -882,6 +932,24 @@ Public Class import_Data
             MsgBox("Error in inserting fo. trade." & vbCrLf & ex.Message)
         End Try
     End Sub
+
+
+    Public Sub InsertBseFoTrd(pSql As String)
+        Dim StrSql As String
+        Try
+
+            StrSql = "INSERT INTO trading (instrumentname, company, mdate, strikerate, cp, script, qty, rate, entrydate, entryno, token1, isliq, orderno, lActivityTime, FileFlag,Dealer,exchange )" &
+                     " SELECT instrumentname,company,mdate,strikerate,cp,script,Qty,Rate,entrydate,entryno,Token1,IsLiq,orderno,lActivityTime,FileFlag,OrgDealer,'BSE'  " &
+                     " FROM (" & Replace(pSql, ";", "") & ") as tlb; "
+
+            data_access.ParamClear()
+            data_access.ExecuteNonQuery(StrSql, CommandType.Text)
+            data_access.cmd_type = CommandType.StoredProcedure
+        Catch ex As Exception
+            MsgBox("Error in inserting EQ. trade." & vbCrLf & ex.Message)
+        End Try
+    End Sub
+
     ''' <summary>
     ''' InsertCurrTrd This Function is use to insert Currency trade which data is imported by ImportOperation
     ''' by Viral
@@ -1010,16 +1078,13 @@ Public Class import_Data
                 .Add("orderno", GetType(Long))
                 .Add("lActivityTime", GetType(Long))
                 .Add("FileFlag")
+                .Add("exchange")
             End With
             Dim Dv As DataView
             'Dim Dtm As DataTable
             'Dtm = Dtr
             Dv = New DataView(Dtr, "", "", DataViewRowState.CurrentRows)
-            DTTrade = Dv.ToTable(False, "entryno", "instrumentname", "company", "mdate", "strikerate", "cp", "qty", "rate", "tot", "entrydate", "script", "token1", "isliq", "orderno", "lActivityTime", "FileFlag", "Dealer")
-            'Dim Etik As Long = System.Environment.TickCount
-            'Write_TradeLog2("Start UnMatch insert in local table(" & System.Environment.TickCount - Etik & ")", System.Environment.TickCount)
-            'Etik = System.Environment.TickCount
-            'Call objTrad.Insert_FOTrading(DTTrade)
+            DTTrade = Dv.ToTable(False, "entryno", "instrumentname", "company", "mdate", "strikerate", "cp", "qty", "rate", "tot", "entrydate", "script", "token1", "isliq", "orderno", "lActivityTime", "FileFlag", "Dealer", "exchange")
             Call insert_FOTradeToGlobalTable(DTTrade)
             'Write_TradeLog2("End   UnMatch insert in local table(" & System.Environment.TickCount - Etik & ")", System.Environment.TickCount)
             'Etik = System.Environment.TickCount
@@ -1442,6 +1507,21 @@ Public Class import_Data
             Return Nothing
         End Try
     End Function
+
+
+    Public Function DTGetsBSEFoTrd(pSql As String) As DataTable
+
+        Try
+            data_access.ParamClear()
+            data_access.Cmd_Text = pSql
+            data_access.cmd_type = CommandType.Text
+            Return data_access.FillList()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Return Nothing
+        End Try
+    End Function
+
     ''' <summary>
     ''' DTGetsCurTrd This Function is use To Get Data of Gets Currency TradeFile Which is Imported by ImportOperation class
     ''' By Viral
@@ -2100,6 +2180,114 @@ Public Class import_Data
     ''' <param name="objIO"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
+    ''' 
+
+    Public Function FromGetsBSEFOTEXT(ByVal ISTimer As Boolean, ByRef DTMargeFOData As DataTable, ByVal CurrentFilePath As String, ByVal PrevFilePath As String, ByVal objIO As ImportOperation) As Boolean
+        Try
+            Dim VarFilePath As String
+            If PrevFilePath = "" Then
+                VarFilePath = CurrentFilePath
+            Else
+                VarFilePath = PrevFilePath
+            End If
+            If ValidateTxtFile(VarFilePath, "FO") = False Then
+                Return False
+                Exit Function
+            End If
+            'mPerfTime.SetFileName("TradeFileImportDataLog")
+            'mPerfTime.Write_DiffMs("MainEnd", "Start Everything-----> :")
+            Call CopyToData(VarFilePath, "BSE GETS FO")
+            Dim Dtr As DataTable
+            Call objIO.ImportGetBseFoTrd()
+
+            Dim strSql As String = Select_GetBseFoTrd 'GetBseFoSql()
+
+            Dtr = DTGetsBSEFoTrd(strSql)
+            If Dtr.Rows.Count = 0 Then
+                Return False
+                Exit Function
+            End If
+            'Call InsertFoTrd(Replace(Select_GetFoTrd, ";", ""))
+            Call InsertBseFoTrd(Replace(strSql, ";", ""))
+            Dim status As Boolean
+            status = SetImportFoTrdDt(Dtr, DTMargeFOData)
+            'mPerfTime.Write_DiffMs("MainEnd", "End Completed Everything-----> :")
+            Return status
+        Catch ex As Exception
+            MsgBox("Error in Procedure : FromGetsFoText() " & vbCrLf & ex.Message)
+            Return False
+        End Try
+    End Function
+
+    Public Shared Function GetBseFoSql() As String
+        Dim sb As New System.Text.StringBuilder()
+        sb.AppendLine("SELECT")
+        sb.AppendLine(" Val([Field1]) AS entryno,")
+        sb.AppendLine(" NotFo.Field3 AS instrumentname,")
+        sb.AppendLine(" NotFo.Field4 AS company,")
+        sb.AppendLine(" IIf(IsDate([Field5]), CDate([Field5]), Null) AS mdate,")
+        sb.AppendLine(" IIf(IsNull([Field6]), 0, [Field6]) AS strikerate,")
+        sb.AppendLine(" IIf(Left([Field3], 3)='FUT','F',Left([Field7],1)) AS cp,")
+
+        sb.AppendLine(" UCase(")
+        sb.AppendLine("   IIf(")
+        sb.AppendLine("     Left([Field7],1) In ('C','P'),")
+        sb.AppendLine("     [Field3] & ' ' & [Field4] & ' ' &")
+        sb.AppendLine("     Format(IIf(IsDate([Field5]),CDate([Field5]),Null),'ddmmmyyyy') & ' ' &")
+        sb.AppendLine("     Format(Val(IIf(IsNull([Field6]),0,[Field6])),'Fixed') & ' ' & [Field7],")
+        sb.AppendLine("     [Field3] & ' ' & [Field4] & ' ' &")
+        sb.AppendLine("     Format(IIf(IsDate([Field5]),CDate([Field5]),Null),'ddmmmyyyy')")
+        sb.AppendLine("   )")
+        sb.AppendLine(" ) AS script,")
+
+        sb.AppendLine(" 'NOTIS-' & IIf(Len([Field18])>12, Left([Field18],12), [Field17]) AS Dealer,")
+        sb.AppendLine(" NotFo.Field13 AS buysell,")
+
+        sb.AppendLine(" Val(")
+        sb.AppendLine("   IIf(")
+        sb.AppendLine("     Left([Field13],1)='B' OR Val([Field13])=1,")
+        sb.AppendLine("     Val([Field14]),")
+        sb.AppendLine("     -Val([Field14])")
+        sb.AppendLine("   )")
+        sb.AppendLine(" ) AS Qty,")
+
+        sb.AppendLine(" Val([Field15]) AS Rate,")
+        sb.AppendLine(" CDate([Field22]) AS entrydate,")
+        sb.AppendLine(" NotFo.Field23 AS orderno,")
+        sb.AppendLine(" NotFo.Field18 AS Dealer1,")
+        sb.AppendLine(" False AS IsLiq,")
+        sb.AppendLine(" DateDiff('s', #01/01/1980#, CDate([Field22])) AS lActivityTime,")
+        sb.AppendLine(" DateValue(CDate([Field22])) AS entry_date,")
+
+        sb.AppendLine(" Val(")
+        sb.AppendLine("   IIf(")
+        sb.AppendLine("     Left([Field13],1)='B',")
+        sb.AppendLine("     Val([Field14]),")
+        sb.AppendLine("     -Val([Field14])")
+        sb.AppendLine("   )")
+        sb.AppendLine(" ) * Val([Field15]) AS Tot,")
+
+        sb.AppendLine(" 'NOTICEFOTEXT' AS FileFlag,")
+        sb.AppendLine(" IIf(Len([Field18])>12, [Field17] & Left([Field18],12), [Field17]) AS OrgDealer")
+
+        sb.AppendLine("FROM BSEGETFOTRD AS NotFo")
+        sb.AppendLine("LEFT JOIN trading")
+        sb.AppendLine(" ON Val(NotFo.Field1)=trading.entryno")
+        sb.AppendLine(" AND NotFo.Field23=trading.orderno;")
+
+        Dim strSql As String = sb.ToString()
+        Return strSql
+    End Function
+
+    Public Function FromGetsFOTEXTAll(ByVal ISTimer As Boolean, ByRef DTMargeFOData As DataTable, ByVal CurrentFilePath As String, ByVal PrevFilePath As String, ByVal objIO As ImportOperation, pExchange As String) As Boolean
+        If pExchange.ToUpper() = "BSE" Then
+            Return FromGetsBSEFOTEXT(ISTimer, DTMargeFOData, CurrentFilePath, PrevFilePath, objIO)
+        ElseIf pExchange.ToUpper() = "NSE" Then
+            Return FromGetsFOTEXT(ISTimer, DTMargeFOData, CurrentFilePath, PrevFilePath, objIO)
+        End If
+        Return False
+    End Function
+
     Public Function FromGetsFOTEXT(ByVal ISTimer As Boolean, ByRef DTMargeFOData As DataTable, ByVal CurrentFilePath As String, ByVal PrevFilePath As String, ByVal objIO As ImportOperation) As Boolean
         Try
             Dim VarFilePath As String

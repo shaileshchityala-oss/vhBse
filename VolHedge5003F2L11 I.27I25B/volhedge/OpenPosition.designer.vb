@@ -23,6 +23,8 @@ Partial Class OpenPosition
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.cmbFoExchange = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.lbllotsize = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cmbstrike = New System.Windows.Forms.ComboBox()
@@ -55,6 +57,8 @@ Partial Class OpenPosition
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.cmbEqExchange = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.cmbeqopt = New System.Windows.Forms.ComboBox()
         Me.cmbeqcomp = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -129,6 +133,8 @@ Partial Class OpenPosition
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.cmbFoExchange)
+        Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.lbllotsize)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.cmbstrike)
@@ -152,6 +158,27 @@ Partial Class OpenPosition
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Future && Option"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'cmbFoExchange
+        '
+        Me.cmbFoExchange.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cmbFoExchange.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbFoExchange.FormattingEnabled = True
+        Me.cmbFoExchange.Location = New System.Drawing.Point(15, 22)
+        Me.cmbFoExchange.Name = "cmbFoExchange"
+        Me.cmbFoExchange.Size = New System.Drawing.Size(79, 21)
+        Me.cmbFoExchange.TabIndex = 1
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(24, 3)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(70, 14)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Exchange"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbllotsize
         '
@@ -181,37 +208,37 @@ Partial Class OpenPosition
         Me.cmbstrike.Location = New System.Drawing.Point(571, 23)
         Me.cmbstrike.Name = "cmbstrike"
         Me.cmbstrike.Size = New System.Drawing.Size(155, 21)
-        Me.cmbstrike.TabIndex = 3
+        Me.cmbstrike.TabIndex = 9
         '
         'cmbcp
         '
         Me.cmbcp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cmbcp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbcp.FormattingEnabled = True
-        Me.cmbcp.Location = New System.Drawing.Point(409, 23)
+        Me.cmbcp.Location = New System.Drawing.Point(444, 23)
         Me.cmbcp.Name = "cmbcp"
-        Me.cmbcp.Size = New System.Drawing.Size(155, 21)
-        Me.cmbcp.TabIndex = 2
+        Me.cmbcp.Size = New System.Drawing.Size(120, 21)
+        Me.cmbcp.TabIndex = 7
         '
         'CmbInstru
         '
         Me.CmbInstru.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.CmbInstru.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CmbInstru.FormattingEnabled = True
-        Me.CmbInstru.Location = New System.Drawing.Point(215, 24)
+        Me.CmbInstru.Location = New System.Drawing.Point(312, 24)
         Me.CmbInstru.Name = "CmbInstru"
-        Me.CmbInstru.Size = New System.Drawing.Size(188, 21)
-        Me.CmbInstru.TabIndex = 1
+        Me.CmbInstru.Size = New System.Drawing.Size(126, 21)
+        Me.CmbInstru.TabIndex = 5
         '
         'CmbComp
         '
         Me.CmbComp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.CmbComp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CmbComp.FormattingEnabled = True
-        Me.CmbComp.Location = New System.Drawing.Point(12, 24)
+        Me.CmbComp.Location = New System.Drawing.Point(100, 23)
         Me.CmbComp.Name = "CmbComp"
-        Me.CmbComp.Size = New System.Drawing.Size(197, 21)
-        Me.CmbComp.TabIndex = 0
+        Me.CmbComp.Size = New System.Drawing.Size(206, 21)
+        Me.CmbComp.TabIndex = 3
         '
         'cmbdate
         '
@@ -220,7 +247,7 @@ Partial Class OpenPosition
         Me.cmbdate.Location = New System.Drawing.Point(732, 23)
         Me.cmbdate.Name = "cmbdate"
         Me.cmbdate.Size = New System.Drawing.Size(149, 22)
-        Me.cmbdate.TabIndex = 4
+        Me.cmbdate.TabIndex = 11
         '
         'Panel6
         '
@@ -310,7 +337,7 @@ Partial Class OpenPosition
         Me.Panel3.Location = New System.Drawing.Point(0, 103)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(888, 53)
-        Me.Panel3.TabIndex = 6
+        Me.Panel3.TabIndex = 13
         '
         'Label9
         '
@@ -319,7 +346,7 @@ Partial Class OpenPosition
         Me.Label9.Location = New System.Drawing.Point(255, 5)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(77, 14)
-        Me.Label9.TabIndex = 15
+        Me.Label9.TabIndex = 4
         Me.Label9.Text = "Entry Date"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -330,7 +357,7 @@ Partial Class OpenPosition
         Me.dtent.Location = New System.Drawing.Point(241, 26)
         Me.dtent.Name = "dtent"
         Me.dtent.Size = New System.Drawing.Size(104, 20)
-        Me.dtent.TabIndex = 8
+        Me.dtent.TabIndex = 5
         '
         'cmdexit
         '
@@ -338,7 +365,7 @@ Partial Class OpenPosition
         Me.cmdexit.Location = New System.Drawing.Point(792, 24)
         Me.cmdexit.Name = "cmdexit"
         Me.cmdexit.Size = New System.Drawing.Size(75, 23)
-        Me.cmdexit.TabIndex = 11
+        Me.cmdexit.TabIndex = 8
         Me.cmdexit.Text = "E&xit"
         Me.cmdexit.UseVisualStyleBackColor = True
         '
@@ -349,7 +376,7 @@ Partial Class OpenPosition
         Me.txtrate.Location = New System.Drawing.Point(123, 25)
         Me.txtrate.Name = "txtrate"
         Me.txtrate.Size = New System.Drawing.Size(110, 22)
-        Me.txtrate.TabIndex = 7
+        Me.txtrate.TabIndex = 3
         '
         'cmdclear
         '
@@ -357,7 +384,7 @@ Partial Class OpenPosition
         Me.cmdclear.Location = New System.Drawing.Point(711, 24)
         Me.cmdclear.Name = "cmdclear"
         Me.cmdclear.Size = New System.Drawing.Size(75, 23)
-        Me.cmdclear.TabIndex = 10
+        Me.cmdclear.TabIndex = 7
         Me.cmdclear.Text = "Clear"
         Me.cmdclear.UseVisualStyleBackColor = True
         '
@@ -366,7 +393,7 @@ Partial Class OpenPosition
         Me.cmdsave.Location = New System.Drawing.Point(630, 24)
         Me.cmdsave.Name = "cmdsave"
         Me.cmdsave.Size = New System.Drawing.Size(75, 23)
-        Me.cmdsave.TabIndex = 9
+        Me.cmdsave.TabIndex = 6
         Me.cmdsave.Text = "Save"
         Me.cmdsave.UseVisualStyleBackColor = True
         '
@@ -377,7 +404,7 @@ Partial Class OpenPosition
         Me.Label13.Location = New System.Drawing.Point(160, 5)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(37, 14)
-        Me.Label13.TabIndex = 18
+        Me.Label13.TabIndex = 2
         Me.Label13.Text = "Rate"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -387,7 +414,7 @@ Partial Class OpenPosition
         Me.txtunit.Location = New System.Drawing.Point(7, 25)
         Me.txtunit.Name = "txtunit"
         Me.txtunit.Size = New System.Drawing.Size(110, 22)
-        Me.txtunit.TabIndex = 6
+        Me.txtunit.TabIndex = 1
         Me.txtunit.Text = "0"
         '
         'Label15
@@ -397,7 +424,7 @@ Partial Class OpenPosition
         Me.Label15.Location = New System.Drawing.Point(42, 5)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(41, 14)
-        Me.Label15.TabIndex = 15
+        Me.Label15.TabIndex = 0
         Me.Label15.Text = "Units"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -408,7 +435,7 @@ Partial Class OpenPosition
         Me.Label17.Location = New System.Drawing.Point(441, 3)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(91, 14)
-        Me.Label17.TabIndex = 14
+        Me.Label17.TabIndex = 6
         Me.Label17.Text = "Call/Put/Fut"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -416,10 +443,10 @@ Partial Class OpenPosition
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(81, 3)
+        Me.Label3.Location = New System.Drawing.Point(161, 3)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 14)
-        Me.Label3.TabIndex = 1
+        Me.Label3.TabIndex = 2
         Me.Label3.Text = "Security"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -430,7 +457,7 @@ Partial Class OpenPosition
         Me.Label4.Location = New System.Drawing.Point(780, 3)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 14)
-        Me.Label4.TabIndex = 2
+        Me.Label4.TabIndex = 10
         Me.Label4.Text = "Expiry"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -438,10 +465,10 @@ Partial Class OpenPosition
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(256, 3)
+        Me.Label2.Location = New System.Drawing.Point(279, 3)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(122, 14)
-        Me.Label2.TabIndex = 0
+        Me.Label2.TabIndex = 4
         Me.Label2.Text = "Instrument Name"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -452,7 +479,7 @@ Partial Class OpenPosition
         Me.txtscript.Location = New System.Drawing.Point(12, 75)
         Me.txtscript.Name = "txtscript"
         Me.txtscript.Size = New System.Drawing.Size(605, 22)
-        Me.txtscript.TabIndex = 5
+        Me.txtscript.TabIndex = 12
         '
         'Label5
         '
@@ -461,7 +488,7 @@ Partial Class OpenPosition
         Me.Label5.Location = New System.Drawing.Point(607, 3)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(81, 14)
-        Me.Label5.TabIndex = 3
+        Me.Label5.TabIndex = 8
         Me.Label5.Text = "Strike Rate"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -478,6 +505,8 @@ Partial Class OpenPosition
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.cmbEqExchange)
+        Me.TabPage2.Controls.Add(Me.Label12)
         Me.TabPage2.Controls.Add(Me.cmbeqopt)
         Me.TabPage2.Controls.Add(Me.cmbeqcomp)
         Me.TabPage2.Controls.Add(Me.Label19)
@@ -493,31 +522,52 @@ Partial Class OpenPosition
         Me.TabPage2.Text = "Equity"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'cmbEqExchange
+        '
+        Me.cmbEqExchange.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cmbEqExchange.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbEqExchange.FormattingEnabled = True
+        Me.cmbEqExchange.Location = New System.Drawing.Point(16, 29)
+        Me.cmbEqExchange.Name = "cmbEqExchange"
+        Me.cmbEqExchange.Size = New System.Drawing.Size(88, 21)
+        Me.cmbEqExchange.TabIndex = 0
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(25, 11)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(70, 14)
+        Me.Label12.TabIndex = 19
+        Me.Label12.Text = "Exchange"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'cmbeqopt
         '
         Me.cmbeqopt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cmbeqopt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbeqopt.FormattingEnabled = True
-        Me.cmbeqopt.Location = New System.Drawing.Point(316, 28)
+        Me.cmbeqopt.Location = New System.Drawing.Point(291, 29)
         Me.cmbeqopt.Name = "cmbeqopt"
-        Me.cmbeqopt.Size = New System.Drawing.Size(188, 21)
-        Me.cmbeqopt.TabIndex = 1
+        Me.cmbeqopt.Size = New System.Drawing.Size(108, 21)
+        Me.cmbeqopt.TabIndex = 2
         '
         'cmbeqcomp
         '
         Me.cmbeqcomp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cmbeqcomp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbeqcomp.FormattingEnabled = True
-        Me.cmbeqcomp.Location = New System.Drawing.Point(8, 28)
+        Me.cmbeqcomp.Location = New System.Drawing.Point(110, 29)
         Me.cmbeqcomp.Name = "cmbeqcomp"
-        Me.cmbeqcomp.Size = New System.Drawing.Size(289, 21)
-        Me.cmbeqcomp.TabIndex = 0
+        Me.cmbeqcomp.Size = New System.Drawing.Size(175, 21)
+        Me.cmbeqcomp.TabIndex = 1
         '
         'Label19
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(347, 11)
+        Me.Label19.Location = New System.Drawing.Point(322, 12)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(49, 14)
         Me.Label19.TabIndex = 18
@@ -528,10 +578,10 @@ Partial Class OpenPosition
         '
         Me.txteqscript.Enabled = False
         Me.txteqscript.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txteqscript.Location = New System.Drawing.Point(526, 30)
+        Me.txteqscript.Location = New System.Drawing.Point(405, 29)
         Me.txteqscript.Name = "txteqscript"
         Me.txteqscript.Size = New System.Drawing.Size(320, 22)
-        Me.txteqscript.TabIndex = 2
+        Me.txteqscript.TabIndex = 3
         '
         'Panel7
         '
@@ -568,7 +618,7 @@ Partial Class OpenPosition
         Me.dteqent.Location = New System.Drawing.Point(239, 27)
         Me.dteqent.Name = "dteqent"
         Me.dteqent.Size = New System.Drawing.Size(102, 20)
-        Me.dteqent.TabIndex = 5
+        Me.dteqent.TabIndex = 2
         '
         'cmdeqexit
         '
@@ -576,7 +626,7 @@ Partial Class OpenPosition
         Me.cmdeqexit.Location = New System.Drawing.Point(780, 25)
         Me.cmdeqexit.Name = "cmdeqexit"
         Me.cmdeqexit.Size = New System.Drawing.Size(75, 23)
-        Me.cmdeqexit.TabIndex = 8
+        Me.cmdeqexit.TabIndex = 5
         Me.cmdeqexit.Text = "E&xit"
         Me.cmdeqexit.UseVisualStyleBackColor = True
         '
@@ -586,7 +636,7 @@ Partial Class OpenPosition
         Me.txteqrate.Location = New System.Drawing.Point(121, 26)
         Me.txteqrate.Name = "txteqrate"
         Me.txteqrate.Size = New System.Drawing.Size(110, 22)
-        Me.txteqrate.TabIndex = 4
+        Me.txteqrate.TabIndex = 1
         Me.txteqrate.Text = "0"
         '
         'cmdeqclear
@@ -595,7 +645,7 @@ Partial Class OpenPosition
         Me.cmdeqclear.Location = New System.Drawing.Point(699, 25)
         Me.cmdeqclear.Name = "cmdeqclear"
         Me.cmdeqclear.Size = New System.Drawing.Size(75, 23)
-        Me.cmdeqclear.TabIndex = 7
+        Me.cmdeqclear.TabIndex = 4
         Me.cmdeqclear.Text = "Clear"
         Me.cmdeqclear.UseVisualStyleBackColor = True
         '
@@ -615,7 +665,7 @@ Partial Class OpenPosition
         Me.cmdeqsave.Location = New System.Drawing.Point(618, 25)
         Me.cmdeqsave.Name = "cmdeqsave"
         Me.cmdeqsave.Size = New System.Drawing.Size(75, 23)
-        Me.cmdeqsave.TabIndex = 6
+        Me.cmdeqsave.TabIndex = 3
         Me.cmdeqsave.Text = "Save"
         Me.cmdeqsave.UseVisualStyleBackColor = True
         '
@@ -625,7 +675,7 @@ Partial Class OpenPosition
         Me.txtequnit.Location = New System.Drawing.Point(5, 26)
         Me.txtequnit.Name = "txtequnit"
         Me.txtequnit.Size = New System.Drawing.Size(110, 22)
-        Me.txtequnit.TabIndex = 3
+        Me.txtequnit.TabIndex = 0
         Me.txtequnit.Text = "0"
         '
         'Label33
@@ -643,7 +693,7 @@ Partial Class OpenPosition
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(663, 11)
+        Me.Label23.Location = New System.Drawing.Point(542, 10)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(41, 14)
         Me.Label23.TabIndex = 12
@@ -654,7 +704,7 @@ Partial Class OpenPosition
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(98, 11)
+        Me.Label28.Location = New System.Drawing.Point(147, 12)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(62, 14)
         Me.Label28.TabIndex = 1
@@ -1022,4 +1072,8 @@ Partial Class OpenPosition
     Friend WithEvents cmbCurrencyExpdate As System.Windows.Forms.ComboBox
     Friend WithEvents lbllotsize As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents cmbFoExchange As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents cmbEqExchange As ComboBox
+    Friend WithEvents Label12 As Label
 End Class

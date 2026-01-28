@@ -81,91 +81,6 @@ Public Class FrmImportAllfile
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub cmdsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsave.Click
-
-
-        'MsgBox(Now)
-        'If txtpath.Text <> "" Then
-        '    Me.Cursor = Cursors.WaitCursor
-        '    ' Try
-        '    Dim dtable As DataTable
-        '    dtable = New DataTable
-        '    With dtable.Columns
-        '        .Add("token", GetType(Integer))
-        '        '============================keval(16-2-10)
-        '        .Add("asset_tokan", GetType(Integer))
-        '        '==============================
-        '        .Add("InstrumentName", GetType(String))
-        '        .Add("Symbol", GetType(String))
-        '        .Add("Siries", GetType(String))
-        '        .Add("ExpiryDate", GetType(Integer))
-        '        .Add("StrikePrice", GetType(Double))
-        '        .Add("OptionType", GetType(String))
-        '        .Add("script", GetType(String))
-        '        .Add("lotsize", GetType(Integer))
-        '    End With
-        '    Dim drow As DataRow
-        '    Dim date1 As Date = "1/1/1980"
-        '    If txtpath.Text.Trim <> "" Then
-        '        If File.Exists(txtpath.Text) Then
-        '            Dim iline As New StreamReader(txtpath.Text)
-        '            Dim chk As Boolean
-        '            chk = False
-        '            Dim i As Integer = 0
-        '            While iline.EndOfStream = False
-        '                If i > 0 Then
-        '                    chk = True
-        '                    Dim line As String()
-        '                    line = Split(iline.ReadLine, "|")
-        '                    If line(2) <> "" Then
-        '                        drow = dtable.NewRow
-        '                        drow("Token") = CInt(line(0))
-        '                        '======================keval(16-2-10)
-        '                        drow("Asset_Tokan") = CInt(line(1))
-        '                        '=======================
-        '                        drow("InstrumentName") = CStr(line(2))
-        '                        drow("Symbol") = CStr(line(3))
-        '                        drow("Siries") = CStr(line(4))
-        '                        drow("ExpiryDate") = CInt(line(6))
-        '                        drow("StrikePrice") = CDbl(line(7)) / 100
-        '                        drow("OptionType") = CStr(line(8))
-        '                        If Not IsDBNull(drow("OptionType")) Then
-        '                            If Mid(UCase(drow("OptionType")), 1, 1) = "C" Or Mid(UCase(drow("OptionType")), 1, 1) = "P" Then
-        '                                drow("script") = drow("InstrumentName") & "  " & drow("Symbol") & "  " & Format(DateAdd(DateInterval.Second, CInt(drow("ExpiryDate")), date1), "ddMMMyyyy") & "  " & CStr(Format(Val(drow("StrikePrice")), "###0.00")) & "  " & drow("OptionType")
-        '                            Else
-        '                                drow("script") = drow("InstrumentName") & "  " & drow("Symbol") & "  " & Format(DateAdd(DateInterval.Second, CInt(drow("ExpiryDate")), date1), "ddMMMyyyy")
-        '                            End If
-        '                        Else
-        '                            drow("script") = drow("InstrumentName") & "  " & drow("Symbol") & "  " & Format(DateAdd(DateInterval.Second, CInt(drow("ExpiryDate")), date1), "ddMMMyyyy")
-        '                        End If
-
-        '                        drow("lotsize") = CStr(line(31))
-        '                        dtable.Rows.Add(drow)
-        '                    End If
-        '                    lblcount.Text = CInt(lblcount.Text) + 1
-        '                    lblcount.Refresh()
-        '                End If
-        '                i = i + 1
-        '            End While
-        '            iline.Close()
-        'objMast.insert(dtable)
-        '            If chk = True Then
-        '                fill_token()
-        '                MsgBox("File Import Successfully")
-        '                txtpath.Text = ""
-        '                lblcount.Text = 0
-        '                lblcount.Refresh()
-        '            End If
-        '        End If
-        '    End If
-        '    Me.Cursor = Cursors.Default
-        'Else
-        '    MsgBox("Please Select File Path....")
-        'End If
-        '' Catch ex As Exception
-        ''MsgBox("File Not Processed")
-        ''MsgBox(ex.ToString)
-        '' End Try
-        'MsgBox(Now)
         Dim flg As Boolean = validate_contract_csv_file(txtpath.Text, "FO")
         If flg = True Then
             MsgBox("Invalid CSV File..", MsgBoxStyle.Information)
@@ -348,6 +263,7 @@ Public Class FrmImportAllfile
 
     Private Sub import_master_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ObjIO = New ImportData.ImportOperation
+        tbCtrlMain.SelectedIndex = 0
         'Me.WindowState = FormWindowState.Normal
         'Me.Refresh()
         CBSPAN.SelectedIndex = 0
@@ -2547,6 +2463,96 @@ currency:
         Else
             FLGCSVCONTRACT = False
         End If
+    End Sub
+
+    Private Sub btnBseContractBrowse_Click(sender As Object, e As EventArgs) Handles btnBseContractBrowse.Click
+        Dim opfile As OpenFileDialog
+        opfile = New OpenFileDialog
+        opfile.Filter = "Files(*.csv)|*.csv"
+        If opfile.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            txtBseContractPath.Text = opfile.FileName
+        End If
+    End Sub
+    Private Sub btnBseContractClear_Click(sender As Object, e As EventArgs) Handles btnBseContractClear.Click
+        txtBseContractPath.Text = ""
+    End Sub
+    Private Sub btnBseContractImport_Click(sender As Object, e As EventArgs) Handles btnBseContractImport.Click
+        If Not File.Exists(txtBseContractPath.Text) Then
+            MsgBox("Invalid File Path.", MsgBoxStyle.Exclamation)
+        End If
+
+        Dim flg As Boolean = validate_contract_csv_file(txtBseContractPath.Text, "FOBSE")
+        If flg = True Then
+            MsgBox("Invalid CSV File..", MsgBoxStyle.Information)
+            Return
+        End If
+        Me.Cursor = Cursors.WaitCursor
+        If clsGlobal.mBseExchange.mContractFo.BSEContractImport(txtBseContractPath.Text) = True Then
+            fill_token()
+            Me.Cursor = Cursors.Default
+            MsgBox("File Imported Successfully.", MsgBoxStyle.Information)
+        Else
+            Me.Cursor = Cursors.Default
+            MsgBox("File Not Processed.", MsgBoxStyle.Information)
+        End If
+        If IsUnMatchTrade() Then
+            Dim frm As New FrmMatchContract
+            frm.ShowForm("FO")
+        End If
+    End Sub
+
+    Private Sub btnBseEqBrowse_Click(sender As Object, e As EventArgs) Handles btnBseEqBrowse.Click
+        Dim opfile As OpenFileDialog
+        opfile = New OpenFileDialog
+        opfile.Filter = "Files(*.csv)|*.csv"
+        If opfile.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            txtBseEqPath.Text = opfile.FileName
+        End If
+    End Sub
+
+    Private Sub btnBseEqImport_Click(sender As Object, e As EventArgs) Handles btnBseEqImport.Click
+        Dim flg As Boolean = validate_contract_csv_file(txtBseEqPath.Text, "EQBSE")
+        If flg = True Then
+            MsgBox("Invalid CSV File..", MsgBoxStyle.Information)
+            Return
+        End If
+        Me.Cursor = Cursors.WaitCursor
+        If txtBseEqPath.Text.Trim = "" Or (Not File.Exists(txtBseEqPath.Text)) Then
+            Me.Cursor = Cursors.Default
+            MsgBox("Invalid File Path.", MsgBoxStyle.Exclamation)
+            Return
+        End If
+        Me.Cursor = Cursors.WaitCursor
+        If clsGlobal.mBseExchange.mContractEq.BSESecurityImport(txtBseEqPath.Text) = True Then
+            fill_token()
+            Me.Cursor = Cursors.Default
+            MsgBox("File Imported Successfully.", MsgBoxStyle.Information)
+            txteqpath.Text = ""
+        Else
+            Me.Cursor = Cursors.Default
+            MsgBox("File Not Processed.", MsgBoxStyle.Information)
+        End If
+    End Sub
+
+    Private Sub btnBseBhavCopyBrowse_Click(sender As Object, e As EventArgs) Handles btnBseBhavCopyBrowse.Click
+        Dim opfile As OpenFileDialog
+        opfile = New OpenFileDialog
+        opfile.Filter = "Files(*.csv)|*.csv"
+        If opfile.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            txtBseBhavcopy.Text = opfile.FileName
+        End If
+    End Sub
+
+    Private Sub btnBseBhavcopyImport_Click(sender As Object, e As EventArgs) Handles btnBseBhavcopyImport.Click
+        If Not File.Exists(txtBseBhavcopy.Text) Then
+            Me.Cursor = Cursors.Default
+            MsgBox("Invalid File Path.", MsgBoxStyle.Exclamation)
+            Return
+        End If
+        Me.Cursor = Cursors.WaitCursor
+        clsGlobal.mBseExchange.mBhavCopy.removebhavcopyBSe()
+        clsGlobal.mBseExchange.mBhavCopy.Read_FilebhavBSe(txtBseBhavcopy.Text)
+        Me.Cursor = Cursors.Default
     End Sub
 End Class
 Public Class ZipHelp

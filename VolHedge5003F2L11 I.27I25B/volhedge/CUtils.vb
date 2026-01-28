@@ -11,6 +11,9 @@ Imports System.Threading
 Imports System.Diagnostics
 Public Class CUtils
     Public Shared Function StringToDouble(ByVal input As String) As Double
+        If String.IsNullOrEmpty(input) Then
+            Return 0
+        End If
         Try
             Return Convert.ToDouble(input)
         Catch
@@ -19,6 +22,11 @@ Public Class CUtils
     End Function
 
     Public Shared Function StringToInt(ByVal input As String) As Integer
+
+        If String.IsNullOrEmpty(input) Then
+            Return 0
+        End If
+
         Try
             Return Convert.ToInt32(input)
         Catch

@@ -435,11 +435,14 @@ Module mainmodule
         Dim asset_tokan As Integer
         Dim InstrumentType As String
         Dim symbol As String
+        Dim exhange As String
+
     End Structure
     Public Structure Struct_EQContract
         Dim Token As Integer
         Dim script As String
         Dim symbol As String
+        Dim exhange As String
 
     End Structure
     Public Structure Struct_CURRContract
@@ -447,6 +450,7 @@ Module mainmodule
         Dim script As String
         Dim InstrumentType As String
         Dim symbol As String
+        Dim exhange As String
     End Structure
 
     REM implimenting of Atm General Setting  By viral 27-06-11
@@ -981,6 +985,7 @@ Module mainmodule
             .Add("BuyPr", GetType(Double))
             .Add("SalePr", GetType(Double))
             .Add("TradingVol", GetType(Double))
+            .Add("exchange")
         End With
         maintable = dtable.Clone
         'use to calculate Eq position
@@ -1003,6 +1008,7 @@ Module mainmodule
             .Columns.Add("prExp", GetType(Double))
             .Columns.Add("toExp", GetType(Double))
             .Columns.Add("IsCalc", GetType(Boolean))
+            .Columns.Add("exchange")
         End With
 
         'use to calculate pic margin
@@ -1108,7 +1114,8 @@ Module mainmodule
                 dr("last1") = drow("ltp1")
                 dr("lv") = drow("vol")
                 dr("MktVol") = drow("MktVol")
-
+                'dr("Vol_Diff") = drow("MktVol") - drow("vol")
+                dr("exchange") = drow("exchange")
                 dr("lv1") = 0 ' drow("vol1")
                 If drow("Cp") = "F" Then
                     dr("delta") = 1
@@ -1570,6 +1577,7 @@ lblAppCrash:
                 dr("toqty") = drow("toqty")
                 dr("units") = Val(drow("qty"))
                 dr("traded") = Val(drow("rate"))
+                dr("exchange") = drow("exchange")
                 ''divyesh
 
                 If GdtCurrencyTrades.Select("Script='" & drow("script") & "' And company='" & drow("company") & "'").Length > 0 Then
@@ -1695,7 +1703,7 @@ lblAppCrash:
                     dr("curTotalMTM") = 0
                     dr("curGrossMTM") = 0
                 End If
-                If maintable.Select("Script='" & drow("script") & "' And company='" & drow("company") & "'").Length = 0 Then
+                If maintable.Select("Script='" & drow("script") & "' And company='" & drow("company") & "' AND exchange='" & drow("exchange") & "'").Length = 0 Then
 
                     maintable.Rows.Add(dr)
                 End If
@@ -1840,15 +1848,17 @@ lblAppCrash:
 
             Dim dtdtable As DataTable = New DataView(GdtEQTrades, " ", "Script", DataViewRowState.CurrentRows).ToTable
             Dim dtdtableView As DataView = New DataView(GdtEQTrades, "", "Script", DataViewRowState.CurrentRows)
-            Dim dtScriptdtable As DataTable = dtdtableView.ToTable(True, "Script", "Company")
+            Dim dtScriptdtable As DataTable = dtdtableView.ToTable(True, "Script", "Company", "exchange")
 
             For Each drow As DataRow In dtScriptdtable.Rows
-                Dim drcount() As DataRow = dtdtable.Select("script='" & drow("script").ToString.Trim & "' and Company='" & drow("Company").ToString.Trim & "' ", "")
+                Dim drcount() As DataRow = dtdtable.Select("script='" & drow("script").ToString.Trim & "' and Company='" & drow("Company").ToString.Trim & "'and exchange='" & drow("exchange").ToString.Trim & "'", "")
                 count = drcount.Length
                 Dim Token As Integer
                 Dim objStr As New Struct_EQContract
-                If Not HT_EQContrct(drow("script").ToString().ToUpper()) Is Nothing Then
-                    objStr = HT_EQContrct(drow("script").ToString().ToUpper())
+
+                Dim strScript As String = drow("script").ToString().ToUpper() & "  " & drow("exchange")
+                If Not HT_EQContrct(strScript) Is Nothing Then
+                    objStr = HT_EQContrct(strScript)
                     Token = objStr.Token
                 Else
                     Token = 0
@@ -2766,15 +2776,15 @@ lblAppCrash:
 
                 Dim dtdtable As DataTable = New DataView(GdtFOTrades, " ", "Script", DataViewRowState.CurrentRows).ToTable
                 Dim dtdtableView As DataView = New DataView(GdtFOTrades, "", "Script", DataViewRowState.CurrentRows)
-                Dim dtScriptdtable As DataTable = dtdtableView.ToTable(True, "Script", "Company")
+                Dim dtScriptdtable As DataTable = dtdtableView.ToTable(True, "Script", "Company", "exchange")
 
                 For Each drow As DataRow In dtScriptdtable.Rows
                     Dim dvdata As DataTable
                     Dim DVcpfmaster As DataTable
                     Dim DVDtAnalysis As DataTable
-                    Dim drcount As DataRow() = GdtFOTrades.Select("script='" & drow("script") & "' and Company='" & drow("Company") & "'")
+                    Dim exchange As String = drow("exchange")
 
-                    'count = CInt(GdtFOTrades.Compute("count(script)", "script='" & drow("script") & "' And company='" & drow("company") & "'"))
+                    Dim drcount As DataRow() = GdtFOTrades.Select("script='" & drow("script") & "' and Company='" & drow("Company") & "' and exchange='" & exchange & "'")
 
                     Dim objStr As New Struct_FOContract
 
@@ -3080,7 +3090,7 @@ lblAppCrash:
                         dr("VannaN") = 0
 
                         dr("IsCalc") = True
-
+                        dr("exchange") = exchange
                         REM For ProffitDiff    By Viral 01-07-11
                         If DtAnalysis.Rows.Count > 0 Then
                             dr("preQty") = Val(DtAnalysis.Compute("Max(preQty)", "tokanno=" & dr("tokanno") & " And company='" & dr("company") & "'") & "")
@@ -4134,6 +4144,8 @@ lblAppCrash:
                 dr("last1") = drow("ltp1")
                 dr("lv") = drow("vol")
                 dr("MktVol") = drow("MktVol")
+                'dr("Vol_Diff") = drow("MktVol") - drow("vol")
+                dr("exchange") = drow("exchange")
                 dr("lv1") = 0 'drow("vol1")
                 If drow("Cp") = "F" Then
                     dr("delta") = 1
@@ -4633,6 +4645,7 @@ lblAppCrash:
             dtrow("issummary") = True
             dtrow("isdisplay") = True
             dtrow("Dealer") = tedrow("Dealer")
+            dtrow("exchange") = tedrow("exchange")
             GdtEQTrades.Rows.Add(dtrow)
         Next
 
@@ -4671,7 +4684,7 @@ lblAppCrash:
             temprow("issummary") = True
             temprow("isdisplay") = True
             temprow("Dealer") = tdrow("Dealer")
-
+            temprow("exchange") = tdrow("exchange")
 
             GdtFOTrades.Rows.Add(temprow)
         Next

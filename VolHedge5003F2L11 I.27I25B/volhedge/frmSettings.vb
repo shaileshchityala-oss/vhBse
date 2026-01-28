@@ -798,6 +798,7 @@ Public Class frmSettings
             DGTextFile.Rows(RowIdx).Cells("File_Code").Value = Dr("File_Code")
             DGTextFile.Rows(RowIdx).Cells("Text_Auto_Import").Value = Dr("Auto_Import")
             DGTextFile.Rows(RowIdx).Cells("Text_Manual_Import").Value = Dr("Manual_Import")
+            DGTextFile.Rows(RowIdx).Cells("Exchange").Value = Dr("Exchange")
         Next
         For Each Dr As DataRow In DtImport_Setting.Select("Import_Type='SQL Server'")
             Dim RowIdx As Integer = DGSQLServer.Rows.Add()
@@ -917,6 +918,29 @@ Public Class frmSettings
                     Else
                         chkcmbroadcastMT.Checked = False
                     End If
+                Case "BSE_FO_UDP_IP"
+                    Dim ipBse() As String
+
+                    ipBse = DR("Settingkey").ToString.Split(".")
+                    If ipBse.Length > 1 Then
+                        txtBseFoIp1.Text = ipBse(0)
+                        txtBseFoIp2.Text = ipBse(1)
+                        txtBseFoIp3.Text = ipBse(2)
+                        txtBseFoIp4.Text = ipBse(3)
+                    End If
+     		Case "BSE_EQ_UDP_IP"
+                    Dim ipBse() As String
+                    ipBse = DR("Settingkey").ToString.Split(".")
+                    If ipBse.Length > 1 Then
+                        txtBseEqIp1.Text = ipBse(0)
+                        txtBseEqIp2.Text = ipBse(1)
+                        txtBseEqIp3.Text = ipBse(2)
+                        txtBseEqIp4.Text = ipBse(3)
+                    End If
+                Case "BSE_FO_UDP_PORT"
+                    txtBseFOUdpPort.Text = DR("Settingkey").ToString()
+                Case "BSE_EQ_UDP_PORT"
+                    txtBseEqUdpPort.Text = DR("Settingkey").ToString()
                 Case CSetting.mKeyCompactMdbAuto
                     If Setting_Key = 1 Then
                         chkCompactMdbAuto.Checked = True
@@ -1684,8 +1708,11 @@ Public Class frmSettings
             'VarFile_Code = IIf(IsDBNull(DGRow.Cells("File_Code").Value) = True, "", DGRow.Cells("File_Code").Value)
             VarManual_Import = DGRow.Cells("Text_Manual_Import").Value
             VarAuto_Import = DGRow.Cells("Text_Auto_Import").Value
+
+            Dim exchange As String = DGRow.Cells("Exchange").Value
+
             If Not VarText_Type Is Nothing Then
-                objTrad.Insert_Import_Setting(VarImport_Type, VarText_Type, VarServer_Type, VarServer_Name, VarDatabase_Name, VarUser_Name, VarPwd, VarTable_Name, VarFile_Path, VarFileName_Format, VarFile_Code, VarAuto_Import, VarManual_Import)
+                objTrad.Insert_Import_Setting(VarImport_Type, VarText_Type, VarServer_Type, VarServer_Name, VarDatabase_Name, VarUser_Name, VarPwd, VarTable_Name, VarFile_Path, VarFileName_Format, VarFile_Code, VarAuto_Import, VarManual_Import, exchange)
             End If
         Next
         For Each DGRow As DataGridViewRow In DGSQLServer.Rows
@@ -1702,8 +1729,9 @@ Public Class frmSettings
             VarFile_Code = ""
             VarManual_Import = DGRow.Cells("SQL_Manual_Import").Value
             VarAuto_Import = DGRow.Cells("SQL_Auto_Import").Value
+            Dim exchange As String = DGRow.Cells("exchange").Value
             If Not VarServer_Type Is Nothing Then
-                objTrad.Insert_Import_Setting(VarImport_Type, VarText_Type, VarServer_Type, VarServer_Name, VarDatabase_Name, VarUser_Name, VarPwd, VarTable_Name, VarFile_Path, VarFileName_Format, VarFile_Code, VarAuto_Import, VarManual_Import)
+                objTrad.Insert_Import_Setting(VarImport_Type, VarText_Type, VarServer_Type, VarServer_Name, VarDatabase_Name, VarUser_Name, VarPwd, VarTable_Name, VarFile_Path, VarFileName_Format, VarFile_Code, VarAuto_Import, VarManual_Import, exchange)
             End If
         Next
         MsgBox("Settings Applied Successfully.", MsgBoxStyle.Information)
@@ -1953,6 +1981,16 @@ Public Class frmSettings
                     Else
                         setting_key = 0
                     End If
+
+                Case "BSE_FO_UDP_IP"
+                    setting_key = CInt(txtBseFoIp1.Text) & "." & CInt(txtBseFoIp2.Text) & "." & CInt(txtBseFoIp3.Text) & "." & CInt(txtBseFoIp4.Text)
+                Case "BSE_FO_UDP_PORT"
+                    setting_key = txtBseFOUdpPort.Text
+                Case "BSE_EQ_UDP_IP"
+                    setting_key = CInt(txtBseEqIp1.Text) & "." & CInt(txtBseEqIp2.Text) & "." & CInt(txtBseEqIp3.Text) & "." & CInt(txtBseEqIp4.Text)
+                Case "BSE_EQ_UDP_PORT"
+                    setting_key = txtBseEqUdpPort.Text
+
             End Select
             If setting_key <> "Nothing" Then
                 objTrad.SettingName = setting_name
@@ -2920,15 +2958,20 @@ Public Class frmSettings
                 Dim HT_Text_Type As New Hashtable
                 For Each DGRow As DataGridViewRow In DGTextFile.Rows
 
+                    Dim exch As String = DGRow.Cells("Exchange").Value
                     Dim str As String = DGRow.Cells("Text_Type").Value
                     Dim idx As Integer = DGRow.Cells("Text_Type").RowIndex
                     Dim COLidx As Integer = DGRow.Cells("Text_Type").ColumnIndex
-                    If str <> "" Then
-                        If HT_Text_Type.ContainsValue(str) = False Then
-                            HT_Text_Type.Add(idx, str)
+                    'clsGlobal.mPerf.PushFileName("bse trade file setting")
+                    'clsGlobal.mPerf.WriteLogStr(str + "-" + exch)
 
+                    Dim val As String = str + "-" + exch
+
+                    If str <> "" Then
+                        If HT_Text_Type.ContainsValue(val) = False Then
+                            HT_Text_Type.Add(idx, val)
                         Else
-                            MsgBox("'" & str & "', Already Exits ")
+                            MsgBox("'" & val & "', Already Exits ")
                             DGTextFile.Rows(e.RowIndex).Cells("Text_Type").Value = ""
 
                         End If
@@ -3835,6 +3878,74 @@ Public Class frmSettings
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
 
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
+        Dim tester As New UdpMulticastTester()
+        Dim ip As String = txtBseFoIp1.Text + "." + txtBseFoIp2.Text + "." + txtBseFoIp3.Text + "." + txtBseFoIp4.Text
+        Dim port As Integer = CUtils.StringToInt(txtBseFOUdpPort.Text)
+
+        clsGlobal.mBseExchange.StopFo()
+        Threading.Thread.Sleep(3000)
+        Dim ok As Boolean = tester.TestConnection(ip, port, 5000)
+        If ok Then
+            MsgBox("Test Connection Successful", MsgBoxStyle.Information)
+        Else
+            MsgBox("Test Connection Failed", MsgBoxStyle.Critical)
+        End If
+
+        clsGlobal.mBseExchange.StartFo()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+        Dim tester As New UdpMulticastTester()
+        'Dim ip As String = txtBseFoIp1.Text + "." + txtBseFoIp2.Text + "." + txtBseFoIp3.Text + "." + txtBseFoIp4.Text
+        'Dim port As Integer = CUtils.StringToInt(txtBseFOUdpPort.Text)
+
+        Dim ip As String = txtBseEqIp1.Text & "." & txtBseEqIp2.Text & "." & txtBseEqIp3.Text & "." & txtBseEqIp4.Text
+        Dim port As Integer = CUtils.StringToInt(txtBseEqUdpPort.Text)
+
+        clsGlobal.mBseExchange.StopEq()
+        Threading.Thread.Sleep(3000)
+        Dim ok As Boolean = tester.TestConnection(ip, port, 5000)
+        If ok Then
+            MsgBox("Test Connection Successful", MsgBoxStyle.Information)
+        Else
+            MsgBox("Test Connection Failed", MsgBoxStyle.Critical)
+        End If
+
+        clsGlobal.mBseExchange.StartEq()
+    End Sub
+
+    Private Sub AddBseColumns()
+        Dim cmbCol As New DataGridViewComboBoxColumn
+        cmbCol.DisplayIndex = 0
+        cmbCol.HeaderText = "Exchange"
+        cmbCol.Name = "exchange"
+
+        DGTextFile.Columns.Add(cmbCol)
+
+        'BSE CODE
+        CType(DGTextFile.Columns("Exchange"), DataGridViewComboBoxColumn).Items.Add("NSE")
+        CType(DGTextFile.Columns("Exchange"), DataGridViewComboBoxColumn).Items.Add("BSE")
+
+
+        cmbCol = New DataGridViewComboBoxColumn
+        cmbCol.DisplayIndex = 0
+        cmbCol.HeaderText = "Exchange"
+        cmbCol.Name = "exchange"
+
+        DGSQLServer.Columns.Add(cmbCol)
+
+
+        'BSE CODE
+        CType(DGSQLServer.Columns("Exchange"), DataGridViewComboBoxColumn).Items.Add("NSE")
+        CType(DGSQLServer.Columns("Exchange"), DataGridViewComboBoxColumn).Items.Add("BSE")
+
+
+    End Sub
+
 
 
 End Class

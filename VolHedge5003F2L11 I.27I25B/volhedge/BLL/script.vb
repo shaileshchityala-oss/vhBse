@@ -261,6 +261,7 @@ Public Class script
         data_access.AddParam("@SaleQty", OleDbType.Integer, 30, Val(SaleQty))
         data_access.AddParam("@BuyVal", OleDbType.Double, 30, Val(BuyVal))
         data_access.AddParam("@SaleVal", OleDbType.Double, 30, Val(SaleVal))
+        data_access.AddParam("@exchange", OleDbType.VarChar, 20, Exchange)
 
 
         data_access.Cmd_Text = SP_Script_Insert
@@ -280,6 +281,7 @@ Public Class script
         data_access.AddParam("@lActivityTime", OleDbType.VarChar, 18, CInt(0))
         data_access.AddParam("@FileFlag", OleDbType.VarChar, 18, (0))
         data_access.AddParam("@Dealer", OleDbType.VarChar, 50, Dealer)
+        data_access.AddParam("@exchange", OleDbType.VarChar, 20, Exchange)
         data_access.Cmd_Text = SP_INSERT_EQUITY
         data_access.ExecuteNonQuery()
     End Sub
@@ -389,11 +391,14 @@ Public Class script
             data_access.AddParam("@SaleQty", OleDbType.Integer, 30, Val(SaleQty))
             data_access.AddParam("@BuyVal", OleDbType.Double, 30, Val(BuyVal))
             data_access.AddParam("@SaleVal", OleDbType.Double, 30, Val(SaleVal))
+            Dim exch As String = drow("exchange").ToString()
+            data_access.AddParam("@exchange", OleDbType.VarChar, 30, exch)
+
 
 
         Next
         data_access.Cmd_Text = SP_Script_Insert
-        data_access.ExecuteMultiple(26)
+        data_access.ExecuteMultiple(27)
 
         
 
@@ -509,7 +514,8 @@ Public Class script
         End Try
     End Function
 
-    Public Sub insert_FOTrade_in_maintable(ByVal script As String, ByVal dtAna As DataTable, ByVal prExp As Double, ByVal toExp As Double, ByVal entrydt As Date, ByVal sCompName As String)
+
+    Public Sub insert_FOTrade_in_maintable(ByVal script As String, ByVal dtAna As DataTable, ByVal prExp As Double, ByVal toExp As Double, ByVal entrydt As Date, ByVal sCompName As String, pExchange As String)
 
         '***********************************************************************************
         'fill public maintable of analysis
@@ -631,7 +637,7 @@ Public Class script
         mrow("asset_tokan") = Val(dtAna.Rows(0)("asset_tokan") & "") 'HT_AssetToken(CLng(dtAna.Rows(0)("token1"))) ' dtAna.Rows(0)("asset_tokan")
         mrow("isliq") = dtAna.Rows(0)("isliq")
         mrow("tokanno") = dtAna.Rows(0)("tokanno")
-
+        mrow("exchange") = dtAna.Rows(0)("exchange")
 
         'mrow("ftoken") = dtAna.Rows(0)("ftoken")
         'GdtSettings.Rows("settingName").Item= 
@@ -689,14 +695,14 @@ Public Class script
             mrow("IsCalc") = True
 
 
-            REM For ProffitDiff    By Viral 06-07-11	  It Should  Assign Value As assign VolFix Flag (in fo,cm, curr)By Viral 3-11-11
-            mrow("preQty") = preQty
-            mrow("preDate") = preDate
-            mrow("preSpot") = preSpot
-            mrow("preVol") = preVol
-            mrow("preDelVal") = preDelVal
-            mrow("preVegVal") = preVegVal
-            mrow("preTheVal") = preTheVal
+        REM For ProffitDiff    By Viral 06-07-11	  It Should  Assign Value As assign VolFix Flag (in fo,cm, curr)By Viral 3-11-11
+        mrow("preQty") = preQty
+        mrow("preDate") = preDate
+        mrow("preSpot") = preSpot
+        mrow("preVol") = preVol
+        mrow("preDelVal") = preDelVal
+        mrow("preVegVal") = preVegVal
+        mrow("preTheVal") = preTheVal
 
             mrow("curSpot") = curSpot
             mrow("curVol") = curVol
@@ -721,7 +727,7 @@ Public Class script
             maintable.AcceptChanges()
 
     End Sub
-    Public Sub insert_EQTrade_in_maintable(ByVal script As String, ByVal dtAna As DataTable, ByVal prExp As Double, ByVal toExp As Double, ByVal entrydt As Date, ByVal sCompName As String)
+    Public Sub insert_EQTrade_in_maintable(ByVal script As String, ByVal dtAna As DataTable, ByVal prExp As Double, ByVal toExp As Double, ByVal entrydt As Date, ByVal sCompName As String, pExchange As String)
         'fill public maintable of analysis
         Dim mrow1(), mrow As DataRow
         Dim remarks As String = ""
@@ -748,7 +754,7 @@ Public Class script
         Dim curGrossMTM As Double = 0
 
         'if position available then select it
-        mrow1 = maintable.Select("script = '" & script & "' And company='" & sCompName & "'", "")
+        mrow1 = maintable.Select("script = '" & script & "' And company='" & sCompName & "' AND exchange='" & pExchange & "'", "")
         If Not mrow1 Is Nothing Then
             If mrow1.Length <> 0 Then
                 mrow = mrow1(0)
@@ -887,6 +893,7 @@ Public Class script
         mrow("preGrossMTM") = preGrossMTM
         mrow("curTotalMTM") = curTotalMTM
         mrow("curGrossMTM") = curGrossMTM
+        mrow("exchange") = pExchange
 
         If CLng(mrow("tokanno")) <> 0 Then
             maintable.Rows.Add(mrow)

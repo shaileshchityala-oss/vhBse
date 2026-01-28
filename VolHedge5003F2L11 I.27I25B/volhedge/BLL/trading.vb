@@ -939,7 +939,7 @@ lbl:
         End Try
     End Function
 
-    Public Sub Insert_Import_Setting(ByVal VarImport_Type As String, ByVal VarText_Type As String, ByVal VarServer_Type As String, ByVal VarServer_Name As String, ByVal VarDatabase_Name As String, ByVal VarUser_Name As String, ByVal VarPwd As String, ByVal VarTable_Name As String, ByVal VarFile_Path As String, ByVal VarFileName_Format As String, ByVal VarFile_Code As String, ByVal VarAuto_Import As Boolean, ByVal VarManual_Import As Boolean)
+    Public Sub Insert_Import_Setting(ByVal VarImport_Type As String, ByVal VarText_Type As String, ByVal VarServer_Type As String, ByVal VarServer_Name As String, ByVal VarDatabase_Name As String, ByVal VarUser_Name As String, ByVal VarPwd As String, ByVal VarTable_Name As String, ByVal VarFile_Path As String, ByVal VarFileName_Format As String, ByVal VarFile_Code As String, ByVal VarAuto_Import As Boolean, ByVal VarManual_Import As Boolean, pExchange As String)
         data_access.ParamClear()
         data_access.AddParam("@Import_Type", OleDbType.VarChar, 150, VarImport_Type)
         data_access.AddParam("@Text_Type", OleDbType.VarChar, 150, VarText_Type)
@@ -954,6 +954,7 @@ lbl:
         data_access.AddParam("@File_Code", OleDbType.VarChar, 150, VarFile_Code)
         data_access.AddParam("@Auto_Import", OleDbType.Boolean, 1, VarAuto_Import)
         data_access.AddParam("@Manual_Import", OleDbType.Boolean, 1, VarManual_Import)
+        data_access.AddParam("@Exchange", OleDbType.VarChar, 50, pExchange)
         data_access.Cmd_Text = SP_Insert_Import_Setting
         data_access.ExecuteNonQuery()
     End Sub
@@ -2083,6 +2084,29 @@ lbl:
         End Try
         Return dt
     End Function
+
+    Public Sub Update_NewToken_del()
+
+        Dim StrSql As String
+
+        'Private Updat_tok_Trading As String = "UPDATE trading INNER JOIN contract ON trading.script = contract.script SET trading.token1 =contract.token;"
+        'Private Update_tok_Analysis As String = "UPDATE analysis INNER JOIN contract ON analysis.script = contract.script SET analysis.token1 =contract.token"
+
+        StrSql = "UPDATE trading INNER JOIN contract ON trading.script = contract.script SET trading.token1 =contract.token;"
+        data_access.ParamClear()
+        data_access.ExecuteNonQuery(StrSql, CommandType.Text)
+        data_access.cmd_type = CommandType.StoredProcedure
+
+
+
+        StrSql = "UPDATE analysis INNER JOIN contract ON analysis.script = contract.script SET analysis.token1 =contract.token"
+        data_access.ParamClear()
+        data_access.ExecuteNonQuery(StrSql, CommandType.Text)
+        data_access.cmd_type = CommandType.StoredProcedure
+
+
+
+    End Sub
 
 #End Region
 End Class

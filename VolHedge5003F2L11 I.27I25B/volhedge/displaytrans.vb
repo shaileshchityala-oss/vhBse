@@ -78,19 +78,21 @@ Public Class displaytrans
         'lblscript.Text = objTrad.Script.Compute("max(script)", "token=" & CLng(token) & "")
         Dim VarCondition As String = ""
 
-        VarCondition = "script='" & lblscript.Text & "' And company='" & company & "'"
+        VarCondition = "script='" & lblscript.Text & "' And company='" & company & "' AND Exchange='" + lblExchange.Text + "'"
         If UCase(StrategyName) <> "TOTAL" And IsDate(StrategyName) = False And StrategyName <> "" Then
             VarCondition &= " AND Strategy_Name='" & StrategyName & "' "
         End If
 
         Dim dv As DataView = New DataView(table, VarCondition, "entrydate DESC", DataViewRowState.CurrentRows)
-        Dim str(5) As String
+        Dim str(6) As String
         str(0) = "qty"
         str(1) = "rate"
         str(2) = "entrydate"
         str(3) = "entryno"
         str(4) = "uid"
         str(5) = "Dealer"
+        'str(6) = "token"
+        str(6) = "exchange"
         dtable = dv.ToTable(False, str)
         If VarScriptType = "CURRENCY" Then
             dtable.Columns.Add("Lots", GetType(Double))
@@ -137,6 +139,8 @@ Public Class displaytrans
             'objscr.orderno =0
             objScr.orderno = GVarMAXEQTradingOrderNo
             objScr.Dealer = "OP"
+            Dim exch As String = clsGlobal.mContract.GetExchangeFromToken(lbltoken.Text, ETokenType.Eq_Token)
+            objScr.Exchange = exch
             'insert EQ trade to database
             objScr.insert_equity()
             'select uid of currenlt inserted trade
@@ -161,6 +165,7 @@ Public Class displaytrans
             temprow("tot2") = Val(txtunit.Text) * Val(txtrate.Text)
             temprow("entryno") = 0
             temprow("orderno") = GVarMAXEQTradingOrderNo
+            temprow("exchange") = exch
             DtTempEQ_trad.Rows.Add(temprow)
 
             Call insert_EQTradeToGlobalTable(DtTempEQ_trad)
@@ -179,13 +184,11 @@ Public Class displaytrans
 
             'insert position to database's analysis table also
             Dim dtAna As New DataTable
-            dtAna = objAna.fill_equity_process(UCase(script.Trim), CInt(txtunit.Text), Val(txtrate.Text), prExp, toExp, dtp_EntryDate.Value.Date, company)
-
-
+            dtAna = objAna.fill_equity_process(UCase(script.Trim), CInt(txtunit.Text), Val(txtrate.Text), prExp, toExp, dtp_EntryDate.Value.Date, company, exch)
 
             '***********************************************************************************
             'insert EQ trade to analysis table
-            objScr.insert_EQTrade_in_maintable(script.Trim, dtAna, prExp, toExp, dtp_EntryDate.Value.Date, company)
+            objScr.insert_EQTrade_in_maintable(script.Trim, dtAna, prExp, toExp, dtp_EntryDate.Value.Date, company, exch)
         ElseIf VarScriptType = "CURRENCY" Then
             GVarMAXCURRTradingOrderNo = GVarMAXCURRTradingOrderNo + 1
             objScr.InstrumentName = instrumentname
@@ -204,6 +207,9 @@ Public Class displaytrans
             objScr.Token = token1
             objScr.Isliq = isliq ' "Yes"
             objScr.Dealer = "OP"
+            Dim exch As String = clsGlobal.mContract.GetExchangeFromToken(lbltoken.Text, ETokenType.Eq_Token)
+            objScr.Exchange = exch
+
             'objScr.orderno = 0
             objScr.orderno = GVarMAXCURRTradingOrderNo
             'insert FO trade to database
@@ -257,12 +263,13 @@ Public Class displaytrans
 
             'insert position to database's analysis table also
             Dim dtAna As New DataTable
-            dtAna = objAna.fill_table_process(script.Trim, CInt(txtunit.Text) * Varmultiplier, Val(txtrate.Text), prExp, toExp, dtp_EntryDate.Value.Date, company)
-
+            dtAna = objAna.fill_table_process(script.Trim, CInt(txtunit.Text) * Varmultiplier, Val(txtrate.Text), prExp, toExp, dtp_EntryDate.Value.Date, company, "se")
+            'TODO CHECK
             'insert FO trade to analysis table
             objScr.insert_CurrencyTrade_in_maintable(script.Trim, dtAna, prExp, toExp, dtp_EntryDate.Value.Date, company)
 
         ElseIf VarScriptType = "FO" Then
+            Dim exch As String = clsGlobal.mContract.GetExchangeFromToken(lbltoken.Text, ETokenType.Fo_Token)
             GVarMAXFOTradingOrderNo = GVarMAXFOTradingOrderNo + 1
             objScr.InstrumentName = instrumentname
             objScr.Company = company
@@ -281,6 +288,7 @@ Public Class displaytrans
             objScr.Token = token1
             objScr.Isliq = isliq ' "Yes"
             objScr.Dealer = "OP"
+            objScr.Exchange = exch
             'objScr.orderno = 0
 
             objScr.orderno = GVarMAXFOTradingOrderNo
@@ -321,6 +329,7 @@ Public Class displaytrans
             temprow("FileFlag") = ""
             temprow("tot") = Val(txtunit.Text) * Val(txtrate.Text)
             temprow("tot2") = Val(txtunit.Text) * (Val(txtrate.Text) + Val(strikerate))
+            temprow("exchange") = exch
             DtTempFO_trad.Rows.Add(temprow)
             Call insert_FOTradeToGlobalTable(DtTempFO_trad)
             GdtFOTrades.Rows(GdtFOTrades.Rows.Count - 1).Item("Uid") = temprow("uid")
@@ -336,10 +345,10 @@ Public Class displaytrans
 
             'insert position to database's analysis table also
             Dim dtAna As New DataTable
-            dtAna = objAna.fill_table_process(script.Trim, CInt(txtunit.Text), Val(txtrate.Text), prExp, toExp, dtp_EntryDate.Value.Date, company)
+            dtAna = objAna.fill_table_process(script.Trim, CInt(txtunit.Text), Val(txtrate.Text), prExp, toExp, dtp_EntryDate.Value.Date, company, exch)
 
             'insert FO trade to analysis table
-            objScr.insert_FOTrade_in_maintable(script.Trim, dtAna, prExp, toExp, dtp_EntryDate.Value.Date, company)
+            objScr.insert_FOTrade_in_maintable(script.Trim, dtAna, prExp, toExp, dtp_EntryDate.Value.Date, company, exch)
 
         End If
 
@@ -379,138 +388,162 @@ Public Class displaytrans
     Private Sub grddisplay_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DGdisplayTrades.KeyDown
         Try
 
-        
-        Dim dtAna As New DataTable
-        If e.KeyCode = Keys.Delete Then
-            With DGdisplayTrades.CurrentRow
 
-                If Val(DGdisplayTrades.CurrentRow.Cells("entryno").Value) = 0 Then
-                    If MsgBox("Are you sure to delete selected script?", MsgBoxStyle.YesNo + MsgBoxStyle.Question) = MsgBoxResult.Yes Then
-                        If VarScriptType = "EQ" Then
-                            objScr.Delete_eqtrad(script, Val(.Cells("uid").Value))
-                            Dim prExp, toExp As Double
-                            'calculate expense of inserted position
+            Dim dtAna As New DataTable
+            If e.KeyCode = Keys.Delete Then
+                With DGdisplayTrades.CurrentRow
 
-                            Dim drow As DataRow()
-                            REM 1: delete trade from global dtEqtrade datatable
-                            drow = GdtEQTrades.Select("uid = " & Val(.Cells("uid").Value), "")
+                    If Val(DGdisplayTrades.CurrentRow.Cells("entryno").Value) = 0 Then
+                        If MsgBox("Are you sure to delete selected script?", MsgBoxStyle.YesNo + MsgBoxStyle.Question) = MsgBoxResult.Yes Then
+                            If VarScriptType = "EQ" Then
+                                objScr.Delete_eqtrad(script, Val(.Cells("uid").Value))
+                                Dim prExp, toExp As Double
+                                'calculate expense of inserted position
 
-                            Dim dtTemp_EQTrad As New DataTable
-                            dtTemp_EQTrad = GdtEQTrades.Clone
-                            dtTemp_EQTrad.ImportRow(drow(0))
+                                Dim drow As DataRow()
+                                REM 1: delete trade from global dtEqtrade datatable
+                                drow = GdtEQTrades.Select("uid = " & Val(.Cells("uid").Value), "")
 
-                            GdtEQTrades.Rows.Remove(drow(0))
-                            GdtEQTrades.AcceptChanges()
-                            REM 1: END
+                                Dim dtTemp_EQTrad As New DataTable
+                                dtTemp_EQTrad = GdtEQTrades.Clone
+                                dtTemp_EQTrad.ImportRow(drow(0))
 
-                            REM Calc. Expense
-                            Call GSub_CalculateExpense(dtTemp_EQTrad, "EQ", False)
-                            objTrad.Delete_Expense_Data_All()
-                            objTrad.Insert_Expense_Data(G_DTExpenseData)
-                            REM End
+                                GdtEQTrades.Rows.Remove(drow(0))
+                                GdtEQTrades.AcceptChanges()
+                                REM 1: END
+
+                                REM Calc. Expense
+                                Call GSub_CalculateExpense(dtTemp_EQTrad, "EQ", False)
+                                objTrad.Delete_Expense_Data_All()
+                                objTrad.Insert_Expense_Data(G_DTExpenseData)
+                                REM End
+
+                                Dim exch As String = clsGlobal.mContract.GetExchangeFromToken(lbltoken.Text, ETokenType.Eq_Token)
+                                ' If dteqent.Value.Date < Now.Date Then
+                                'insert position to database's analysis table also
+                                dtAna = objAna.fill_equity_process(UCase(script.Trim), -CInt(.Cells("qty").Value), Val(.Cells("rate").Value), prExp, toExp, CDate(.Cells("entrydate").Value), company, exch)
+                                '***********************************************************************************
+                                'insert EQ trade to analysis table
+                                If dtAna.Rows.Count > 0 Then
+                                    objScr.insert_EQTrade_in_maintable(script.Trim, dtAna, prExp, toExp, CDate(.Cells("entrydate").Value), company, exch)
+                                Else
+                                    Dim mrow As DataRow()
+                                    mrow = maintable.Select("script = '" & script & "' And company='" & company & "'", "")
+                                    maintable.Rows.Remove(mrow(0))
+                                End If
+                            ElseIf VarScriptType = "FO" Then
+                                Dim exch As String = clsGlobal.mContract.GetExchangeFromToken(lbltoken.Text, ETokenType.Fo_Token)
+                                objScr.Delete_trad(script, Val(DGdisplayTrades.CurrentRow.Cells("uid").Value))
+                                Dim drow As DataRow()
+                                'calulate exp of trade to be deleted
+                                Dim prExp, toExp As Double
+                                'cal_prebal(CDate(.Cells("entrydate").Value), company, cpfe, Val(.Cells("qty").Value), -Val(.Cells("rate").Value), prExp, toExp)
+
+                                ' If dteqent.Value.Date < Now.Date Then
+                                'insert position to database's analysis table also                                
+                                dtAna = objAna.fill_equity_process(UCase(script.Trim), -CInt(.Cells("qty").Value), Val(.Cells("rate").Value), prExp, toExp, CDate(.Cells("entrydate").Value), company, exch)
+                                '***********************************************************************************
+                                'insert EQ trade to analysis table
+                                If dtAna.Rows.Count > 0 Then
+                                    objScr.insert_EQTrade_in_maintable(script.Trim, dtAna, prExp, toExp, CDate(.Cells("entrydate").Value), company, exch)
+                                Else
+                                    Dim mrow As DataRow()
+                                    mrow = maintable.Select("script = '" & script & "' And company='" & company & "'", "")
+                                    maintable.Rows.Remove(mrow(0))
+                                End If
+                            ElseIf VarScriptType = "FO" Then
+                                Dim exch As String = clsGlobal.mContract.GetExchangeFromToken(lbltoken.Text, ETokenType.Fo_Token)
+                                objScr.Delete_trad(script, Val(DGdisplayTrades.CurrentRow.Cells("uid").Value))
+                                Dim drow As DataRow()
+                                'calulate exp of trade to be deleted
+                                Dim prExp, toExp As Double
+                                'cal_prebal(CDate(.Cells("entrydate").Value), company, cpfe, Val(.Cells("qty").Value), -Val(.Cells("rate").Value), prExp, toExp)
+
+                                REM 1: delete trade from global dtFOtrade datatable
+                                drow = GdtFOTrades.Select("uid = " & Val(.Cells("uid").Value), "")
+
+                                Dim dtTemp_FOTrad As New DataTable
+                                dtTemp_FOTrad = GdtFOTrades.Clone
+                                dtTemp_FOTrad.ImportRow(drow(0))
 
 
-                            ' If dteqent.Value.Date < Now.Date Then
-                            'insert position to database's analysis table also
-                            dtAna = objAna.fill_equity_process(UCase(script.Trim), -CInt(.Cells("qty").Value), Val(.Cells("rate").Value), prExp, toExp, CDate(.Cells("entrydate").Value), company)
-                            '***********************************************************************************
-                            'insert EQ trade to analysis table
-                            If dtAna.Rows.Count > 0 Then
-                                objScr.insert_EQTrade_in_maintable(script.Trim, dtAna, prExp, toExp, CDate(.Cells("entrydate").Value), company)
-                            Else
-                                Dim mrow As DataRow()
-                                mrow = maintable.Select("script = '" & script & "' And company='" & company & "'", "")
-                                maintable.Rows.Remove(mrow(0))
-                            End If
-                        ElseIf VarScriptType = "FO" Then
-                            objScr.Delete_trad(script, Val(DGdisplayTrades.CurrentRow.Cells("uid").Value))
-                            Dim drow As DataRow()
-                            'calulate exp of trade to be deleted
-                            Dim prExp, toExp As Double
-                            'cal_prebal(CDate(.Cells("entrydate").Value), company, cpfe, Val(.Cells("qty").Value), -Val(.Cells("rate").Value), prExp, toExp)
+                                GdtFOTrades.Rows.Remove(drow(0))
+                                GdtFOTrades.AcceptChanges()
 
-                            REM 1: delete trade from global dtFOtrade datatable
-                            drow = GdtFOTrades.Select("uid = " & Val(.Cells("uid").Value), "")
-                              
-                            Dim dtTemp_FOTrad As New DataTable
-                            dtTemp_FOTrad = GdtFOTrades.Clone
-                            dtTemp_FOTrad.ImportRow(drow(0))
+                                REM 1: END
 
+                                REM Calc. Expense
+                                Call GSub_CalculateExpense(dtTemp_FOTrad, "FO", False)
+                                objTrad.Delete_Expense_Data_All()
+                                objTrad.Insert_Expense_Data(G_DTExpenseData)
+                                REM End
 
-                            GdtFOTrades.Rows.Remove(drow(0))
-                            GdtFOTrades.AcceptChanges()
+                                'insert position to database's analysis table also
+                                '                                dtAna = objAna.fill_table_process(script.Trim, -CInt(.Cells("qty").Value), Val(.Cells("rate").Value), prExp, toExp, CDate(.Cells("entrydate").Value), company)
+                                dtAna = objAna.fill_table_process(script.Trim, -CInt(.Cells("qty").Value), Val(.Cells("rate").Value), prExp, toExp, CDate(.Cells("entrydate").Value), company, exch)
 
-                            REM 1: END
-
-                            REM Calc. Expense
-                            Call GSub_CalculateExpense(dtTemp_FOTrad, "FO", False)
-                            objTrad.Delete_Expense_Data_All()
-                            objTrad.Insert_Expense_Data(G_DTExpenseData)
-                            REM End
-
-                            'insert position to database's analysis table also
-                            dtAna = objAna.fill_table_process(script.Trim, -CInt(.Cells("qty").Value), Val(.Cells("rate").Value), prExp, toExp, CDate(.Cells("entrydate").Value), company)
-                            'caluclate expense of inserted position
-                            'insert FO trade to analysis table
-                            If dtAna.Rows.Count > 0 Then
-                                objScr.insert_FOTrade_in_maintable(script.Trim, dtAna, prExp, toExp, CDate(.Cells("entrydate").Value), company)
-                            Else
-                                Dim mrow As DataRow()
+                                'caluclate expense of inserted position
+                                'insert FO trade to analysis table
+                                If dtAna.Rows.Count > 0 Then
+                                    objScr.insert_FOTrade_in_maintable(script.Trim, dtAna, prExp, toExp, CDate(.Cells("entrydate").Value), company, exch)
+                                Else
+                                    Dim mrow As DataRow()
                                     mrow = maintable.Select("script = '" & script & "' And company='" & company & "'", "")
                                     If NetMode = "API" Then
                                         Dim str As String = HT_GetIdentifierFromTokan(CLng(mrow(0).Item("Tokanno")))
                                         UnRegIdentifier(str)
                                     End If
-                                   
-                                maintable.Rows.Remove(mrow(0))
+
+                                    maintable.Rows.Remove(mrow(0))
+                                End If
+                                REM 2:recalculate position in analysis table and store to database
+                            ElseIf VarScriptType = "CURRENCY" Then
+                                Dim exch As String = clsGlobal.mContract.GetExchangeFromToken(lbltoken.Text, ETokenType.Fo_Token)
+                                objScr.Delete_Currency_Trading_byUID(script, Val(DGdisplayTrades.CurrentRow.Cells("uid").Value))
+                                Dim drow As DataRow()
+                                'calulate exp of trade to be deleted
+                                Dim prExp, toExp As Double
+                                'Call cal_prebal(CDate(.Cells("entrydate").Value), company, "C" & cpfe, Val(.Cells("qty").Value), -Val(.Cells("rate").Value), prExp, toExp)
+
+                                REM 1: delete trade from global dtFOtrade datatable
+                                drow = GdtCurrencyTrades.Select("uid = " & Val(.Cells("uid").Value), "")
+
+                                Dim dtTemp_CurrTrad As New DataTable
+                                dtTemp_CurrTrad = GdtCurrencyTrades.Clone
+                                dtTemp_CurrTrad.ImportRow(drow(0))
+
+
+                                GdtCurrencyTrades.Rows.Remove(drow(0))
+                                GdtCurrencyTrades.AcceptChanges()
+                                REM 1: END
+
+                                REM Calc. Expense
+                                Call GSub_CalculateExpense(dtTemp_CurrTrad, "CURR", False)
+                                objTrad.Delete_Expense_Data_All()
+                                objTrad.Insert_Expense_Data(G_DTExpenseData)
+                                REM End
+
+                                'insert position to database's analysis table also
+                                dtAna = objAna.fill_table_process(script.Trim, -CInt(.Cells("qty").Value), Val(.Cells("rate").Value), prExp, toExp, CDate(.Cells("entrydate").Value), company, exch)
+                                'caluclate expense of inserted position
+                                'insert FO trade to analysis table
+                                If dtAna.Rows.Count > 0 Then
+                                    objScr.insert_CurrencyTrade_in_maintable(script.Trim, dtAna, prExp, toExp, CDate(.Cells("entrydate").Value), company)
+                                Else
+                                    Dim mrow As DataRow()
+                                    mrow = maintable.Select("script = '" & script & "' And company='" & company & "'", "")
+                                    maintable.Rows.Remove(mrow(0))
+                                End If
+                                REM 2:recalculate position in analysis table and store to database
                             End If
-                            REM 2:recalculate position in analysis table and store to database
-                        ElseIf VarScriptType = "CURRENCY" Then
-                            objScr.Delete_Currency_Trading_byUID(script, Val(DGdisplayTrades.CurrentRow.Cells("uid").Value))
-                            Dim drow As DataRow()
-                            'calulate exp of trade to be deleted
-                            Dim prExp, toExp As Double
-                            'Call cal_prebal(CDate(.Cells("entrydate").Value), company, "C" & cpfe, Val(.Cells("qty").Value), -Val(.Cells("rate").Value), prExp, toExp)
+                            Threading.Thread.Sleep(500)
+                            ' cal_prebal(CDate(.Cells(2).Value), company)
 
-                            REM 1: delete trade from global dtFOtrade datatable
-                            drow = GdtCurrencyTrades.Select("uid = " & Val(.Cells("uid").Value), "")
-
-                            Dim dtTemp_CurrTrad As New DataTable
-                            dtTemp_CurrTrad = GdtCurrencyTrades.Clone
-                            dtTemp_CurrTrad.ImportRow(drow(0))
-
-
-                            GdtCurrencyTrades.Rows.Remove(drow(0))
-                            GdtCurrencyTrades.AcceptChanges()
-                            REM 1: END
-
-                            REM Calc. Expense
-                            Call GSub_CalculateExpense(dtTemp_CurrTrad, "CURR", False)
-                            objTrad.Delete_Expense_Data_All()
-                            objTrad.Insert_Expense_Data(G_DTExpenseData)
-                            REM End
-
-                            'insert position to database's analysis table also
-                            dtAna = objAna.fill_table_process(script.Trim, -CInt(.Cells("qty").Value), Val(.Cells("rate").Value), prExp, toExp, CDate(.Cells("entrydate").Value), company)
-                            'caluclate expense of inserted position
-                            'insert FO trade to analysis table
-                            If dtAna.Rows.Count > 0 Then
-                                objScr.insert_CurrencyTrade_in_maintable(script.Trim, dtAna, prExp, toExp, CDate(.Cells("entrydate").Value), company)
-                            Else
-                                Dim mrow As DataRow()
-                                mrow = maintable.Select("script = '" & script & "' And company='" & company & "'", "")
-                                maintable.Rows.Remove(mrow(0))
-                            End If
-                            REM 2:recalculate position in analysis table and store to database
+                            Call process_data()
+                            count1.Add(True)
                         End If
-                        Threading.Thread.Sleep(500)
-                        ' cal_prebal(CDate(.Cells(2).Value), company)
-
-                        Call process_data()
-                        count1.Add(True)
                     End If
-                End If
-            End With
+                End With
 
             End If
         Catch ex As Exception

@@ -131,6 +131,53 @@ Partial Class FrmImportAllfile
         Me.Button23 = New System.Windows.Forms.Button()
         Me.Button24 = New System.Windows.Forms.Button()
         Me.Button25 = New System.Windows.Forms.Button()
+        Me.tbCtrlMain = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Panel22 = New System.Windows.Forms.Panel()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.btnBseEqBrowse = New System.Windows.Forms.Button()
+        Me.txtBseEqPath = New System.Windows.Forms.TextBox()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Panel23 = New System.Windows.Forms.Panel()
+        Me.btnBseEqClear = New System.Windows.Forms.Button()
+        Me.btnBseEqDownload = New System.Windows.Forms.Button()
+        Me.btnBseEqImport = New System.Windows.Forms.Button()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.btnBseContractBrowse = New System.Windows.Forms.Button()
+        Me.txtBseContractPath = New System.Windows.Forms.TextBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Panel21 = New System.Windows.Forms.Panel()
+        Me.btnBseContractClear = New System.Windows.Forms.Button()
+        Me.btnBseContractDownload = New System.Windows.Forms.Button()
+        Me.btnBseContractImport = New System.Windows.Forms.Button()
+        Me.Panel24 = New System.Windows.Forms.Panel()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.btnBseBhavCopyBrowse = New System.Windows.Forms.Button()
+        Me.txtBseBhavcopy = New System.Windows.Forms.TextBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.btnBseBhavcopyDownload = New System.Windows.Forms.Button()
+        Me.Panel25 = New System.Windows.Forms.Panel()
+        Me.Panel26 = New System.Windows.Forms.Panel()
+        Me.Button29 = New System.Windows.Forms.Button()
+        Me.Button30 = New System.Windows.Forms.Button()
+        Me.Button31 = New System.Windows.Forms.Button()
+        Me.Panel27 = New System.Windows.Forms.Panel()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Button32 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.btnBseBhavcopyClear = New System.Windows.Forms.Button()
+        Me.btnBseBhavcopyImport = New System.Windows.Forms.Button()
         Me.Panel6.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -150,6 +197,17 @@ Partial Class FrmImportAllfile
         Me.Panel17.SuspendLayout()
         Me.Panel18.SuspendLayout()
         Me.Panel19.SuspendLayout()
+        Me.tbCtrlMain.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.Panel22.SuspendLayout()
+        Me.Panel23.SuspendLayout()
+        Me.Panel20.SuspendLayout()
+        Me.Panel21.SuspendLayout()
+        Me.Panel24.SuspendLayout()
+        Me.Panel25.SuspendLayout()
+        Me.Panel26.SuspendLayout()
+        Me.Panel27.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label10
@@ -157,7 +215,7 @@ Partial Class FrmImportAllfile
         Me.Label10.BackColor = System.Drawing.SystemColors.Control
         Me.Label10.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(1, 201)
+        Me.Label10.Location = New System.Drawing.Point(4, 221)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(506, 19)
         Me.Label10.TabIndex = 19
@@ -192,7 +250,7 @@ Partial Class FrmImportAllfile
         Me.Panel6.Controls.Add(Me.btnClearCurrency)
         Me.Panel6.Controls.Add(Me.btnImportCurrency2)
         Me.Panel6.Controls.Add(Me.btnImportCurrency)
-        Me.Panel6.Location = New System.Drawing.Point(1, 262)
+        Me.Panel6.Location = New System.Drawing.Point(4, 282)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(508, 34)
         Me.Panel6.TabIndex = 21
@@ -202,7 +260,7 @@ Partial Class FrmImportAllfile
         Me.chkcurr.AutoSize = True
         Me.chkcurr.Checked = True
         Me.chkcurr.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkcurr.Location = New System.Drawing.Point(180, 3)
+        Me.chkcurr.Location = New System.Drawing.Point(178, 9)
         Me.chkcurr.Name = "chkcurr"
         Me.chkcurr.Size = New System.Drawing.Size(57, 17)
         Me.chkcurr.TabIndex = 4
@@ -250,7 +308,7 @@ Partial Class FrmImportAllfile
         Me.Panel3.Controls.Add(Me.cmdeqclear)
         Me.Panel3.Controls.Add(Me.cmdeqimport2)
         Me.Panel3.Controls.Add(Me.cmdeqimport)
-        Me.Panel3.Location = New System.Drawing.Point(1, 163)
+        Me.Panel3.Location = New System.Drawing.Point(4, 183)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(508, 38)
         Me.Panel3.TabIndex = 18
@@ -319,7 +377,7 @@ Partial Class FrmImportAllfile
         Me.Panel7.Controls.Add(Me.txtCurrencyPath)
         Me.Panel7.Controls.Add(Me.Label8)
         Me.Panel7.Controls.Add(Me.Label9)
-        Me.Panel7.Location = New System.Drawing.Point(1, 221)
+        Me.Panel7.Location = New System.Drawing.Point(4, 241)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(508, 39)
         Me.Panel7.TabIndex = 20
@@ -433,7 +491,7 @@ Partial Class FrmImportAllfile
         Me.Panel5.Controls.Add(Me.txteqpath)
         Me.Panel5.Controls.Add(Me.Label4)
         Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Location = New System.Drawing.Point(1, 123)
+        Me.Panel5.Location = New System.Drawing.Point(4, 142)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(508, 39)
         Me.Panel5.TabIndex = 17
@@ -468,7 +526,7 @@ Partial Class FrmImportAllfile
         Me.Panel2.Controls.Add(Me.txtpath)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(2, 27)
+        Me.Panel2.Location = New System.Drawing.Point(5, 47)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(508, 41)
         Me.Panel2.TabIndex = 14
@@ -499,7 +557,7 @@ Partial Class FrmImportAllfile
         Me.Label7.BackColor = System.Drawing.SystemColors.Control
         Me.Label7.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(1, 103)
+        Me.Label7.Location = New System.Drawing.Point(4, 123)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(506, 17)
         Me.Label7.TabIndex = 16
@@ -523,7 +581,7 @@ Partial Class FrmImportAllfile
         Me.Panel4.Controls.Add(Me.cmdclear)
         Me.Panel4.Controls.Add(Me.cmdsave2)
         Me.Panel4.Controls.Add(Me.cmdsave)
-        Me.Panel4.Location = New System.Drawing.Point(2, 70)
+        Me.Panel4.Location = New System.Drawing.Point(5, 90)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(508, 33)
         Me.Panel4.TabIndex = 15
@@ -558,9 +616,9 @@ Partial Class FrmImportAllfile
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Button26)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(2, 0)
+        Me.Panel1.Location = New System.Drawing.Point(5, 7)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(508, 38)
+        Me.Panel1.Size = New System.Drawing.Size(508, 37)
         Me.Panel1.TabIndex = 13
         '
         'Button26
@@ -568,7 +626,7 @@ Partial Class FrmImportAllfile
         Me.Button26.BackColor = System.Drawing.SystemColors.ControlDark
         Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button26.Location = New System.Drawing.Point(372, 2)
+        Me.Button26.Location = New System.Drawing.Point(368, 4)
         Me.Button26.Name = "Button26"
         Me.Button26.Size = New System.Drawing.Size(132, 24)
         Me.Button26.TabIndex = 28
@@ -580,7 +638,7 @@ Partial Class FrmImportAllfile
         Me.Label2.BackColor = System.Drawing.SystemColors.Control
         Me.Label2.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(0, 295)
+        Me.Label2.Location = New System.Drawing.Point(3, 315)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(506, 26)
         Me.Label2.TabIndex = 22
@@ -596,7 +654,7 @@ Partial Class FrmImportAllfile
         Me.Panel9.Controls.Add(Me.txtaelpath)
         Me.Panel9.Controls.Add(Me.Label15)
         Me.Panel9.Controls.Add(Me.Label16)
-        Me.Panel9.Location = New System.Drawing.Point(1, 319)
+        Me.Panel9.Location = New System.Drawing.Point(4, 339)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(508, 44)
         Me.Panel9.TabIndex = 22
@@ -663,7 +721,7 @@ Partial Class FrmImportAllfile
         Me.Panel10.Controls.Add(Me.Button4)
         Me.Panel10.Controls.Add(Me.Button5)
         Me.Panel10.Controls.Add(Me.Button6)
-        Me.Panel10.Location = New System.Drawing.Point(1, 366)
+        Me.Panel10.Location = New System.Drawing.Point(4, 386)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(508, 38)
         Me.Panel10.TabIndex = 23
@@ -838,7 +896,7 @@ Partial Class FrmImportAllfile
         Me.Label21.BackColor = System.Drawing.SystemColors.Control
         Me.Label21.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label21.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label21.Location = New System.Drawing.Point(3, 404)
+        Me.Label21.Location = New System.Drawing.Point(6, 424)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(506, 21)
         Me.Label21.TabIndex = 24
@@ -854,7 +912,7 @@ Partial Class FrmImportAllfile
         Me.Panel13.Controls.Add(Me.TXTBHAVCOPY)
         Me.Panel13.Controls.Add(Me.Label23)
         Me.Panel13.Controls.Add(Me.Label24)
-        Me.Panel13.Location = New System.Drawing.Point(0, 422)
+        Me.Panel13.Location = New System.Drawing.Point(3, 442)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(508, 43)
         Me.Panel13.TabIndex = 25
@@ -921,7 +979,7 @@ Partial Class FrmImportAllfile
         Me.Panel14.Controls.Add(Me.Button16)
         Me.Panel14.Controls.Add(Me.Button17)
         Me.Panel14.Controls.Add(Me.Button18)
-        Me.Panel14.Location = New System.Drawing.Point(0, 467)
+        Me.Panel14.Location = New System.Drawing.Point(3, 487)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(508, 38)
         Me.Panel14.TabIndex = 26
@@ -1096,7 +1154,7 @@ Partial Class FrmImportAllfile
         Me.Label11.BackColor = System.Drawing.SystemColors.Control
         Me.Label11.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(1, 505)
+        Me.Label11.Location = New System.Drawing.Point(4, 525)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(506, 22)
         Me.Label11.TabIndex = 27
@@ -1113,7 +1171,7 @@ Partial Class FrmImportAllfile
         Me.Panel8.Controls.Add(Me.TXTSPAN)
         Me.Panel8.Controls.Add(Me.Label13)
         Me.Panel8.Controls.Add(Me.Label29)
-        Me.Panel8.Location = New System.Drawing.Point(0, 533)
+        Me.Panel8.Location = New System.Drawing.Point(4, 552)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(508, 44)
         Me.Panel8.TabIndex = 26
@@ -1190,7 +1248,7 @@ Partial Class FrmImportAllfile
         Me.Panel17.Controls.Add(Me.Button23)
         Me.Panel17.Controls.Add(Me.Button24)
         Me.Panel17.Controls.Add(Me.Button25)
-        Me.Panel17.Location = New System.Drawing.Point(2, 582)
+        Me.Panel17.Location = New System.Drawing.Point(4, 601)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(508, 41)
         Me.Panel17.TabIndex = 27
@@ -1360,29 +1418,556 @@ Partial Class FrmImportAllfile
         Me.Button25.Text = "Import"
         Me.Button25.UseVisualStyleBackColor = True
         '
+        'tbCtrlMain
+        '
+        Me.tbCtrlMain.Controls.Add(Me.TabPage1)
+        Me.tbCtrlMain.Controls.Add(Me.TabPage2)
+        Me.tbCtrlMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tbCtrlMain.Location = New System.Drawing.Point(0, 0)
+        Me.tbCtrlMain.Name = "tbCtrlMain"
+        Me.tbCtrlMain.SelectedIndex = 0
+        Me.tbCtrlMain.Size = New System.Drawing.Size(531, 675)
+        Me.tbCtrlMain.TabIndex = 28
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.Panel1)
+        Me.TabPage1.Controls.Add(Me.Panel17)
+        Me.TabPage1.Controls.Add(Me.Panel4)
+        Me.TabPage1.Controls.Add(Me.Panel8)
+        Me.TabPage1.Controls.Add(Me.Label7)
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.Panel2)
+        Me.TabPage1.Controls.Add(Me.Panel14)
+        Me.TabPage1.Controls.Add(Me.Panel5)
+        Me.TabPage1.Controls.Add(Me.Panel13)
+        Me.TabPage1.Controls.Add(Me.Panel7)
+        Me.TabPage1.Controls.Add(Me.Label21)
+        Me.TabPage1.Controls.Add(Me.Panel3)
+        Me.TabPage1.Controls.Add(Me.Panel10)
+        Me.TabPage1.Controls.Add(Me.Panel6)
+        Me.TabPage1.Controls.Add(Me.Panel9)
+        Me.TabPage1.Controls.Add(Me.Label10)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(523, 649)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "NSE"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.Panel24)
+        Me.TabPage2.Controls.Add(Me.Label45)
+        Me.TabPage2.Controls.Add(Me.Panel25)
+        Me.TabPage2.Controls.Add(Me.Label38)
+        Me.TabPage2.Controls.Add(Me.Panel22)
+        Me.TabPage2.Controls.Add(Me.Panel23)
+        Me.TabPage2.Controls.Add(Me.Label34)
+        Me.TabPage2.Controls.Add(Me.Panel20)
+        Me.TabPage2.Controls.Add(Me.Panel21)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(523, 649)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "BSE"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label38
+        '
+        Me.Label38.BackColor = System.Drawing.SystemColors.Control
+        Me.Label38.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label38.Location = New System.Drawing.Point(4, 113)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(506, 17)
+        Me.Label38.TabIndex = 19
+        Me.Label38.Text = "Import Security Master "
+        Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel22
+        '
+        Me.Panel22.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel22.Controls.Add(Me.Label39)
+        Me.Panel22.Controls.Add(Me.btnBseEqBrowse)
+        Me.Panel22.Controls.Add(Me.txtBseEqPath)
+        Me.Panel22.Controls.Add(Me.Label40)
+        Me.Panel22.Controls.Add(Me.Label41)
+        Me.Panel22.Location = New System.Drawing.Point(5, 133)
+        Me.Panel22.Name = "Panel22"
+        Me.Panel22.Size = New System.Drawing.Size(508, 39)
+        Me.Panel22.TabIndex = 20
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(48, 24)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(13, 13)
+        Me.Label39.TabIndex = 7
+        Me.Label39.Text = "0"
+        Me.Label39.Visible = False
+        '
+        'btnBseEqBrowse
+        '
+        Me.btnBseEqBrowse.Location = New System.Drawing.Point(425, 1)
+        Me.btnBseEqBrowse.Name = "btnBseEqBrowse"
+        Me.btnBseEqBrowse.Size = New System.Drawing.Size(75, 23)
+        Me.btnBseEqBrowse.TabIndex = 6
+        Me.btnBseEqBrowse.Text = "Browse"
+        Me.btnBseEqBrowse.UseVisualStyleBackColor = True
+        '
+        'txtBseEqPath
+        '
+        Me.txtBseEqPath.BackColor = System.Drawing.SystemColors.Window
+        Me.txtBseEqPath.Enabled = False
+        Me.txtBseEqPath.Location = New System.Drawing.Point(63, 3)
+        Me.txtBseEqPath.Name = "txtBseEqPath"
+        Me.txtBseEqPath.ReadOnly = True
+        Me.txtBseEqPath.Size = New System.Drawing.Size(350, 20)
+        Me.txtBseEqPath.TabIndex = 5
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Location = New System.Drawing.Point(48, 5)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(12, 14)
+        Me.Label40.TabIndex = 4
+        Me.Label40.Text = ":"
+        Me.Label40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(11, 5)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(31, 14)
+        Me.Label41.TabIndex = 1
+        Me.Label41.Text = "File"
+        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel23
+        '
+        Me.Panel23.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel23.Controls.Add(Me.btnBseEqClear)
+        Me.Panel23.Controls.Add(Me.btnBseEqDownload)
+        Me.Panel23.Controls.Add(Me.btnBseEqImport)
+        Me.Panel23.Location = New System.Drawing.Point(5, 174)
+        Me.Panel23.Name = "Panel23"
+        Me.Panel23.Size = New System.Drawing.Size(508, 38)
+        Me.Panel23.TabIndex = 21
+        '
+        'btnBseEqClear
+        '
+        Me.btnBseEqClear.CausesValidation = False
+        Me.btnBseEqClear.Location = New System.Drawing.Point(418, 5)
+        Me.btnBseEqClear.Name = "btnBseEqClear"
+        Me.btnBseEqClear.Size = New System.Drawing.Size(75, 20)
+        Me.btnBseEqClear.TabIndex = 1
+        Me.btnBseEqClear.Text = "Clear"
+        Me.btnBseEqClear.UseVisualStyleBackColor = True
+        '
+        'btnBseEqDownload
+        '
+        Me.btnBseEqDownload.BackgroundImage = CType(resources.GetObject("btnBseEqDownload.BackgroundImage"), System.Drawing.Image)
+        Me.btnBseEqDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBseEqDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBseEqDownload.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBseEqDownload.Location = New System.Drawing.Point(12, 5)
+        Me.btnBseEqDownload.Name = "btnBseEqDownload"
+        Me.btnBseEqDownload.Size = New System.Drawing.Size(152, 28)
+        Me.btnBseEqDownload.TabIndex = 0
+        Me.btnBseEqDownload.Text = "Download  Import"
+        Me.btnBseEqDownload.UseVisualStyleBackColor = True
+        '
+        'btnBseEqImport
+        '
+        Me.btnBseEqImport.Location = New System.Drawing.Point(337, 5)
+        Me.btnBseEqImport.Name = "btnBseEqImport"
+        Me.btnBseEqImport.Size = New System.Drawing.Size(75, 20)
+        Me.btnBseEqImport.TabIndex = 0
+        Me.btnBseEqImport.Text = "Import"
+        Me.btnBseEqImport.UseVisualStyleBackColor = True
+        '
+        'Label34
+        '
+        Me.Label34.BackColor = System.Drawing.SystemColors.Control
+        Me.Label34.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label34.Location = New System.Drawing.Point(8, 3)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(364, 24)
+        Me.Label34.TabIndex = 16
+        Me.Label34.Text = "Import Contract Master "
+        Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel20
+        '
+        Me.Panel20.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel20.Controls.Add(Me.Label35)
+        Me.Panel20.Controls.Add(Me.btnBseContractBrowse)
+        Me.Panel20.Controls.Add(Me.txtBseContractPath)
+        Me.Panel20.Controls.Add(Me.Label36)
+        Me.Panel20.Controls.Add(Me.Label37)
+        Me.Panel20.Location = New System.Drawing.Point(7, 31)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(508, 41)
+        Me.Panel20.TabIndex = 17
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(48, 24)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(13, 13)
+        Me.Label35.TabIndex = 7
+        Me.Label35.Text = "0"
+        '
+        'btnBseContractBrowse
+        '
+        Me.btnBseContractBrowse.Location = New System.Drawing.Point(425, 3)
+        Me.btnBseContractBrowse.Name = "btnBseContractBrowse"
+        Me.btnBseContractBrowse.Size = New System.Drawing.Size(75, 23)
+        Me.btnBseContractBrowse.TabIndex = 6
+        Me.btnBseContractBrowse.Text = "Browse"
+        Me.btnBseContractBrowse.UseVisualStyleBackColor = True
+        '
+        'txtBseContractPath
+        '
+        Me.txtBseContractPath.BackColor = System.Drawing.SystemColors.Window
+        Me.txtBseContractPath.Enabled = False
+        Me.txtBseContractPath.Location = New System.Drawing.Point(63, 5)
+        Me.txtBseContractPath.Name = "txtBseContractPath"
+        Me.txtBseContractPath.ReadOnly = True
+        Me.txtBseContractPath.Size = New System.Drawing.Size(350, 20)
+        Me.txtBseContractPath.TabIndex = 5
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(48, 7)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(12, 14)
+        Me.Label36.TabIndex = 4
+        Me.Label36.Text = ":"
+        Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(11, 7)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(31, 14)
+        Me.Label37.TabIndex = 1
+        Me.Label37.Text = "File"
+        Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel21
+        '
+        Me.Panel21.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel21.Controls.Add(Me.btnBseContractClear)
+        Me.Panel21.Controls.Add(Me.btnBseContractDownload)
+        Me.Panel21.Controls.Add(Me.btnBseContractImport)
+        Me.Panel21.Location = New System.Drawing.Point(6, 77)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(508, 33)
+        Me.Panel21.TabIndex = 18
+        '
+        'btnBseContractClear
+        '
+        Me.btnBseContractClear.CausesValidation = False
+        Me.btnBseContractClear.Location = New System.Drawing.Point(419, 5)
+        Me.btnBseContractClear.Name = "btnBseContractClear"
+        Me.btnBseContractClear.Size = New System.Drawing.Size(75, 21)
+        Me.btnBseContractClear.TabIndex = 1
+        Me.btnBseContractClear.Text = "Clear"
+        Me.btnBseContractClear.UseVisualStyleBackColor = True
+        '
+        'btnBseContractDownload
+        '
+        Me.btnBseContractDownload.BackgroundImage = CType(resources.GetObject("btnBseContractDownload.BackgroundImage"), System.Drawing.Image)
+        Me.btnBseContractDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBseContractDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBseContractDownload.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBseContractDownload.Location = New System.Drawing.Point(11, 2)
+        Me.btnBseContractDownload.Name = "btnBseContractDownload"
+        Me.btnBseContractDownload.Size = New System.Drawing.Size(152, 27)
+        Me.btnBseContractDownload.TabIndex = 0
+        Me.btnBseContractDownload.Text = "Download  Import"
+        Me.btnBseContractDownload.UseVisualStyleBackColor = True
+        '
+        'btnBseContractImport
+        '
+        Me.btnBseContractImport.Location = New System.Drawing.Point(338, 5)
+        Me.btnBseContractImport.Name = "btnBseContractImport"
+        Me.btnBseContractImport.Size = New System.Drawing.Size(75, 21)
+        Me.btnBseContractImport.TabIndex = 0
+        Me.btnBseContractImport.Text = "Import"
+        Me.btnBseContractImport.UseVisualStyleBackColor = True
+        '
+        'Panel24
+        '
+        Me.Panel24.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel24.Controls.Add(Me.Label42)
+        Me.Panel24.Controls.Add(Me.btnBseBhavCopyBrowse)
+        Me.Panel24.Controls.Add(Me.txtBseBhavcopy)
+        Me.Panel24.Controls.Add(Me.Label43)
+        Me.Panel24.Controls.Add(Me.Label44)
+        Me.Panel24.Location = New System.Drawing.Point(5, 239)
+        Me.Panel24.Name = "Panel24"
+        Me.Panel24.Size = New System.Drawing.Size(508, 43)
+        Me.Panel24.TabIndex = 28
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(48, 26)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(13, 13)
+        Me.Label42.TabIndex = 7
+        Me.Label42.Text = "0"
+        Me.Label42.Visible = False
+        '
+        'btnBseBhavCopyBrowse
+        '
+        Me.btnBseBhavCopyBrowse.Location = New System.Drawing.Point(425, 4)
+        Me.btnBseBhavCopyBrowse.Name = "btnBseBhavCopyBrowse"
+        Me.btnBseBhavCopyBrowse.Size = New System.Drawing.Size(75, 23)
+        Me.btnBseBhavCopyBrowse.TabIndex = 6
+        Me.btnBseBhavCopyBrowse.Text = "Browse"
+        Me.btnBseBhavCopyBrowse.UseVisualStyleBackColor = True
+        '
+        'txtBseBhavcopy
+        '
+        Me.txtBseBhavcopy.BackColor = System.Drawing.SystemColors.Window
+        Me.txtBseBhavcopy.Enabled = False
+        Me.txtBseBhavcopy.Location = New System.Drawing.Point(63, 6)
+        Me.txtBseBhavcopy.Name = "txtBseBhavcopy"
+        Me.txtBseBhavcopy.ReadOnly = True
+        Me.txtBseBhavcopy.Size = New System.Drawing.Size(350, 20)
+        Me.txtBseBhavcopy.TabIndex = 5
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(48, 8)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(12, 14)
+        Me.Label43.TabIndex = 4
+        Me.Label43.Text = ":"
+        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(11, 8)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(31, 14)
+        Me.Label44.TabIndex = 1
+        Me.Label44.Text = "File"
+        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label45
+        '
+        Me.Label45.BackColor = System.Drawing.SystemColors.Control
+        Me.Label45.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label45.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label45.Location = New System.Drawing.Point(4, 215)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(506, 21)
+        Me.Label45.TabIndex = 27
+        Me.Label45.Text = "Import Bhavcopy"
+        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btnBseBhavcopyDownload
+        '
+        Me.btnBseBhavcopyDownload.BackgroundImage = CType(resources.GetObject("btnBseBhavcopyDownload.BackgroundImage"), System.Drawing.Image)
+        Me.btnBseBhavcopyDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBseBhavcopyDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBseBhavcopyDownload.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBseBhavcopyDownload.Location = New System.Drawing.Point(12, 4)
+        Me.btnBseBhavcopyDownload.Name = "btnBseBhavcopyDownload"
+        Me.btnBseBhavcopyDownload.Size = New System.Drawing.Size(152, 27)
+        Me.btnBseBhavcopyDownload.TabIndex = 0
+        Me.btnBseBhavcopyDownload.Text = "Download  Import"
+        Me.btnBseBhavcopyDownload.UseVisualStyleBackColor = True
+        '
+        'Panel25
+        '
+        Me.Panel25.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel25.Controls.Add(Me.Panel26)
+        Me.Panel25.Controls.Add(Me.Panel27)
+        Me.Panel25.Controls.Add(Me.Label49)
+        Me.Panel25.Controls.Add(Me.btnBseBhavcopyClear)
+        Me.Panel25.Controls.Add(Me.btnBseBhavcopyDownload)
+        Me.Panel25.Controls.Add(Me.btnBseBhavcopyImport)
+        Me.Panel25.Location = New System.Drawing.Point(5, 288)
+        Me.Panel25.Name = "Panel25"
+        Me.Panel25.Size = New System.Drawing.Size(508, 38)
+        Me.Panel25.TabIndex = 29
+        '
+        'Panel26
+        '
+        Me.Panel26.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel26.Controls.Add(Me.Button29)
+        Me.Panel26.Controls.Add(Me.Button30)
+        Me.Panel26.Controls.Add(Me.Button31)
+        Me.Panel26.Location = New System.Drawing.Point(0, 142)
+        Me.Panel26.Name = "Panel26"
+        Me.Panel26.Size = New System.Drawing.Size(508, 48)
+        Me.Panel26.TabIndex = 26
+        '
+        'Button29
+        '
+        Me.Button29.CausesValidation = False
+        Me.Button29.Location = New System.Drawing.Point(418, 13)
+        Me.Button29.Name = "Button29"
+        Me.Button29.Size = New System.Drawing.Size(75, 23)
+        Me.Button29.TabIndex = 1
+        Me.Button29.Text = "Clear"
+        Me.Button29.UseVisualStyleBackColor = True
+        '
+        'Button30
+        '
+        Me.Button30.BackgroundImage = CType(resources.GetObject("Button30.BackgroundImage"), System.Drawing.Image)
+        Me.Button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button30.Location = New System.Drawing.Point(12, 7)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Size = New System.Drawing.Size(152, 36)
+        Me.Button30.TabIndex = 0
+        Me.Button30.Text = "Download  Import"
+        Me.Button30.UseVisualStyleBackColor = True
+        '
+        'Button31
+        '
+        Me.Button31.Location = New System.Drawing.Point(337, 13)
+        Me.Button31.Name = "Button31"
+        Me.Button31.Size = New System.Drawing.Size(75, 23)
+        Me.Button31.TabIndex = 0
+        Me.Button31.Text = "Import"
+        Me.Button31.UseVisualStyleBackColor = True
+        '
+        'Panel27
+        '
+        Me.Panel27.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel27.Controls.Add(Me.Label46)
+        Me.Panel27.Controls.Add(Me.Button32)
+        Me.Panel27.Controls.Add(Me.TextBox2)
+        Me.Panel27.Controls.Add(Me.Label47)
+        Me.Panel27.Controls.Add(Me.Label48)
+        Me.Panel27.Location = New System.Drawing.Point(0, 81)
+        Me.Panel27.Name = "Panel27"
+        Me.Panel27.Size = New System.Drawing.Size(508, 61)
+        Me.Panel27.TabIndex = 25
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(48, 44)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(13, 13)
+        Me.Label46.TabIndex = 7
+        Me.Label46.Text = "0"
+        Me.Label46.Visible = False
+        '
+        'Button32
+        '
+        Me.Button32.Location = New System.Drawing.Point(425, 14)
+        Me.Button32.Name = "Button32"
+        Me.Button32.Size = New System.Drawing.Size(75, 23)
+        Me.Button32.TabIndex = 6
+        Me.Button32.Text = "Browse"
+        Me.Button32.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(63, 16)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(350, 20)
+        Me.TextBox2.TabIndex = 5
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.Location = New System.Drawing.Point(48, 18)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(12, 14)
+        Me.Label47.TabIndex = 4
+        Me.Label47.Text = ":"
+        Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.Location = New System.Drawing.Point(11, 18)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(31, 14)
+        Me.Label48.TabIndex = 1
+        Me.Label48.Text = "File"
+        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label49
+        '
+        Me.Label49.BackColor = System.Drawing.SystemColors.Control
+        Me.Label49.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label49.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label49.Location = New System.Drawing.Point(-1, 52)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(506, 36)
+        Me.Label49.TabIndex = 24
+        Me.Label49.Text = "Import Ael File"
+        Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btnBseBhavcopyClear
+        '
+        Me.btnBseBhavcopyClear.CausesValidation = False
+        Me.btnBseBhavcopyClear.Location = New System.Drawing.Point(418, 7)
+        Me.btnBseBhavcopyClear.Name = "btnBseBhavcopyClear"
+        Me.btnBseBhavcopyClear.Size = New System.Drawing.Size(75, 21)
+        Me.btnBseBhavcopyClear.TabIndex = 1
+        Me.btnBseBhavcopyClear.Text = "Clear"
+        Me.btnBseBhavcopyClear.UseVisualStyleBackColor = True
+        '
+        'btnBseBhavcopyImport
+        '
+        Me.btnBseBhavcopyImport.Location = New System.Drawing.Point(337, 7)
+        Me.btnBseBhavcopyImport.Name = "btnBseBhavcopyImport"
+        Me.btnBseBhavcopyImport.Size = New System.Drawing.Size(75, 21)
+        Me.btnBseBhavcopyImport.TabIndex = 0
+        Me.btnBseBhavcopyImport.Text = "Import"
+        Me.btnBseBhavcopyImport.UseVisualStyleBackColor = True
+        '
         'FrmImportAllfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(512, 656)
-        Me.Controls.Add(Me.Panel17)
-        Me.Controls.Add(Me.Panel8)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Panel14)
-        Me.Controls.Add(Me.Panel13)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Panel10)
-        Me.Controls.Add(Me.Panel9)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(531, 675)
+        Me.Controls.Add(Me.tbCtrlMain)
         Me.Name = "FrmImportAllfile"
         Me.Text = "Import Files"
         Me.Panel6.ResumeLayout(False)
@@ -1419,6 +2004,21 @@ Partial Class FrmImportAllfile
         Me.Panel18.ResumeLayout(False)
         Me.Panel19.ResumeLayout(False)
         Me.Panel19.PerformLayout()
+        Me.tbCtrlMain.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.Panel22.ResumeLayout(False)
+        Me.Panel22.PerformLayout()
+        Me.Panel23.ResumeLayout(False)
+        Me.Panel20.ResumeLayout(False)
+        Me.Panel20.PerformLayout()
+        Me.Panel21.ResumeLayout(False)
+        Me.Panel24.ResumeLayout(False)
+        Me.Panel24.PerformLayout()
+        Me.Panel25.ResumeLayout(False)
+        Me.Panel26.ResumeLayout(False)
+        Me.Panel27.ResumeLayout(False)
+        Me.Panel27.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1530,4 +2130,51 @@ Partial Class FrmImportAllfile
     Friend WithEvents chkAEL As System.Windows.Forms.CheckBox
     Friend WithEvents chkbhav As System.Windows.Forms.CheckBox
     Friend WithEvents chkspan As System.Windows.Forms.CheckBox
+    Friend WithEvents tbCtrlMain As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Panel20 As Panel
+    Friend WithEvents Label35 As Label
+    Friend WithEvents btnBseContractBrowse As Button
+    Friend WithEvents txtBseContractPath As TextBox
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Panel21 As Panel
+    Friend WithEvents btnBseContractClear As Button
+    Friend WithEvents btnBseContractDownload As Button
+    Friend WithEvents btnBseContractImport As Button
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Panel22 As Panel
+    Friend WithEvents Label39 As Label
+    Friend WithEvents btnBseEqBrowse As Button
+    Friend WithEvents txtBseEqPath As TextBox
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Panel23 As Panel
+    Friend WithEvents btnBseEqClear As Button
+    Friend WithEvents btnBseEqDownload As Button
+    Friend WithEvents btnBseEqImport As Button
+    Friend WithEvents Panel24 As Panel
+    Friend WithEvents Label42 As Label
+    Friend WithEvents btnBseBhavCopyBrowse As Button
+    Friend WithEvents txtBseBhavcopy As TextBox
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Panel25 As Panel
+    Friend WithEvents Panel26 As Panel
+    Friend WithEvents Button29 As Button
+    Friend WithEvents Button30 As Button
+    Friend WithEvents Button31 As Button
+    Friend WithEvents Panel27 As Panel
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Button32 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label48 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents btnBseBhavcopyClear As Button
+    Friend WithEvents btnBseBhavcopyDownload As Button
+    Friend WithEvents btnBseBhavcopyImport As Button
 End Class

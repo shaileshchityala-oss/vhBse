@@ -266,6 +266,9 @@ Module BCastModule
             While True
 
                 Dim bteReceiveData_fo(511) As Byte
+                If multicastListener_fo Is Nothing Then
+                    Continue While
+                End If
                 multicastListener_fo.Receive(bteReceiveData_fo)
                 '  multicastListener_fo.ReceiveFrom(bteReceiveData_fo, GroupEP)
                 'If thrworking = True Then
@@ -388,8 +391,11 @@ Module BCastModule
             While True
 
                 Dim bteReceiveData_cm(511) As Byte
+                If multicastListener_cm IsNot Nothing Then
+                    multicastListener_cm.Receive(bteReceiveData_cm)
+                End If
 
-                multicastListener_cm.Receive(bteReceiveData_cm)
+                'multicastListener_cm.Receive(bteReceiveData_cm)
                 'If thrworking = True Then
                 '  If NEW_CM_BROADCAST_MT = 1 Then
 
@@ -1181,6 +1187,14 @@ Module BCastModule
         For j As Integer = 0 To (IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(data, 48 + pktinc)) - 1) * 214 Step 214
             Try
                 token_no = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt32(data, 50 + j + pktinc))
+
+                If Not clsGlobal.H_All_token_FO.ContainsKey(token_no) Then
+                    Continue For
+                End If
+
+
+                '  Debug.WriteLine(token_no.ToString())
+
                 buy_price = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt32(data, 110 + j + pktinc)) / 100
                 sale_price = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt32(data, 170 + j + pktinc)) / 100
                 last_trade_price = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt32(data, 62 + j + pktinc)) / 100
@@ -1911,6 +1925,10 @@ Module BCastModule
         For j As Integer = 0 To (IPAddress.HostToNetworkOrder(System.BitConverter.ToInt16(data, 46 + iAdd + pktinc)) - 1) * 214 Step 214
             Try
                 token_no = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt32(data, 48 + j + iAdd + pktinc))
+
+                If Not clsGlobal.H_All_token_EQ.ContainsKey(token_no) Then
+                    Continue For
+                End If
                 buy_price = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt32(data, 108 + j + iAdd + pktinc)) / 10000000
                 sale_price = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt32(data, 168 + j + iAdd + pktinc)) / 10000000
                 last_trade_price = IPAddress.HostToNetworkOrder(System.BitConverter.ToInt32(data, 60 + j + iAdd + pktinc)) / 10000000

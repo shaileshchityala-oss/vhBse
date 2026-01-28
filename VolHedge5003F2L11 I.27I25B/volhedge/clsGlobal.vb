@@ -14,6 +14,11 @@ Public Class clsGlobal
     Public Shared InternetVersionFlag As Boolean = False
     Public Shared Mrateofinterast As Double = 0
 
+    Public Shared H_PendingTokens_EQ As New Hashtable()
+    Public Shared H_PendingTokens_FO As New Hashtable()
+    Public Shared H_All_token_EQ As New Hashtable()
+    Public Shared H_All_token_FO As New Hashtable()
+
     Public Shared EmailVerified As Boolean = False
     Public Shared PhVerified As Boolean = False
     Public Shared LoginUser As String
@@ -249,6 +254,40 @@ Public Class clsGlobal
         smtpPasword = "uvfygwnphadomcoq"
 
         Write_TimeLog1("ClsGlobal-> End Fun-LoadInitializeData" + "|" + TimeSpan.FromTicks(DateTime.Now.Ticks - ttik).TotalSeconds.ToString())
+    End Sub
+
+    Public Shared Sub CreateBseExchange()
+        mBseExchange = New CBseExchange()
+    End Sub
+
+
+
+
+   Public Shared Sub SkAddTokkensFromCurTable(currtable As DataTable)
+        clsGlobal.H_All_token_FO.Clear()
+        clsGlobal.H_All_token_EQ.Clear()
+
+        For Each row As DataRow In currtable.Rows
+            Dim tok As String = row("tokanno").ToString()
+            Dim cp As String = row("CP").ToString()
+            Dim ftoken As String = row("ftoken").ToString()
+
+            ' Add only if not already in Hashtable
+            If cp = "C" Or cp = "P" Or cp = "F" Then
+                If Not clsGlobal.H_All_token_FO.ContainsKey(CLng(tok)) Then
+                    clsGlobal.H_All_token_FO.Add(CLng(tok), 0)
+                End If
+
+                If Not clsGlobal.H_All_token_FO.ContainsKey(CLng(ftoken)) Then
+                    clsGlobal.H_All_token_FO.Add(CLng(ftoken), 0)
+                End If
+
+            ElseIf cp = "E" Then
+                If Not clsGlobal.H_All_token_EQ.ContainsKey(CLng(tok)) Then
+                    clsGlobal.H_All_token_EQ.Add(CLng(tok), 0)
+                End If
+            End If
+        Next
     End Sub
 
     Public Shared Sub read_bhavcopyfile(ByVal strPath1 As String)

@@ -113,7 +113,26 @@ Namespace DAL
 
             End Try
         End Sub
+        'Public Shared Sub ParamClear()
+        '    _paramtable = New DataTable()
+        '    _paramtable.Columns.Add("ParameterName", GetType(String))
+        '    _paramtable.Columns.Add("oleDbType", GetType(OleDbType))
+        '    _paramtable.Columns.Add("Size", GetType(Integer))
+        '    _paramtable.Columns.Add("Value", GetType(Object))
+        'End Sub
+        'Public Shared Sub AddParam(ByVal param_id As String, ByVal oledbtype As OleDbType, ByVal size As Integer, ByVal value As Object)
+        '    Dim drow As DataRow = _paramtable.NewRow()
+        '    drow("ParameterName") = param_id
+        '    drow("oledbtype") = oledbtype
+        '    drow("Size") = size
+        '    If value Is Nothing Then
+        '        drow("Value") = DBNull.Value
+        '    Else
+        '        drow("Value") = value
+        '    End If
 
+        '    _paramtable.Rows.Add(drow)
+        'End Sub
         Public Shared Function ExecuteNonQuery_AEL() As Boolean
             Dim sqlstr As String = _cmd_text
             Try

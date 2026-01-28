@@ -22,14 +22,21 @@ Partial Class displaytrans
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(displaytrans))
         Me.DGdisplayTrades = New System.Windows.Forms.DataGridView()
+        Me.qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Lots = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.entrydate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.entryno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.uid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dealer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblscript = New System.Windows.Forms.Label()
@@ -54,13 +61,9 @@ Partial Class displaytrans
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Lots = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.entrydate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.entryno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.uid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dealer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblExchange = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.DGdisplayTrades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -105,10 +108,73 @@ Partial Class displaytrans
         Me.DGdisplayTrades.Size = New System.Drawing.Size(635, 348)
         Me.DGdisplayTrades.TabIndex = 4
         '
+        'qty
+        '
+        Me.qty.DataPropertyName = "qty"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.qty.DefaultCellStyle = DataGridViewCellStyle2
+        Me.qty.HeaderText = "Quantity"
+        Me.qty.Name = "qty"
+        Me.qty.ReadOnly = True
+        Me.qty.Width = 80
+        '
+        'Lots
+        '
+        Me.Lots.DataPropertyName = "Lots"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Lots.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Lots.HeaderText = "Lots"
+        Me.Lots.Name = "Lots"
+        Me.Lots.ReadOnly = True
+        Me.Lots.Width = 60
+        '
+        'rate
+        '
+        Me.rate.DataPropertyName = "rate"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.rate.DefaultCellStyle = DataGridViewCellStyle4
+        Me.rate.HeaderText = "Rate"
+        Me.rate.Name = "rate"
+        Me.rate.ReadOnly = True
+        Me.rate.Width = 110
+        '
+        'entrydate
+        '
+        Me.entrydate.DataPropertyName = "entrydate"
+        Me.entrydate.HeaderText = "Entry Date"
+        Me.entrydate.Name = "entrydate"
+        Me.entrydate.ReadOnly = True
+        Me.entrydate.Width = 140
+        '
+        'entryno
+        '
+        Me.entryno.DataPropertyName = "entryno"
+        Me.entryno.HeaderText = "Order No."
+        Me.entryno.Name = "entryno"
+        Me.entryno.ReadOnly = True
+        '
+        'uid
+        '
+        Me.uid.DataPropertyName = "uid"
+        Me.uid.HeaderText = "uid"
+        Me.uid.Name = "uid"
+        Me.uid.ReadOnly = True
+        Me.uid.Visible = False
+        '
+        'Dealer
+        '
+        Me.Dealer.DataPropertyName = "Dealer"
+        Me.Dealer.HeaderText = "Dealer"
+        Me.Dealer.Name = "Dealer"
+        Me.Dealer.ReadOnly = True
+        Me.Dealer.Width = 140
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(5, 9)
+        Me.Label1.Location = New System.Drawing.Point(152, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(31, 13)
         Me.Label1.TabIndex = 1
@@ -117,7 +183,7 @@ Partial Class displaytrans
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(45, 9)
+        Me.Label2.Location = New System.Drawing.Point(65, 9)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(10, 13)
         Me.Label2.TabIndex = 2
@@ -126,7 +192,7 @@ Partial Class displaytrans
         'lblscript
         '
         Me.lblscript.AutoSize = True
-        Me.lblscript.Location = New System.Drawing.Point(61, 9)
+        Me.lblscript.Location = New System.Drawing.Point(195, 9)
         Me.lblscript.Name = "lblscript"
         Me.lblscript.Size = New System.Drawing.Size(44, 13)
         Me.lblscript.TabIndex = 3
@@ -328,68 +394,32 @@ Partial Class displaytrans
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
-        'qty
+        'lblExchange
         '
-        Me.qty.DataPropertyName = "qty"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.qty.DefaultCellStyle = DataGridViewCellStyle2
-        Me.qty.HeaderText = "Quantity"
-        Me.qty.Name = "qty"
-        Me.qty.ReadOnly = True
-        Me.qty.Width = 80
+        Me.lblExchange.AutoSize = True
+        Me.lblExchange.Location = New System.Drawing.Point(78, 9)
+        Me.lblExchange.Name = "lblExchange"
+        Me.lblExchange.Size = New System.Drawing.Size(31, 13)
+        Me.lblExchange.TabIndex = 1
+        Me.lblExchange.Text = "Scrip"
         '
-        'Lots
+        'Label10
         '
-        Me.Lots.DataPropertyName = "Lots"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Lots.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Lots.HeaderText = "Lots"
-        Me.Lots.Name = "Lots"
-        Me.Lots.ReadOnly = True
-        Me.Lots.Width = 60
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(8, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(55, 13)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "Exchange"
         '
-        'rate
+        'Label11
         '
-        Me.rate.DataPropertyName = "rate"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.rate.DefaultCellStyle = DataGridViewCellStyle4
-        Me.rate.HeaderText = "Rate"
-        Me.rate.Name = "rate"
-        Me.rate.ReadOnly = True
-        Me.rate.Width = 110
-        '
-        'entrydate
-        '
-        Me.entrydate.DataPropertyName = "entrydate"
-        Me.entrydate.HeaderText = "Entry Date"
-        Me.entrydate.Name = "entrydate"
-        Me.entrydate.ReadOnly = True
-        Me.entrydate.Width = 140
-        '
-        'entryno
-        '
-        Me.entryno.DataPropertyName = "entryno"
-        Me.entryno.HeaderText = "Order No."
-        Me.entryno.Name = "entryno"
-        Me.entryno.ReadOnly = True
-        '
-        'uid
-        '
-        Me.uid.DataPropertyName = "uid"
-        Me.uid.HeaderText = "uid"
-        Me.uid.Name = "uid"
-        Me.uid.ReadOnly = True
-        Me.uid.Visible = False
-        '
-        'Dealer
-        '
-        Me.Dealer.DataPropertyName = "Dealer"
-        Me.Dealer.HeaderText = "Dealer"
-        Me.Dealer.Name = "Dealer"
-        Me.Dealer.ReadOnly = True
-        Me.Dealer.Width = 140
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(183, 9)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(10, 13)
+        Me.Label11.TabIndex = 2
+        Me.Label11.Text = ":"
         '
         'displaytrans
         '
@@ -412,7 +442,10 @@ Partial Class displaytrans
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lbltoken)
         Me.Controls.Add(Me.lblscript)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblExchange)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DGdisplayTrades)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -459,4 +492,7 @@ Partial Class displaytrans
     Friend WithEvents entryno As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents uid As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Dealer As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents lblExchange As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
 End Class
