@@ -7,10 +7,15 @@ Public Class FrmMarginBse
 
     Public mNseSr As CSpanReader
     Public mBseSr As CSpanReader
+    Public mPerf As CPerfCheck
 
     Protected Overrides Sub OnLoad(e As EventArgs)
 
         Me.TopMost = True
+        mPerf = New CPerfCheck()
+
+        mPerf.Push("BseMargin")
+        mPerf.Write_DiffMs("BseMargin", "Start Loading BSE MARGING")
         clsGlobal.mFrmExchangeMargin = Me
 
         If clsGlobal.mNseSr Is Nothing Then
@@ -28,7 +33,7 @@ Public Class FrmMarginBse
         mDtTrades = maintable
         mNseSr.mCurTable = maintable
         mBseSr.mCurTable = maintable
-
+        mPerf.Write_DiffMs("BseMargin", "End Loading BSE MARGING")
         MyBase.OnLoad(e)
     End Sub
     Public mDtTrades As DataTable

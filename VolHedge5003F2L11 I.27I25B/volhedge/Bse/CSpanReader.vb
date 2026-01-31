@@ -166,7 +166,7 @@ Public Class CSpanReader
         Try
             mIsOutputFileGenerated = False
 
-            Shell(mSPAN_path & "\generate.bat", AppWinStyle.Hide)
+            Shell(mSPAN_path & "\" + mExchange + "generate.bat", AppWinStyle.Hide)
 
             'Process.Start(mSPAN_path & "\generate.bat")
             'MsgBox("job_going_on")
@@ -2969,7 +2969,7 @@ a2:
         pSb.EndPointInTime()
 
         ' ---------- SAVE ----------
-        pSb.Save(mSPAN_path & "\input.txt")
+        pSb.Save(mSPAN_path & "\" + mExchange + "Input.txt")
 
     End Sub
 
@@ -3367,9 +3367,9 @@ a2:
 
     Private Sub CreateBseBatchFiles()
         ' ==== generate.bat ====
-        Dim batchPath As String = System.IO.Path.Combine(mSPAN_path, "generate.bat")
+        Dim batchPath As String = System.IO.Path.Combine(mSPAN_path, mExchange + "generate.bat")
         Dim spanCmd As String = """" & System.IO.Path.Combine(mSPAN_path, "spanit") & """ """ &
-                    System.IO.Path.Combine(mSPAN_path, "BseSpan.spn") & """"
+                    System.IO.Path.Combine(mSPAN_path, mExchange + "Span.spn") & """"
 
         Using fs_batchfile As New FileStream(batchPath, FileMode.Create, FileAccess.Write, FileShare.None)
             Using sw As New StreamWriter(fs_batchfile)
@@ -3391,7 +3391,7 @@ a2:
         End Using
     End Sub
 
-    Private Sub CreateCurSpan()
+    Private Sub CreateCurSpanNse()
         Dim curSpnPath As String = System.IO.Path.Combine(mSPAN_path, "curspan.spn")
         Dim curInput As String = System.IO.Path.Combine(mSPAN_path, "curinput.txt")
         Dim curOutput As String = System.IO.Path.Combine(mSPAN_path, "curoutput.xml")
@@ -3416,14 +3416,12 @@ a2:
             End If
         End If
 
-        Dim fullSpnPath As String = System.IO.Path.Combine(mSPAN_path, "BseSpan.spn")
-        Dim inputFile As String = System.IO.Path.Combine(mSPAN_path, "input.txt")
+        Dim fullSpnPath As String = System.IO.Path.Combine(mSPAN_path, mExchange + "Span.spn")
+        Dim inputFile As String = System.IO.Path.Combine(mSPAN_path, mExchange + "input.txt")
         Dim outputFile As String = System.IO.Path.Combine(mSPAN_path, mExchange + "output.xml")
 
         Using fs_spn As New FileStream(fullSpnPath, FileMode.Create, FileAccess.Write, FileShare.None)
             Using swSpn As New StreamWriter(fs_spn)
-
-                ' Quote file paths in case of spaces
                 swSpn.WriteLine("LOAD " & mSPAN_path & "\" & mCurrent_SPAN_file)
                 swSpn.WriteLine("Load " & inputFile & ",USEXTLAYOUT")
                 swSpn.WriteLine("Calc")
@@ -3435,31 +3433,15 @@ a2:
     Private Sub DeleteExistingFiles()
         Try
 
-            'If File.Exists(mSPAN_path & "\" + mExchange + "Output.xml") Then
-            '    System.IO.File.Delete(mSPAN_path & "\curoutput.xml")
-            '    System.IO.File.Delete(mSPAN_path & "\" + mExchange + "output.xml")
-            'End If
-
-            'System.IO.File.Delete(mSPAN_path & "\span.spn")
-            'System.IO.File.Delete(mSPAN_path & "\curspan.spn")
-
-            'System.IO.File.Delete(mSPAN_path & "\input.txt")
-            'System.IO.File.Delete(mSPAN_path & "\curinput.txt")
-
-            'System.IO.File.Delete(mSPAN_path & "\generate.bat")
-            'System.IO.File.Delete(mSPAN_path & "\curgenerate.bat")
-
-
-            CUtils.DeleteWithTimeout(mSPAN_path & "\curoutput.xml")
             CUtils.DeleteWithTimeout(mSPAN_path & "\" & mExchange & "output.xml")
             CUtils.DeleteWithTimeout(mSPAN_path & "\" & mExchange & "Span.spn")
+            CUtils.DeleteWithTimeout(mSPAN_path & "\" & mExchange & "input.txt")
+            CUtils.DeleteWithTimeout(mSPAN_path & "\" & mExchange & "\generate.bat")
+
             CUtils.DeleteWithTimeout(mSPAN_path & "\curspan.spn")
-            CUtils.DeleteWithTimeout(mSPAN_path & "\input.txt")
             CUtils.DeleteWithTimeout(mSPAN_path & "\curinput.txt")
-            CUtils.DeleteWithTimeout(mSPAN_path & "\generate.bat")
             CUtils.DeleteWithTimeout(mSPAN_path & "\curgenerate.bat")
-
-
+            CUtils.DeleteWithTimeout(mSPAN_path & "\curoutput.xml")
 
         Catch ex As Exception
             MsgBox("Error In generate_Span_data Method..")
@@ -3470,6 +3452,8 @@ a2:
     'Public dtable As DataTable
     Public Sub generate_SPAN_data_NSE() 'As Boolean
         Try
+            mPerf.Push("ael test")
+
             Dim dtable = New DataTable
             dtable = mMainTable.Copy()
 
@@ -3537,27 +3521,7 @@ a2:
             Dim ar_comp(ht_comp.Count - 1) As String
             ht_comp.Keys.CopyTo(ar_comp, 0)
 
-            'Try
-            '    System.IO.File.Delete(mSPAN_path & "\" + mExchange + "output.xml")
-            '    If File.Exists(mSPAN_path & "\" + mExchange + "output.xml") Then
-            '        System.IO.File.Delete(mSPAN_path & "\curoutput.xml")
-            '    End If
 
-            '    System.IO.File.Delete(mSPAN_path & "\span.spn")
-            '    System.IO.File.Delete(mSPAN_path & "\curspan.spn")
-            '    System.IO.File.Delete(mSPAN_path & "\input.txt")
-            '    System.IO.File.Delete(mSPAN_path & "\curinput.txt")
-            '    System.IO.File.Delete(mSPAN_path & "\generate.bat")
-            '    System.IO.File.Delete(mSPAN_path & "\curgenerate.bat")
-            'Catch ex As Exception
-            '    MsgBox("Error In generate_Span_data Method..")
-            '    mFlgThr_Span = False
-            'End Try
-
-            '  wait(3000)
-
-            'create file stream
-            DeleteExistingFiles()
 
             mSPAN_path = SPAN_PATH
             'CType(Me.MdiParent, mdiMain).StatusBar1.Panels(2).Text = ""
@@ -3581,446 +3545,19 @@ a2:
                 End If
             End If
 
+            DeleteExistingFiles()
 
-            'Dim fs_spn As New FileStream(mSPAN_path & "\span.spn", FileMode.Create)
+            CreateSpanFile()
 
-            'Dim sw As StreamWriter
-            'sw = New StreamWriter(fs_spn)
-            'sw.WriteLine("Load " & mSPAN_path & "\input.txt" & ", USEXTLAYOUT")
-            'sw.WriteLine("Calc")
-            'sw.WriteLine("Save " & mSPAN_path & "\output.xml")
-            'sw.Close()
-            'fs_spn.Close()
+            CreateCurSpanNse()
 
+            GenerateNseBatch()
 
-            Dim fullSpnPath As String = System.IO.Path.Combine(mSPAN_path, "span.spn")
-            Dim inputFile As String = System.IO.Path.Combine(mSPAN_path, "input.txt")
-            Dim outputFile As String = System.IO.Path.Combine(mSPAN_path, mExchange + "output.xml")
+            GenerateCurBatch()
 
-            Using fs_spn As New FileStream(fullSpnPath, FileMode.Create, FileAccess.Write, FileShare.None)
-                Using swSpn As New StreamWriter(fs_spn)
+            CreateNseInputFile(dtable, client_code, temp_comp_name, comp_name, option_type, mat_date, CAL_PUT, strike_price, qty, drow_position, ar_comp)
 
-                    ' Quote file paths in case of spaces
-                    swSpn.WriteLine("LOAD " & mSPAN_path & "\" & mCurrent_SPAN_file)
-                    swSpn.WriteLine("Load " & inputFile & ", USEXTLAYOUT")
-                    swSpn.WriteLine("Calc")
-                    swSpn.WriteLine("Save " & outputFile)
-                End Using ' StreamWriter auto closes and flushes
-            End Using ' FileStream auto closes
-
-
-            'Dim fs_Curspn As New FileStream(mSPAN_path & "\curspan.spn", FileMode.Create)
-            'Dim cursw As StreamWriter
-            'cursw = New StreamWriter(fs_Curspn)
-            'cursw.WriteLine("LOAD " & mSPAN_path & "\" & mCurrent_CurSPAN_file)
-            'cursw.WriteLine("Load " & mSPAN_path & "\curinput.txt" & ", USEXTLAYOUT")
-            'cursw.WriteLine("Calc")
-            'cursw.WriteLine("Save " & mSPAN_path & "\curoutput.xml")
-            'cursw.Close()
-            'fs_Curspn.Close()
-
-
-            Dim curSpnPath As String = System.IO.Path.Combine(mSPAN_path, "curspan.spn")
-            Dim curInput As String = System.IO.Path.Combine(mSPAN_path, "curinput.txt")
-            Dim curOutput As String = System.IO.Path.Combine(mSPAN_path, "curoutput.xml")
-            Dim curSPANFile As String = System.IO.Path.Combine(mSPAN_path, mCurrent_CurSPAN_file)
-
-            Using fs_Curspn As New FileStream(curSpnPath, FileMode.Create, FileAccess.Write, FileShare.None)
-                Using cursw As New StreamWriter(fs_Curspn)
-
-                    ' Quote all paths for safety
-                    cursw.WriteLine("LOAD " & curSPANFile)
-                    cursw.WriteLine("LOAD " & curInput & ", USEXTLAYOUT")
-                    cursw.WriteLine("CALC")
-                    cursw.WriteLine("SAVE " & curOutput)
-                End Using
-            End Using
-
-            'Dim fs_batchfile As New FileStream(mSPAN_path & "\generate.bat", FileMode.Create)
-
-            'sw = New StreamWriter(fs_batchfile)
-            'sw.WriteLine(mSPAN_path & "\spanit " & mSPAN_path & "\span.spn")
-            'sw.Close()
-            'fs_batchfile.Close()
-
-            'Dim fs_Curbatchfile As New FileStream(mSPAN_path & "\curgenerate.bat", FileMode.Create)
-
-            'sw = New StreamWriter(fs_Curbatchfile)
-            'sw.WriteLine(mSPAN_path & "\spanit " & mSPAN_path & "\curspan.spn")
-            'sw.Close()
-            'fs_Curbatchfile.Close()
-
-            ' ==== generate.bat ====
-            Dim batchPath As String = System.IO.Path.Combine(mSPAN_path, "generate.bat")
-            Dim spanCmd As String = """" & System.IO.Path.Combine(mSPAN_path, "spanit") & """ """ &
-                        System.IO.Path.Combine(mSPAN_path, "span.spn") & """"
-
-            Using fs_batchfile As New FileStream(batchPath, FileMode.Create, FileAccess.Write, FileShare.None)
-                Using sw As New StreamWriter(fs_batchfile)
-                    sw.WriteLine(spanCmd)
-                End Using
-            End Using
-
-
-
-            ' ==== curgenerate.bat ====
-            Dim curBatchPath As String = System.IO.Path.Combine(mSPAN_path, "curgenerate.bat")
-            Dim curSpanCmd As String = """" & System.IO.Path.Combine(mSPAN_path, "spanit") & """ """ &
-                           System.IO.Path.Combine(mSPAN_path, "curspan.spn") & """"
-
-            Using fs_Curbatchfile As New FileStream(curBatchPath, FileMode.Create, FileAccess.Write, FileShare.None)
-                Using swCur As New StreamWriter(fs_Curbatchfile)
-                    swCur.WriteLine(curSpanCmd)
-                End Using
-            End Using
-
-
-            ' Dim temp As Integer
-
-            '  Dim fs_input As New FileStream(mSPAN_path & "\input.txt", FileMode.Create)
-            Using fs_input As New FileStream(mSPAN_path & "\input.txt", FileMode.Create, FileAccess.Write, FileShare.None)
-                Using swInput As New StreamWriter(fs_input)
-                    '      sw = New StreamWriter(fs_input)
-                    swInput.WriteLine("<?xml version=""" & "1.0""" & "?>")
-                    swInput.WriteLine("<posFile>")
-                    swInput.WriteLine("<fileFormat>4.00</fileFormat>")
-                    swInput.WriteLine("<created>" & Format(Today.Year, "####") & Format(Today.Month, "##") & Format(Today.Day, "##") & "</created>")
-                    swInput.WriteLine("<pointInTime>")
-                    swInput.WriteLine("<date></date>")
-                    swInput.WriteLine("<isSetl>0</isSetl>")
-                    swInput.WriteLine("<time>:: </time>")
-                    swInput.WriteLine("<run>0</run>")
-                    swInput.WriteLine("<pointInTime>")
-                    swInput.WriteLine("<date></date>")
-                    swInput.WriteLine("<isSetl>0</isSetl>")
-                    swInput.WriteLine("<time>:::::</time>")
-                    swInput.WriteLine("<run>0</run>")
-
-                    'loop for each client
-
-                    'Debug.WriteLine(cur_position_client_list)
-
-
-                    'For Each drow_client In mTbl_ledger.Select(cur_position_client_list)
-                    For i As Integer = 0 To ar_comp.Length - 1
-                        client_code = ar_comp(i)
-                        temp_comp_name = ""
-
-                        swInput.WriteLine("<portfolio>")
-                        swInput.WriteLine("<firm>" & client_code.Replace("&", "&amp;") & "</firm>") 'Viral20Oct16 //.Replace("&", "")
-                        swInput.WriteLine("<acctId>" & GetSymbol(client_code).Replace("&", "&amp;") & "</acctId>") 'Viral20Oct16 //.Replace("&", "")
-                        swInput.WriteLine("<acctType>S</acctType>")
-                        swInput.WriteLine("<isCust>1</isCust>")
-                        swInput.WriteLine("<seg>N/A</seg>")
-                        swInput.WriteLine("<isNew>1</isNew>")
-                        swInput.WriteLine("<pclient>0</pclient>")
-                        swInput.WriteLine("<currency>INR</currency>")
-                        swInput.WriteLine("<ledgerBal>0.00</ledgerBal>")
-                        swInput.WriteLine("<ote>0.00</ote>")
-                        swInput.WriteLine("<securities>0.00</securities>")
-
-                        swInput.WriteLine("<ecPort>")
-                        swInput.WriteLine("<ec>NSCCL</ec>")
-
-                        ''loop for each position
-                        For Each drow_position In dtable.Select("company = '" & client_code & "' and units <> 0", "company,strikes")
-                            comp_name = drow_position("company")
-                            'M&amp;MFIN
-                            If InStr(comp_name, "&") > 0 Then
-                                comp_name = Replace(comp_name, "&", "&amp;")
-                            End If
-
-                            'If InStr(comp_name, "&") > 0 Then
-                            'comp_name = Replace(comp_name, "&", "")
-                            'End If
-
-
-
-                            If UCase(drow_position("cp")) = "F" Then
-                                option_type = "FUT"
-                                CAL_PUT = ""
-                            Else
-                                option_type = "OOP"
-                                CAL_PUT = Mid(UCase(drow_position("cp")), 1, 1)
-                            End If
-                            If comp_name.Contains("INR") Then
-                                mat_date = Format(drow_position("mdate"), "yyyyMM")
-                            Else
-                                mat_date = Format(drow_position("mdate"), "yyyyMMdd")
-                            End If
-
-                            strike_price = FormatNumber(drow_position("strikes"), 2, TriState.False, TriState.False, TriState.False)
-                            If CBool(drow_position("IsCurrency")) = True Then
-                                qty = 0 'drow_position("Lots")
-                            Else
-                                qty = drow_position("units")
-                            End If
-
-
-                            If temp_comp_name <> comp_name Then
-                                If temp_comp_name <> "" Then
-                                    swInput.WriteLine("</ccPort>")
-                                End If
-                                swInput.WriteLine("<ccPort>")
-                                swInput.WriteLine("<cc>" & GetSymbol(comp_name) & "</cc>")
-                                swInput.WriteLine("<r>1</r>")
-                                swInput.WriteLine("<currency>INR</currency>")
-                                swInput.WriteLine("<pss>0</pss>")
-                            End If
-
-                            swInput.WriteLine("<np>")
-                            swInput.WriteLine("<exch>NSE</exch>")
-
-                            swInput.WriteLine("<pfCode>" & GetSymbol(comp_name) & "</pfCode>")
-                            swInput.WriteLine("<pfType>" & option_type & "</pfType>")
-                            swInput.WriteLine("<pe>" & mat_date & "</pe>")
-                            If option_type = "OOP" Then
-                                If comp_name.Contains("INR") Then
-                                    swInput.WriteLine("<undPe>000000</undPe>")
-                                Else
-                                    swInput.WriteLine("<undPe>00000000</undPe>")
-                                End If
-
-                                swInput.WriteLine("<o>" & CAL_PUT & "</o>")
-                                swInput.WriteLine("<k>" & strike_price & "</k>")
-                            End If
-                            swInput.WriteLine("<net>" & qty & "</net>")
-                            swInput.WriteLine("</np>")
-
-                            temp_comp_name = comp_name
-                            Dim drrow As DataRow
-                            Dim cp As String
-                            Dim result As String() = drow_position("script").Split(New String() {"  "}, StringSplitOptions.None)
-                            Dim ael_expo As Double
-                            If CALMARGINWITH_AEL_EXPO = 1 Then
-
-                                If drow_position("cp") = "C" Then
-                                    cp = "CE"
-                                ElseIf drow_position("cp") = "P" Then
-                                    cp = "PE"
-                                ElseIf drow_position("cp") = "F" Then
-                                    cp = "XX"
-                                End If
-
-                                Dim value As Double = 0
-                                Dim ELRPR As Double = 0
-                                If drow_position("toqty") < 0 Then
-
-                                    value = Convert.ToDouble(drow_position("toqty").ToString()) * Convert.ToDouble(drow_position("last").ToString())
-                                    If mTbl_ael_Additional_Expo Is Nothing Then
-                                        ELRPR = mTbl_ael_Additional_Expo.Select("InsType = '" & result(1) & "' and Symbol='" & result(0) & "' and StrikePrice = '" & result(3).Replace(".00", "") & "' and OptType='" & cp & "' and ExpDate = #" & result(2) & "#")(0).Item("ELMPer")
-
-                                    Else
-                                        ELRPR = 0
-                                    End If
-
-                                    ael_expo = (value * ELRPR) / 100
-                                End If
-
-
-                                drrow = mTbl_AEL_Expo_calc.NewRow
-                                drrow("AEL_EXPOSURE") = ael_expo
-                                drrow("Company") = client_code
-
-                                mTbl_AEL_Expo_calc.Rows.Add(drrow)
-
-                            End If
-                        Next
-                        swInput.WriteLine("</ccPort>")
-                        'end of loop for each position
-
-
-                        swInput.WriteLine("</ecPort>")
-                        swInput.WriteLine("</portfolio>")
-                    Next
-                    swInput.WriteLine("</pointInTime>")
-                    swInput.WriteLine("</pointInTime>")
-                    swInput.WriteLine("</posFile>")
-                    '   sw.Close()
-                    '  fs_input.Close()
-                End Using
-            End Using
-
-            '   Dim fs_Curinput As New FileStream(, FileMode.Create)
-
-            Using fs_Curinput As New FileStream(mSPAN_path & "\curinput.txt", FileMode.Create, FileAccess.Write, FileShare.None)
-                Using swCur As New StreamWriter(fs_Curinput)
-                    '''''Currinpitfile
-                    '   sw = New StreamWriter(fs_Curinput)
-                    swCur.WriteLine("<?xml version=""" & "1.0""" & "?>")
-                    swCur.WriteLine("<posFile>")
-                    swCur.WriteLine("<fileFormat>4.00</fileFormat>")
-                    'sw.WriteLine("<created>" & Format(Today.Year, "####") & "0" & Format(Today.Month, "##") & Format(Today.Day, "##") & "</created>")
-                    swCur.WriteLine("<created>" & Today.ToString("yyyyMMdd") & "</created>")
-                    swCur.WriteLine("<pointInTime>")
-                    'sw.WriteLine("<date>" & Format(Today.Year, "####") & "0" & Format(Today.Month, "##") & Format(Today.Day, "##") & "</date>")
-                    swCur.WriteLine("<date>" & Today.ToString("yyyyMMdd") & "</date>")
-                    swCur.WriteLine("<isSetl>0</isSetl>")
-                    swCur.WriteLine("<time>:::::</time>")
-                    swCur.WriteLine("<run>0</run>")
-                    'sw.WriteLine("<pointInTime>")
-                    'sw.WriteLine("<date></date>")
-                    'sw.WriteLine("<isSetl>0</isSetl>")
-                    'sw.WriteLine("<time>:::::</time>")
-                    'sw.WriteLine("<run>0</run>")
-
-                    'loop for each client
-
-                    'Debug.WriteLine(cur_position_client_list)
-
-
-                    'For Each drow_client In mTbl_ledger.Select(cur_position_client_list)
-                    For i As Integer = 0 To ar_comp.Length - 1
-                        client_code = ar_comp(i)
-                        temp_comp_name = ""
-
-                        swCur.WriteLine("<portfolio>")
-                        swCur.WriteLine("<firm>" & client_code.Replace("&", "&amp;") & "</firm>")
-                        swCur.WriteLine("<acctId>" & GetSymbol(client_code).Replace("&", "&amp;") & "</acctId>")
-                        swCur.WriteLine("<acctType>S</acctType>")
-                        swCur.WriteLine("<isCust>1</isCust>")
-                        swCur.WriteLine("<seg>N/A</seg>")
-
-                        swCur.WriteLine("<acctSubType>")
-                        swCur.WriteLine("<acctSubTypeCode>GSCIER</acctSubTypeCode>")
-                        swCur.WriteLine("<value>0</value>")
-                        swCur.WriteLine("</acctSubType>")
-
-                        swCur.WriteLine("<acctSubType>")
-                        swCur.WriteLine("<acctSubTypeCode>TRAKRS</acctSubTypeCode>")
-                        swCur.WriteLine("<value>0</value>")
-                        swCur.WriteLine("</acctSubType>")
-
-                        swCur.WriteLine("<isNew>1</isNew>")
-                        swCur.WriteLine("<custPortUseLov>0</custPortUseLov>")
-                        swCur.WriteLine("<currency>INR</currency>")
-                        swCur.WriteLine("<ledgerBal>0.00</ledgerBal>")
-                        swCur.WriteLine("<ote>0.00</ote>")
-                        swCur.WriteLine("<securities>0.00</securities>")
-                        swCur.WriteLine("<lue>0.00</lue>")
-
-                        swCur.WriteLine("<ecPort>")
-                        swCur.WriteLine("<ec>NSCCL</ec>")
-
-                        ''loop for each position
-                        For Each drow_position In dtable.Select("company = '" & client_code & "' and units <> 0", "company,strikes")
-                            If CBool(drow_position("IsCurrency")) = True Then
-                                comp_name = drow_position("company")
-                                'comment for testing
-                                If InStr(comp_name, "&") > 0 Then
-                                    comp_name = Replace(comp_name, "&", "&amp;")
-                                End If
-
-                                If UCase(drow_position("cp")) = "F" Then
-                                    option_type = "FUT"
-                                    CAL_PUT = ""
-                                Else
-                                    option_type = "OOP"
-                                    CAL_PUT = Mid(UCase(drow_position("cp")), 1, 1)
-                                End If
-                                'If client_code.Contains("INR") Then
-                                'mat_date = Format(drow_position("mdate"), "yyyyMM")
-                                'Else
-                                mat_date = Format(drow_position("mdate"), "yyyyMMdd")
-                                'End If
-
-                                strike_price = FormatNumber(drow_position("strikes"), 2, TriState.False, TriState.False, TriState.False)
-                                If CBool(drow_position("IsCurrency")) = True Then
-                                    If CURRENCY_MARGIN_QTY = 1 Then
-                                        qty = drow_position("Units")
-                                    Else
-                                        qty = drow_position("Lots")
-                                    End If
-
-                                Else
-                                    qty = 0 'drow_position("units")
-                                End If
-
-
-                                If temp_comp_name <> comp_name Then
-                                    If temp_comp_name <> "" Then
-                                        swCur.WriteLine("</ccPort>")
-                                    End If
-                                    swCur.WriteLine("<ccPort>")
-                                    swCur.WriteLine("<cc>" & GetSymbol(comp_name) & "</cc>")
-                                    swCur.WriteLine("<r>1</r>")
-                                    swCur.WriteLine("<currency>INR</currency>")
-                                    swCur.WriteLine("<pss>0</pss>")
-                                End If
-
-                                swCur.WriteLine("<np>")
-                                swCur.WriteLine("<exch>NSE</exch>")
-
-                                swCur.WriteLine("<pfCode>" & GetSymbol(comp_name) & "</pfCode>") '//Viral
-                                swCur.WriteLine("<pfType>" & option_type & "</pfType>")
-                                swCur.WriteLine("<pe>" & mat_date & "</pe>")
-                                If option_type = "OOP" Then
-                                    'If client_code.Contains("INR") Then
-                                    'sw.WriteLine("<undPe>000000</undPe>")
-                                    'Else
-                                    swCur.WriteLine("<undPe>00000000</undPe>")
-                                    'End If
-
-                                    swCur.WriteLine("<o>" & CAL_PUT & "</o>")
-                                    swCur.WriteLine("<k>" & strike_price & "00" & "</k>")
-                                End If
-                                swCur.WriteLine("<net>" & qty & "</net>")
-                                swCur.WriteLine("</np>")
-
-                                temp_comp_name = comp_name
-
-                            End If
-                        Next
-                        swCur.WriteLine("</ccPort>")
-                        'end of loop for each position
-
-
-                        swCur.WriteLine("</ecPort>")
-                        swCur.WriteLine("</portfolio>")
-                    Next
-                    swCur.WriteLine("</pointInTime>")
-                    'sw.WriteLine("</pointInTime>")
-                    swCur.WriteLine("</posFile>")
-                    swCur.Close()
-                    fs_Curinput.Close()
-
-                End Using
-            End Using
-
-
-            Dim outFilePath As String = mSPAN_path & "\output.xml"
-            'DeleteFileWithWait(outFilePath, "Output", FlgThr_Span)
-            If System.IO.File.Exists(outFilePath) = True Then
-                'If System.IO.File.Exists(mSPAN_path & "\output.xml") = True Then
-                Try
-                    '     System.IO.File.Delete(mSPAN_path & "\output.xml")
-                    System.IO.File.Delete(outFilePath)
-                Catch ex As Exception
-                    MsgBox("Software cannot access SPAN Output file.", MsgBoxStyle.Exclamation)
-                    'Return False
-                    mFlgThr_Span = False
-                    Exit Sub
-                End Try
-            End If
-
-            Dim outFilePathCur As String = mSPAN_path & "\curoutput.xml"
-            'DeleteFileWithWait(outFilePath, "curoutput", FlgThr_Span)
-
-            If System.IO.File.Exists(outFilePathCur) = True Then
-                Try
-                    System.IO.File.Delete(outFilePathCur)
-                Catch ex As Exception
-                    MsgBox("Software cannot access SPAN Currency Output file.", MsgBoxStyle.Exclamation)
-                    'Return False
-                    mFlgThr_Span = False
-                    Exit Sub
-                End Try
-            End If
-
-            'Shell(mSPAN_path & "\generate.bat", AppWinStyle.MinimizedNoFocus)
-            'Dim worker As New System.Threading.Thread(AddressOf execute_batch_file)
-            'worker.Start()
-            'worker.Join()
+            NseCurInp(dtable, client_code, temp_comp_name, comp_name, option_type, mat_date, CAL_PUT, strike_price, qty, drow_position, ar_comp)
 
             If mCurrent_SPAN_file <> "" Then
                 Dim worker As New System.Threading.Thread(AddressOf execute_FO_batch_file)
@@ -4036,15 +3573,6 @@ a2:
                 worker2.Join()
             End If
 
-
-            'execute_batch_file()
-            'Process.Start(mSPAN_path & "\spanit", mSPAN_path & "\span.spn")
-            'MsgBox("job_completed")
-
-            'If extract_span_req() = False Then
-            '    Return False
-            '    Exit Function
-            'End If
             If mIsOutputFileGenerated = False Then
                 Return
             End If
@@ -4056,10 +3584,8 @@ a2:
                     Exit Sub
 
                 End If
-
-                'mPerf.PushFileName("ael test")
-                'mPerf.WriteLogStr("Old Code")
-                'mPerf.WriteLogStr("Table:mTblSpanOutput")
+                mPerf.WriteLogStr("Old Code")
+                mPerf.WriteLogStr("Table:mTblSpanOutput")
 
                 '   mPerf.PrintDataTable(mTblSpanOutput)
                 '   mPerf.PrintDataTable(mTbl_exposure_comp)
@@ -4071,8 +3597,6 @@ a2:
                 mPerf.PrintTopRecords(mTbl_exposure_comp, 10)
                 mPerf.WriteLogStr("Table:mTbl_span_calc")
                 mPerf.PrintTopRecords(mTbl_span_calc, 10)
-
-
 
                 Dim ax As AelSpanXmlReader = New AelSpanXmlReader(mTbl_exposure_comp, mTbl_span_calc, mTblSpanOutput)
                 Dim outputXmlFile As String = mSPAN_path & "\" + mExchange + "output.xml"
@@ -4251,6 +3775,7 @@ a2:
             'DataGridView1.DataSource = mTbl_exposure_comp
             'DataGridView2.DataSource = mTbl_SPAN_output
             'Return True
+            mPerf.Pop()
         Catch ex As Exception
             'MsgBox(ex.ToString)
             MsgBox("Wait for sum Time")
@@ -4259,6 +3784,364 @@ a2:
         End Try
     End Sub
 
+    Private Sub NseCurInp(dtable As DataTable, ByRef client_code As String, ByRef temp_comp_name As String, ByRef comp_name As String, ByRef option_type As String, ByRef mat_date As String, ByRef CAL_PUT As String, ByRef strike_price As String, ByRef qty As String, ByRef drow_position As DataRow, ar_comp() As String)
+        Using fs_Curinput As New FileStream(mSPAN_path & "\curinput.txt", FileMode.Create, FileAccess.Write, FileShare.None)
+            Using swCur As New StreamWriter(fs_Curinput)
+                '''''Currinpitfile
+                '   sw = New StreamWriter(fs_Curinput)
+                swCur.WriteLine("<?xml version=""" & "1.0""" & "?>")
+                swCur.WriteLine("<posFile>")
+                swCur.WriteLine("<fileFormat>4.00</fileFormat>")
+                swCur.WriteLine("<created>" & Today.ToString("yyyyMMdd") & "</created>")
+                swCur.WriteLine("<pointInTime>")
+                swCur.WriteLine("<date>" & Today.ToString("yyyyMMdd") & "</date>")
+                swCur.WriteLine("<isSetl>0</isSetl>")
+                swCur.WriteLine("<time>:::::</time>")
+                swCur.WriteLine("<run>0</run>")
+                For i As Integer = 0 To ar_comp.Length - 1
+                    client_code = ar_comp(i)
+                    temp_comp_name = ""
+
+                    swCur.WriteLine("<portfolio>")
+                    swCur.WriteLine("<firm>" & client_code.Replace("&", "&amp;") & "</firm>")
+                    swCur.WriteLine("<acctId>" & GetSymbol(client_code).Replace("&", "&amp;") & "</acctId>")
+                    swCur.WriteLine("<acctType>S</acctType>")
+                    swCur.WriteLine("<isCust>1</isCust>")
+                    swCur.WriteLine("<seg>N/A</seg>")
+
+                    swCur.WriteLine("<acctSubType>")
+                    swCur.WriteLine("<acctSubTypeCode>GSCIER</acctSubTypeCode>")
+                    swCur.WriteLine("<value>0</value>")
+                    swCur.WriteLine("</acctSubType>")
+
+                    swCur.WriteLine("<acctSubType>")
+                    swCur.WriteLine("<acctSubTypeCode>TRAKRS</acctSubTypeCode>")
+                    swCur.WriteLine("<value>0</value>")
+                    swCur.WriteLine("</acctSubType>")
+
+                    swCur.WriteLine("<isNew>1</isNew>")
+                    swCur.WriteLine("<custPortUseLov>0</custPortUseLov>")
+                    swCur.WriteLine("<currency>INR</currency>")
+                    swCur.WriteLine("<ledgerBal>0.00</ledgerBal>")
+                    swCur.WriteLine("<ote>0.00</ote>")
+                    swCur.WriteLine("<securities>0.00</securities>")
+                    swCur.WriteLine("<lue>0.00</lue>")
+
+                    swCur.WriteLine("<ecPort>")
+                    swCur.WriteLine("<ec>NSCCL</ec>")
+
+                    ''loop for each position
+                    For Each drow_position In dtable.Select("company = '" & client_code & "' and units <> 0", "company,strikes")
+                        If CBool(drow_position("IsCurrency")) = True Then
+                            comp_name = drow_position("company")
+                            'comment for testing
+                            If InStr(comp_name, "&") > 0 Then
+                                comp_name = Replace(comp_name, "&", "&amp;")
+                            End If
+
+                            If UCase(drow_position("cp")) = "F" Then
+                                option_type = "FUT"
+                                CAL_PUT = ""
+                            Else
+                                option_type = "OOP"
+                                CAL_PUT = Mid(UCase(drow_position("cp")), 1, 1)
+                            End If
+                            'If client_code.Contains("INR") Then
+                            'mat_date = Format(drow_position("mdate"), "yyyyMM")
+                            'Else
+                            mat_date = Format(drow_position("mdate"), "yyyyMMdd")
+                            'End If
+
+                            strike_price = FormatNumber(drow_position("strikes"), 2, TriState.False, TriState.False, TriState.False)
+                            If CBool(drow_position("IsCurrency")) = True Then
+                                If CURRENCY_MARGIN_QTY = 1 Then
+                                    qty = drow_position("Units")
+                                Else
+                                    qty = drow_position("Lots")
+                                End If
+
+                            Else
+                                qty = 0 'drow_position("units")
+                            End If
+
+
+                            If temp_comp_name <> comp_name Then
+                                If temp_comp_name <> "" Then
+                                    swCur.WriteLine("</ccPort>")
+                                End If
+                                swCur.WriteLine("<ccPort>")
+                                swCur.WriteLine("<cc>" & GetSymbol(comp_name) & "</cc>")
+                                swCur.WriteLine("<r>1</r>")
+                                swCur.WriteLine("<currency>INR</currency>")
+                                swCur.WriteLine("<pss>0</pss>")
+                            End If
+
+                            swCur.WriteLine("<np>")
+                            swCur.WriteLine("<exch>NSE</exch>")
+
+                            swCur.WriteLine("<pfCode>" & GetSymbol(comp_name) & "</pfCode>") '//Viral
+                            swCur.WriteLine("<pfType>" & option_type & "</pfType>")
+                            swCur.WriteLine("<pe>" & mat_date & "</pe>")
+                            If option_type = "OOP" Then
+                                'If client_code.Contains("INR") Then
+                                'sw.WriteLine("<undPe>000000</undPe>")
+                                'Else
+                                swCur.WriteLine("<undPe>00000000</undPe>")
+                                'End If
+
+                                swCur.WriteLine("<o>" & CAL_PUT & "</o>")
+                                swCur.WriteLine("<k>" & strike_price & "00" & "</k>")
+                            End If
+                            swCur.WriteLine("<net>" & qty & "</net>")
+                            swCur.WriteLine("</np>")
+
+                            temp_comp_name = comp_name
+
+                        End If
+                    Next
+                    swCur.WriteLine("</ccPort>")
+                    'end of loop for each position
+
+
+                    swCur.WriteLine("</ecPort>")
+                    swCur.WriteLine("</portfolio>")
+                Next
+                swCur.WriteLine("</pointInTime>")
+                'sw.WriteLine("</pointInTime>")
+                swCur.WriteLine("</posFile>")
+                swCur.Close()
+                fs_Curinput.Close()
+
+            End Using
+        End Using
+    End Sub
+
+    Private Sub CreateNseInputFile(dtable As DataTable, ByRef client_code As String, ByRef temp_comp_name As String, ByRef comp_name As String, ByRef option_type As String, ByRef mat_date As String, ByRef CAL_PUT As String, ByRef strike_price As String, ByRef qty As String, ByRef drow_position As DataRow, ar_comp() As String)
+        Using fs_input As New FileStream(mSPAN_path & "\" & mExchange & "input.txt", FileMode.Create, FileAccess.Write, FileShare.None)
+            Using swInput As New StreamWriter(fs_input)
+                '      sw = New StreamWriter(fs_input)
+                swInput.WriteLine("<?xml version=""" & "1.0""" & "?>")
+                swInput.WriteLine("<posFile>")
+                swInput.WriteLine("<fileFormat>4.00</fileFormat>")
+                swInput.WriteLine("<created>" & Format(Today.Year, "####") & Format(Today.Month, "##") & Format(Today.Day, "##") & "</created>")
+                swInput.WriteLine("<pointInTime>")
+                swInput.WriteLine("<date></date>")
+                swInput.WriteLine("<isSetl>0</isSetl>")
+                swInput.WriteLine("<time>:: </time>")
+                swInput.WriteLine("<run>0</run>")
+                swInput.WriteLine("<pointInTime>")
+                swInput.WriteLine("<date></date>")
+                swInput.WriteLine("<isSetl>0</isSetl>")
+                swInput.WriteLine("<time>:::::</time>")
+                swInput.WriteLine("<run>0</run>")
+
+                'loop for each client
+
+                'Debug.WriteLine(cur_position_client_list)
+
+
+                'For Each drow_client In mTbl_ledger.Select(cur_position_client_list)
+                For i As Integer = 0 To ar_comp.Length - 1
+                    client_code = ar_comp(i)
+                    temp_comp_name = ""
+
+                    swInput.WriteLine("<portfolio>")
+                    swInput.WriteLine("<firm>" & client_code.Replace("&", "&amp;") & "</firm>") 'Viral20Oct16 //.Replace("&", "")
+                    swInput.WriteLine("<acctId>" & GetSymbol(client_code).Replace("&", "&amp;") & "</acctId>") 'Viral20Oct16 //.Replace("&", "")
+                    swInput.WriteLine("<acctType>S</acctType>")
+                    swInput.WriteLine("<isCust>1</isCust>")
+                    swInput.WriteLine("<seg>N/A</seg>")
+                    swInput.WriteLine("<isNew>1</isNew>")
+                    swInput.WriteLine("<pclient>0</pclient>")
+                    swInput.WriteLine("<currency>INR</currency>")
+                    swInput.WriteLine("<ledgerBal>0.00</ledgerBal>")
+                    swInput.WriteLine("<ote>0.00</ote>")
+                    swInput.WriteLine("<securities>0.00</securities>")
+
+                    swInput.WriteLine("<ecPort>")
+                    swInput.WriteLine("<ec>NSCCL</ec>")
+
+                    ''loop for each position
+                    For Each drow_position In dtable.Select("company = '" & client_code & "' and units <> 0", "company,strikes")
+                        comp_name = drow_position("company")
+                        'M&amp;MFIN
+                        If InStr(comp_name, "&") > 0 Then
+                            comp_name = Replace(comp_name, "&", "&amp;")
+                        End If
+
+                        'If InStr(comp_name, "&") > 0 Then
+                        'comp_name = Replace(comp_name, "&", "")
+                        'End If
+
+
+
+                        If UCase(drow_position("cp")) = "F" Then
+                            option_type = "FUT"
+                            CAL_PUT = ""
+                        Else
+                            option_type = "OOP"
+                            CAL_PUT = Mid(UCase(drow_position("cp")), 1, 1)
+                        End If
+                        If comp_name.Contains("INR") Then
+                            mat_date = Format(drow_position("mdate"), "yyyyMM")
+                        Else
+                            mat_date = Format(drow_position("mdate"), "yyyyMMdd")
+                        End If
+
+                        strike_price = FormatNumber(drow_position("strikes"), 2, TriState.False, TriState.False, TriState.False)
+                        If CBool(drow_position("IsCurrency")) = True Then
+                            qty = 0 'drow_position("Lots")
+                        Else
+                            qty = drow_position("units")
+                        End If
+
+
+                        If temp_comp_name <> comp_name Then
+                            If temp_comp_name <> "" Then
+                                swInput.WriteLine("</ccPort>")
+                            End If
+                            swInput.WriteLine("<ccPort>")
+                            swInput.WriteLine("<cc>" & GetSymbol(comp_name) & "</cc>")
+                            swInput.WriteLine("<r>1</r>")
+                            swInput.WriteLine("<currency>INR</currency>")
+                            swInput.WriteLine("<pss>0</pss>")
+                        End If
+
+                        swInput.WriteLine("<np>")
+                        swInput.WriteLine("<exch>NSE</exch>")
+
+                        swInput.WriteLine("<pfCode>" & GetSymbol(comp_name) & "</pfCode>")
+                        swInput.WriteLine("<pfType>" & option_type & "</pfType>")
+                        swInput.WriteLine("<pe>" & mat_date & "</pe>")
+                        If option_type = "OOP" Then
+                            If comp_name.Contains("INR") Then
+                                swInput.WriteLine("<undPe>000000</undPe>")
+                            Else
+                                swInput.WriteLine("<undPe>00000000</undPe>")
+                            End If
+
+                            swInput.WriteLine("<o>" & CAL_PUT & "</o>")
+                            swInput.WriteLine("<k>" & strike_price & "</k>")
+                        End If
+                        swInput.WriteLine("<net>" & qty & "</net>")
+                        swInput.WriteLine("</np>")
+
+                        temp_comp_name = comp_name
+                        Dim drrow As DataRow
+                        Dim cp As String
+                        Dim result As String() = drow_position("script").Split(New String() {"  "}, StringSplitOptions.None)
+                        Dim ael_expo As Double
+                        If CALMARGINWITH_AEL_EXPO = 1 Then
+
+                            If drow_position("cp") = "C" Then
+                                cp = "CE"
+                            ElseIf drow_position("cp") = "P" Then
+                                cp = "PE"
+                            ElseIf drow_position("cp") = "F" Then
+                                cp = "XX"
+                            End If
+
+                            Dim value As Double = 0
+                            Dim ELRPR As Double = 0
+                            If drow_position("toqty") < 0 Then
+
+                                value = Convert.ToDouble(drow_position("toqty").ToString()) * Convert.ToDouble(drow_position("last").ToString())
+                                If mTbl_ael_Additional_Expo Is Nothing Then
+                                    ELRPR = mTbl_ael_Additional_Expo.Select("InsType = '" & result(1) & "' and Symbol='" & result(0) & "' and StrikePrice = '" & result(3).Replace(".00", "") & "' and OptType='" & cp & "' and ExpDate = #" & result(2) & "#")(0).Item("ELMPer")
+
+                                Else
+                                    ELRPR = 0
+                                End If
+
+                                ael_expo = (value * ELRPR) / 100
+                            End If
+
+
+                            drrow = mTbl_AEL_Expo_calc.NewRow
+                            drrow("AEL_EXPOSURE") = ael_expo
+                            drrow("Company") = client_code
+
+                            mTbl_AEL_Expo_calc.Rows.Add(drrow)
+
+                        End If
+                    Next
+                    swInput.WriteLine("</ccPort>")
+                    'end of loop for each position
+
+
+                    swInput.WriteLine("</ecPort>")
+                    swInput.WriteLine("</portfolio>")
+                Next
+                swInput.WriteLine("</pointInTime>")
+                swInput.WriteLine("</pointInTime>")
+                swInput.WriteLine("</posFile>")
+                '   sw.Close()
+                '  fs_input.Close()
+            End Using
+        End Using
+    End Sub
+
+    Private Sub GenerateCurBatch()
+        ' ==== curgenerate.bat ====
+        Dim curBatchPath As String = System.IO.Path.Combine(mSPAN_path, "curgenerate.bat")
+        Dim curSpanCmd As String = """" & System.IO.Path.Combine(mSPAN_path, "spanit") & """ """ &
+                       System.IO.Path.Combine(mSPAN_path, "curspan.spn") & """"
+
+        Using fs_Curbatchfile As New FileStream(curBatchPath, FileMode.Create, FileAccess.Write, FileShare.None)
+            Using swCur As New StreamWriter(fs_Curbatchfile)
+                swCur.WriteLine(curSpanCmd)
+            End Using
+        End Using
+    End Sub
+
+
+    Private Sub GenerateNseBatch()
+        ' ==== generate.bat ====
+        Dim batchPath As String = System.IO.Path.Combine(mSPAN_path, mExchange + "generate.bat")
+        Dim spanCmd As String = """" & System.IO.Path.Combine(mSPAN_path, "spanit") & """ """ &
+                    System.IO.Path.Combine(mSPAN_path, mExchange + "span.spn") & """"
+
+        Using fs_batchfile As New FileStream(batchPath, FileMode.Create, FileAccess.Write, FileShare.None)
+            Using sw As New StreamWriter(fs_batchfile)
+                sw.WriteLine(spanCmd)
+            End Using
+        End Using
+    End Sub
+
+    Private Sub CreateCurSpan()
+        Dim curSpnPath As String = System.IO.Path.Combine(mSPAN_path, "curspan.spn")
+        Dim curInput As String = System.IO.Path.Combine(mSPAN_path, "curinput.txt")
+        Dim curOutput As String = System.IO.Path.Combine(mSPAN_path, "curoutput.xml")
+        Dim curSPANFile As String = System.IO.Path.Combine(mSPAN_path, mCurrent_CurSPAN_file)
+
+        Using fs_Curspn As New FileStream(curSpnPath, FileMode.Create, FileAccess.Write, FileShare.None)
+            Using cursw As New StreamWriter(fs_Curspn)
+
+                ' Quote all paths for safety
+                cursw.WriteLine("LOAD " & curSPANFile)
+                cursw.WriteLine("LOAD " & curInput & ", USEXTLAYOUT")
+                cursw.WriteLine("CALC")
+                cursw.WriteLine("SAVE " & curOutput)
+            End Using
+        End Using
+    End Sub
+
+    Private Sub CreateSpanFile()
+        Dim fullSpnPath As String = System.IO.Path.Combine(mSPAN_path, mExchange + "span.spn")
+        Dim inputFile As String = System.IO.Path.Combine(mSPAN_path, mExchange + "input.txt")
+        Dim outputFile As String = System.IO.Path.Combine(mSPAN_path, mExchange + "output.xml")
+
+        Using fs_spn As New FileStream(fullSpnPath, FileMode.Create, FileAccess.Write, FileShare.None)
+            Using swSpn As New StreamWriter(fs_spn)
+
+                ' Quote file paths in case of spaces
+                swSpn.WriteLine("LOAD " & mSPAN_path & "\" & mCurrent_SPAN_file)
+                swSpn.WriteLine("Load " & inputFile & ", USEXTLAYOUT")
+                swSpn.WriteLine("Calc")
+                swSpn.WriteLine("Save " & outputFile)
+            End Using
+        End Using
+    End Sub
 
     Private Function concat_scrip(ByVal comp_name As String, ByVal cal_put_fut As String, ByVal exp_date As String, ByVal strike_price As String) As String
         Dim index_name As String

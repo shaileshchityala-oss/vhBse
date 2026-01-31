@@ -194,30 +194,39 @@ Public Class OpenPosition
     End Sub
     Private Function GetAtmStrike() As Double
         Try
-            If NetMode <> "UDP" Then
 
-                ' Dim dv As DataView = New DataView(masterdata, "symbol='" & CmbComp.Text & "' and option_type='XX'", "strike_price", DataViewRowState.CurrentRows)
-                Dim fdv() As DataRow
-                fdv = masterdata.Select("symbol='" & CmbComp.Text & "' and option_type='XX'", "strike_price  desc")
 
-                Dim token As Integer = Convert.ToInt32(fdv(0).Item("ftoken"))
-                Dim strike As Double
+            ' Dim dv As DataView = New DataView(masterdata, "symbol='" & CmbComp.Text & "' and option_type='XX'", "strike_price", DataViewRowState.CurrentRows)
+            Dim fdv() As DataRow
+            fdv = masterdata.Select("symbol='" & CmbComp.Text & "' and option_type='XX'", "strike_price  desc")
 
-                Dim dt As String = getrate(Convert.ToInt64(token))
-                Dim futRate As String = Math.Round(ED.DFo(Val(dt.ToString())), 2)
+            Dim token As Integer = Convert.ToInt32(fdv(0).Item("ftoken"))
+            Dim lntoken As Long = Convert.ToInt64(fdv(0).Item("ftoken"))
+            Dim strike As Double
 
-                Dim fdv1() As DataRow
-                If fltpprice.Contains(Convert.ToInt64(token)) Then
-                    strike = Math.Round(Val(fltpprice(Convert.ToInt64(token))), 2)
-                    fdv1 = masterdata.Select("symbol='" & CmbComp.Text & "' and option_type<>'XX' And  Strike_Price < '" & strike & "'", "strike_price  desc")
-                    strike = Convert.ToDouble(fdv1(0).Item("strike_price"))
+            Dim futRate As String = "0"
+            Dim dt As String = "0"
+            If NetMode = "UDP" Then
+                If (ltpprice.ContainsKey(lntoken)) Then
+                    futRate = ltpprice(lntoken).ToString()
                 Else
-                    fdv1 = masterdata.Select("symbol='" & CmbComp.Text & "' and option_type<>'XX' And  Strike_Price < '" & futRate & "'", "strike_price  desc")
-                    strike = Convert.ToDouble(fdv1(0).Item("strike_price"))
+                    clsGlobal.AddFoTokenToHt(lntoken)
                 End If
-
-                Return strike
+            Else
+                futRate = Math.Round(ED.DFo(Val(dt.ToString())), 2)
+                dt = getrate(Convert.ToInt64(token))
             End If
+            Dim fdv1() As DataRow
+            If fltpprice.Contains(Convert.ToInt64(token)) Then
+                strike = Math.Round(Val(fltpprice(Convert.ToInt64(token))), 2)
+                fdv1 = masterdata.Select("symbol='" & CmbComp.Text & "' and option_type<>'XX' And  Strike_Price < '" & strike & "'", "strike_price  desc")
+                strike = Convert.ToDouble(fdv1(0).Item("strike_price"))
+            Else
+                fdv1 = masterdata.Select("symbol='" & CmbComp.Text & "' and option_type<>'XX' And  Strike_Price < '" & futRate & "'", "strike_price  desc")
+                strike = Convert.ToDouble(fdv1(0).Item("strike_price"))
+            End If
+            Return strike
+
         Catch ex As Exception
             Return 0
         End Try
@@ -233,7 +242,7 @@ Public Class OpenPosition
                 If cmbstrike.SelectedText <> "" Then
                     cmbstrike.SelectedIndex = 0
                 End If
-                getrateFo()
+                '  getrateFo()
 
                 Dim strike As Double = GetAtmStrike()
                 If strike <> 0 Then
@@ -2572,26 +2581,20 @@ Public Class OpenPosition
         If token = 0 Then
             Exit Sub
         End If
+        Dim lnToken As Long = Convert.ToInt64(token)
         If NetMode = "UDP" Then
-
-
-            If ltpprice.Contains(Convert.ToInt64(token)) Then
-
-                txtrate.Text = Math.Round(Val(ltpprice(Convert.ToInt64(token))), 2)
-
-            End If
-            If fltpprice.Contains(Convert.ToInt64(token)) Then
-                txtrate.Text = Math.Round(Val(fltpprice(Convert.ToInt64(token))), 2)
-            End If
-
-        ElseIf NetMode = "TCP" Or NetMode = "API" Or NetMode = "JL" Then
-            If ltpprice.Contains(Convert.ToInt64(token)) Then
-                txtrate.Text = Math.Round(Val(ltpprice(Convert.ToInt64(token))))
-            ElseIf fltpprice.Contains(Convert.ToInt64(token)) Then
-
-                txtrate.Text = Math.Round(Val(fltpprice(Convert.ToInt64(token))), 2)
+            If ltpprice.Contains(lnToken) Then
+                txtrate.Text = Math.Round(Val(ltpprice(lnToken)), 2)
             Else
-                Dim dt As String = getrate(Convert.ToInt64(token))
+                clsGlobal.AddFoTokenToHt(lnToken)
+            End If
+        ElseIf NetMode = "TCP" Or NetMode = "API" Or NetMode = "JL" Then
+            If ltpprice.Contains(lnToken) Then
+                txtrate.Text = Math.Round(Val(ltpprice(lnToken)))
+            ElseIf fltpprice.Contains(lnToken) Then
+                txtrate.Text = Math.Round(Val(fltpprice(lnToken)), 2)
+            Else
+                Dim dt As String = getrate(lnToken)
                 If dt Is Nothing = False Then
                     If dt.ToString() <> "0" And dt <> "" Then
                         txtrate.Text = Math.Round(ED.DFo(Val(dt.ToString())), 2)
@@ -2606,13 +2609,13 @@ Public Class OpenPosition
         ElseIf NetMode = "NET" Or NetMode = "API" Or NetMode = "JL" Then
 
 
-            If ltpprice.Contains(Convert.ToInt64(token)) Then
+            If ltpprice.Contains(lnToken) Then
 
-                txtrate.Text = Math.Round(Val(ltpprice(Convert.ToInt64(token))), 2)
+                txtrate.Text = Math.Round(Val(ltpprice(lnToken)), 2)
 
             End If
-            If fltpprice.Contains(Convert.ToInt64(token)) Then
-                txtrate.Text = Math.Round(Val(fltpprice(Convert.ToInt64(token))), 2)
+            If fltpprice.Contains(lnToken) Then
+                txtrate.Text = Math.Round(Val(fltpprice(lnToken)), 2)
             End If
         End If
 
@@ -2736,10 +2739,6 @@ Public Class OpenPosition
 
     End Sub
 
-    Private Sub cmbcp_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbcp.SelectedIndexChanged
-
-    End Sub
-
     Private Sub cmbstrike_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbstrike.SelectedValueChanged
         'txtscript.Text = ""
     End Sub
@@ -2756,4 +2755,15 @@ Public Class OpenPosition
         End If
     End Sub
 
+    Private Sub txtunit_TextChanged(sender As Object, e As EventArgs) Handles txtunit.TextChanged
+        If NetMode = "UDP" And txtscript.Text.Length > 0 Then
+            getrateFo()
+        End If
+    End Sub
+
+    Private Sub txtequnit_TextChanged(sender As Object, e As EventArgs) Handles txtequnit.TextChanged
+        If NetMode = "UDP" And txteqscript.Text.Length > 0 Then
+            getrateEQ()
+        End If
+    End Sub
 End Class

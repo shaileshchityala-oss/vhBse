@@ -39,6 +39,7 @@ Partial Class MDI
         Me.MWToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GAPUPDownFormToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ATMVOLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiMarketIndex = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddUserDefineTagToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsF10ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -134,7 +135,6 @@ Partial Class MDI
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.timUserCheck = New System.Windows.Forms.Timer(Me.components)
-        Me.tsmiMarketIndex = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GBwait.SuspendLayout()
@@ -156,259 +156,266 @@ Partial Class MDI
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(60, 15)
         Me.ToolStripStatusLabel.Text = "Status"
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AnalysisF2ToolStripMenuItem, Me.ScenarioF3ToolStripMenuItem, Me.MarketWatchF4ToolStripMenuItem, Me.ToolStripMenuItem2, Me.FilterBhavCopyF6ToolStripMenuItem, Me.SettelmentBhavToolStripMenuItem, Me.SaveDataToolStripMenuItem, Me.SummaryF9ToolStripMenuItem, Me.ExitToolStripMenuItem, Me.ReadFileToolStripMenuItem, Me.MWToolStripMenuItem, Me.GAPUPDownFormToolStripMenuItem, Me.ATMVOLToolStripMenuItem, Me.tsmiMarketIndex})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(46, 23)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(66, 33)
         Me.ViewToolStripMenuItem.Text = "&View"
         '
         'AnalysisF2ToolStripMenuItem
         '
         Me.AnalysisF2ToolStripMenuItem.Name = "AnalysisF2ToolStripMenuItem"
-        Me.AnalysisF2ToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.AnalysisF2ToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.AnalysisF2ToolStripMenuItem.Text = "&Analysis (F2)"
         '
         'ScenarioF3ToolStripMenuItem
         '
         Me.ScenarioF3ToolStripMenuItem.Name = "ScenarioF3ToolStripMenuItem"
-        Me.ScenarioF3ToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.ScenarioF3ToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.ScenarioF3ToolStripMenuItem.Text = "&Scenario (F3)"
         '
         'MarketWatchF4ToolStripMenuItem
         '
         Me.MarketWatchF4ToolStripMenuItem.Name = "MarketWatchF4ToolStripMenuItem"
-        Me.MarketWatchF4ToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.MarketWatchF4ToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.MarketWatchF4ToolStripMenuItem.Text = "&Market Watch (F4)"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(200, 22)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(298, 34)
         Me.ToolStripMenuItem2.Text = "&Range Calculator"
         '
         'FilterBhavCopyF6ToolStripMenuItem
         '
         Me.FilterBhavCopyF6ToolStripMenuItem.Name = "FilterBhavCopyF6ToolStripMenuItem"
-        Me.FilterBhavCopyF6ToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.FilterBhavCopyF6ToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.FilterBhavCopyF6ToolStripMenuItem.Text = "&Filter Bhav Copy (F6)"
         '
         'SettelmentBhavToolStripMenuItem
         '
         Me.SettelmentBhavToolStripMenuItem.Name = "SettelmentBhavToolStripMenuItem"
-        Me.SettelmentBhavToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.SettelmentBhavToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.SettelmentBhavToolStripMenuItem.Text = "Settle Expiry Contract"
         '
         'SaveDataToolStripMenuItem
         '
         Me.SaveDataToolStripMenuItem.Name = "SaveDataToolStripMenuItem"
-        Me.SaveDataToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.SaveDataToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.SaveDataToolStripMenuItem.Text = "&Save Data"
         '
         'SummaryF9ToolStripMenuItem
         '
         Me.SummaryF9ToolStripMenuItem.Enabled = False
         Me.SummaryF9ToolStripMenuItem.Name = "SummaryF9ToolStripMenuItem"
-        Me.SummaryF9ToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.SummaryF9ToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.SummaryF9ToolStripMenuItem.Text = "Summary (F9)"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.ExitToolStripMenuItem.Text = "&Exit"
         '
         'ReadFileToolStripMenuItem
         '
         Me.ReadFileToolStripMenuItem.Name = "ReadFileToolStripMenuItem"
-        Me.ReadFileToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.ReadFileToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.ReadFileToolStripMenuItem.Text = "Read File"
         Me.ReadFileToolStripMenuItem.Visible = False
         '
         'MWToolStripMenuItem
         '
         Me.MWToolStripMenuItem.Name = "MWToolStripMenuItem"
-        Me.MWToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.MWToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.MWToolStripMenuItem.Text = "MW"
+        Me.MWToolStripMenuItem.Visible = False
         '
         'GAPUPDownFormToolStripMenuItem
         '
         Me.GAPUPDownFormToolStripMenuItem.Name = "GAPUPDownFormToolStripMenuItem"
-        Me.GAPUPDownFormToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.GAPUPDownFormToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.GAPUPDownFormToolStripMenuItem.Text = "GAP UP Down Form"
         '
         'ATMVOLToolStripMenuItem
         '
         Me.ATMVOLToolStripMenuItem.Name = "ATMVOLToolStripMenuItem"
-        Me.ATMVOLToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.ATMVOLToolStripMenuItem.Size = New System.Drawing.Size(298, 34)
         Me.ATMVOLToolStripMenuItem.Text = "ATM VOL"
+        '
+        'tsmiMarketIndex
+        '
+        Me.tsmiMarketIndex.Name = "tsmiMarketIndex"
+        Me.tsmiMarketIndex.Size = New System.Drawing.Size(298, 34)
+        Me.tsmiMarketIndex.Text = "Index View"
         '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUserDefineTagToolStripMenuItem, Me.SettingsF10ToolStripMenuItem, Me.RefreshLTPCtrlF5ToolStripMenuItem, Me.ReSetFixVolToolStripMenuItem, Me.AlertEntryToolStripMenuItem, Me.DeleteDataToolStripMenuItem, Me.CalculatorsToolStripMenuItem, Me.CompactDatabaseToolStripMenuItem, Me.OptionToolStripMenuItem, Me.Option1ToolStripMenuItem, Me.ReOptimizedPositionToolStripMenuItem, Me.ToolStripMenuItem4, Me.ConnectToServerToolStripMenuItem, Me.DisconnectToolStripMenuItem, Me.ToolStripMenuItem3, Me.UploadRangeDataToolStripMenuItem, Me.DownloadRangeDataToolStripMenuItem, Me.ToolStripMenuItem5, Me.MatchFOContractToolStripMenuItem, Me.MatchCurrencyContractToolStripMenuItem, Me.ScriptMapperToolStripMenuItem, Me.RecalculatePositionToolStripMenuItem, Me.UpdateSapnFileToolStripMenuItem, Me.UpdateCURRSapnFileToolStripMenuItem, Me.CFBalanceToolStripMenuItem, Me.UpdateAllFileToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 23)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(67, 33)
         Me.ToolsToolStripMenuItem.Text = "&Tools"
         '
         'AddUserDefineTagToolStripMenuItem
         '
         Me.AddUserDefineTagToolStripMenuItem.Name = "AddUserDefineTagToolStripMenuItem"
-        Me.AddUserDefineTagToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.AddUserDefineTagToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.AddUserDefineTagToolStripMenuItem.Text = "Add Blank Analysis (Ctrl + A)"
         Me.AddUserDefineTagToolStripMenuItem.Visible = False
         '
         'SettingsF10ToolStripMenuItem
         '
         Me.SettingsF10ToolStripMenuItem.Name = "SettingsF10ToolStripMenuItem"
-        Me.SettingsF10ToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.SettingsF10ToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.SettingsF10ToolStripMenuItem.Text = "&Settings (Ctrl+S)"
         '
         'RefreshLTPCtrlF5ToolStripMenuItem
         '
         Me.RefreshLTPCtrlF5ToolStripMenuItem.Name = "RefreshLTPCtrlF5ToolStripMenuItem"
-        Me.RefreshLTPCtrlF5ToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.RefreshLTPCtrlF5ToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.RefreshLTPCtrlF5ToolStripMenuItem.Text = "Refresh LTP (Ctrl + R)"
         Me.RefreshLTPCtrlF5ToolStripMenuItem.ToolTipText = "Only For Internet Connection"
         '
         'ReSetFixVolToolStripMenuItem
         '
         Me.ReSetFixVolToolStripMenuItem.Name = "ReSetFixVolToolStripMenuItem"
-        Me.ReSetFixVolToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.ReSetFixVolToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.ReSetFixVolToolStripMenuItem.Text = "Reset FixVol"
         '
         'AlertEntryToolStripMenuItem
         '
         Me.AlertEntryToolStripMenuItem.Name = "AlertEntryToolStripMenuItem"
-        Me.AlertEntryToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.AlertEntryToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.AlertEntryToolStripMenuItem.Text = "&Alert Entry (F7)"
         '
         'DeleteDataToolStripMenuItem
         '
         Me.DeleteDataToolStripMenuItem.Name = "DeleteDataToolStripMenuItem"
-        Me.DeleteDataToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.DeleteDataToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.DeleteDataToolStripMenuItem.Text = "&Delete Data"
         '
         'CalculatorsToolStripMenuItem
         '
         Me.CalculatorsToolStripMenuItem.Name = "CalculatorsToolStripMenuItem"
-        Me.CalculatorsToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.CalculatorsToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.CalculatorsToolStripMenuItem.Text = "Calculator (Ctrl +L)"
         '
         'CompactDatabaseToolStripMenuItem
         '
         Me.CompactDatabaseToolStripMenuItem.Name = "CompactDatabaseToolStripMenuItem"
-        Me.CompactDatabaseToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.CompactDatabaseToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.CompactDatabaseToolStripMenuItem.Text = "&Compact Database"
         '
         'OptionToolStripMenuItem
         '
         Me.OptionToolStripMenuItem.Name = "OptionToolStripMenuItem"
-        Me.OptionToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.OptionToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.OptionToolStripMenuItem.Text = "Option"
         Me.OptionToolStripMenuItem.Visible = False
         '
         'Option1ToolStripMenuItem
         '
         Me.Option1ToolStripMenuItem.Name = "Option1ToolStripMenuItem"
-        Me.Option1ToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.Option1ToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.Option1ToolStripMenuItem.Text = "Learn Options Behavior"
         '
         'ReOptimizedPositionToolStripMenuItem
         '
         Me.ReOptimizedPositionToolStripMenuItem.Name = "ReOptimizedPositionToolStripMenuItem"
-        Me.ReOptimizedPositionToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.ReOptimizedPositionToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.ReOptimizedPositionToolStripMenuItem.Text = "Reoptimize Position"
         Me.ReOptimizedPositionToolStripMenuItem.Visible = False
         '
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(240, 6)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(361, 6)
         '
         'ConnectToServerToolStripMenuItem
         '
         Me.ConnectToServerToolStripMenuItem.Name = "ConnectToServerToolStripMenuItem"
-        Me.ConnectToServerToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.ConnectToServerToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.ConnectToServerToolStripMenuItem.Text = "Start Broadcast"
         '
         'DisconnectToolStripMenuItem
         '
         Me.DisconnectToolStripMenuItem.Name = "DisconnectToolStripMenuItem"
-        Me.DisconnectToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.DisconnectToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.DisconnectToolStripMenuItem.Text = "Stop Broadcast"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(240, 6)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(361, 6)
         '
         'UploadRangeDataToolStripMenuItem
         '
         Me.UploadRangeDataToolStripMenuItem.Name = "UploadRangeDataToolStripMenuItem"
-        Me.UploadRangeDataToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.UploadRangeDataToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.UploadRangeDataToolStripMenuItem.Text = "Upload Range Data"
         Me.UploadRangeDataToolStripMenuItem.Visible = False
         '
         'DownloadRangeDataToolStripMenuItem
         '
         Me.DownloadRangeDataToolStripMenuItem.Name = "DownloadRangeDataToolStripMenuItem"
-        Me.DownloadRangeDataToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.DownloadRangeDataToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.DownloadRangeDataToolStripMenuItem.Text = "Download Range Data"
         '
         'ToolStripMenuItem5
         '
         Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(240, 6)
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(361, 6)
         '
         'MatchFOContractToolStripMenuItem
         '
         Me.MatchFOContractToolStripMenuItem.Name = "MatchFOContractToolStripMenuItem"
-        Me.MatchFOContractToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.MatchFOContractToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.MatchFOContractToolStripMenuItem.Text = "Match F&&O Contract"
         '
         'MatchCurrencyContractToolStripMenuItem
         '
         Me.MatchCurrencyContractToolStripMenuItem.Name = "MatchCurrencyContractToolStripMenuItem"
-        Me.MatchCurrencyContractToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.MatchCurrencyContractToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.MatchCurrencyContractToolStripMenuItem.Text = "Match Currency Contract"
         '
         'ScriptMapperToolStripMenuItem
         '
         Me.ScriptMapperToolStripMenuItem.Name = "ScriptMapperToolStripMenuItem"
-        Me.ScriptMapperToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.ScriptMapperToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.ScriptMapperToolStripMenuItem.Text = "Script Mapper"
         '
         'RecalculatePositionToolStripMenuItem
         '
         Me.RecalculatePositionToolStripMenuItem.Name = "RecalculatePositionToolStripMenuItem"
-        Me.RecalculatePositionToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.RecalculatePositionToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.RecalculatePositionToolStripMenuItem.Text = "Recalculate Position"
         '
         'UpdateSapnFileToolStripMenuItem
         '
         Me.UpdateSapnFileToolStripMenuItem.Name = "UpdateSapnFileToolStripMenuItem"
-        Me.UpdateSapnFileToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.UpdateSapnFileToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.UpdateSapnFileToolStripMenuItem.Text = "Update FO Span File"
         '
         'UpdateCURRSapnFileToolStripMenuItem
         '
         Me.UpdateCURRSapnFileToolStripMenuItem.Name = "UpdateCURRSapnFileToolStripMenuItem"
-        Me.UpdateCURRSapnFileToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.UpdateCURRSapnFileToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.UpdateCURRSapnFileToolStripMenuItem.Text = "Update CURR Span File"
         '
         'CFBalanceToolStripMenuItem
         '
         Me.CFBalanceToolStripMenuItem.Name = "CFBalanceToolStripMenuItem"
-        Me.CFBalanceToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.CFBalanceToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.CFBalanceToolStripMenuItem.Text = "CFBalance"
         '
         'UpdateAllFileToolStripMenuItem
         '
         Me.UpdateAllFileToolStripMenuItem.Name = "UpdateAllFileToolStripMenuItem"
-        Me.UpdateAllFileToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.UpdateAllFileToolStripMenuItem.Size = New System.Drawing.Size(364, 34)
         Me.UpdateAllFileToolStripMenuItem.Text = "Update All file"
         Me.UpdateAllFileToolStripMenuItem.Visible = False
         '
@@ -416,131 +423,131 @@ Partial Class MDI
         '
         Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PositionReportToolStripMenuItem, Me.MaturityReportToolStripMenuItem, Me.DayWiseExpenseReportToolStripMenuItem, Me.ProftLossToolStripMenuItem, Me.ProfitLossAnalysisToolStripMenuItem, Me.MarginReportToolStripMenuItem})
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(57, 23)
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(82, 33)
         Me.ReportToolStripMenuItem.Text = "&Report"
         '
         'PositionReportToolStripMenuItem
         '
         Me.PositionReportToolStripMenuItem.Name = "PositionReportToolStripMenuItem"
-        Me.PositionReportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.PositionReportToolStripMenuItem.Size = New System.Drawing.Size(326, 34)
         Me.PositionReportToolStripMenuItem.Text = "&Position Report"
         Me.PositionReportToolStripMenuItem.Visible = False
         '
         'MaturityReportToolStripMenuItem
         '
         Me.MaturityReportToolStripMenuItem.Name = "MaturityReportToolStripMenuItem"
-        Me.MaturityReportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.MaturityReportToolStripMenuItem.Size = New System.Drawing.Size(326, 34)
         Me.MaturityReportToolStripMenuItem.Text = "&Maturity Report"
         '
         'DayWiseExpenseReportToolStripMenuItem
         '
         Me.DayWiseExpenseReportToolStripMenuItem.Name = "DayWiseExpenseReportToolStripMenuItem"
-        Me.DayWiseExpenseReportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.DayWiseExpenseReportToolStripMenuItem.Size = New System.Drawing.Size(326, 34)
         Me.DayWiseExpenseReportToolStripMenuItem.Text = "&Day wise Expense Report"
         '
         'ProftLossToolStripMenuItem
         '
         Me.ProftLossToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScriptwiseDaywiseToolStripMenuItem, Me.DaywiseScriptwiseToolStripMenuItem, Me.SummaryToolStripMenuItem})
         Me.ProftLossToolStripMenuItem.Name = "ProftLossToolStripMenuItem"
-        Me.ProftLossToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.ProftLossToolStripMenuItem.Size = New System.Drawing.Size(326, 34)
         Me.ProftLossToolStripMenuItem.Text = "P&rofit && Loss"
         '
         'ScriptwiseDaywiseToolStripMenuItem
         '
         Me.ScriptwiseDaywiseToolStripMenuItem.Name = "ScriptwiseDaywiseToolStripMenuItem"
-        Me.ScriptwiseDaywiseToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.ScriptwiseDaywiseToolStripMenuItem.Size = New System.Drawing.Size(273, 34)
         Me.ScriptwiseDaywiseToolStripMenuItem.Text = "ScripWise DayWise"
         '
         'DaywiseScriptwiseToolStripMenuItem
         '
         Me.DaywiseScriptwiseToolStripMenuItem.Name = "DaywiseScriptwiseToolStripMenuItem"
-        Me.DaywiseScriptwiseToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.DaywiseScriptwiseToolStripMenuItem.Size = New System.Drawing.Size(273, 34)
         Me.DaywiseScriptwiseToolStripMenuItem.Text = "Daywise ScripWise"
         '
         'SummaryToolStripMenuItem
         '
         Me.SummaryToolStripMenuItem.Name = "SummaryToolStripMenuItem"
-        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(273, 34)
         Me.SummaryToolStripMenuItem.Text = "Summary"
         '
         'ProfitLossAnalysisToolStripMenuItem
         '
         Me.ProfitLossAnalysisToolStripMenuItem.Name = "ProfitLossAnalysisToolStripMenuItem"
-        Me.ProfitLossAnalysisToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.ProfitLossAnalysisToolStripMenuItem.Size = New System.Drawing.Size(326, 34)
         Me.ProfitLossAnalysisToolStripMenuItem.Text = "Profit Loss Analysis "
         '
         'MarginReportToolStripMenuItem
         '
         Me.MarginReportToolStripMenuItem.Name = "MarginReportToolStripMenuItem"
-        Me.MarginReportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.MarginReportToolStripMenuItem.Size = New System.Drawing.Size(326, 34)
         Me.MarginReportToolStripMenuItem.Text = "Margin Report"
         '
         'ImportExportToolStripMenuItem
         '
         Me.ImportExportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreviousPositionToolStripMenuItem, Me.PreviousTradeFileToolStripMenuItem, Me.ContractSecurityToolStripMenuItem, Me.BackUpToolStripMenuItem, Me.ExposureMarginToolStripMenuItem, Me.AdditionalAELExposureToolStripMenuItem, Me.CurrencyToolStripMenuItem, Me.ExportAnalysisToolStripMenuItem, Me.ImportAllFileToolStripMenuItem, Me.tsmiStopData})
         Me.ImportExportToolStripMenuItem.Name = "ImportExportToolStripMenuItem"
-        Me.ImportExportToolStripMenuItem.Size = New System.Drawing.Size(108, 23)
+        Me.ImportExportToolStripMenuItem.Size = New System.Drawing.Size(161, 33)
         Me.ImportExportToolStripMenuItem.Text = "&Import / Export"
         '
         'PreviousPositionToolStripMenuItem
         '
         Me.PreviousPositionToolStripMenuItem.Name = "PreviousPositionToolStripMenuItem"
-        Me.PreviousPositionToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.PreviousPositionToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.PreviousPositionToolStripMenuItem.Text = "Import Previous &Position"
         '
         'PreviousTradeFileToolStripMenuItem
         '
         Me.PreviousTradeFileToolStripMenuItem.Name = "PreviousTradeFileToolStripMenuItem"
-        Me.PreviousTradeFileToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.PreviousTradeFileToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.PreviousTradeFileToolStripMenuItem.Text = "Import Previous Trade &File"
         '
         'ContractSecurityToolStripMenuItem
         '
         Me.ContractSecurityToolStripMenuItem.Name = "ContractSecurityToolStripMenuItem"
-        Me.ContractSecurityToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.ContractSecurityToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.ContractSecurityToolStripMenuItem.Text = "Import &Token"
         '
         'BackUpToolStripMenuItem
         '
         Me.BackUpToolStripMenuItem.Name = "BackUpToolStripMenuItem"
-        Me.BackUpToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.BackUpToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.BackUpToolStripMenuItem.Text = "Database &Backup"
         '
         'ExposureMarginToolStripMenuItem
         '
         Me.ExposureMarginToolStripMenuItem.Name = "ExposureMarginToolStripMenuItem"
-        Me.ExposureMarginToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.ExposureMarginToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.ExposureMarginToolStripMenuItem.Text = "&Exposure Margin"
         '
         'AdditionalAELExposureToolStripMenuItem
         '
         Me.AdditionalAELExposureToolStripMenuItem.Name = "AdditionalAELExposureToolStripMenuItem"
-        Me.AdditionalAELExposureToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.AdditionalAELExposureToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.AdditionalAELExposureToolStripMenuItem.Text = "Additional AEL Exposure"
         '
         'CurrencyToolStripMenuItem
         '
         Me.CurrencyToolStripMenuItem.Name = "CurrencyToolStripMenuItem"
-        Me.CurrencyToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.CurrencyToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.CurrencyToolStripMenuItem.Text = "&Currency Exposure Margin"
         '
         'ExportAnalysisToolStripMenuItem
         '
         Me.ExportAnalysisToolStripMenuItem.Name = "ExportAnalysisToolStripMenuItem"
-        Me.ExportAnalysisToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.ExportAnalysisToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.ExportAnalysisToolStripMenuItem.Text = "Export Analysis (F10)"
         Me.ExportAnalysisToolStripMenuItem.Visible = False
         '
         'ImportAllFileToolStripMenuItem
         '
         Me.ImportAllFileToolStripMenuItem.Name = "ImportAllFileToolStripMenuItem"
-        Me.ImportAllFileToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.ImportAllFileToolStripMenuItem.Size = New System.Drawing.Size(334, 34)
         Me.ImportAllFileToolStripMenuItem.Text = "Import All File"
         '
         'tsmiStopData
         '
         Me.tsmiStopData.Name = "tsmiStopData"
-        Me.tsmiStopData.Size = New System.Drawing.Size(226, 22)
+        Me.tsmiStopData.Size = New System.Drawing.Size(334, 34)
         Me.tsmiStopData.Text = "Stop Data"
         Me.tsmiStopData.Visible = False
         '
@@ -548,83 +555,83 @@ Partial Class MDI
         '
         Me.WindowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TileToolStripMenuItem, Me.ToolStripMenuItem1, Me.CascadeToolStripMenuItem, Me.CloseAllToolStripMenuItem})
         Me.WindowsToolStripMenuItem.Name = "WindowsToolStripMenuItem"
-        Me.WindowsToolStripMenuItem.Size = New System.Drawing.Size(69, 23)
+        Me.WindowsToolStripMenuItem.Size = New System.Drawing.Size(102, 33)
         Me.WindowsToolStripMenuItem.Text = "&Windows"
         '
         'TileToolStripMenuItem
         '
         Me.TileToolStripMenuItem.Name = "TileToolStripMenuItem"
-        Me.TileToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.TileToolStripMenuItem.Size = New System.Drawing.Size(231, 34)
         Me.TileToolStripMenuItem.Text = "Tile &Vertically"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(155, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(231, 34)
         Me.ToolStripMenuItem1.Text = "Tile &Horizantly"
         '
         'CascadeToolStripMenuItem
         '
         Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(231, 34)
         Me.CascadeToolStripMenuItem.Text = "&Cascade"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(231, 34)
         Me.CloseAllToolStripMenuItem.Text = "Close &All"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsF1ToolStripMenuItem, Me.VideosToolStripMenuItem, Me.AboutVolHedgeToolStripMenuItem, Me.TroubleshootingStepsToolStripMenuItem, Me.ReconnectToServerToolStripMenuItem, Me.OnlineSupportToolStripMenuItem, Me.SuggestionsFeedBackToolStripMenuItem, Me.OnlineUpdateToolStripMenuItem, Me.IssueReportingToolStripMenuItem, Me.DownloadSpanToolStripMenuItem, Me.VolHedgeAPIPlanToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 23)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(64, 33)
         Me.HelpToolStripMenuItem.Text = "&Help"
         '
         'ContentsF1ToolStripMenuItem
         '
         Me.ContentsF1ToolStripMenuItem.Name = "ContentsF1ToolStripMenuItem"
         Me.ContentsF1ToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.ContentsF1ToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ContentsF1ToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.ContentsF1ToolStripMenuItem.Text = "&Contents "
         '
         'VideosToolStripMenuItem
         '
         Me.VideosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HindiVideosToolStripMenuItem, Me.EnglishVideosToolStripMenuItem})
         Me.VideosToolStripMenuItem.Name = "VideosToolStripMenuItem"
-        Me.VideosToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.VideosToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.VideosToolStripMenuItem.Text = "&Videos"
         '
         'HindiVideosToolStripMenuItem
         '
         Me.HindiVideosToolStripMenuItem.Name = "HindiVideosToolStripMenuItem"
-        Me.HindiVideosToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.HindiVideosToolStripMenuItem.Size = New System.Drawing.Size(234, 34)
         Me.HindiVideosToolStripMenuItem.Text = "Hindi Videos"
         '
         'EnglishVideosToolStripMenuItem
         '
         Me.EnglishVideosToolStripMenuItem.Name = "EnglishVideosToolStripMenuItem"
-        Me.EnglishVideosToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.EnglishVideosToolStripMenuItem.Size = New System.Drawing.Size(234, 34)
         Me.EnglishVideosToolStripMenuItem.Text = "English Videos"
         '
         'AboutVolHedgeToolStripMenuItem
         '
         Me.AboutVolHedgeToolStripMenuItem.Name = "AboutVolHedgeToolStripMenuItem"
-        Me.AboutVolHedgeToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.AboutVolHedgeToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.AboutVolHedgeToolStripMenuItem.Text = "&About VolHedge"
         '
         'TroubleshootingStepsToolStripMenuItem
         '
         Me.TroubleshootingStepsToolStripMenuItem.Name = "TroubleshootingStepsToolStripMenuItem"
-        Me.TroubleshootingStepsToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.TroubleshootingStepsToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.TroubleshootingStepsToolStripMenuItem.Text = "Troubleshooting Steps"
         Me.TroubleshootingStepsToolStripMenuItem.Visible = False
         '
         'ReconnectToServerToolStripMenuItem
         '
         Me.ReconnectToServerToolStripMenuItem.Name = "ReconnectToServerToolStripMenuItem"
-        Me.ReconnectToServerToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.ReconnectToServerToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.ReconnectToServerToolStripMenuItem.Text = "Reconnect to Server"
         Me.ReconnectToServerToolStripMenuItem.Visible = False
         '
@@ -632,64 +639,65 @@ Partial Class MDI
         '
         Me.OnlineSupportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeamviewerToolStripMenuItem, Me.AmmyyAdminToolStripMenuItem, Me.UltraviewerToolStripMenuItem})
         Me.OnlineSupportToolStripMenuItem.Name = "OnlineSupportToolStripMenuItem"
-        Me.OnlineSupportToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.OnlineSupportToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.OnlineSupportToolStripMenuItem.Text = "Online Support"
         '
         'TeamviewerToolStripMenuItem
         '
         Me.TeamviewerToolStripMenuItem.Enabled = False
         Me.TeamviewerToolStripMenuItem.Name = "TeamviewerToolStripMenuItem"
-        Me.TeamviewerToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.TeamviewerToolStripMenuItem.Size = New System.Drawing.Size(236, 34)
         Me.TeamviewerToolStripMenuItem.Text = "Teamviewer"
         Me.TeamviewerToolStripMenuItem.Visible = False
         '
         'AmmyyAdminToolStripMenuItem
         '
         Me.AmmyyAdminToolStripMenuItem.Name = "AmmyyAdminToolStripMenuItem"
-        Me.AmmyyAdminToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.AmmyyAdminToolStripMenuItem.Size = New System.Drawing.Size(236, 34)
         Me.AmmyyAdminToolStripMenuItem.Text = "Ammyy Admin"
         Me.AmmyyAdminToolStripMenuItem.Visible = False
         '
         'UltraviewerToolStripMenuItem
         '
         Me.UltraviewerToolStripMenuItem.Name = "UltraviewerToolStripMenuItem"
-        Me.UltraviewerToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.UltraviewerToolStripMenuItem.Size = New System.Drawing.Size(236, 34)
         Me.UltraviewerToolStripMenuItem.Text = "Ultraviewer"
         '
         'SuggestionsFeedBackToolStripMenuItem
         '
         Me.SuggestionsFeedBackToolStripMenuItem.Name = "SuggestionsFeedBackToolStripMenuItem"
-        Me.SuggestionsFeedBackToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.SuggestionsFeedBackToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.SuggestionsFeedBackToolStripMenuItem.Text = "Suggestions And FeedBack"
         '
         'OnlineUpdateToolStripMenuItem
         '
         Me.OnlineUpdateToolStripMenuItem.Name = "OnlineUpdateToolStripMenuItem"
-        Me.OnlineUpdateToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.OnlineUpdateToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.OnlineUpdateToolStripMenuItem.Text = "Online Update"
         '
         'IssueReportingToolStripMenuItem
         '
         Me.IssueReportingToolStripMenuItem.Name = "IssueReportingToolStripMenuItem"
-        Me.IssueReportingToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.IssueReportingToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.IssueReportingToolStripMenuItem.Text = "Issue Reporting"
         '
         'DownloadSpanToolStripMenuItem
         '
         Me.DownloadSpanToolStripMenuItem.Name = "DownloadSpanToolStripMenuItem"
-        Me.DownloadSpanToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.DownloadSpanToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.DownloadSpanToolStripMenuItem.Text = "Download Span 4.5 Setup"
         '
         'VolHedgeAPIPlanToolStripMenuItem
         '
         Me.VolHedgeAPIPlanToolStripMenuItem.Name = "VolHedgeAPIPlanToolStripMenuItem"
-        Me.VolHedgeAPIPlanToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
+        Me.VolHedgeAPIPlanToolStripMenuItem.Size = New System.Drawing.Size(342, 34)
         Me.VolHedgeAPIPlanToolStripMenuItem.Text = "VolHedge API Plan"
         '
         'MenuStrip1
         '
         Me.MenuStrip1.AllowMerge = False
         Me.MenuStrip1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.ImportExportToolStripMenuItem, Me.ReportToolStripMenuItem, Me.WindowsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.ToolStripcompanyCombo, Me.ToolStripMenuSearchComp})
         Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
@@ -699,7 +707,7 @@ Partial Class MDI
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.MenuStrip1.ShowItemToolTips = True
-        Me.MenuStrip1.Size = New System.Drawing.Size(1020, 27)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1020, 37)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -708,7 +716,7 @@ Partial Class MDI
         Me.ToolStripcompanyCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.ToolStripcompanyCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ToolStripcompanyCombo.Name = "ToolStripcompanyCombo"
-        Me.ToolStripcompanyCombo.Size = New System.Drawing.Size(100, 23)
+        Me.ToolStripcompanyCombo.Size = New System.Drawing.Size(100, 33)
         Me.ToolStripcompanyCombo.ToolTipText = "Search Company (Ctrl + T)"
         Me.ToolStripcompanyCombo.Visible = False
         '
@@ -717,7 +725,7 @@ Partial Class MDI
         Me.ToolStripMenuSearchComp.BackColor = System.Drawing.Color.Silver
         Me.ToolStripMenuSearchComp.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripMenuSearchComp.Name = "ToolStripMenuSearchComp"
-        Me.ToolStripMenuSearchComp.Size = New System.Drawing.Size(65, 23)
+        Me.ToolStripMenuSearchComp.Size = New System.Drawing.Size(96, 33)
         Me.ToolStripMenuSearchComp.Text = "Search"
         Me.ToolStripMenuSearchComp.Visible = False
         '
@@ -753,7 +761,7 @@ Partial Class MDI
         Me.chktcp.AutoSize = True
         Me.chktcp.Location = New System.Drawing.Point(640, 0)
         Me.chktcp.Name = "chktcp"
-        Me.chktcp.Size = New System.Drawing.Size(74, 23)
+        Me.chktcp.Size = New System.Drawing.Size(107, 30)
         Me.chktcp.TabIndex = 12
         Me.chktcp.Text = "INTERNET"
         Me.chktcp.UseVisualStyleBackColor = True
@@ -795,7 +803,7 @@ Partial Class MDI
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(50, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 16)
+        Me.Label1.Size = New System.Drawing.Size(158, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Please Wait.."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -896,15 +904,9 @@ Partial Class MDI
         Me.timUserCheck.Enabled = True
         Me.timUserCheck.Interval = 20000
         '
-        'tsmiMarketIndex
-        '
-        Me.tsmiMarketIndex.Name = "tsmiMarketIndex"
-        Me.tsmiMarketIndex.Size = New System.Drawing.Size(200, 22)
-        Me.tsmiMarketIndex.Text = "Index View"
-        '
         'MDI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.VolHedge.My.Resources.Resources.VolHedge_Logo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center

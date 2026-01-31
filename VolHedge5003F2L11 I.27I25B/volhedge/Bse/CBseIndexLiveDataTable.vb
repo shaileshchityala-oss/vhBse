@@ -14,22 +14,23 @@ Public Class CBseIndexLiveDataTable
         AddColumns(mDtIndex)
     End Sub
 
-    Private Sub AddColumns(pDt As DataTable)
+    Public Sub AddColumns(pDt As DataTable)
         pDt.Clear()
         pDt.Columns.Add("Code", GetType(Long))
-        pDt.Columns.Add("Index Name", GetType(String))
+        pDt.Columns.Add("Index", GetType(String))
         pDt.Columns.Add("Ltp", GetType(Double))
         pDt.Columns.Add("Open", GetType(Double))
         pDt.Columns.Add("High", GetType(Double))
         pDt.Columns.Add("Low", GetType(Double))
         pDt.Columns.Add("Close", GetType(Double))
         pDt.PrimaryKey = New DataColumn() {pDt.Columns("Code")}
+
     End Sub
 
-    Private Sub UpdateRow(pDt As DataTable, pCode As Long, pIndexName As String, pLtp As Double, pOpen As Double, pHigh As Double, pLow As Double, pClose As Double)
+    Public Sub UpdateRow(pDt As DataTable, pCode As Long, pIndexName As String, pLtp As Double, pOpen As Double, pHigh As Double, pLow As Double, pClose As Double)
         Dim row As DataRow = pDt.NewRow()
         row("Code") = pCode
-        row("Index Name") = pIndexName
+        row("Index") = pIndexName
         row("Ltp") = pLtp
         row("Open") = pOpen
         row("High") = pHigh
@@ -50,10 +51,10 @@ Public Class CBseIndexLiveDataTable
     End Sub
 
 
-    Private Sub AddNewRow(pDt As DataTable, pCode As Long, pIndexName As String, pLtp As Double, pOpen As Double, pHigh As Double, pLow As Double, pClose As Double)
+    Public Sub AddNewRow(pDt As DataTable, pCode As Long, pIndexName As String, pLtp As Double, pOpen As Double, pHigh As Double, pLow As Double, pClose As Double)
         Dim row As DataRow = pDt.NewRow()
         row("Code") = pCode
-        row("Index Name") = pIndexName
+        row("Index") = pIndexName
         row("Ltp") = pLtp
         row("Open") = pOpen
         row("High") = pHigh
@@ -72,7 +73,7 @@ Public Class CBseIndexLiveDataTable
 
     Public Sub UpdateName(pDt As DataTable, pCode As Long, pName As String)
         Dim row As DataRow = pDt.Rows.Find(pCode)
-        row("Index Name") = pName
+        row("Index") = pName
     End Sub
 
 
@@ -106,7 +107,7 @@ Public Class CBseIndexLiveDataTable
 
     Public Sub UpdateIndexData(pDt As DataTable, pCode As Long, pIndexName As String, pLtp As Double, pOpen As Double, pHigh As Double, pLow As Double, pClose As Double)
         Dim row As DataRow = pDt.Rows.Find(pCode)
-        row("Index Name") = pIndexName
+        row("Index") = pIndexName
         row("Ltp") = pLtp
         row("Open") = pOpen
         row("High") = pHigh

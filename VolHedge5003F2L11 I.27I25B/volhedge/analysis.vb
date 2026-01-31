@@ -1056,11 +1056,20 @@ Public Class analysis
     ''' 5. Initialize Broadcast and start broadcast receiving
     ''' 6. Fill company tab in tab control and if NIFTY tab exist and Select NIFTY table otherwise default tab select
     '''</remarks>
+    '''
+    Dim mAllowedSymbols As New List(Of String) '''
     Private Sub analysis_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Write_Log2("Step1:analysis_Load Process Start..")
         'txttvolgaval.Visible = False
         'txttvolga1.Visible = False
         'Label32.Visible = False
+
+        mAllowedSymbols.Add("NIFTY")
+        mAllowedSymbols.Add("BANKNIFTY")
+        mAllowedSymbols.Add("FINNIFTY")
+        mAllowedSymbols.Add("MIDCPNIFTY")
+        mAllowedSymbols.Add("SENSEX")
+        mAllowedSymbols.Add("BANKEX")
 
         TimerBEP.Enabled = True
         isloaded = True
@@ -2518,12 +2527,25 @@ Public Class analysis
                 If currtable.Rows(0).Item("script").ToString.Substring(3, 3) = "IDX" Then
                     chkCalVol.Visible = False
                 End If
-                If GetSymbol(currtable.Rows(0).Item("company").ToString()) = "NIFTY" Or GetSymbol(currtable.Rows(0).Item("company").ToString()) = "BANKNIFTY" Or GetSymbol(currtable.Rows(0).Item("company").ToString()) = "FINNIFTY" Or GetSymbol(currtable.Rows(0).Item("company").ToString()) = "MIDCPNIFTY" Then
+
+
+                Dim curSymbol = GetSymbol(currtable.Rows(0).Item("company").ToString())
+
+                If mAllowedSymbols.Contains(curSymbol) Then
                     chkCalVol.Visible = True
                     txteqrate.Visible = True
                     lbleq.Visible = True
                     'chkfuture.Visible = True
                 End If
+
+                'If GetSymbol(currtable.Rows(0).Item("company").ToString()) = "NIFTY" Or GetSymbol(currtable.Rows(0).Item("company").ToString()) = "BANKNIFTY" Or GetSymbol(currtable.Rows(0).Item("company").ToString()) = "FINNIFTY" Or GetSymbol(currtable.Rows(0).Item("company").ToString()) = "MIDCPNIFTY" Then
+                '    chkCalVol.Visible = True
+                '    txteqrate.Visible = True
+                '    lbleq.Visible = True
+                '    'chkfuture.Visible = True
+                'End If
+
+
                 'Commented By Viral 19Sept16
                 'If GetSymbol(currtable.Rows(0).Item("company").ToString()) = "BANKNIFTY" Then
                 '    chkfuture.Visible = True
@@ -2887,7 +2909,7 @@ Public Class analysis
                                     'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("ftoken")))
 
                                     'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("ftoken")), 0)
-                                    clsGlobal.H_All_token_FO.Add(CLng(drow("tokanno")), 0)
+                                    clsGlobal.H_All_token_FO.Add(CLng(drow("ftoken")), 0)
                                 End If
                             End If
                         End If
@@ -3706,7 +3728,7 @@ Public Class analysis
                                 If Not clsGlobal.H_All_token_FO.Contains(CLng(drow("token"))) Then
                                     'mSharkhanConn.mScriptListFo.Add("NF" & CLng(drow("token")))
 
-                                    clsGlobal.H_All_token_FO.Add(CLng(drow("tokanno")), 0)
+                                    clsGlobal.H_All_token_FO.Add(CLng(drow("token")), 0)
                                     'clsGlobal.H_All_token_FO.Add("NF" & CLng(drow("token")), 0)
                                 End If
                             End If
@@ -9058,6 +9080,28 @@ lbl1:
 
                                                     End If
                                                 End If
+                                            ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                                If CAL_USING_EQ_WITHINDEX = True Then
+                                                    eltppr = Val(eIdxprice("SENSEX"))
+                                                Else
+                                                    If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                        eltppr = Val(eIdxprice("SENSEX"))
+                                                    Else
+                                                        eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+
+                                                    End If
+                                                End If
+                                            ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                                If CAL_USING_EQ_WITHINDEX = True Then
+                                                    eltppr = Val(eIdxprice("BANKEX"))
+                                                Else
+                                                    If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                        eltppr = Val(eIdxprice("BANKEX"))
+                                                    Else
+                                                        eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+
+                                                    End If
+                                                End If
                                             Else
                                                 If IsDBNull(drow("asset_tokan")) = False Then
                                                     eltppr = Val(eltpprice(CLng(drow("asset_tokan"))))
@@ -9167,29 +9211,17 @@ lbl1:
 
 
                                             If GetSymbol(drow("company").ToString()) = "BANKNIFTY" Then
-                                                'eltppr = Val(eIdxprice("Nifty Bank"))
-                                                'commented by Viral 19-Sep-16
-                                                'If chkfuture.Checked = True Then
-                                                '    eltppr = Val(fltpprice("Ftoken"))
-                                                'Else
-                                                '    eltppr = Val(eIdxprice("Nifty Bank"))
-                                                'End If
-
                                                 eltppr = Val(eIdxprice("Nifty Bank"))
-
                                             ElseIf GetSymbol(drow("company").ToString()) = "NIFTY" Then
-
-
                                                 eltppr = Val(eIdxprice("Nifty 50"))
-
                                             ElseIf GetSymbol(drow("company").ToString()) = "FINNIFTY" Then
-
-
                                                 eltppr = Val(eIdxprice("NiftyFinService"))
                                             ElseIf GetSymbol(drow("company").ToString()) = "MIDCPNIFTY" Then
-
-
                                                 eltppr = Val(eIdxprice("NIFTYMIDSELECT"))
+                                            ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                                eltppr = Val(eIdxprice("SENSEX"))
+                                            ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                                eltppr = Val(eIdxprice("BANKEX"))
                                             Else
                                                 eltppr = Val(eltpprice(CLng(Val(drow("asset_tokan").ToString))))
                                             End If
@@ -9317,7 +9349,26 @@ lbl1:
                                                 eltppr = Val(eIdxprice("NIFTYMIDSELECT"))
                                             Else
                                                 eltppr = Val(fltpprice(CLng(drow("ftoken"))))
-
+                                            End If
+                                        End If
+                                    ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                        If CAL_USING_EQ_WITHINDEX = True Then
+                                            eltppr = Val(eIdxprice("SENSEX"))
+                                        Else
+                                            If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                eltppr = Val(eIdxprice("SENSEX"))
+                                            Else
+                                                eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+                                            End If
+                                        End If
+                                    ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                        If CAL_USING_EQ_WITHINDEX = True Then
+                                            eltppr = Val(eIdxprice("BANKEX"))
+                                        Else
+                                            If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                eltppr = Val(eIdxprice("BANKEX"))
+                                            Else
+                                                eltppr = Val(fltpprice(CLng(drow("ftoken"))))
                                             End If
                                         End If
                                     Else
@@ -9347,16 +9398,24 @@ lbl1:
                                                     eltppr = Val(eIdxprice("Nifty 50"))
                                                 Else
                                                     eltppr = Val(fltpprice(CLng(drow("ftoken"))))
-
                                                 End If
                                             ElseIf GetSymbol(drow("company").ToString()) = "FINNIFTY" Then
-
-                                                ' eltppr = Val(eIdxprice("Nifty 50"))
                                                 If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                     eltppr = Val(eIdxprice("NiftyFinService"))
                                                 Else
                                                     eltppr = Val(fltpprice(CLng(drow("ftoken"))))
-
+                                                End If
+                                            ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                                If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                    eltppr = Val(eIdxprice("SENSEX"))
+                                                Else
+                                                    eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+                                                End If
+                                            ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                                If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                    eltppr = Val(eIdxprice("BANKEX"))
+                                                Else
+                                                    eltppr = Val(fltpprice(CLng(drow("ftoken"))))
                                                 End If
                                             Else
                                                 If IsDBNull(drow("asset_tokan")) = False Then
@@ -9851,15 +9910,12 @@ lbl1:
                                                 If CAL_USING_EQ_WITHINDEX = True Then
                                                     eltppr = Val(eIdxprice("Nifty Bank"))
                                                 Else
-
                                                     If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                         eltppr = Val(eIdxprice("Nifty Bank"))
                                                     Else
                                                         eltppr = Val(fltpprice(CLng(drow("ftoken"))))
 
                                                     End If
-
-
                                                 End If
 
                                             ElseIf GetSymbol(drow("company").ToString()) = "NIFTY" Then
@@ -9918,7 +9974,7 @@ lbl1:
                                                 End If
                                             ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
                                                 If CAL_USING_EQ_WITHINDEX = True Then
-                                                    eltppr = Val(eIdxprice("SENSEX"))
+                                                    eltppr = Val(eIdxprice("BANKEX"))
                                                 Else
                                                     If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                         eltppr = Val(eIdxprice("BANKEX"))
@@ -9961,51 +10017,42 @@ lbl1:
                                             If chksynfutexp.Checked = True Then
                                                 If fDate(Date.Now) = fDate(drow("Mdate")) Then
                                                     If GetSymbol(drow("company").ToString()) = "BANKNIFTY" Then
-
-                                                        '  eltppr = Val(eIdxprice("Nifty Bank"))
-
                                                         If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                             eltppr = Val(eIdxprice("Nifty Bank"))
                                                         Else
                                                             eltppr = Val(fltpprice(CLng(drow("ftoken"))))
 
                                                         End If
-
-
-
                                                     ElseIf GetSymbol(drow("company").ToString()) = "NIFTY" Then
-
-                                                        ' eltppr = Val(eIdxprice("Nifty 50"))
-
                                                         If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                             eltppr = Val(eIdxprice("Nifty 50"))
                                                         Else
                                                             eltppr = Val(fltpprice(CLng(drow("ftoken"))))
-
                                                         End If
-
-
                                                     ElseIf GetSymbol(drow("company").ToString()) = "FINNIFTY" Then
-
-                                                        ' eltppr = Val(eIdxprice("Nifty 50"))
-
-
                                                         If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                             eltppr = Val(eIdxprice("NiftyFinService"))
                                                         Else
                                                             eltppr = Val(fltpprice(CLng(drow("ftoken"))))
-
                                                         End If
                                                     ElseIf GetSymbol(drow("company").ToString()) = "MIDCPNIFTY" Then
-
-                                                        ' eltppr = Val(eIdxprice("Nifty 50"))
                                                         If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                             eltppr = Val(eIdxprice("NIFTYMIDSELECT"))
                                                         Else
                                                             eltppr = Val(fltpprice(CLng(drow("ftoken"))))
-
                                                         End If
-
+                                                    ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                                        If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                            eltppr = Val(eIdxprice("SENSEX"))
+                                                        Else
+                                                            eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+                                                        End If
+                                                    ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                                        If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                            eltppr = Val(eIdxprice("BANKEX"))
+                                                        Else
+                                                            eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+                                                        End If
                                                     Else
                                                         If IsDBNull(drow("asset_tokan")) = False Then
                                                             eltppr = Val(eltpprice(CLng(drow("asset_tokan"))))
@@ -10073,13 +10120,16 @@ lbl1:
 
                                             If GetSymbol(drow("company").ToString()) = "BANKNIFTY" Then
                                                 eltppr = Val(eIdxprice("Nifty Bank"))
-
                                             ElseIf GetSymbol(drow("company").ToString()) = "NIFTY" Then
                                                 eltppr = Val(eIdxprice("Nifty 50"))
                                             ElseIf GetSymbol(drow("company").ToString()) = "FINNIFTY" Then
                                                 eltppr = Val(eIdxprice("NiftyFinService"))
                                             ElseIf GetSymbol(drow("company").ToString()) = "MIDCPNIFTY" Then
                                                 eltppr = Val(eIdxprice("NIFTYMIDSELECT"))
+                                            ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                                eltppr = Val(eIdxprice("SENSEX"))
+                                            ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                                eltppr = Val(eIdxprice("BANKEX"))
                                             Else
                                                 eltppr = Val(eltpprice(CLng(Val(drow("asset_tokan") & ""))))
                                             End If
@@ -10151,16 +10201,16 @@ lbl1:
 
                                             If GetSymbol(drow("company").ToString()) = "BANKNIFTY" Then
                                                 eltppr = Val(eIdxprice("Nifty Bank"))
-
                                             ElseIf GetSymbol(drow("company").ToString()) = "NIFTY" Then
-
-
                                                 eltppr = Val(eIdxprice("Nifty 50"))
                                             ElseIf GetSymbol(drow("company").ToString()) = "FINNIFTY" Then
                                                 eltppr = Val(eIdxprice("NiftyFinService"))
-
                                             ElseIf GetSymbol(drow("company").ToString()) = "MIDCPNIFTY" Then
                                                 eltppr = Val(eIdxprice("NIFTYMIDSELECT"))
+                                            ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                                eltppr = Val(eIdxprice("SENSEX"))
+                                            ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                                eltppr = Val(eIdxprice("BANKEX"))
                                             Else
                                                 eltppr = Val(eltpprice(CLng(Val(drow("asset_tokan").ToString))))
                                             End If
@@ -10321,16 +10371,12 @@ lbl1:
                                         If CAL_USING_EQ_WITHINDEX = True Then
                                             eltppr = Val(eIdxprice("Nifty Bank"))
                                         Else
-
                                             If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                 eltppr = Val(eIdxprice("Nifty Bank"))
                                             Else
                                                 eltppr = Val(fltpprice(CLng(drow("ftoken"))))
 
                                             End If
-
-
-
                                         End If
 
                                     ElseIf GetSymbol(drow("company").ToString()) = "NIFTY" Then
@@ -10369,6 +10415,28 @@ lbl1:
                                         Else
                                             If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                 eltppr = Val(eIdxprice("NIFTYMIDSELECT"))
+                                            Else
+                                                eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+
+                                            End If
+                                        End If
+                                    ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                        If CAL_USING_EQ_WITHINDEX = True Then
+                                            eltppr = Val(eIdxprice("SENSEX"))
+                                        Else
+                                            If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                eltppr = Val(eIdxprice("SENSEX"))
+                                            Else
+                                                eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+
+                                            End If
+                                        End If
+                                    ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                        If CAL_USING_EQ_WITHINDEX = True Then
+                                            eltppr = Val(eIdxprice("BANKEX"))
+                                        Else
+                                            If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                eltppr = Val(eIdxprice("BANKEX"))
                                             Else
                                                 eltppr = Val(fltpprice(CLng(drow("ftoken"))))
 
@@ -10418,13 +10486,22 @@ lbl1:
 
                                                 End If
                                             ElseIf GetSymbol(drow("company").ToString()) = "MIDCPNIFTY" Then
-
-                                                ' eltppr = Val(eIdxprice("Nifty 50"))
                                                 If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                                                     eltppr = Val(eIdxprice("NIFTYMIDSELECT"))
                                                 Else
                                                     eltppr = Val(fltpprice(CLng(drow("ftoken"))))
-
+                                                End If
+                                            ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                                                If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                    eltppr = Val(eIdxprice("SENSEX"))
+                                                Else
+                                                    eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+                                                End If
+                                            ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                                                If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                                                    eltppr = Val(eIdxprice("BANKEX"))
+                                                Else
+                                                    eltppr = Val(fltpprice(CLng(drow("ftoken"))))
                                                 End If
                                             Else
                                                 'eltppr = Val(fltpprice(CLng(drow("ftoken"))))
@@ -11530,24 +11607,22 @@ lbl1:
                     If chkCalVol.Checked = True Then
 
                         If GetSymbol(drow("company")) = "BANKNIFTY" Then
-
-
                             index = Val(eIdxprice("Nifty Bank"))
                             txteqrate.Invoke(meqdel, Val(index.ToString))
                         ElseIf GetSymbol(drow("company")) = "NIFTY" Then
-
-
                             index = Val(eIdxprice("Nifty 50"))
                             txteqrate.Invoke(meqdel, Val(index.ToString))
                         ElseIf GetSymbol(drow("company")) = "FINNIFTY" Then
-
-
                             index = Val(eIdxprice("NiftyFinService"))
                             txteqrate.Invoke(meqdel, Val(index.ToString))
                         ElseIf GetSymbol(drow("company")) = "MIDCPNIFTY" Then
-
-
                             index = Val(eIdxprice("NIFTYMIDSELECT"))
+                            txteqrate.Invoke(meqdel, Val(index.ToString))
+                        ElseIf GetSymbol(drow("company")) = "SENSEX" Then
+                            index = Val(eIdxprice("SENSEX"))
+                            txteqrate.Invoke(meqdel, Val(index.ToString))
+                        ElseIf GetSymbol(drow("company")) = "BANKEX" Then
+                            index = Val(eIdxprice("BANKEX"))
                             txteqrate.Invoke(meqdel, Val(index.ToString))
                         End If
 
@@ -19880,6 +19955,28 @@ Read_curspn_output:
                 Else
                     If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
                         eltppr = Val(eIdxprice("NIFTYMIDSELECT"))
+                    Else
+                        eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+
+                    End If
+                End If
+            ElseIf GetSymbol(drow("company").ToString()) = "SENSEX" Then
+                If CAL_USING_EQ_WITHINDEX = True Then
+                    eltppr = Val(eIdxprice("SENSEX"))
+                Else
+                    If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                        eltppr = Val(eIdxprice("SENSEX"))
+                    Else
+                        eltppr = Val(fltpprice(CLng(drow("ftoken"))))
+
+                    End If
+                End If
+            ElseIf GetSymbol(drow("company").ToString()) = "BANKEX" Then
+                If CAL_USING_EQ_WITHINDEX = True Then
+                    eltppr = Val(eIdxprice("BANKEX"))
+                Else
+                    If CDate(drow("mdate")) <> CDate(drow("fut_mdate")) Then
+                        eltppr = Val(eIdxprice("BANKEX"))
                     Else
                         eltppr = Val(fltpprice(CLng(drow("ftoken"))))
 
@@ -30371,6 +30468,8 @@ Read_curspn_output:
     ''' <remarks>This method call to click Margin lable to caclulate Exposure Margin</remarks>
     Private Sub Label24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label24.Click
         OpenMarginCalc()
+
+        Return
         If FlgThr_Span = True Then
             Exit Sub
         Else

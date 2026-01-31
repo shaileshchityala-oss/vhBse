@@ -526,6 +526,12 @@ Public Class clsGlobal
         Return Password
     End Function
 
+    Public Shared Sub AddFoTokenToHt(pToken As Long)
+        If Not H_All_token_FO.Contains(pToken) Then
+            H_All_token_FO.Add(pToken, 0)
+        End If
+    End Sub
+
 End Class
 
 

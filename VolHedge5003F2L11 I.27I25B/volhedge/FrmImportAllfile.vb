@@ -81,6 +81,7 @@ Public Class FrmImportAllfile
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub cmdsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsave.Click
+        FLGCSVCONTRACT = False
         Dim flg As Boolean = validate_contract_csv_file(txtpath.Text, "FO")
         If flg = True Then
             MsgBox("Invalid CSV File..", MsgBoxStyle.Information)
@@ -162,6 +163,7 @@ Public Class FrmImportAllfile
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub cmdeqimport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdeqimport.Click
+        FLGCSVCONTRACT = False
         'If txteqpath.Text <> "" Then
         '    Me.Cursor = Cursors.WaitCursor
         '    Try
@@ -541,7 +543,7 @@ Public Class FrmImportAllfile
     End Function
     Private Const PMgrKey As String = "NseContractAllImport"
     Private Sub cmdsave2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsave2.Click
-
+        FLGCSVCONTRACT = False
         If Not CUtils.IsConnectedToInternet() Then
             MessageBox.Show("Internet Not Available")
         End If
@@ -865,7 +867,7 @@ back2:
     End Sub
 
     Private Sub cmdeqimport2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdeqimport2.Click
-
+        FLGCSVCONTRACT = False
         If Not CUtils.IsConnectedToInternet() Then
             MessageBox.Show("Internet Not Available")
             Return
@@ -2013,6 +2015,7 @@ aa:
     End Function
 
     Private Sub Button26_Click(sender As System.Object, e As System.EventArgs) Handles Button26.Click
+        FLGCSVCONTRACT = False
         Try
 
             If Not CUtils.IsConnectedToInternet() Then
@@ -2477,6 +2480,7 @@ currency:
         txtBseContractPath.Text = ""
     End Sub
     Private Sub btnBseContractImport_Click(sender As Object, e As EventArgs) Handles btnBseContractImport.Click
+        FLGCSVCONTRACT = True
         If Not File.Exists(txtBseContractPath.Text) Then
             MsgBox("Invalid File Path.", MsgBoxStyle.Exclamation)
         End If
@@ -2511,6 +2515,7 @@ currency:
     End Sub
 
     Private Sub btnBseEqImport_Click(sender As Object, e As EventArgs) Handles btnBseEqImport.Click
+        FLGCSVCONTRACT = True
         Dim flg As Boolean = validate_contract_csv_file(txtBseEqPath.Text, "EQBSE")
         If flg = True Then
             MsgBox("Invalid CSV File..", MsgBoxStyle.Information)
@@ -2553,6 +2558,14 @@ currency:
         clsGlobal.mBseExchange.mBhavCopy.removebhavcopyBSe()
         clsGlobal.mBseExchange.mBhavCopy.Read_FilebhavBSe(txtBseBhavcopy.Text)
         Me.Cursor = Cursors.Default
+    End Sub
+
+    Private Sub tbCtrlMain_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tbCtrlMain.SelectedIndexChanged
+        If tbCtrlMain.SelectedIndex = 0 Then
+            FLGCSVCONTRACT = False
+        Else
+            FLGCSVCONTRACT = True
+        End If
     End Sub
 End Class
 Public Class ZipHelp
